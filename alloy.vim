@@ -115,7 +115,7 @@ call s:h("ErrorMsg",      { "fg": s:black,      "bg": s:red,          "format": 
 call s:h("WarningMsg",    { "fg": s:red })
 call s:h("VertSplit",     { "fg": s:darkgrey,   "bg": s:darkblack })
 call s:h("LineNr",        { "fg": s:grey,       "bg": s:lightblack })
-call s:h("CursorLineNr",  { "fg": s:orange,     "bg": s:lightblack })
+call s:h("CursorLineNr",  { "fg": s:white,     "bg": s:lightblack })
 call s:h("SignColumn",    {                     "bg": s:lightblack })
 
 " misc
@@ -298,7 +298,7 @@ call s:h("rubyRailsARAssociationMethod",{ "fg": s:orange })
 call s:h("rubyRailsARMethod",           { "fg": s:orange })
 call s:h("rubyRailsRenderMethod",       { "fg": s:orange })
 call s:h("rubyRailsMethod",             { "fg": s:orange })
-call s:h("rubyConstant",                { "fg": s:aqua })
+call s:h("rubyConstant",                { "fg": s:aqua, "format": "italic" })
 call s:h("rubyBlockArgument",           { "fg": s:orange })
 call s:h("rubyBlockParameter",          { "fg": s:orange })
 
