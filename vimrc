@@ -10,6 +10,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'alvan/vim-closetag'
 Plug 'airblade/vim-gitgutter'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'elixir-editors/vim-elixir'
 
 call plug#end()
 
