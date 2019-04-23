@@ -44,8 +44,10 @@ inoremap {;<CR> {<CR>};<ESC>O
 
 syntax on
 
+autocmd VimEnter * color monokai
 autocmd VimEnter * NERDTree
 autocmd VimEnter * IndentLinesToggle
 autocmd VimEnter * CloseTagEnableBuffer
 
 autocmd FileType ruby compiler ruby
+
