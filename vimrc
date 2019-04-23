@@ -30,8 +30,6 @@ highlight CursorLine guibg=#303000 ctermbg=234
 
 let g:gitgutter_terminal_reports_focus=0
 let g:indentLine_color_term = 239
-let g:monokai_term_italic = 1
-let g:monokai_gui_italic = 1
 
 let g:closetag_filenames = '*.erb,*.html,*.xhtml,*.phtml'
 let g:closetag_filetypes = 'html,xhtml,phtml'
@@ -46,7 +44,6 @@ inoremap {;<CR> {<CR>};<ESC>O
 
 syntax on
 
-autocmd VimEnter * color alloy
 autocmd VimEnter * NERDTree
 autocmd VimEnter * IndentLinesToggle
 autocmd VimEnter * CloseTagEnableBuffer
