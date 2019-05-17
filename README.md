@@ -20,6 +20,33 @@ And set up the default-terminal option in ```~/.tmux.conf```:
 ```set -g default-terminal "xterm"```
 Lastly, do ```$ source ~/.bashrc``` to load new alias. Tmux
 
+important keybinds:
+
+Create horizontal pane:
+
+- ctrl b "
+
+Create vertical pane:
+
+- ctrl b %
+
+Resize pane:
+
+- ctrl b :
+- resize-pane -t 1 -y 5
+
+Change panes:
+
+- ctrl b o
+
+Swtich to pane visual mode:
+
+- ctrl b [
+
+Quite pane visual mode
+
+- q
+
 #### Current branch in terminal
 ```
 parse_git_branch() {
