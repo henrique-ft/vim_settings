@@ -31,13 +31,17 @@ set noshowmode
 "Mouse workds
 set mouse=a
 "Add highlight for searchs
-set hlsearch 
+set hlsearch
 "f2 NERDTree"
 silent! nmap <F1> :NERDTreeToggle<CR>
 silent! map <F2> :NERDTreeFind<CR>
 let g:NERDTreeMapActivateNode="<F2>"
 let g:NERDTreeMapPreview="<F3>"
-"
+
+"Enable better whitespaces for default
+let g:better_whitespace_enabled=1
+let g:strip_whitespace_on_save=1
+
 "CTRLP Maps
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
