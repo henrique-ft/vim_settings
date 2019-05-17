@@ -14,7 +14,8 @@ Plug 'crusoexia/vim-monokai'
 Plug 'dyng/ctrlsf.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'pangloss/vim-javascript'
-
+"Tmux
+Plug 'christoomey/vim-tmux-navigator'
 "https://docs.emmet.io/cheat-sheet/"
 Plug 'mattn/emmet-vim'
 
@@ -85,6 +86,14 @@ autocmd VimEnter * IndentLinesToggle
 autocmd VimEnter * CloseTagEnableBuffer
 
 autocmd FileType ruby compiler ruby
+
+"Tmux navigator"
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> <A-Left> :TmuxNavigateLeft<CR>
+nnoremap <silent> <A-Down> :TmuxNavigateDow<CR>
+nnoremap <silent> <A-Up> :TmuxNavigateUp<CR>
+nnoremap <silent> <A-Right> :TmuxNavigateRight<CR>
 
 "Endwise (tpope/vim-endwise)
 "------------------------------------------------------------------------------------------------------------------------------------
