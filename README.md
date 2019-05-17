@@ -33,11 +33,10 @@ Create vertical pane:
 Resize pane:
 
 - ctrl b :
-- resize-pane -t 1 -y 5
+- resize-pane -t 1 -y 9
 
-Change panes:
-
-- ctrl b o
+Change panes (with Vim include):
+- Alt + Arrows
 
 Swtich to pane visual mode:
 
