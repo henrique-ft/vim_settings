@@ -1,6 +1,6 @@
 # VimSettings
 
-### Extra installations
+### Extra installations / configurations
 
 #### SilverSearch
 
