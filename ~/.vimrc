@@ -95,6 +95,10 @@ nnoremap <silent> <A-Down> :TmuxNavigateDow<CR>
 nnoremap <silent> <A-Up> :TmuxNavigateUp<CR>
 nnoremap <silent> <A-Right> :TmuxNavigateRight<CR>
 
+"Fast navigation in ctrl + arrows"
+nnoremap <C-Up> <C-u>
+nnoremap <C-Down> <C-d>
+
 "Endwise (tpope/vim-endwise)
 "------------------------------------------------------------------------------------------------------------------------------------
 
