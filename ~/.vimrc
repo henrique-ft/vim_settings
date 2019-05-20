@@ -20,6 +20,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'mattn/emmet-vim'
 "For Blocks Comments with '\ cc' and '/ c <space>'
 Plug 'scrooloose/nerdcommenter'
+Plug 'kshenoy/vim-signature'
 
 call plug#end()
 
