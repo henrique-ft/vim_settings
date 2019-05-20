@@ -18,6 +18,8 @@ Plug 'pangloss/vim-javascript'
 Plug 'christoomey/vim-tmux-navigator'
 "https://docs.emmet.io/cheat-sheet/"
 Plug 'mattn/emmet-vim'
+"For Blocks Comments with '\ cc' and '/ c <space>'
+Plug 'scrooloose/nerdcommenter'
 
 call plug#end()
 
@@ -85,7 +87,7 @@ autocmd VimEnter * CloseTagEnableBuffer
 
 autocmd FileType ruby compiler ruby
 
-"Alt+arrow Navigation"
+"Alt+arrow or hjkl Navigation"
 nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
