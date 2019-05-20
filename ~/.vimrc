@@ -29,12 +29,15 @@ set expandtab
 set number
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set noshowmode
+
 "Mouse workds
 set mouse=a
+
 "Add highlight for searchs
 set hlsearch
+
 "f2 NERDTree"
-silent! nmap <F1> :NERDTreeToggle<CR>
+silent! nmap <F12> :NERDTreeToggle<CR>
 silent! map <F2> :NERDTreeFind<CR>
 let g:NERDTreeMapActivateNode="<F2>"
 let g:NERDTreeMapPreview="<F3>"
@@ -46,17 +49,10 @@ let g:strip_whitespace_on_save=1
 "CTRLP Maps
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-"Alt+arrow Navigation"
-nmap <silent> <A-Up> :wincmd k<CR>
-nmap <silent> <A-Down> :wincmd j<CR>
-nmap <silent> <A-Left> :wincmd h<CR>
-nmap <silent> <A-Right> :wincmd l<CR>
-"
+
 "Set relative number"
 map <silent> <F4> :set relativenumber!<CR>
 "
-"Open terminal with F5"
-map <silent> <F5> :term<CR>
 "Some system may need it, others not"
 set termguicolors
 set t_Co=256
@@ -66,8 +62,10 @@ let g:indentLine_color_term = 239
 let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:closetag_filenames = '*.erb,*.html,*.xhtml,*.phtml'
 let g:closetag_filetypes = 'html,xhtml,phtml'
+
 " Press Space to turn off highlighting and clear any message already displayed.
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
 "Html auto complete"
 inoremap " ""<left>
 inoremap ' ''<left>
@@ -87,9 +85,15 @@ autocmd VimEnter * CloseTagEnableBuffer
 
 autocmd FileType ruby compiler ruby
 
+"Alt+arrow Navigation"
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
+"
+
 "Tmux navigator"
 let g:tmux_navigator_no_mappings = 1
-
 nnoremap <silent> <A-Left> :TmuxNavigateLeft<CR>
 nnoremap <silent> <A-Down> :TmuxNavigateDow<CR>
 nnoremap <silent> <A-Up> :TmuxNavigateUp<CR>
@@ -98,6 +102,9 @@ nnoremap <silent> <A-Right> :TmuxNavigateRight<CR>
 "Fast navigation in ctrl + arrows"
 nnoremap <C-Up> <C-u>
 nnoremap <C-Down> <C-d>
+
+"Fast word finding in project"
+nnoremap <silent> <F1> :Ack <cword><CR>
 
 "Endwise (tpope/vim-endwise)
 "------------------------------------------------------------------------------------------------------------------------------------
