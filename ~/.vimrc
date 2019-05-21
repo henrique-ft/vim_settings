@@ -12,8 +12,8 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'elixir-editors/vim-elixir'
 Plug 'crusoexia/vim-monokai'
 Plug 'dyng/ctrlsf.vim'
-Plug 'itchyny/lightline.vim'
 Plug 'pangloss/vim-javascript'
+Plug 'itchyny/lightline.vim'
 "Tmux
 Plug 'christoomey/vim-tmux-navigator'
 "https://docs.emmet.io/cheat-sheet/"
@@ -21,6 +21,8 @@ Plug 'mattn/emmet-vim'
 "For Blocks Comments with '\ cc' and '/ c <space>'
 Plug 'scrooloose/nerdcommenter'
 Plug 'kshenoy/vim-signature'
+Plug 'neovimhaskell/haskell-vim'
+Plug 'tomasiser/vim-code-dark'
 
 call plug#end()
 
@@ -309,3 +311,4 @@ endfunction
 
 " vim:set sw=2 sts=2:
 " -------------------------------------------------------------------------------------------------------------------------------
+
