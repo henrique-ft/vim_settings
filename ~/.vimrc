@@ -121,6 +121,11 @@ nnoremap <silent> <F3> :Ack <cword><CR>
 vmap <F4> <Plug>CtrlSFVwordExec
 nmap <F4> <Plug>CtrlSFCwordPath
 
+"Add space q and space w"
+let mapleader=" "
+nmap <Leader>q :q<CR>
+nmap <Leader>w :w<CR>
+
 "Endwise (tpope/vim-endwise)
 "------------------------------------------------------------------------------------------------------------------------------------
 
@@ -321,4 +326,3 @@ endfunction
 
 " vim:set sw=2 sts=2:
 " -------------------------------------------------------------------------------------------------------------------------------
-
