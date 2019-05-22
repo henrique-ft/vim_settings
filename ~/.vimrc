@@ -62,7 +62,7 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 "Toggle relative number"
-map <silent> <F5> :set relativenumber!<CR>
+map <silent> <F6> :set relativenumber!<CR>
 "
 "Some system may need it, others not"
 set termguicolors
@@ -75,7 +75,7 @@ let g:closetag_filenames = '*.erb,*.html,*.xhtml,*.phtml'
 let g:closetag_filetypes = 'html,xhtml,phtml'
 
 " Press Space to turn off highlighting and clear any message already displayed.
-nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+nnoremap <silent> <F5> :nohlsearch<Bar>:echo<CR>
 
 "Html auto complete"
 inoremap " ""<left>
@@ -112,7 +112,7 @@ nnoremap <silent> <A-Down> :TmuxNavigateDow<CR>
 nnoremap <silent> <A-Up> :TmuxNavigateUp<CR>
 nnoremap <silent> <A-Right> :TmuxNavigateRight<CR>
 
-"Fast navigation in ctrl + arrows"
+"Fast navigation in space + arrows"
 nnoremap <C-Up> <C-u>
 nnoremap <C-Down> <C-d>
 
