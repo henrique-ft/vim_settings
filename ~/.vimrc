@@ -10,7 +10,6 @@ Plug 'alvan/vim-closetag'
 Plug 'airblade/vim-gitgutter'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'elixir-editors/vim-elixir'
-Plug 'crusoexia/vim-monokai'
 Plug 'dyng/ctrlsf.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'itchyny/lightline.vim'
@@ -22,7 +21,13 @@ Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'kshenoy/vim-signature'
 Plug 'neovimhaskell/haskell-vim'
+
+"colors ---------------------"
 Plug 'tomasiser/vim-code-dark'
+Plug 'liuchengxu/space-vim-dark'
+Plug 'crusoexia/vim-monokai'
+Plug 'dracula/vim'
+"----------------------------"
 
 call plug#end()
 
@@ -34,6 +39,7 @@ set expandtab
 set number
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set noshowmode
+set relativenumber
 
 "Mouse workds
 set mouse=a
@@ -43,9 +49,9 @@ set hlsearch
 
 "f2 NERDTree"
 silent! nmap <F12> :NERDTreeToggle<CR>
-silent! map <F2> :NERDTreeFind<CR>
-let g:NERDTreeMapActivateNode="<F2>"
-let g:NERDTreeMapPreview="<F3>"
+silent! map <F1> :NERDTreeFind<CR>
+let g:NERDTreeMapActivateNode="<F1>"
+let g:NERDTreeMapPreview="<F2>"
 
 "Enable better whitespaces for default
 let g:better_whitespace_enabled=1
@@ -55,8 +61,8 @@ let g:strip_whitespace_on_save=1
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
-"Set relative number"
-map <silent> <F4> :set relativenumber!<CR>
+"Toggle relative number"
+map <silent> <F5> :set relativenumber!<CR>
 "
 "Some system may need it, others not"
 set termguicolors
@@ -82,8 +88,10 @@ inoremap {;<CR> {<CR>};<ESC>O
 "
 syntax on
 
-autocmd VimEnter * color monokai
-
+"Colorscheme"
+let g:space_vim_dark_background = 234
+autocmd VimEnter * color space-vim-dark
+"
 autocmd VimEnter * NERDTree
 autocmd VimEnter * IndentLinesToggle
 autocmd VimEnter * CloseTagEnableBuffer
@@ -109,7 +117,8 @@ nnoremap <C-Up> <C-u>
 nnoremap <C-Down> <C-d>
 
 "Fast word finding in project"
-nnoremap <silent> <F1> :Ack <cword><CR>
+nnoremap <silent> <F3> :Ack <cword><CR>
+vmap <F4> <Plug>CtrlSFVwordExec
 
 "Endwise (tpope/vim-endwise)
 "------------------------------------------------------------------------------------------------------------------------------------
