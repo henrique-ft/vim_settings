@@ -49,9 +49,9 @@ set hlsearch
 
 "f2 NERDTree"
 silent! nmap <F12> :NERDTreeToggle<CR>
-silent! map <F1> :NERDTreeFind<CR>
-let g:NERDTreeMapActivateNode="<F1>"
-let g:NERDTreeMapPreview="<F2>"
+silent! map <F2> :NERDTreeFind<CR>
+let g:NERDTreeMapActivateNode="<F2>"
+let g:NERDTreeMapPreview="<F1>"
 
 "Enable better whitespaces for default
 let g:better_whitespace_enabled=1
@@ -119,6 +119,7 @@ nnoremap <C-Down> <C-d>
 "Fast word finding in project"
 nnoremap <silent> <F3> :Ack <cword><CR>
 vmap <F4> <Plug>CtrlSFVwordExec
+nmap <F4> <Plug>CtrlSFCwordPath
 
 "Endwise (tpope/vim-endwise)
 "------------------------------------------------------------------------------------------------------------------------------------
