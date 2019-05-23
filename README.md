@@ -2,6 +2,14 @@
 
 ### Extra installations / configurations
 
+#### Airline
+
+$ git clone http://www.github.com/powerline/fonts.git
+$ cd fonts
+$ ./install.sh
+
+Setar fonte Hack Regular tamanho 10
+
 #### SilverSearch
 
 ```$ apt-get install silversearcher-ag```
