@@ -12,7 +12,9 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'elixir-editors/vim-elixir'
 Plug 'dyng/ctrlsf.vim'
 Plug 'pangloss/vim-javascript'
-Plug 'itchyny/lightline.vim'
+"Plug  'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 "Tmux
 Plug 'christoomey/vim-tmux-navigator'
 "https://docs.emmet.io/cheat-sheet/"
@@ -21,12 +23,12 @@ Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'kshenoy/vim-signature'
 Plug 'neovimhaskell/haskell-vim'
-
+Plug 'zivyangll/git-blame.vim'
 "colors ---------------------"
 Plug 'tomasiser/vim-code-dark'
 Plug 'liuchengxu/space-vim-dark'
 Plug 'crusoexia/vim-monokai'
-Plug 'dracula/vim'
+Plug 'morhetz/gruvbox'
 "----------------------------"
 
 call plug#end()
@@ -41,7 +43,20 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 set noshowmode
 set relativenumber
 
-"Mouse workds
+"Airline configurations"
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_splits = 1
+let g:airline#extensions#tabline#show_tabs = 1
+let g:airline#extensions#tabline#show_tab_nr = 0
+let g:airline#extensions#tabline#show_tab_type = 1
+let g:airline#extensions#tabline#close_symbol = '×'
+let g:airline#extensions#tabline#show_close_button = 0
+let g:airline_powerline_fonts = 1
+map <silent> <F7> :AirlineTheme dark<CR>
+"Add :AirlineTheme dark on enter"
+
+"Mouse works
 set mouse=a
 
 "Add highlight for searchs
@@ -74,7 +89,7 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:closetag_filenames = '*.erb,*.html,*.xhtml,*.phtml'
 let g:closetag_filetypes = 'html,xhtml,phtml'
 
-" Press Space to turn off highlighting and clear any message already displayed.
+"Press Space to turn off highlighting and clear any message already displayed.
 nnoremap <silent> <F5> :nohlsearch<Bar>:echo<CR>
 
 "Html auto complete"
@@ -89,8 +104,9 @@ inoremap {;<CR> {<CR>};<ESC>O
 syntax on
 
 "Colorscheme"
-let g:space_vim_dark_background = 234
-autocmd VimEnter * color space-vim-dark
+"let g:space_vim_dark_background = 234
+"autocmd VimEnter * color space-vim-dark
+autocmd VimEnter * color monokai
 "
 autocmd VimEnter * NERDTree
 autocmd VimEnter * IndentLinesToggle
@@ -121,10 +137,12 @@ nnoremap <silent> <F3> :Ack <cword><CR>
 vmap <F4> <Plug>CtrlSFVwordExec
 nmap <F4> <Plug>CtrlSFCwordPath
 
-"Add space q and space w"
 let mapleader=" "
 nmap <Leader>q :q<CR>
 nmap <Leader>w :w<CR>
+
+"Git Blame"
+nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 
 "Endwise (tpope/vim-endwise)
 "------------------------------------------------------------------------------------------------------------------------------------
