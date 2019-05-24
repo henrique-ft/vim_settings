@@ -2,6 +2,10 @@
 
 ### Extra installations / configurations
 
+#### Change ESC and Capslock
+
+setxkbmap -option caps:swapescape
+
 #### Airline
 
 $ git clone http://www.github.com/powerline/fonts.git
