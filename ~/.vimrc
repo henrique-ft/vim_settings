@@ -53,11 +53,12 @@ let g:airline#extensions#tabline#show_tab_type = 1
 let g:airline#extensions#tabline#close_symbol = '×'
 let g:airline#extensions#tabline#show_close_button = 0
 let g:airline_powerline_fonts = 1
-map <silent> <F7> :AirlineTheme dark<CR>
+let g:airline_theme='minimalist'
+map <silent> <F7> :AirlineTheme minimalist<CR>
 "Add :AirlineTheme dark on enter"
 
 "Mouse works
-set mouse=a
+"set mouse=a
 
 "Add highlight for searchs
 set hlsearch
@@ -119,6 +120,11 @@ nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
+
+nmap <silent> <C-h> :wincmd h<CR>
+nmap <silent> <C-j> :wincmd j<CR>
+nmap <silent> <C-k> :wincmd k<CR>
+nmap <silent> <C-l> :wincmd l<CR>
 "
 
 "Tmux navigator"
@@ -128,6 +134,11 @@ nnoremap <silent> <A-Down> :TmuxNavigateDow<CR>
 nnoremap <silent> <A-Up> :TmuxNavigateUp<CR>
 nnoremap <silent> <A-Right> :TmuxNavigateRight<CR>
 
+nnoremap <silent> {Left-Mapping} :TmuxNavigateLeft<cr>
+nnoremap <silent> {Down-Mapping} :TmuxNavigateDown<cr>
+nnoremap <silent> {Up-Mapping} :TmuxNavigateUp<cr>
+nnoremap <silent> {Right-Mapping} :TmuxNavigateRight<cr>
+nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
 "Fast navigation in space + arrows"
 nnoremap <C-Up> <C-u>
 nnoremap <C-Down> <C-d>
@@ -137,6 +148,7 @@ nnoremap <silent> <F3> :Ack <cword><CR>
 vmap <F4> <Plug>CtrlSFVwordExec
 nmap <F4> <Plug>CtrlSFCwordPath
 
+"Add space q and space w to save and quit
 let mapleader=" "
 nmap <Leader>q :q<CR>
 nmap <Leader>w :w<CR>
@@ -344,3 +356,4 @@ endfunction
 
 " vim:set sw=2 sts=2:
 " -------------------------------------------------------------------------------------------------------------------------------
+
