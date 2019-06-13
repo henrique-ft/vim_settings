@@ -29,6 +29,9 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'liuchengxu/space-vim-dark'
 Plug 'crusoexia/vim-monokai'
 Plug 'morhetz/gruvbox'
+Plug 'nanotech/jellybeans.vim'
+Plug 'haishanh/night-owl.vim'
+Plug 'dunstontc/vim-vscode-theme'
 "----------------------------"
 
 call plug#end()
@@ -55,6 +58,7 @@ let g:airline#extensions#tabline#show_close_button = 0
 let g:airline_powerline_fonts = 1
 let g:airline_theme='minimalist'
 map <silent> <F7> :AirlineTheme minimalist<CR>
+map <silent> <F8> :AirlineTheme dark<CR>
 "Add :AirlineTheme dark on enter"
 
 "Mouse works
@@ -107,7 +111,13 @@ syntax on
 "Colorscheme"
 "let g:space_vim_dark_background = 234
 "autocmd VimEnter * color space-vim-dark
-autocmd VimEnter * color monokai
+"autocmd VimEnter * color monokai
+"autocmd VimEnter * color codedark
+"autocmd VimEnter * color gruvbox
+"autocmd VimEnter * color jellybeans
+"autocmd VimEnter * color night-owl
+autocmd VimEnter * color dark_plus
+autocmd VimEnter * color codedark
 "
 autocmd VimEnter * NERDTree
 autocmd VimEnter * IndentLinesToggle
@@ -356,4 +366,5 @@ endfunction
 
 " vim:set sw=2 sts=2:
 " -------------------------------------------------------------------------------------------------------------------------------
+
 
