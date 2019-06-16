@@ -61,6 +61,7 @@ let g:airline#extensions#tabline#close_symbol = '×'
 let g:airline#extensions#tabline#show_close_button = 0
 let g:airline_powerline_fonts = 1
 let g:airline_theme='minimalist'
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 map <silent> <F7> :AirlineTheme minimalist<CR>
 map <silent> <F8> :AirlineTheme zenburn<CR>
 "Add :AirlineTheme dark on enter"
@@ -124,7 +125,7 @@ autocmd VimEnter * color monokai
 "autocmd VimEnter * color dark_plus
 "autocmd VimEnter * color codedark
 "
-autocmd VimEnter * NERDTree
+"autocmd VimEnter * NERDTree
 autocmd VimEnter * IndentLinesToggle
 autocmd VimEnter * CloseTagEnableBuffer
 
@@ -371,4 +372,3 @@ endfunction
 
 " vim:set sw=2 sts=2:
 " -------------------------------------------------------------------------------------------------------------------------------
-
