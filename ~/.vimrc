@@ -24,6 +24,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'kshenoy/vim-signature'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'zivyangll/git-blame.vim'
+Plug 'ryanoasis/vim-devicons'
 "colors ---------------------"
 Plug 'tomasiser/vim-code-dark'
 Plug 'liuchengxu/space-vim-dark'
@@ -46,6 +47,9 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 set noshowmode
 set relativenumber
 
+"Exclude identatiotn from nerdtree
+let g:indent_guides_exclude_filetypes = ['nerdtree']
+
 "Airline configurations"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
@@ -58,7 +62,7 @@ let g:airline#extensions#tabline#show_close_button = 0
 let g:airline_powerline_fonts = 1
 let g:airline_theme='minimalist'
 map <silent> <F7> :AirlineTheme minimalist<CR>
-map <silent> <F8> :AirlineTheme dark<CR>
+map <silent> <F8> :AirlineTheme zenburn<CR>
 "Add :AirlineTheme dark on enter"
 
 "Mouse works
@@ -85,8 +89,9 @@ let g:ctrlp_cmd = 'CtrlP'
 map <silent> <F6> :set relativenumber!<CR>
 "
 "Some system may need it, others not"
-set termguicolors
+"set termguicolors
 set t_Co=256
+set encoding=UTF-8
 "
 let g:gitgutter_terminal_reports_focus=0
 let g:indentLine_color_term = 239
@@ -111,13 +116,13 @@ syntax on
 "Colorscheme"
 "let g:space_vim_dark_background = 234
 "autocmd VimEnter * color space-vim-dark
-"autocmd VimEnter * color monokai
+autocmd VimEnter * color monokai
 "autocmd VimEnter * color codedark
 "autocmd VimEnter * color gruvbox
 "autocmd VimEnter * color jellybeans
 "autocmd VimEnter * color night-owl
-autocmd VimEnter * color dark_plus
-autocmd VimEnter * color codedark
+"autocmd VimEnter * color dark_plus
+"autocmd VimEnter * color codedark
 "
 autocmd VimEnter * NERDTree
 autocmd VimEnter * IndentLinesToggle
@@ -366,5 +371,4 @@ endfunction
 
 " vim:set sw=2 sts=2:
 " -------------------------------------------------------------------------------------------------------------------------------
-
 
