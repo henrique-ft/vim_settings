@@ -47,6 +47,13 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 set noshowmode
 set relativenumber
 
+"ctrlsf position"
+let g:ctrlsf_position = 'bottom'
+let g:ctrlsf_auto_close = {
+    \ "normal" : 0,
+    \ "compact": 0
+    \}
+
 "Exclude identatiotn from nerdtree
 let g:indent_guides_exclude_filetypes = ['nerdtree']
 
@@ -160,7 +167,7 @@ nnoremap <C-Up> <C-u>
 nnoremap <C-Down> <C-d>
 
 "Fast word finding in project"
-nnoremap <silent> <F3> :Ack <cword><CR>
+map <F3> <Plug>CtrlSFPrompt
 vmap <F4> <Plug>CtrlSFVwordExec
 nmap <F4> <Plug>CtrlSFCwordPath
 
