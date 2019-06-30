@@ -179,6 +179,10 @@ nmap <Leader>w :w<CR>
 "Git Blame"
 nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 
+"Tab navigation
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+
 "Endwise (tpope/vim-endwise)
 "------------------------------------------------------------------------------------------------------------------------------------
 
