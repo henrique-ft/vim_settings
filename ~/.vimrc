@@ -94,7 +94,7 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 "Toggle relative number"
-map <silent> <F6> :set relativenumber!<CR>
+map <C-n> :set relativenumber!<CR>
 "
 "Some system may need it, others not"
 "set termguicolors
@@ -179,9 +179,17 @@ nmap <Leader>w :w<CR>
 "Git Blame"
 nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 
-"Tab navigation
-nnoremap <C-Left> :tabprevious<CR>
-nnoremap <C-Right> :tabnext<CR>
+"Tab Navigation
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>
 
 "Endwise (tpope/vim-endwise)
 "------------------------------------------------------------------------------------------------------------------------------------
