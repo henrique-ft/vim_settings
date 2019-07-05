@@ -25,6 +25,8 @@ Plug 'kshenoy/vim-signature'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'zivyangll/git-blame.vim'
 Plug 'ryanoasis/vim-devicons'
+Plug 'leafgarland/typescript-vim'
+Plug 'akz92/vim-ionic2'
 "colors ---------------------"
 Plug 'tomasiser/vim-code-dark'
 Plug 'liuchengxu/space-vim-dark'
@@ -69,7 +71,6 @@ let g:airline#extensions#tabline#show_close_button = 0
 let g:airline_powerline_fonts = 1
 let g:airline_theme='minimalist'
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-map <silent> <F7> :AirlineTheme minimalist<CR>
 map <silent> <F8> :AirlineTheme zenburn<CR>
 "Add :AirlineTheme dark on enter"
 
@@ -78,6 +79,7 @@ map <silent> <F8> :AirlineTheme zenburn<CR>
 
 "Add highlight for searchs
 set hlsearch
+
 
 "f2 NERDTree"
 silent! nmap <F12> :NERDTreeToggle<CR>
@@ -190,6 +192,12 @@ noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
+
+"VsCode go to definition
+map <leader>f gf<CR>
+
+"VsCode go to definition
+map <F9> K<CR>
 
 "Endwise (tpope/vim-endwise)
 "------------------------------------------------------------------------------------------------------------------------------------
@@ -391,3 +399,4 @@ endfunction
 
 " vim:set sw=2 sts=2:
 " -------------------------------------------------------------------------------------------------------------------------------
+
