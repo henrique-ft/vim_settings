@@ -82,7 +82,7 @@ set hlsearch
 
 
 "f2 NERDTree"
-silent! nmap <F12> :NERDTreeToggle<CR>
+silent! nmap <Tab> :NERDTreeToggle<CR>
 silent! map <F2> :NERDTreeFind<CR>
 let g:NERDTreeMapActivateNode="<F2>"
 let g:NERDTreeMapPreview="<F1>"
@@ -194,9 +194,12 @@ noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
 
 "VsCode go to definition
-map <leader>f gf<CR>
+map <Leader><Leader> G<CR>
 
 "VsCode go to definition
+map <F12> gf<CR>
+
+"VsCode method explanation
 map <F9> K<CR>
 
 "Endwise (tpope/vim-endwise)
@@ -399,4 +402,3 @@ endfunction
 
 " vim:set sw=2 sts=2:
 " -------------------------------------------------------------------------------------------------------------------------------
-
