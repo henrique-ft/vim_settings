@@ -1,0 +1,65 @@
+set backspace=indent,eol,start
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set number
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+set noshowmode
+set relativenumber
+
+map <C-n> :set relativenumber!<CR>
+nnoremap <silent> <F5> :nohlsearch<Bar>:echo<CR>
+
+"Html auto complete"
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+"
+syntax on
+
+"Arrow or hjkl Navigation"
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
+
+nmap <silent> <C-h> :wincmd h<CR>
+nmap <silent> <C-j> :wincmd j<CR>
+nmap <silent> <C-k> :wincmd k<CR>
+nmap <silent> <C-l> :wincmd l<CR>
+"
+
+"fast navigation in space + arrows"
+nnoremap <C-Up> <C-u>
+nnoremap <C-Down> <C-d>
+
+"Add space q and space w to save and quit
+let mapleader=" "
+nmap <Leader>q :q<CR>
+nmap <Leader>w :w<CR>
+
+"Tab Navigation
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>
+
+"VsCode go to definition
+map <F12> gf<CR>
+
+"VsCode method explanation
+map <F9> K<CR>
+
+silent! nmap <Tab> :Explore<CR>
+autocmd VimEnter * Explore
