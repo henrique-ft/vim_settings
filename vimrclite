@@ -11,7 +11,7 @@ set relativenumber
 map <C-n> :set relativenumber!<CR>
 nnoremap <silent> <F5> :nohlsearch<Bar>:echo<CR>
 
-"Html auto complete"
+"Auto complete"
 inoremap " ""<left>
 inoremap ' ''<left>
 inoremap ( ()<left>
@@ -61,5 +61,4 @@ map <F12> gf<CR>
 "VsCode method explanation
 map <F9> K<CR>
 
-silent! nmap <Tab> :Explore<CR>
-autocmd VimEnter * Explore
+silent! nmap <Tab> :Hexplore<CR>
