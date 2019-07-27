@@ -194,9 +194,6 @@ noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
 
 "VsCode go to definition
-map <Leader><Leader> G<CR>
-
-"VsCode go to definition
 map <F12> gf<CR>
 
 "VsCode method explanation
