@@ -1,15 +1,59 @@
+call plug#begin('~/.vim/plugged')
+  Plug 'christoomey/vim-tmux-navigator'
+  Plug 'scrooloose/nerdtree'
+  Plug 'scrooloose/nerdcommenter'
+  Plug 'alvan/vim-closetag'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
+  Plug 'vim-ruby/vim-ruby'
+  Plug 'tpope/vim-rails'
+  Plug 'itchyny/lightline.vim'
+  "cd ~/.vim"
+  "git clone https://github.com/kien/ctrlp.vim.git bundle/ctrlp.vim"
+call plug#end()
+
+colorscheme ron
+
+"Lightline
+set laststatus=2
+if !has('gui_running')
+    set t_Co=256
+endif
+let g:lightline = {
+      \ 'colorscheme': 'PaperColor',
+      \ }
+    
+"CTRLP Maps
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+"Git"
+let g:gitgutter_terminal_reports_focus=0
+
+"Closetags"
+let g:closetag_filenames = '*.erb,*.html,*.xhtml,*.phtml'
+let g:closetag_filetypes = 'html,xhtml,phtml'
+
+"f2 NERDTree"
+silent! nmap <Tab> :NERDTreeToggle<CR>
+silent! map <F2> :NERDTreeFind<CR>
+let g:NERDTreeMapActivateNode="<F2>"
+let g:NERDTreeMapPreview="<F1>"
+
 set backspace=indent,eol,start
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
 set number
-set runtimepath^=~/.vim/bundle/ctrlp.vim
 set noshowmode
 set relativenumber
+"Ctrl P"
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+"Add highlight for searchs
+set hlsearch
 
 map <C-n> :set relativenumber!<CR>
-nnoremap <silent> <F5> :nohlsearch<Bar>:echo<CR>
 
 "Auto complete"
 inoremap " ""<left>
@@ -33,6 +77,19 @@ nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-k> :wincmd k<CR>
 nmap <silent> <C-l> :wincmd l<CR>
 "
+
+"Tmux navigator"
+let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <A-Left> :TmuxNavigateLeft<CR>
+nnoremap <silent> <A-Down> :TmuxNavigateDow<CR>
+nnoremap <silent> <A-Up> :TmuxNavigateUp<CR>
+nnoremap <silent> <A-Right> :TmuxNavigateRight<CR>
+
+nnoremap <silent> {Left-Mapping} :TmuxNavigateLeft<cr>
+nnoremap <silent> {Down-Mapping} :TmuxNavigateDown<cr>
+nnoremap <silent> {Up-Mapping} :TmuxNavigateUp<cr>
+nnoremap <silent> {Right-Mapping} :TmuxNavigateRight<cr>
+nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
 
 "fast navigation in space + arrows"
 nnoremap <C-Up> <C-u>
@@ -60,5 +117,9 @@ map <F12> gf<CR>
 
 "VsCode method explanation
 map <F9> K<CR>
+
+"Press F5 to turn off highlighting and clear any message already displayed.
+nnoremap <silent> <F5> :nohlsearch<Bar>:echo<CR>
+
 
 silent! nmap <Tab> :Hexplore<CR>
