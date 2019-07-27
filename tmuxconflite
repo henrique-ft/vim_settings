@@ -1,0 +1,8 @@
+# Disable esc arrow pane switching
+set -s escape-time 0
+
+# Set accessible keybind
+# remap prefix from 'C-b' to 'C-a'
+unbind C-b
+set-option -g prefix C-a
+bind-key C-a send-prefix
