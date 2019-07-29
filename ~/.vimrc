@@ -12,9 +12,9 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'elixir-editors/vim-elixir'
 Plug 'dyng/ctrlsf.vim'
 Plug 'pangloss/vim-javascript'
-"Plug  'itchyny/lightline.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug  'itchyny/lightline.vim'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
 "Tmux
 Plug 'christoomey/vim-tmux-navigator'
 "https://docs.emmet.io/cheat-sheet/"
@@ -24,7 +24,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'kshenoy/vim-signature'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'zivyangll/git-blame.vim'
-Plug 'ryanoasis/vim-devicons'
+"Plug 'ryanoasis/vim-devicons'
 Plug 'leafgarland/typescript-vim'
 Plug 'akz92/vim-ionic2'
 "colors ---------------------"
@@ -59,19 +59,28 @@ let g:ctrlsf_auto_close = {
 "Exclude identatiotn from nerdtree
 let g:indent_guides_exclude_filetypes = ['nerdtree']
 
+"lightline"
+set laststatus=2
+if !has('gui_running')
+    set t_Co=256
+endif
+let g:lightline = {
+      \ 'colorscheme': 'PaperColor',
+      \ }
+
 "Airline configurations"
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#show_splits = 1
-let g:airline#extensions#tabline#show_tabs = 1
-let g:airline#extensions#tabline#show_tab_nr = 0
-let g:airline#extensions#tabline#show_tab_type = 1
-let g:airline#extensions#tabline#close_symbol = '×'
-let g:airline#extensions#tabline#show_close_button = 0
-let g:airline_powerline_fonts = 1
-let g:airline_theme='minimalist'
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-map <silent> <F8> :AirlineTheme zenburn<CR>
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#show_buffers = 0
+"let g:airline#extensions#tabline#show_splits = 1
+"let g:airline#extensions#tabline#show_tabs = 1
+"let g:airline#extensions#tabline#show_tab_nr = 0
+"let g:airline#extensions#tabline#show_tab_type = 1
+"let g:airline#extensions#tabline#close_symbol = '×'
+"let g:airline#extensions#tabline#show_close_button = 0
+"let g:airline_powerline_fonts = 1
+"let g:airline_theme='minimalist'
+"let g:airline#extensions#tabline#formatter = 'unique_tail'
+"map <silent> <F8> :AirlineTheme zenburn<CR>
 "Add :AirlineTheme dark on enter"
 
 "Mouse works
@@ -80,12 +89,13 @@ map <silent> <F8> :AirlineTheme zenburn<CR>
 "Add highlight for searchs
 set hlsearch
 
-
 "f2 NERDTree"
 silent! nmap <Tab> :NERDTreeToggle<CR>
 silent! map <F2> :NERDTreeFind<CR>
 let g:NERDTreeMapActivateNode="<F2>"
 let g:NERDTreeMapPreview="<F1>"
+
+"silent! nmap <Tab> :Hexplore<CR>
 
 "Enable better whitespaces for default
 let g:better_whitespace_enabled=1
@@ -126,14 +136,14 @@ syntax on
 "Colorscheme"
 "let g:space_vim_dark_background = 234
 "autocmd VimEnter * color space-vim-dark
-autocmd VimEnter * color monokai
+"autocmd VimEnter * color monokai
 "autocmd VimEnter * color codedark
 "autocmd VimEnter * color gruvbox
 "autocmd VimEnter * color jellybeans
 "autocmd VimEnter * color night-owl
 "autocmd VimEnter * color dark_plus
 "autocmd VimEnter * color codedark
-"
+colorscheme ron
 "autocmd VimEnter * NERDTree
 autocmd VimEnter * IndentLinesToggle
 autocmd VimEnter * CloseTagEnableBuffer
