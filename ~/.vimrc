@@ -12,7 +12,7 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'elixir-editors/vim-elixir'
 Plug 'dyng/ctrlsf.vim'
 Plug 'pangloss/vim-javascript'
-Plug  'itchyny/lightline.vim'
+Plug 'itchyny/lightline.vim'
 "Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
 "Tmux
@@ -67,6 +67,10 @@ endif
 let g:lightline = {
       \ 'colorscheme': 'PaperColor',
       \ }
+" Show full path of filename
+function! FilenameForLightline()
+    return expand('%')
+endfunction
 
 "Airline configurations"
 "let g:airline#extensions#tabline#enabled = 1
