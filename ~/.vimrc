@@ -67,7 +67,7 @@ endif
 let g:lightline = {
       \ 'colorscheme': 'PaperColor',
       \ }
-" Show full path of filename
+"Show full path of filename"
 function! FilenameForLightline()
     return expand('%')
 endfunction
@@ -123,7 +123,7 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:closetag_filenames = '*.erb,*.html,*.xhtml,*.phtml'
 let g:closetag_filetypes = 'html,xhtml,phtml'
 
-"Press Space to turn off highlighting and clear any message already displayed.
+"Press F5 to turn off highlighting and clear any message already displayed.
 nnoremap <silent> <F5> :nohlsearch<Bar>:echo<CR>
 
 "Html auto complete"
@@ -155,30 +155,20 @@ autocmd VimEnter * CloseTagEnableBuffer
 autocmd FileType ruby compiler ruby
 
 "Alt+arrow or hjkl Navigation"
-nmap <silent> <A-Up> :wincmd k<CR>
-nmap <silent> <A-Down> :wincmd j<CR>
-nmap <silent> <A-Left> :wincmd h<CR>
-nmap <silent> <A-Right> :wincmd l<CR>
-
 nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-k> :wincmd k<CR>
 nmap <silent> <C-l> :wincmd l<CR>
+
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
 "
 
 "Tmux navigator"
-let g:tmux_navigator_no_mappings = 1
-nnoremap <silent> <A-Left> :TmuxNavigateLeft<CR>
-nnoremap <silent> <A-Down> :TmuxNavigateDow<CR>
-nnoremap <silent> <A-Up> :TmuxNavigateUp<CR>
-nnoremap <silent> <A-Right> :TmuxNavigateRight<CR>
 
-nnoremap <silent> {Left-Mapping} :TmuxNavigateLeft<cr>
-nnoremap <silent> {Down-Mapping} :TmuxNavigateDown<cr>
-nnoremap <silent> {Up-Mapping} :TmuxNavigateUp<cr>
-nnoremap <silent> {Right-Mapping} :TmuxNavigateRight<cr>
-nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
-"Fast navigation in space + arrows"
+"Fast navigation in ctrl + arrows"
 nnoremap <C-Up> <C-u>
 nnoremap <C-Down> <C-d>
 
