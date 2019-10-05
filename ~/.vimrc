@@ -141,6 +141,7 @@ syntax on
 "let g:space_vim_dark_background = 234
 "autocmd VimEnter * color space-vim-dark
 "autocmd VimEnter * color monokai
+"autocmd VimEnter * color alloy
 "autocmd VimEnter * color codedark
 "autocmd VimEnter * color gruvbox
 "autocmd VimEnter * color jellybeans
@@ -165,6 +166,8 @@ nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
 "
+nnoremap H :tabprevious<CR>
+nnoremap L :tabnext<CR>
 
 "Tmux navigator"
 
