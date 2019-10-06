@@ -3,8 +3,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
 Plug 'mileszs/ack.vim'
-Plug 'Yggdroot/indentLine'
+"Plug 'Yggdroot/indentLine'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'alvan/vim-closetag'
 Plug 'airblade/vim-gitgutter'
@@ -57,7 +58,7 @@ let g:ctrlsf_auto_close = {
     \}
 
 "Exclude identatiotn from nerdtree
-let g:indent_guides_exclude_filetypes = ['nerdtree']
+"let g:indent_guides_exclude_filetypes = ['nerdtree']
 
 "lightline"
 set laststatus=2
@@ -94,8 +95,8 @@ endfunction
 set hlsearch
 
 "f2 NERDTree"
-silent! nmap <Tab> :NERDTreeToggle<CR>
-silent! map <F2> :NERDTreeFind<CR>
+silent! nmap <Tab> :NERDTreeTabsToggle<CR>
+silent! map <F2> :NERDTreeTabsFind<CR>
 let g:NERDTreeMapActivateNode="<F2>"
 let g:NERDTreeMapPreview="<F1>"
 
@@ -149,11 +150,12 @@ syntax on
 "autocmd VimEnter * color dark_plus
 "autocmd VimEnter * color codedark
 colorscheme ron
-"autocmd VimEnter * NERDTree
-autocmd VimEnter * IndentLinesToggle
-autocmd VimEnter * CloseTagEnableBuffer
 
+autocmd VimEnter * CloseTagEnableBuffer
 autocmd FileType ruby compiler ruby
+
+"Togle line identation"
+"nnoremap I :IndentLinesToggle<CR>
 
 "Alt+arrow or hjkl Navigation"
 nmap <silent> <C-h> :wincmd h<CR>
@@ -166,9 +168,6 @@ nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
 "
-nnoremap H :tabprevious<CR>
-nnoremap L :tabnext<CR>
-
 "Tmux navigator"
 
 "Fast navigation in ctrl + arrows"
@@ -189,6 +188,8 @@ nmap <Leader>w :w<CR>
 nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 
 "Tab Navigation
+nnoremap H :tabprevious<CR>
+nnoremap L :tabnext<CR>
 noremap <leader>1 1gt
 noremap <leader>2 2gt
 noremap <leader>3 3gt
