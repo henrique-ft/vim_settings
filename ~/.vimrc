@@ -128,13 +128,12 @@ let g:closetag_filetypes = 'html,xhtml,phtml'
 nnoremap <silent> <F5> :nohlsearch<Bar>:echo<CR>
 
 "Html auto complete"
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
+"inoremap ' ''<left>
+"inoremap ( ()<left>
+"inoremap [ []<left>
+"inoremap { {}<left>
+"inoremap {<CR> {<CR>}<ESC>O
+"inoremap {;<CR> {<CR>};<ESC>O
 "
 syntax on
 
