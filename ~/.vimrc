@@ -25,7 +25,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'kshenoy/vim-signature'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'zivyangll/git-blame.vim'
-"Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons'
 Plug 'leafgarland/typescript-vim'
 Plug 'akz92/vim-ionic2'
 "colors ---------------------"
