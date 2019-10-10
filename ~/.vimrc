@@ -5,6 +5,7 @@ Plug 'tpope/vim-rails'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'mileszs/ack.vim'
+Plug 'drmikehenry/vim-fixkey'
 "Plug 'Yggdroot/indentLine'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'alvan/vim-closetag'
@@ -65,6 +66,9 @@ set laststatus=2
 if !has('gui_running')
     set t_Co=256
 endif
+"let g:lightline = {
+      "\ 'colorscheme': 'jellybeans',
+      "\ }
 let g:lightline = {
       \ 'colorscheme': 'PaperColor',
       \ }
@@ -94,9 +98,10 @@ endfunction
 "Add highlight for searchs
 set hlsearch
 
-"f2 NERDTree"
+"NERDTree navigation"
 silent! nmap <Tab> :NERDTreeTabsToggle<CR>
 silent! map <F2> :NERDTreeTabsFind<CR>
+silent! map <F3> t<CR>
 let g:NERDTreeMapActivateNode="<F2>"
 let g:NERDTreeMapPreview="<F1>"
 
@@ -156,27 +161,21 @@ autocmd FileType ruby compiler ruby
 "Togle line identation"
 "nnoremap I :IndentLinesToggle<CR>
 
-"Alt+arrow or hjkl Navigation"
+"ctrl+hjkl or hjkl Navigation"
 nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-k> :wincmd k<CR>
 nmap <silent> <C-l> :wincmd l<CR>
-
-nmap <silent> <A-Up> :wincmd k<CR>
-nmap <silent> <A-Down> :wincmd j<CR>
-nmap <silent> <A-Left> :wincmd h<CR>
-nmap <silent> <A-Right> :wincmd l<CR>
 "
-"Tmux navigator"
 
 "Fast navigation in ctrl + arrows"
-nnoremap <C-Up> <C-u>
-nnoremap <C-Down> <C-d>
+nnoremap <M-k> <C-u>
+nnoremap <M-j> <C-d>
 
 "Fast word finding in project"
-map <F3> <Plug>CtrlSFPrompt
-vmap <F4> <Plug>CtrlSFVwordExec
-nmap <F4> <Plug>CtrlSFCwordPath
+map <F4> <Plug>CtrlSFPrompt
+vmap <F12> <Plug>CtrlSFVwordExec
+nmap <F12> <Plug>CtrlSFCwordPath
 
 "Add space q and space w to save and quit
 let mapleader=" "
@@ -187,8 +186,8 @@ nmap <Leader>w :w<CR>
 nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 
 "Tab Navigation
-nnoremap H :tabprevious<CR>
-nnoremap L :tabnext<CR>
+noremap <M-h> :tabprevious<CR>
+noremap <M-l> :tabnext<CR>
 noremap <leader>1 1gt
 noremap <leader>2 2gt
 noremap <leader>3 3gt
@@ -199,9 +198,6 @@ noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
-
-"VsCode go to definition
-map <F12> gf<CR>
 
 "VsCode method explanation
 map <F9> K<CR>
