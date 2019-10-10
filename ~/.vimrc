@@ -66,12 +66,12 @@ set laststatus=2
 if !has('gui_running')
     set t_Co=256
 endif
-"let g:lightline = {
-      "\ 'colorscheme': 'jellybeans',
-      "\ }
 let g:lightline = {
-      \ 'colorscheme': 'PaperColor',
+      \ 'colorscheme': 'jellybeans',
       \ }
+"let g:lightline = {
+      "\ 'colorscheme': 'PaperColor',
+      "\ }
 "Show full path of filename"
 function! FilenameForLightline()
     return expand('%')
@@ -149,11 +149,11 @@ syntax on
 "autocmd VimEnter * color alloy
 "autocmd VimEnter * color codedark
 "autocmd VimEnter * color gruvbox
-"autocmd VimEnter * color jellybeans
+autocmd VimEnter * color jellybeans
 "autocmd VimEnter * color night-owl
 "autocmd VimEnter * color dark_plus
 "autocmd VimEnter * color codedark
-colorscheme ron
+"colorscheme ron
 
 autocmd VimEnter * CloseTagEnableBuffer
 autocmd FileType ruby compiler ruby
@@ -171,11 +171,6 @@ nmap <silent> <C-l> :wincmd l<CR>
 "Fast navigation in ctrl + arrows"
 nnoremap <M-k> <C-u>
 nnoremap <M-j> <C-d>
-
-"Fast word finding in project"
-map <F4> <Plug>CtrlSFPrompt
-vmap <F12> <Plug>CtrlSFVwordExec
-nmap <F12> <Plug>CtrlSFCwordPath
 
 "Add space q and space w to save and quit
 let mapleader=" "
@@ -198,6 +193,17 @@ noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
+
+"Fast word finding in project"
+map f <Plug>CtrlSFPrompt
+vmap <leader>f <Plug>CtrlSFVwordExec
+nmap <leader>f <Plug>CtrlSFCwordPath
+vmap <F4> <Plug>CtrlSFVwordExec
+nmap <F4> <Plug>CtrlSFCwordPath
+
+" Map line navigation
+map L $
+map H _
 
 "VsCode method explanation
 map <F9> K<CR>
