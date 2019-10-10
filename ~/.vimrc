@@ -66,12 +66,12 @@ set laststatus=2
 if !has('gui_running')
     set t_Co=256
 endif
-let g:lightline = {
-      \ 'colorscheme': 'jellybeans',
-      \ }
 "let g:lightline = {
-      "\ 'colorscheme': 'PaperColor',
+      "\ 'colorscheme': 'jellybeans',
       "\ }
+let g:lightline = {
+      \ 'colorscheme': 'PaperColor',
+      \ }
 "Show full path of filename"
 function! FilenameForLightline()
     return expand('%')
@@ -149,11 +149,11 @@ syntax on
 "autocmd VimEnter * color alloy
 "autocmd VimEnter * color codedark
 "autocmd VimEnter * color gruvbox
-autocmd VimEnter * color jellybeans
+"autocmd VimEnter * color jellybeans
 "autocmd VimEnter * color night-owl
 "autocmd VimEnter * color dark_plus
 "autocmd VimEnter * color codedark
-"colorscheme ron
+colorscheme ron
 
 autocmd VimEnter * CloseTagEnableBuffer
 autocmd FileType ruby compiler ruby
