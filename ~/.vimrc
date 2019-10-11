@@ -101,7 +101,6 @@ set hlsearch
 "NERDTree navigation"
 silent! nmap <Tab> :NERDTreeTabsToggle<CR>
 silent! map <F2> :NERDTreeTabsFind<CR>
-silent! map <F3> t<CR>
 let g:NERDTreeMapActivateNode="<F2>"
 let g:NERDTreeMapPreview="<F1>"
 
@@ -117,6 +116,7 @@ let g:ctrlp_cmd = 'CtrlP'
 
 "Toggle relative number"
 map <C-n> :set relativenumber!<CR>
+map <F12> :set invnumber<CR>
 "
 "Some system may need it, others not"
 "set termguicolors
@@ -168,7 +168,7 @@ nmap <silent> <C-k> :wincmd k<CR>
 nmap <silent> <C-l> :wincmd l<CR>
 "
 
-"Fast navigation in ctrl + arrows"
+"Fast navigation in alt + j k"
 nnoremap <M-k> <C-u>
 nnoremap <M-j> <C-d>
 
@@ -198,6 +198,7 @@ noremap <leader>0 :tablast<cr>
 map f <Plug>CtrlSFPrompt
 vmap <leader>f <Plug>CtrlSFVwordExec
 nmap <leader>f <Plug>CtrlSFCwordPath
+map <F3> <Plug>CtrlSFPrompt
 vmap <F4> <Plug>CtrlSFVwordExec
 nmap <F4> <Plug>CtrlSFCwordPath
 
