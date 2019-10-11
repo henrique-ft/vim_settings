@@ -87,10 +87,11 @@ endfunction
 "let g:airline#extensions#tabline#close_symbol = '×'
 "let g:airline#extensions#tabline#show_close_button = 0
 "let g:airline_powerline_fonts = 1
-"let g:airline_theme='minimalist'
 "let g:airline#extensions#tabline#formatter = 'unique_tail'
+""Elixir theme
+"let g:airline_theme='minimalist'
+"Ruby theme
 "map <silent> <F8> :AirlineTheme zenburn<CR>
-"Add :AirlineTheme dark on enter"
 
 "Mouse works
 "set mouse=a
@@ -145,9 +146,8 @@ syntax on
 "Colorscheme"
 "let g:space_vim_dark_background = 234
 "autocmd VimEnter * color space-vim-dark
-"autocmd VimEnter * color monokai
 "autocmd VimEnter * color alloy
-"autocmd VimEnter * color codedark
+"autocmd VimEnter * color monokai
 "autocmd VimEnter * color gruvbox
 "autocmd VimEnter * color jellybeans
 "autocmd VimEnter * color night-owl
@@ -409,3 +409,4 @@ endfunction
 
 " vim:set sw=2 sts=2:
 " -------------------------------------------------------------------------------------------------------------------------------
+
