@@ -14,9 +14,9 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'elixir-editors/vim-elixir'
 Plug 'dyng/ctrlsf.vim'
 Plug 'pangloss/vim-javascript'
-Plug 'itchyny/lightline.vim'
-"Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
+"Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 "Tmux
 Plug 'christoomey/vim-tmux-navigator'
 "https://docs.emmet.io/cheat-sheet/"
@@ -62,36 +62,36 @@ let g:ctrlsf_auto_close = {
 "let g:indent_guides_exclude_filetypes = ['nerdtree']
 
 "lightline"
-set laststatus=2
-if !has('gui_running')
-    set t_Co=256
-endif
+"set laststatus=2
+"if !has('gui_running')
+    "set t_Co=256
+"endif
+""let g:lightline = {
+      ""\ 'colorscheme': 'jellybeans',
+      ""\ }
 "let g:lightline = {
-      "\ 'colorscheme': 'jellybeans',
+      "\ 'colorscheme': 'PaperColor',
       "\ }
-let g:lightline = {
-      \ 'colorscheme': 'PaperColor',
-      \ }
-"Show full path of filename"
-function! FilenameForLightline()
-    return expand('%')
-endfunction
+""Show full path of filename"
+"function! FilenameForLightline()
+    "return expand('%')
+"endfunction
 
 "Airline configurations"
-"let g:airline#extensions#tabline#enabled = 1
-"let g:airline#extensions#tabline#show_buffers = 0
-"let g:airline#extensions#tabline#show_splits = 1
-"let g:airline#extensions#tabline#show_tabs = 1
-"let g:airline#extensions#tabline#show_tab_nr = 0
-"let g:airline#extensions#tabline#show_tab_type = 1
-"let g:airline#extensions#tabline#close_symbol = '×'
-"let g:airline#extensions#tabline#show_close_button = 0
-"let g:airline_powerline_fonts = 1
-"let g:airline#extensions#tabline#formatter = 'unique_tail'
-""Elixir theme
-"let g:airline_theme='minimalist'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_splits = 1
+let g:airline#extensions#tabline#show_tabs = 1
+let g:airline#extensions#tabline#show_tab_nr = 0
+let g:airline#extensions#tabline#show_tab_type = 1
+let g:airline#extensions#tabline#close_symbol = '×'
+let g:airline#extensions#tabline#show_close_button = 0
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+"Elixir theme
+let g:airline_theme='minimalist'
 "Ruby theme
-"map <silent> <F8> :AirlineTheme zenburn<CR>
+map <silent> <F8> :AirlineTheme minimalist<CR>
 
 "Mouse works
 "set mouse=a
