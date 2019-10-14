@@ -88,10 +88,8 @@ let g:airline#extensions#tabline#close_symbol = '×'
 let g:airline#extensions#tabline#show_close_button = 0
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-"Elixir theme
 let g:airline_theme='minimalist'
-"Ruby theme
-map <silent> <F8> :AirlineTheme minimalist<CR>
+map <silent> <F8> :AirlineTheme zenburn<CR>
 
 "Mouse works
 "set mouse=a
@@ -147,13 +145,16 @@ syntax on
 "let g:space_vim_dark_background = 234
 "autocmd VimEnter * color space-vim-dark
 "autocmd VimEnter * color alloy
-"autocmd VimEnter * color monokai
 "autocmd VimEnter * color gruvbox
 "autocmd VimEnter * color jellybeans
 "autocmd VimEnter * color night-owl
 "autocmd VimEnter * color dark_plus
 "autocmd VimEnter * color codedark
+
+"Elixir Theme
 colorscheme ron
+"Ruby Theme
+"autocmd VimEnter * color monokai
 
 autocmd VimEnter * CloseTagEnableBuffer
 autocmd FileType ruby compiler ruby
@@ -409,4 +410,3 @@ endfunction
 
 " vim:set sw=2 sts=2:
 " -------------------------------------------------------------------------------------------------------------------------------
-
