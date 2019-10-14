@@ -88,8 +88,10 @@ let g:airline#extensions#tabline#close_symbol = '×'
 let g:airline#extensions#tabline#show_close_button = 0
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
+"Elixir Theme'
 let g:airline_theme='minimalist'
-map <silent> <F8> :AirlineTheme zenburn<CR>
+"Ruby Theme'
+map <silent> <F8> :AirlineTheme distinguished<CR>
 
 "Mouse works
 "set mouse=a
@@ -155,6 +157,7 @@ syntax on
 colorscheme ron
 "Ruby Theme
 "autocmd VimEnter * color monokai
+"autocmd VimEnter * color jellybeans
 
 autocmd VimEnter * CloseTagEnableBuffer
 autocmd FileType ruby compiler ruby
