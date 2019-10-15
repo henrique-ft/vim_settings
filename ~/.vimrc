@@ -91,7 +91,7 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 "Elixir Theme'
 let g:airline_theme='minimalist'
 "Ruby Theme'
-map <silent> <F8> :AirlineTheme minimalist<CR>
+map <silent> <F8> :AirlineTheme zenburn<CR>
 
 "Mouse works
 "set mouse=a
@@ -413,4 +413,3 @@ endfunction
 
 " vim:set sw=2 sts=2:
 " -------------------------------------------------------------------------------------------------------------------------------
-
