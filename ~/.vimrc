@@ -50,6 +50,9 @@ set number
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set noshowmode
 set relativenumber
+set nobackup
+set noswapfile
+set noundofile
 
 "ctrlsf position"
 let g:ctrlsf_position = 'bottom'
@@ -59,9 +62,9 @@ let g:ctrlsf_auto_close = {
     \}
 
 "Exclude identatiotn from nerdtree
-"let g:indent_guides_exclude_filetypes = ['nerdtree']
+let g:indent_guides_exclude_filetypes = ['nerdtree']
 
-"lightline"
+""lightline"
 "set laststatus=2
 "if !has('gui_running')
     "set t_Co=256
@@ -71,7 +74,7 @@ let g:ctrlsf_auto_close = {
       ""\ }
 "let g:lightline = {
       "\ 'colorscheme': 'PaperColor',
-      "\ }
+
 ""Show full path of filename"
 "function! FilenameForLightline()
     "return expand('%')
@@ -88,11 +91,9 @@ let g:airline#extensions#tabline#close_symbol = '×'
 let g:airline#extensions#tabline#show_close_button = 0
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-"Elixir Theme'
 let g:airline_theme='minimalist'
-"Ruby Theme'
-map <silent> <F8> :AirlineTheme zenburn<CR>
-
+map <silent> <F7> :AirlineTheme zenburn<CR>
+map <silent> <F8> :AirlineTheme minimalist<CR>
 "Mouse works
 "set mouse=a
 
@@ -130,9 +131,6 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:closetag_filenames = '*.erb,*.html,*.xhtml,*.phtml'
 let g:closetag_filetypes = 'html,xhtml,phtml'
 
-"Press F5 to turn off highlighting and clear any message already displayed.
-nnoremap <silent> <F5> :nohlsearch<Bar>:echo<CR>
-
 "Html auto complete"
 "inoremap ' ''<left>
 "inoremap ( ()<left>
@@ -144,20 +142,19 @@ nnoremap <silent> <F5> :nohlsearch<Bar>:echo<CR>
 syntax on
 
 "Colorscheme"
-"let g:space_vim_dark_background = 234
-"autocmd VimEnter * color space-vim-dark
+"autocmd VimEnter * color jellybeans
 "autocmd VimEnter * color alloy
 "autocmd VimEnter * color gruvbox
-"autocmd VimEnter * color jellybeans
 "autocmd VimEnter * color night-owl
 "autocmd VimEnter * color dark_plus
 "autocmd VimEnter * color codedark
+"colorscheme ron
 
 "Elixir Theme
-"colorscheme ron
+let g:space_vim_dark_background = 234
+autocmd VimEnter * color space-vim-dark
 "Ruby Theme
-autocmd VimEnter * color monokai
-"autocmd VimEnter * color jellybeans
+"autocmd VimEnter * color monokai
 
 autocmd VimEnter * CloseTagEnableBuffer
 autocmd FileType ruby compiler ruby
@@ -199,12 +196,20 @@ noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
 
 "Fast word finding in project"
-map f <Plug>CtrlSFPrompt
+map F <Plug>CtrlSFPrompt
 vmap <leader>f <Plug>CtrlSFVwordExec
 nmap <leader>f <Plug>CtrlSFCwordPath
-map <F3> <Plug>CtrlSFPrompt
-vmap <F4> <Plug>CtrlSFVwordExec
-nmap <F4> <Plug>CtrlSFCwordPath
+"map <F3> <Plug>CtrlSFPrompt
+"vmap <F4> <Plug>CtrlSFVwordExec
+"nmap <F4> <Plug>CtrlSFCwordPath
+
+"Fast word highlighting"
+noremap f *
+"Press \ to turn off highlighting and clear any message already displayed.
+nnoremap \ :noh<return>
+
+"Press CTRL F to search.
+nnoremap <C-f> /
 
 " Map line navigation
 map L $
