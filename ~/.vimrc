@@ -206,6 +206,7 @@ nmap <leader>f <Plug>CtrlSFCwordPath
 "Fast word highlighting"
 noremap f *
 "Press \ to turn off highlighting and clear any message already displayed.
+nnoremap <leader><leader> :noh<return>
 nnoremap \ :noh<return>
 
 "Press CTRL F to search.
