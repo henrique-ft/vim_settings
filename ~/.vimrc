@@ -1,20 +1,32 @@
 call plug#begin('~/.vim/plugged')
 
+" JAVASCRIPT ENVIRONMENT
+Plug 'pangloss/vim-javascript'
+
+" TYPESCRIPT ENVIRONMENT
+"Plug 'akz92/vim-ionic2'
+"Plug 'leafgarland/typescript-vim'
+
+" RAILS ENVIRONMENT
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
+
+" ELIXIR ENVIRONMENT
+Plug 'elixir-editors/vim-elixir'
+
+" HASKELL ENVIRONMENT
+"Plug 'neovimhaskell/haskell-vim'
+
+" < DEFAULT >
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'mileszs/ack.vim'
 Plug 'drmikehenry/vim-fixkey'
-"Plug 'Yggdroot/indentLine'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'alvan/vim-closetag'
 Plug 'airblade/vim-gitgutter'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'elixir-editors/vim-elixir'
 Plug 'dyng/ctrlsf.vim'
-Plug 'pangloss/vim-javascript'
-"Plug 'itchyny/lightline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 "Tmux
@@ -24,11 +36,8 @@ Plug 'mattn/emmet-vim'
 "For Blocks Comments with '\ cc' and '/ c <space>'
 Plug 'scrooloose/nerdcommenter'
 Plug 'kshenoy/vim-signature'
-Plug 'neovimhaskell/haskell-vim'
 Plug 'zivyangll/git-blame.vim'
 Plug 'ryanoasis/vim-devicons'
-Plug 'leafgarland/typescript-vim'
-Plug 'akz92/vim-ionic2'
 "colors ---------------------"
 Plug 'tomasiser/vim-code-dark'
 Plug 'liuchengxu/space-vim-dark'
@@ -61,25 +70,6 @@ let g:ctrlsf_auto_close = {
     \ "compact": 0
     \}
 
-"Exclude identatiotn from nerdtree
-let g:indent_guides_exclude_filetypes = ['nerdtree']
-
-""lightline"
-"set laststatus=2
-"if !has('gui_running')
-    "set t_Co=256
-"endif
-""let g:lightline = {
-      ""\ 'colorscheme': 'jellybeans',
-      ""\ }
-"let g:lightline = {
-      "\ 'colorscheme': 'PaperColor',
-
-""Show full path of filename"
-"function! FilenameForLightline()
-    "return expand('%')
-"endfunction
-
 "Airline configurations"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
@@ -94,8 +84,6 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_theme='minimalist'
 map <silent> <F7> :AirlineTheme zenburn<CR>
 map <silent> <F8> :AirlineTheme minimalist<CR>
-"Mouse works
-"set mouse=a
 
 "Add highlight for searchs
 set hlsearch
@@ -105,8 +93,6 @@ silent! nmap <Tab> :NERDTreeTabsToggle<CR>
 silent! map <F2> :NERDTreeTabsFind<CR>
 let g:NERDTreeMapActivateNode="<F2>"
 let g:NERDTreeMapPreview="<F1>"
-
-"silent! nmap <Tab> :Hexplore<CR>
 
 "Enable better whitespaces for default
 let g:better_whitespace_enabled=1
@@ -135,13 +121,13 @@ let g:closetag_filetypes = 'html,xhtml,phtml'
 "inoremap ' ''<left>
 "inoremap ( ()<left>
 "inoremap [ []<left>
-"inoremap { {}<left>
-"inoremap {<CR> {<CR>}<ESC>O
-"inoremap {;<CR> {<CR>};<ESC>O
+"inoremap { {}<left> " JAVASCRIPT AND TYPESCRIPT ENVIRONMENT
+"inoremap {<CR> {<CR>}<ESC>O " JAVASCRIPT AND TYPESCRIPT ENVIRONMENT
+"inoremap {;<CR> {<CR>};<ESC>O " JAVASCRIPT AND TYPESCRIPT ENVIRONMENT
 "
 syntax on
 
-"Colorscheme"
+"Colorschemes"
 "autocmd VimEnter * color jellybeans
 "autocmd VimEnter * color alloy
 "autocmd VimEnter * color gruvbox
@@ -150,17 +136,17 @@ syntax on
 "autocmd VimEnter * color codedark
 "colorscheme ron
 
-"Elixir Theme
+" ELIXIR ENVIRONMENT
 let g:space_vim_dark_background = 234
 autocmd VimEnter * color space-vim-dark
-"Ruby Theme
+
+" RUBY ENVIRONMENT
 "autocmd VimEnter * color monokai
 
 autocmd VimEnter * CloseTagEnableBuffer
-autocmd FileType ruby compiler ruby
 
-"Togle line identation"
-"nnoremap I :IndentLinesToggle<CR>
+" RUBY ENVIRONMENT
+autocmd FileType ruby compiler ruby
 
 "ctrl+hjkl or hjkl Navigation"
 nmap <silent> <C-h> :wincmd h<CR>
@@ -199,9 +185,6 @@ noremap <leader>0 :tablast<cr>
 map F <Plug>CtrlSFPrompt
 vmap <leader>f <Plug>CtrlSFVwordExec
 nmap <leader>f <Plug>CtrlSFCwordPath
-"map <F3> <Plug>CtrlSFPrompt
-"vmap <F4> <Plug>CtrlSFVwordExec
-"nmap <F4> <Plug>CtrlSFCwordPath
 
 "Fast word highlighting"
 noremap f *
@@ -219,6 +202,7 @@ map H _
 "VsCode method explanation
 map <F9> K<CR>
 
+" RUBY AND ELIXIR ENVIRONMENT
 "Endwise (tpope/vim-endwise)
 "------------------------------------------------------------------------------------------------------------------------------------
 
