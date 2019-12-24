@@ -4,8 +4,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'pangloss/vim-javascript'
 
 " TYPESCRIPT ENVIRONMENT
-"Plug 'akz92/vim-ionic2'
-"Plug 'leafgarland/typescript-vim'
+Plug 'akz92/vim-ionic2'
+Plug 'leafgarland/typescript-vim'
 
 " RAILS ENVIRONMENT
 Plug 'vim-ruby/vim-ruby'
@@ -121,20 +121,30 @@ let g:closetag_filetypes = 'html,xhtml,phtml'
 "inoremap ' ''<left>
 "inoremap ( ()<left>
 "inoremap [ []<left>
-"inoremap { {}<left> " JAVASCRIPT AND TYPESCRIPT ENVIRONMENT
-"inoremap {<CR> {<CR>}<ESC>O " JAVASCRIPT AND TYPESCRIPT ENVIRONMENT
-"inoremap {;<CR> {<CR>};<ESC>O " JAVASCRIPT AND TYPESCRIPT ENVIRONMENT
+
+"NODE / PHP ENVIRONMENT
+"inoremap { {}<left>
+"inoremap {<CR> {<CR>}<ESC>O
+"inoremap {;<CR> {<CR>};<ESC>O
 "
 syntax on
 
 "Colorschemes"
-"autocmd VimEnter * color jellybeans
 "autocmd VimEnter * color alloy
 "autocmd VimEnter * color gruvbox
 "autocmd VimEnter * color night-owl
 "autocmd VimEnter * color dark_plus
-"autocmd VimEnter * color codedark
 "colorscheme ron
+"
+" PHP ENVIRONMENT
+"set background=dark
+"autocmd VimEnter * color gruvbox
+
+" TYPESCRIPT ENVIRONMENT
+"autocmd VimEnter * color jellybeans
+
+" JS ENVIRONMENT
+"autocmd VimEnter * color codedark
 
 " ELIXIR ENVIRONMENT
 let g:space_vim_dark_background = 234
