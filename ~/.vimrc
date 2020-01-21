@@ -4,8 +4,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'pangloss/vim-javascript'
 
 " TYPESCRIPT ENVIRONMENT
-Plug 'akz92/vim-ionic2'
-Plug 'leafgarland/typescript-vim'
+"Plug 'akz92/vim-ionic2'
+"Plug 'leafgarland/typescript-vim'
 
 " RAILS ENVIRONMENT
 Plug 'vim-ruby/vim-ruby'
@@ -47,7 +47,6 @@ Plug 'morhetz/gruvbox'
 Plug 'nanotech/jellybeans.vim'
 Plug 'haishanh/night-owl.vim'
 Plug 'dunstontc/vim-vscode-theme'
-Plug 'mhartington/oceanic-next'
 "----------------------------"
 
 call plug#end()
@@ -146,8 +145,7 @@ syntax on
 "autocmd VimEnter * color gruvbox
 "autocmd VimEnter * color night-owl
 "autocmd VimEnter * color dark_plus
-"let g:space_vim_dark_background = 234
-"autocmd VimEnter * color space-vim-dark
+"autocmd VimEnter * color OceanicNext
 "colorscheme ron
 "
 " PHP || JS / NODE  ENVIRONMENT
@@ -158,7 +156,8 @@ syntax on
 " autocmd VimEnter * color jellybeans
 
 " ELIXIR ENVIRONMENT
-autocmd VimEnter * color OceanicNext
+let g:space_vim_dark_background = 234
+autocmd VimEnter * color space-vim-dark
 
 " RUBY ENVIRONMENT
 "autocmd VimEnter * color monokai
