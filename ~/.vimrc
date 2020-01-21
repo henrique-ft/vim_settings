@@ -13,6 +13,7 @@ Plug 'tpope/vim-rails'
 
 " ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
+Plug 'slashmili/alchemist.vim'
 
 " HASKELL ENVIRONMENT
 "Plug 'neovimhaskell/haskell-vim'
