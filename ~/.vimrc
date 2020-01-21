@@ -46,14 +46,22 @@ Plug 'morhetz/gruvbox'
 Plug 'nanotech/jellybeans.vim'
 Plug 'haishanh/night-owl.vim'
 Plug 'dunstontc/vim-vscode-theme'
+Plug 'mhartington/oceanic-next'
 "----------------------------"
 
 call plug#end()
 
 set backspace=indent,eol,start
+
+" RUBY / ELIXIR ENVIRONMENT
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
+" PHP ENVIRONMENT
+"set tabstop=4
+"set shiftwidth=4
+"set softtabstop=4
+
 set expandtab
 set number
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -69,6 +77,9 @@ let g:ctrlsf_auto_close = {
     \ "normal" : 0,
     \ "compact": 0
     \}
+
+"make italics work
+let &t_ZH="\e[3m"
 
 "Airline configurations"
 let g:airline#extensions#tabline#enabled = 1
@@ -134,26 +145,24 @@ syntax on
 "autocmd VimEnter * color gruvbox
 "autocmd VimEnter * color night-owl
 "autocmd VimEnter * color dark_plus
+"let g:space_vim_dark_background = 234
+"autocmd VimEnter * color space-vim-dark
 "colorscheme ron
 "
-" PHP ENVIRONMENT
+" PHP || JS / NODE  ENVIRONMENT
 "set background=dark
 "autocmd VimEnter * color gruvbox
 
 " TYPESCRIPT ENVIRONMENT
-"autocmd VimEnter * color jellybeans
-
-" JS ENVIRONMENT
-"autocmd VimEnter * color codedark
+" autocmd VimEnter * color jellybeans
 
 " ELIXIR ENVIRONMENT
-let g:space_vim_dark_background = 234
-autocmd VimEnter * color space-vim-dark
+autocmd VimEnter * color OceanicNext
 
 " RUBY ENVIRONMENT
 "autocmd VimEnter * color monokai
 
-autocmd VimEnter * CloseTagEnableBuffer
+"autocmd VimEnter * CloseTagEnableBuffer
 
 " RUBY ENVIRONMENT
 autocmd FileType ruby compiler ruby
