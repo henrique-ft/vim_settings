@@ -32,7 +32,6 @@ Plug 'alvan/vim-closetag'
 Plug 'airblade/vim-gitgutter'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'dyng/ctrlsf.vim'
-"Plug 'itchyny/lightline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 "Tmux
@@ -67,6 +66,12 @@ set softtabstop=2
 "set tabstop=4
 "set shiftwidth=4
 "set softtabstop=4
+
+"stop recording bug
+map q <Nop>
+"stop navigation wrong keys 'bugs'
+map K <Nop>
+map J <Nop>
 
 set expandtab
 set number
@@ -104,26 +109,6 @@ map <silent> <F6> :set background=light<CR> :color PaperColor<CR>
 map <silent> <F7> :AirlineTheme zenburn<CR>
 map <silent> <F8> :AirlineTheme minimalist<CR>
 
-"stop recording bug
-map q <Nop>
-
-""lightline"
-"set laststatus=2
-"if !has('gui_running')
-    "set t_Co=256
-"endif
-"let g:lightline = {
-      "\ 'colorscheme': 'jellybeans'
-      "\ }
-""let g:lightline = {
-      ""\ 'colorscheme': 'PaperColor'}
-
-""Show full path of filename"
-"function! FilenameForLightline()
-    "return expand('%')
-"endfunction
-
-
 "Add highlight for searchs
 set hlsearch
 
@@ -142,8 +127,9 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 "Toggle relative number"
-map <C-n> :set relativenumber!<CR>
-map <F12> :set invnumber<CR>
+" USE MOUSE WITH CTRL KEY PRESSED
+"map <C-n> :set relativenumber!<CR>
+"map <F12> :set invnumber<CR>
 "
 "Some system may need it, others not"
 "set termguicolors
@@ -187,11 +173,11 @@ autocmd VimEnter * CloseTagEnableBuffer
  "autocmd VimEnter * color jellybeans
 
 " ELIXIR ENVIRONMENT
-let g:space_vim_dark_background = 234
-autocmd VimEnter * color space-vim-dark
+"let g:space_vim_dark_background = 234
+"autocmd VimEnter * color space-vim-dark
 
 " RUBY ENVIRONMENT
-"autocmd VimEnter * color monokai
+autocmd VimEnter * color monokai
 autocmd FileType ruby compiler ruby
 
 " MARKDOWN ENVIRONMENT
@@ -232,25 +218,18 @@ noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
 
 "Fast word finding in project"
-map F <Plug>CtrlSFPrompt
+map <C-f> <Plug>CtrlSFPrompt
 vmap <leader>f <Plug>CtrlSFVwordExec
 nmap <leader>f <Plug>CtrlSFCwordPath
 
 "Fast word highlighting"
 noremap f *
-"Press \ to turn off highlighting and clear any message already displayed.
+"Press space space to turn off highlighting and clear any message already displayed.
 nnoremap <leader><leader> :noh<return>
-nnoremap \ :noh<return>
-
-"Press CTRL F to search.
-nnoremap <C-f> /
 
 " Map line navigation
 map L $
 map H _
-
-"VsCode method explanation
-map <F9> K<CR>
 
 " RUBY AND ELIXIR ENVIRONMENT
 "Endwise (tpope/vim-endwise)
