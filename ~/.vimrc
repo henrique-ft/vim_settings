@@ -18,6 +18,10 @@ Plug 'slashmili/alchemist.vim'
 " HASKELL ENVIRONMENT
 "Plug 'neovimhaskell/haskell-vim'
 
+" MARKDOWN ENVIRONMENT
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
 " < DEFAULT >
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
@@ -28,6 +32,7 @@ Plug 'alvan/vim-closetag'
 Plug 'airblade/vim-gitgutter'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'dyng/ctrlsf.vim'
+"Plug 'itchyny/lightline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 "Tmux
@@ -38,7 +43,7 @@ Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'kshenoy/vim-signature'
 Plug 'zivyangll/git-blame.vim'
-Plug 'ryanoasis/vim-devicons'
+"Plug 'ryanoasis/vim-devicons'
 "colors ---------------------"
 Plug 'tomasiser/vim-code-dark'
 Plug 'liuchengxu/space-vim-dark'
@@ -47,6 +52,7 @@ Plug 'morhetz/gruvbox'
 Plug 'nanotech/jellybeans.vim'
 Plug 'haishanh/night-owl.vim'
 Plug 'dunstontc/vim-vscode-theme'
+Plug 'NLKNguyen/papercolor-theme'
 "----------------------------"
 
 call plug#end()
@@ -70,6 +76,7 @@ set relativenumber
 set nobackup
 set noswapfile
 set noundofile
+set nofoldenable
 
 "ctrlsf position"
 let g:ctrlsf_position = 'bottom'
@@ -84,17 +91,38 @@ let &t_ZH="\e[3m"
 "Airline configurations"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#show_splits = 1
+let g:airline#extensions#tabline#show_splits = 0
 let g:airline#extensions#tabline#show_tabs = 1
 let g:airline#extensions#tabline#show_tab_nr = 0
-let g:airline#extensions#tabline#show_tab_type = 1
+let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline#extensions#tabline#close_symbol = '×'
 let g:airline#extensions#tabline#show_close_button = 0
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_theme='minimalist'
+map <silent> <F6> :set background=light<CR> :color PaperColor<CR>
 map <silent> <F7> :AirlineTheme zenburn<CR>
 map <silent> <F8> :AirlineTheme minimalist<CR>
+
+"stop recording bug
+map q <Nop>
+
+""lightline"
+"set laststatus=2
+"if !has('gui_running')
+    "set t_Co=256
+"endif
+"let g:lightline = {
+      "\ 'colorscheme': 'jellybeans'
+      "\ }
+""let g:lightline = {
+      ""\ 'colorscheme': 'PaperColor'}
+
+""Show full path of filename"
+"function! FilenameForLightline()
+    "return expand('%')
+"endfunction
+
 
 "Add highlight for searchs
 set hlsearch
@@ -140,12 +168,15 @@ let g:closetag_filetypes = 'html,xhtml,phtml'
 "
 syntax on
 
+autocmd VimEnter * CloseTagEnableBuffer
+
 "Colorschemes"
 "autocmd VimEnter * color alloy
 "autocmd VimEnter * color gruvbox
 "autocmd VimEnter * color night-owl
 "autocmd VimEnter * color dark_plus
 "autocmd VimEnter * color OceanicNext
+"autocmd VimEnter * color ron
 "colorscheme ron
 "
 " PHP || JS / NODE  ENVIRONMENT
@@ -153,7 +184,7 @@ syntax on
 "autocmd VimEnter * color gruvbox
 
 " TYPESCRIPT ENVIRONMENT
-" autocmd VimEnter * color jellybeans
+ "autocmd VimEnter * color jellybeans
 
 " ELIXIR ENVIRONMENT
 let g:space_vim_dark_background = 234
@@ -161,11 +192,11 @@ autocmd VimEnter * color space-vim-dark
 
 " RUBY ENVIRONMENT
 "autocmd VimEnter * color monokai
-
-"autocmd VimEnter * CloseTagEnableBuffer
-
-" RUBY ENVIRONMENT
 autocmd FileType ruby compiler ruby
+
+" MARKDOWN ENVIRONMENT
+"autocmd FileType markdown set background=light
+"autocmd FileType markdown color PaperColor
 
 "ctrl+hjkl or hjkl Navigation"
 nmap <silent> <C-h> :wincmd h<CR>
