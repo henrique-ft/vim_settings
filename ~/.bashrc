@@ -4,3 +4,6 @@ parse_git_branch() {
 export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 alias tmux="TERM=screen-256color-bce tmux"
+
+#so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
+stty -ixon
