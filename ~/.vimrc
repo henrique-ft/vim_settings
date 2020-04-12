@@ -6,10 +6,15 @@ Plug 'pangloss/vim-javascript'
 " TYPESCRIPT ENVIRONMENT
 "Plug 'akz92/vim-ionic2'
 "Plug 'leafgarland/typescript-vim'
+"Plug 'posva/vim-vue'
+
+" CRYSTAL ENVIRONMENT
+"Plug 'rhysd/vim-crystal'
+"Plug 'elorest/vim-slang'
 
 " RAILS ENVIRONMENT
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
+"Plug 'vim-ruby/vim-ruby'
+"Plug 'tpope/vim-rails'
 
 " ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
@@ -19,10 +24,14 @@ Plug 'slashmili/alchemist.vim'
 "Plug 'neovimhaskell/haskell-vim'
 
 " MARKDOWN ENVIRONMENT
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
+"Plug 'godlygeek/tabular'
+"Plug 'plasticboy/vim-markdown'
+
+"JAVA ENVINRONMENT
+"Plug 'artur-shaik/vim-javacomplete2'
 
 " < DEFAULT >
+Plug 'janko/vim-test'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'mileszs/ack.vim'
@@ -170,19 +179,25 @@ autocmd VimEnter * CloseTagEnableBuffer
 "autocmd VimEnter * color gruvbox
 
 " TYPESCRIPT ENVIRONMENT
- "autocmd VimEnter * color jellybeans
+"autocmd VimEnter * color jellybeans
+
+" CRYSTAL ENVIRONMENT
+"autocmd VimEnter * color night-owl
 
 " ELIXIR ENVIRONMENT
-"let g:space_vim_dark_background = 234
-"autocmd VimEnter * color space-vim-dark
+let g:space_vim_dark_background = 234
+autocmd VimEnter * color space-vim-dark
+" OR
+"set background=light
+"autocmd VimEnter * color PaperColor
 
 " RUBY ENVIRONMENT
-autocmd VimEnter * color monokai
-autocmd FileType ruby compiler ruby
+"autocmd VimEnter * color monokai
+"autocmd FileType ruby compiler ruby
 
 " MARKDOWN ENVIRONMENT
 "autocmd FileType markdown set background=light
-"autocmd FileType markdown color PaperColor
+"autocmd VimEnter * color PaperColor
 
 "ctrl+hjkl or hjkl Navigation"
 nmap <silent> <C-h> :wincmd h<CR>
@@ -216,6 +231,19 @@ noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
+
+" Test files
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> t :TestFile<CR>
+
+"ELIXIR ENVIRONMENT
+nmap <silent> <leader>T :!mix test<CR>
+"RUBY ENVIRONMENT
+"nmap <silent> <leader>T :!rspec<CR>
+
+"nmap <silent> t<C-g> :TestVisit<CR>
+"nmap <silent> t<C-s> :TestSuite<CR>
+"nmap <silent> t<C-l> :TestLast<CR>
 
 "Fast word finding in project"
 map <C-f> <Plug>CtrlSFPrompt
@@ -432,3 +460,4 @@ endfunction
 
 " vim:set sw=2 sts=2:
 " -------------------------------------------------------------------------------------------------------------------------------
+
