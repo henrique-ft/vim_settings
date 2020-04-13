@@ -10,6 +10,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'vim-ruby/vim-ruby'
   Plug 'tpope/vim-rails'
+  Plug 'elixir-editors/vim-elixir'
+  Plug 'slashmili/alchemist.vim'
+  Plug 'janko/vim-test'
   Plug 'itchyny/lightline.vim'
   "Install ctrlp
   "cd ~/.vim"
@@ -29,7 +32,7 @@ endif
 let g:lightline = {
       \ 'colorscheme': 'PaperColor',
       \ }
-    
+
 "CTRLP Maps
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
@@ -88,17 +91,14 @@ nmap <silent> <C-k> :wincmd k<CR>
 nmap <silent> <C-l> :wincmd l<CR>
 "
 
-"Tmux navigator"
-"let g:tmux_navigator_no_mappings = 1
-"nnoremap <silent> <A-Left> :TmuxNavigateLeft<CR>
-"nnoremap <silent> <A-Down> :TmuxNavigateDow<CR>
-"nnoremap <silent> <A-Up> :TmuxNavigateUp<CR>
-"nnoremap <silent> <A-Right> :TmuxNavigateRight<CR>
-"nnoremap <silent> {Left-Mapping} :TmuxNavigateLeft<cr>
-"nnoremap <silent> {Down-Mapping} :TmuxNavigateDown<cr>
-"nnoremap <silent> {Up-Mapping} :TmuxNavigateUp<cr>
-"nnoremap <silent> {Right-Mapping} :TmuxNavigateRight<cr>
-"nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
+" Test files
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> t :TestFile<CR>
+
+"ELIXIR ENVIRONMENT
+nmap <silent> <leader>T :!mix test<CR>
+"RUBY ENVIRONMENT
+"nmap <silent> <leader>T :!rspec<CR>
 
 "fast navigation in space + arrows"
 nnoremap <C-Up> <C-u>
@@ -124,32 +124,27 @@ noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
 
 "Fast word finding in project"
-map F <Plug>CtrlSFPrompt
+map <C-f> <Plug>CtrlSFPrompt
 vmap <leader>f <Plug>CtrlSFVwordExec
 nmap <leader>f <Plug>CtrlSFCwordPath
 
 "Fast word highlighting"
 noremap f *
-
 "Press \ to turn off highlighting and clear any message already displayed.
 nnoremap <leader><leader> :noh<return>
-nnoremap \ :noh<return>
-
-"Press CTRL F to search.
-nnoremap <C-f> /
 
 " Map line navigation
 map L $
 map H _
 
-"VsCode go to definition
-map <F12> gf<CR>
-
-"VsCode method explanation
-map <F9> K<CR>
-
 "Press F5 to turn off highlighting and clear any message already displayed.
 nnoremap <silent> <F5> :nohlsearch<Bar>:echo<CR>
+
+"stop recording bug
+map q <Nop>
+"stop navigation wrong keys 'bugs'
+map K <Nop>
+map J <Nop>
 
 " RUBY AND ELIXIR ENVIRONMENT
 "Endwise (tpope/vim-endwise)
