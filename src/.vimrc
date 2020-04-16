@@ -43,10 +43,11 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'dyng/ctrlsf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'othree/html5.vim'
 "Tmux
 Plug 'christoomey/vim-tmux-navigator'
 "https://docs.emmet.io/cheat-sheet/"
-Plug 'mattn/emmet-vim'
+"Plug 'mattn/emmet-vim'
 "For Blocks Comments with '\ cc' and '/ c <space>'
 Plug 'scrooloose/nerdcommenter'
 Plug 'kshenoy/vim-signature'
@@ -116,7 +117,7 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_theme='minimalist'
 map <silent> <F6> :set background=light<CR> :color PaperColor<CR>
-map <silent> <F7> :AirlineTheme zenburn<CR>
+map <silent> <F7> :AirlineTheme base16_grayscale<CR>
 map <silent> <F8> :AirlineTheme minimalist<CR>
 
 "Add highlight for searchs
