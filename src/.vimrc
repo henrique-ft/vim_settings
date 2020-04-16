@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 " JAVASCRIPT ENVIRONMENT
-Plug 'pangloss/vim-javascript'
+"Plug 'pangloss/vim-javascript'
 
 " TYPESCRIPT ENVIRONMENT
 "Plug 'akz92/vim-ionic2'
@@ -61,6 +61,7 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'haishanh/night-owl.vim'
 Plug 'dunstontc/vim-vscode-theme'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'dracula/vim'
 "----------------------------"
 
 call plug#end()
@@ -185,11 +186,7 @@ autocmd VimEnter * CloseTagEnableBuffer
 "autocmd VimEnter * color night-owl
 
 " ELIXIR ENVIRONMENT
-let g:space_vim_dark_background = 234
-autocmd VimEnter * color space-vim-dark
-" OR
-"set background=light
-"autocmd VimEnter * color PaperColor
+autocmd VimEnter * color dracula
 
 " RUBY ENVIRONMENT
 "autocmd VimEnter * color monokai
@@ -236,10 +233,8 @@ noremap <leader>0 :tablast<cr>
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> t :TestFile<CR>
 
-"ELIXIR ENVIRONMENT
-nmap <silent> <leader>T :!mix test<CR>
-"RUBY ENVIRONMENT
-"nmap <silent> <leader>T :!rspec<CR>
+autocmd FileType elixir nmap <silent> <leader>T :!mix test<CR>
+autocmd FileType ruby nmap <silent> <leader>T :!rspec<CR>
 
 "nmap <silent> t<C-g> :TestVisit<CR>
 "nmap <silent> t<C-s> :TestSuite<CR>
@@ -460,4 +455,3 @@ endfunction
 
 " vim:set sw=2 sts=2:
 " -------------------------------------------------------------------------------------------------------------------------------
-
