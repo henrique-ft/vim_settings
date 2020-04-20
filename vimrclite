@@ -146,6 +146,10 @@ map q <Nop>
 map K <Nop>
 map J <Nop>
 
+" Elixir
+abbr pry require IEx; IEx.pry
+abbr defm defmodule
+
 " RUBY AND ELIXIR ENVIRONMENT
 "Endwise (tpope/vim-endwise)
 "------------------------------------------------------------------------------------------------------------------------------------
