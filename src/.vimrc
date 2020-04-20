@@ -52,7 +52,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdcommenter'
 Plug 'kshenoy/vim-signature'
 Plug 'zivyangll/git-blame.vim'
-"Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons'
 "colors ---------------------"
 Plug 'tomasiser/vim-code-dark'
 Plug 'liuchengxu/space-vim-dark'
@@ -254,6 +254,10 @@ nnoremap <leader><leader> :noh<return>
 " Map line navigation
 map L $
 map H _
+
+" Elixir
+abbr pry require IEx; IEx.pry
+abbr defm defmodule
 
 " RUBY AND ELIXIR ENVIRONMENT
 "Endwise (tpope/vim-endwise)
