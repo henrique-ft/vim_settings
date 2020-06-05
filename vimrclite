@@ -1,4 +1,5 @@
 call plug#begin('~/.vim/plugged')
+  Plug 'severin-lemaignan/vim-minimap'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'scrooloose/nerdtree'
   Plug 'jistr/vim-nerdtree-tabs'
@@ -8,12 +9,16 @@ call plug#begin('~/.vim/plugged')
   Plug 'zivyangll/git-blame.vim'
   Plug 'airblade/vim-gitgutter'
   Plug 'Xuyuanp/nerdtree-git-plugin'
-  Plug 'vim-ruby/vim-ruby'
-  Plug 'tpope/vim-rails'
-  Plug 'elixir-editors/vim-elixir'
   Plug 'slashmili/alchemist.vim'
   Plug 'janko/vim-test'
   Plug 'itchyny/lightline.vim'
+  " NGINX ENVIRONMENT
+  Plug 'chr4/nginx.vim'
+  " RUBY ENVIRONMENT
+  Plug 'vim-ruby/vim-ruby'
+  Plug 'tpope/vim-rails'
+  " ELIXIR ENVIRONMENT
+  Plug 'elixir-editors/vim-elixir'
   "Install ctrlp
   "cd ~/.vim"
   "git clone https://github.com/kien/ctrlp.vim.git bundle/ctrlp.vim"
@@ -48,7 +53,6 @@ let g:closetag_filetypes = 'html,xhtml,phtml'
 
 "Toggle relative number"
 map <C-n> :set relativenumber!<CR>
-map <F12> :set invnumber<CR>
 
 "NERDTree navigation"
 silent! nmap <Tab> :NERDTreeTabsToggle<CR>
@@ -149,6 +153,9 @@ map J <Nop>
 " Elixir
 abbr pry require IEx; IEx.pry
 abbr defm defmodule
+
+" TOGGLE MINIMAP
+let g:minimap_toggle='<C-m>'
 
 " RUBY AND ELIXIR ENVIRONMENT
 "Endwise (tpope/vim-endwise)
