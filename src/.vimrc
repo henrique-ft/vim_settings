@@ -1,37 +1,20 @@
 call plug#begin('~/.vim/plugged')
 
 " JAVASCRIPT ENVIRONMENT
-"Plug 'pangloss/vim-javascript'
-
-" TYPESCRIPT ENVIRONMENT
-"Plug 'akz92/vim-ionic2'
-"Plug 'leafgarland/typescript-vim'
-"Plug 'posva/vim-vue'
-
+Plug 'pangloss/vim-javascript'
+Plug 'posva/vim-vue'
 " CRYSTAL ENVIRONMENT
 "Plug 'rhysd/vim-crystal'
-"Plug 'elorest/vim-slang'
-
 " RAILS ENVIRONMENT
 "Plug 'vim-ruby/vim-ruby'
 "Plug 'tpope/vim-rails'
-
 " ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
 Plug 'slashmili/alchemist.vim'
-
-" HASKELL ENVIRONMENT
-"Plug 'neovimhaskell/haskell-vim'
-
-" MARKDOWN ENVIRONMENT
-"Plug 'godlygeek/tabular'
-"Plug 'plasticboy/vim-markdown'
-
-"JAVA ENVINRONMENT
-"Plug 'artur-shaik/vim-javacomplete2'
-
+" NGINX ENVIRONMENT
+Plug 'chr4/nginx.vim'
 " < DEFAULT >
-Plug 'janko/vim-test'
+Plug 'severin-lemaignan/vim-minimap'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'mileszs/ack.vim'
@@ -44,16 +27,12 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'othree/html5.vim'
-"Tmux
 Plug 'christoomey/vim-tmux-navigator'
-"https://docs.emmet.io/cheat-sheet/"
-"Plug 'mattn/emmet-vim'
-"For Blocks Comments with '\ cc' and '/ c <space>'
 Plug 'scrooloose/nerdcommenter'
 Plug 'kshenoy/vim-signature'
 Plug 'zivyangll/git-blame.vim'
 Plug 'ryanoasis/vim-devicons'
-"colors ---------------------"
+" COLORS
 Plug 'tomasiser/vim-code-dark'
 Plug 'liuchengxu/space-vim-dark'
 Plug 'crusoexia/vim-monokai'
@@ -62,6 +41,8 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'haishanh/night-owl.vim'
 Plug 'dunstontc/vim-vscode-theme'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'mhartington/oceanic-next'
+Plug 'jnurmine/Zenburn'
 Plug 'dracula/vim'
 "----------------------------"
 
@@ -73,7 +54,7 @@ set backspace=indent,eol,start
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-" PHP ENVIRONMENT
+" JS / VUE / NODE ENVIRONMENT
 "set tabstop=4
 "set shiftwidth=4
 "set softtabstop=4
@@ -139,9 +120,9 @@ let g:ctrlp_cmd = 'CtrlP'
 
 "Toggle relative number"
 " USE MOUSE WITH CTRL KEY PRESSED
-"map <C-n> :set relativenumber!<CR>
+map <C-n> :set relativenumber!<CR>
 "map <F12> :set invnumber<CR>
-"
+
 "Some system may need it, others not"
 "set termguicolors
 set t_Co=256
@@ -153,12 +134,12 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:closetag_filenames = '*.erb,*.html,*.xhtml,*.phtml'
 let g:closetag_filetypes = 'html,xhtml,phtml'
 
-"Html auto complete"
+"Auto complete"
 "inoremap ' ''<left>
 "inoremap ( ()<left>
 "inoremap [ []<left>
 
-"NODE / PHP ENVIRONMENT
+" JS / VUE / NODE ENVIRONMENT
 "inoremap { {}<left>
 "inoremap {<CR> {<CR>}<ESC>O
 "inoremap {;<CR> {<CR>};<ESC>O
@@ -175,16 +156,13 @@ autocmd VimEnter * CloseTagEnableBuffer
 "autocmd VimEnter * color OceanicNext
 "autocmd VimEnter * color ron
 "colorscheme ron
-"
-" PHP || JS / NODE  ENVIRONMENT
+
+" JS / VUE / NODE / DENO ENVIRONMENT
 "set background=dark
 "autocmd VimEnter * color gruvbox
 
-" TYPESCRIPT ENVIRONMENT
-"autocmd VimEnter * color jellybeans
-
-" CRYSTAL ENVIRONMENT
-"autocmd VimEnter * color night-owl
+" CRYSTAL
+"autocmd VimEnter * color zenburn
 
 " ELIXIR ENVIRONMENT
 autocmd VimEnter * color dracula
@@ -192,10 +170,6 @@ autocmd VimEnter * color dracula
 " RUBY ENVIRONMENT
 "autocmd VimEnter * color monokai
 "autocmd FileType ruby compiler ruby
-
-" MARKDOWN ENVIRONMENT
-"autocmd FileType markdown set background=light
-"autocmd VimEnter * color PaperColor
 
 "ctrl+hjkl or hjkl Navigation"
 nmap <silent> <C-h> :wincmd h<CR>
@@ -230,17 +204,6 @@ noremap <leader>8 8gt
 noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
 
-" Test files
-nmap <silent> <leader>t :TestNearest<CR>
-nmap <silent> t :TestFile<CR>
-
-autocmd FileType elixir nmap <silent> <leader>T :!mix test<CR>
-autocmd FileType ruby nmap <silent> <leader>T :!rspec<CR>
-
-"nmap <silent> t<C-g> :TestVisit<CR>
-"nmap <silent> t<C-s> :TestSuite<CR>
-"nmap <silent> t<C-l> :TestLast<CR>
-
 "Fast word finding in project"
 map <C-f> <Plug>CtrlSFPrompt
 vmap <leader>f <Plug>CtrlSFVwordExec
@@ -255,11 +218,14 @@ nnoremap <leader><leader> :noh<return>
 map L $
 map H _
 
-" Elixir
+" ELIXIR
 abbr pry require IEx; IEx.pry
 abbr defm defmodule
 
-" RUBY AND ELIXIR ENVIRONMENT
+" TOGGLE MINIMAP
+let g:minimap_toggle='<C-m>'
+
+" RUBY / ELIXIR / CRYSTAL ENVIRONMENT
 "Endwise (tpope/vim-endwise)
 "------------------------------------------------------------------------------------------------------------------------------------
 
