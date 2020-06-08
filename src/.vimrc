@@ -6,11 +6,11 @@ Plug 'posva/vim-vue'
 " CRYSTAL ENVIRONMENT
 "Plug 'rhysd/vim-crystal'
 " RAILS ENVIRONMENT
-"Plug 'vim-ruby/vim-ruby'
-"Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
 " ELIXIR ENVIRONMENT
-Plug 'elixir-editors/vim-elixir'
-Plug 'slashmili/alchemist.vim'
+"Plug 'elixir-editors/vim-elixir'
+"Plug 'slashmili/alchemist.vim'
 " NGINX ENVIRONMENT
 Plug 'chr4/nginx.vim'
 " < DEFAULT >
@@ -113,6 +113,7 @@ let g:NERDTreeMapPreview="<F1>"
 "Enable better whitespaces for default
 let g:better_whitespace_enabled=1
 let g:strip_whitespace_on_save=1
+let g:strip_whitespace_confirm=0
 
 "CTRLP Maps
 let g:ctrlp_map = '<c-p>'
@@ -165,11 +166,11 @@ autocmd VimEnter * CloseTagEnableBuffer
 "autocmd VimEnter * color zenburn
 
 " ELIXIR ENVIRONMENT
-autocmd VimEnter * color dracula
+"autocmd VimEnter * color dracula
 
 " RUBY ENVIRONMENT
-"autocmd VimEnter * color monokai
-"autocmd FileType ruby compiler ruby
+autocmd VimEnter * color monokai
+autocmd FileType ruby compiler ruby
 
 "ctrl+hjkl or hjkl Navigation"
 nmap <silent> <C-h> :wincmd h<CR>
