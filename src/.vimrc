@@ -9,8 +9,8 @@ Plug 'posva/vim-vue'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 " ELIXIR ENVIRONMENT
-"Plug 'elixir-editors/vim-elixir'
-"Plug 'slashmili/alchemist.vim'
+Plug 'elixir-editors/vim-elixir'
+Plug 'slashmili/alchemist.vim'
 " NGINX ENVIRONMENT
 Plug 'chr4/nginx.vim'
 " < DEFAULT >
@@ -32,6 +32,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'kshenoy/vim-signature'
 Plug 'zivyangll/git-blame.vim'
 Plug 'ryanoasis/vim-devicons'
+Plug 'Yggdroot/indentLine'
 " COLORS
 Plug 'tomasiser/vim-code-dark'
 Plug 'liuchengxu/space-vim-dark'
@@ -209,6 +210,11 @@ noremap <leader>0 :tablast<cr>
 map <C-f> <Plug>CtrlSFPrompt
 vmap <leader>f <Plug>CtrlSFVwordExec
 nmap <leader>f <Plug>CtrlSFCwordPath
+
+" Identlines configuration
+nmap <Leader>i :IndentLinesToggle<CR>
+let g:indentLine_char = '│'
+let g:indentLine_fileTypeExclude = ["nerdtree"]
 
 "Fast word highlighting"
 noremap f *
