@@ -213,6 +213,8 @@ nmap <leader>f <Plug>CtrlSFCwordPath
 noremap f *
 "Press space space to turn off highlighting and clear any message already displayed.
 nnoremap <leader><leader> :noh<return>
+"Fast word finding"
+noremap \ /
 
 " Map line navigation
 map L $
