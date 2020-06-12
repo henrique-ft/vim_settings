@@ -12,6 +12,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'slashmili/alchemist.vim'
   Plug 'janko/vim-test'
   Plug 'itchyny/lightline.vim'
+  Plug 'Yggdroot/indentLine'
   " NGINX ENVIRONMENT
   Plug 'chr4/nginx.vim'
   " RUBY ENVIRONMENT
@@ -149,6 +150,11 @@ map q <Nop>
 "stop navigation wrong keys 'bugs'
 map K <Nop>
 map J <Nop>
+
+" Identlines configuration
+nmap <Leader>i :IndentLinesToggle<CR>
+let g:indentLine_char = '│'
+let g:indentLine_fileTypeExclude = ["nerdtree"]
 
 " Elixir
 abbr pry require IEx; IEx.pry
