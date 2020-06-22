@@ -123,7 +123,8 @@ let g:strip_whitespace_confirm=0
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 " SHOW MOST RECENT FILES
-noremap <M-p> :CtrlPMixed<CR>
+"noremap <M-p> :CtrlPMixed<CR>
+noremap <M-p> :CtrlPMRU<CR>
 
 "Toggle relative number"
 " USE MOUSE WITH CTRL KEY PRESSED
