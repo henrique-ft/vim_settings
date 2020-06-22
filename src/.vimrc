@@ -1,14 +1,16 @@
 call plug#begin('~/.vim/plugged')
 
+" CSS ENVIRONMENT
+Plug 'ap/vim-css-color'
 " JAVASCRIPT ENVIRONMENT
 Plug 'pangloss/vim-javascript'
-Plug 'posva/vim-vue'
+Plug 'MaxMEllon/vim-jsx-pretty'
 " CRYSTAL ENVIRONMENT
 "Plug 'rhysd/vim-crystal'
 " RAILS ENVIRONMENT
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
-" ELIXIR ENVIRONMENT
+"Plug 'vim-ruby/vim-ruby'
+"Plug 'tpope/vim-rails'
+"" ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
 Plug 'slashmili/alchemist.vim'
 " NGINX ENVIRONMENT
@@ -166,12 +168,12 @@ autocmd VimEnter * CloseTagEnableBuffer
 " CRYSTAL
 "autocmd VimEnter * color zenburn
 
-" ELIXIR ENVIRONMENT
-"autocmd VimEnter * color dracula
+" ELIXIR / REACT ENVIRONMENT
+autocmd VimEnter * color dracula
 
 " RUBY ENVIRONMENT
-autocmd VimEnter * color monokai
-autocmd FileType ruby compiler ruby
+"autocmd VimEnter * color monokai
+"autocmd FileType ruby compiler ruby
 
 "ctrl+hjkl or hjkl Navigation"
 nmap <silent> <C-h> :wincmd h<CR>
