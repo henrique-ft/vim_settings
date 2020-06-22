@@ -64,6 +64,7 @@ set softtabstop=2
 
 "stop recording bug
 map q <Nop>
+map Q <Nop>
 "stop navigation wrong keys 'bugs'
 map K <Nop>
 map J <Nop>
@@ -121,6 +122,8 @@ let g:strip_whitespace_confirm=0
 "CTRLP Maps
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+" SHOW MOST RECENT FILES
+noremap <M-p> :CtrlPMixed<CR>
 
 "Toggle relative number"
 " USE MOUSE WITH CTRL KEY PRESSED
@@ -169,11 +172,11 @@ autocmd VimEnter * CloseTagEnableBuffer
 "autocmd VimEnter * color zenburn
 
 " ELIXIR / REACT ENVIRONMENT
-autocmd VimEnter * color dracula
+"autocmd VimEnter * color dracula
 
 " RUBY ENVIRONMENT
-"autocmd VimEnter * color monokai
-"autocmd FileType ruby compiler ruby
+autocmd VimEnter * color monokai
+autocmd FileType ruby compiler ruby
 
 "ctrl+hjkl or hjkl Navigation"
 nmap <silent> <C-h> :wincmd h<CR>
@@ -235,6 +238,9 @@ abbr defm defmodule
 
 " TOGGLE MINIMAP
 let g:minimap_toggle='<C-m>'
+
+"autocmd VimEnter * color monokai
+"autocmd FileType ruby compiler ruby
 
 " RUBY / ELIXIR / CRYSTAL ENVIRONMENT
 "Endwise (tpope/vim-endwise)
