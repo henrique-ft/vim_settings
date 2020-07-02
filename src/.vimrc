@@ -8,8 +8,8 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 " CRYSTAL ENVIRONMENT
 "Plug 'rhysd/vim-crystal'
 " RAILS ENVIRONMENT
-"Plug 'vim-ruby/vim-ruby'
-"Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
 "" ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
 Plug 'slashmili/alchemist.vim'
@@ -50,6 +50,29 @@ Plug 'dracula/vim'
 "----------------------------"
 
 call plug#end()
+
+"Colorschemes"
+"autocmd VimEnter * color alloy
+"autocmd VimEnter * color gruvbox
+"autocmd VimEnter * color night-owl
+"autocmd VimEnter * color dark_plus
+"autocmd VimEnter * color OceanicNext
+"autocmd VimEnter * color ron
+"colorscheme ron
+
+" JS / VUE / NODE / DENO ENVIRONMENT
+"set background=dark
+"autocmd VimEnter * color gruvbox
+
+" CRYSTAL
+"autocmd VimEnter * color zenburn
+
+" ELIXIR / REACT ENVIRONMENT
+autocmd VimEnter * color dracula
+
+" RUBY ENVIRONMENT
+"autocmd VimEnter * color monokai
+"autocmd FileType ruby compiler ruby
 
 set backspace=indent,eol,start
 
@@ -155,29 +178,6 @@ let g:closetag_filetypes = 'html,xhtml,phtml'
 syntax on
 
 autocmd VimEnter * CloseTagEnableBuffer
-
-"Colorschemes"
-"autocmd VimEnter * color alloy
-"autocmd VimEnter * color gruvbox
-"autocmd VimEnter * color night-owl
-"autocmd VimEnter * color dark_plus
-"autocmd VimEnter * color OceanicNext
-"autocmd VimEnter * color ron
-"colorscheme ron
-
-" JS / VUE / NODE / DENO ENVIRONMENT
-"set background=dark
-"autocmd VimEnter * color gruvbox
-
-" CRYSTAL
-"autocmd VimEnter * color zenburn
-
-" ELIXIR / REACT ENVIRONMENT
-"autocmd VimEnter * color dracula
-
-" RUBY ENVIRONMENT
-autocmd VimEnter * color monokai
-autocmd FileType ruby compiler ruby
 
 "ctrl+hjkl or hjkl Navigation"
 nmap <silent> <C-h> :wincmd h<CR>
