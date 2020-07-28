@@ -68,19 +68,19 @@ endfunction
 
 
 let s:white       = { "gui": "#E8E8E3", "cterm": "255" }
-let s:black       = { "gui": "#272822", "cterm": "236" }
-let s:lightblack  = { "gui": "#2D2E27", "cterm": "237" }
-let s:lightblack2 = { "gui": "#383a3e", "cterm": "238" }
-let s:darkblack   = { "gui": "#211F1C", "cterm": "235" }
+let s:black       = { "gui": "#272822", "cterm": "233" }
+let s:lightblack  = { "gui": "#2D2E27", "cterm": "235" }
+let s:lightblack2 = { "gui": "#383a3e", "cterm": "237" }
+let s:darkblack   = { "gui": "#211F1C", "cterm": "232" }
 let s:grey        = { "gui": "#8F908A", "cterm": "243" }
 let s:lightgrey   = { "gui": "#575b61", "cterm": "239" }
 let s:darkgrey    = { "gui": "#64645e", "cterm": "241" }
 let s:warmgrey    = { "gui": "#75715E", "cterm": "59" }
 
-let s:pink        = { "gui": "#F92772", "cterm": "198" }
-let s:green       = { "gui": "#A6E22D", "cterm": "82" }
+let s:pink        = { "gui": "#a91718", "cterm": "1" }
+let s:green       = { "gui": "#A6E22D", "cterm": "155" }
 let s:aqua        = { "gui": "#66d9ef", "cterm": "81" }
-let s:yellow      = { "gui": "#E6DB74", "cterm": "186" }
+let s:yellow      = { "gui": "#E6DB74", "cterm": "228" }
 let s:orange      = { "gui": "#FD9720", "cterm": "208" }
 let s:purple      = { "gui": "#ae81ff", "cterm": "177" }
 let s:red         = { "gui": "#e73c50", "cterm": "196" }
@@ -280,7 +280,7 @@ call s:h("lessVariable",        { "fg": s:green })
 call s:h("rubyInterpolationDelimiter",  {})
 call s:h("rubyInstanceVariable",        {})
 call s:h("rubyGlobalVariable",          {})
-call s:h("rubyClassVariable",           {})
+call s:h("rubyClassVariable",           {"fg": s:purple})
 call s:h("rubyPseudoVariable",          {})
 call s:h("rubyFunction",                { "fg": s:green })
 call s:h("rubyStringDelimiter",         { "fg": s:yellow })
