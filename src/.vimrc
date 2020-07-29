@@ -71,8 +71,8 @@ call plug#end()
 autocmd VimEnter * color dracula
 
 " RUBY ENVIRONMENT
-"autocmd VimEnter * color monokai
-"autocmd FileType ruby compiler ruby
+autocmd VimEnter * color ruby_box
+autocmd FileType ruby compiler ruby
 
 set backspace=indent,eol,start
 
@@ -101,6 +101,8 @@ set nobackup
 set noswapfile
 set noundofile
 set nofoldenable
+" Identation on past
+nnoremap p p=`]
 
 "ctrlsf position"
 let g:ctrlsf_position = 'bottom'
