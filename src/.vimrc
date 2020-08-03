@@ -5,14 +5,14 @@ Plug 'ap/vim-css-color'
 " JAVASCRIPT ENVIRONMENT
 Plug 'pangloss/vim-javascript'
 Plug 'MaxMEllon/vim-jsx-pretty'
-" CRYSTAL ENVIRONMENT
-"Plug 'rhysd/vim-crystal'
 " RAILS ENVIRONMENT
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 "" ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
 Plug 'slashmili/alchemist.vim'
+" RUST ENVIRONMENT
+Plug 'rust-lang/rust.vim'
 " NGINX ENVIRONMENT
 Plug 'chr4/nginx.vim'
 " < DEFAULT >
@@ -64,15 +64,15 @@ call plug#end()
 "set background=dark
 "autocmd VimEnter * color gruvbox
 
-" CRYSTAL
-"autocmd VimEnter * color zenburn
+" RUST
+autocmd VimEnter * color zenburn
 
 " ELIXIR / REACT ENVIRONMENT
-autocmd VimEnter * color dracula
+"autocmd VimEnter * color dracula
 
 " RUBY ENVIRONMENT
-autocmd VimEnter * color ruby_box
-autocmd FileType ruby compiler ruby
+"autocmd VimEnter * color ruby_box
+"autocmd FileType ruby compiler ruby
 
 set backspace=indent,eol,start
 
