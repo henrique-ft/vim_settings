@@ -8,11 +8,12 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 " RAILS ENVIRONMENT
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
-"" ELIXIR ENVIRONMENT
-Plug 'elixir-editors/vim-elixir'
-Plug 'slashmili/alchemist.vim'
 " RUST ENVIRONMENT
 Plug 'rust-lang/rust.vim'
+Plug 'mustache/vim-mustache-handlebars'
+" ELIXIR ENVIRONMENT
+Plug 'elixir-editors/vim-elixir'
+Plug 'slashmili/alchemist.vim'
 " NGINX ENVIRONMENT
 Plug 'chr4/nginx.vim'
 " < DEFAULT >
@@ -80,7 +81,7 @@ set backspace=indent,eol,start
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-" JS / VUE / NODE ENVIRONMENT
+" RUST / JS / VUE / NODE ENVIRONMENT
 "set tabstop=4
 "set shiftwidth=4
 "set softtabstop=4
@@ -172,7 +173,7 @@ let g:closetag_filetypes = 'html,xhtml,phtml'
 "inoremap ( ()<left>
 "inoremap [ []<left>
 
-" JS / VUE / NODE ENVIRONMENT
+" RUST / JS / VUE / NODE ENVIRONMENT
 "inoremap { {}<left>
 "inoremap {<CR> {<CR>}<ESC>O
 "inoremap {;<CR> {<CR>};<ESC>O
