@@ -67,6 +67,7 @@ call plug#end()
 
 " RUST
 autocmd VimEnter * color zenburn
+let g:mustache_abbreviations = 1
 
 " ELIXIR / REACT ENVIRONMENT
 "autocmd VimEnter * color dracula
