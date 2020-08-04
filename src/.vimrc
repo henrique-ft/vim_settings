@@ -8,12 +8,12 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 " RAILS ENVIRONMENT
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
-" RUST ENVIRONMENT
-Plug 'rust-lang/rust.vim'
-Plug 'mustache/vim-mustache-handlebars'
 " ELIXIR ENVIRONMENT
-Plug 'elixir-editors/vim-elixir'
-Plug 'slashmili/alchemist.vim'
+"Plug 'elixir-editors/vim-elixir'
+"Plug 'slashmili/alchemist.vim'
+" RUST ENVIRONMENT
+"Plug 'rust-lang/rust.vim'
+"Plug 'mustache/vim-mustache-handlebars'
 " NGINX ENVIRONMENT
 Plug 'chr4/nginx.vim'
 " < DEFAULT >
@@ -66,15 +66,15 @@ call plug#end()
 "autocmd VimEnter * color gruvbox
 
 " RUST
-autocmd VimEnter * color zenburn
-let g:mustache_abbreviations = 1
+"autocmd VimEnter * color zenburn
+"let g:mustache_abbreviations = 1
 
 " ELIXIR / REACT ENVIRONMENT
 "autocmd VimEnter * color dracula
 
 " RUBY ENVIRONMENT
-"autocmd VimEnter * color ruby_box
-"autocmd FileType ruby compiler ruby
+autocmd VimEnter * color ruby_box
+autocmd FileType ruby compiler ruby
 
 set backspace=indent,eol,start
 
