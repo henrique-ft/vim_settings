@@ -11,8 +11,9 @@ Plug 'tpope/vim-rails'
 " ELIXIR ENVIRONMENT
 "Plug 'elixir-editors/vim-elixir'
 "Plug 'slashmili/alchemist.vim'
-" CRYSTAL ENVIRONMENT
-Plug 'vim-crystal/vim-crystal'
+" RUST ENVIRONMENT
+"Plug 'rust-lang/rust.vim'
+"Plug 'mustache/vim-mustache-handlebars'
 " NGINX ENVIRONMENT
 Plug 'chr4/nginx.vim'
 " < DEFAULT >
@@ -63,16 +64,17 @@ call plug#end()
 " JS / VUE / NODE / DENO ENVIRONMENT
 "set background=dark
 "autocmd VimEnter * color gruvbox
-"
-" RUBY ENVIRONMENT
-"autocmd VimEnter * color ruby_box
-"autocmd FileType ruby compiler ruby
+
+" RUST
+"autocmd VimEnter * color zenburn
+"let g:mustache_abbreviations = 1
 
 " ELIXIR / REACT ENVIRONMENT
 "autocmd VimEnter * color dracula
 
-" CRYSTAL
-autocmd VimEnter * color zenburn
+" RUBY ENVIRONMENT
+autocmd VimEnter * color ruby_box
+autocmd FileType ruby compiler ruby
 
 set backspace=indent,eol,start
 
