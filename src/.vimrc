@@ -4,13 +4,16 @@ call plug#begin('~/.vim/plugged')
 Plug 'ap/vim-css-color'
 " JAVASCRIPT ENVIRONMENT
 Plug 'pangloss/vim-javascript'
-Plug 'MaxMEllon/vim-jsx-pretty'
+" REACT
+"Plug 'MaxMEllon/vim-jsx-pretty'
+" VUE
+"Plug 'posva/vim-vue'
 " RAILS ENVIRONMENT
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
+"Plug 'vim-ruby/vim-ruby'
+"Plug 'tpope/vim-rails'
 " ELIXIR ENVIRONMENT
-"Plug 'elixir-editors/vim-elixir'
-"Plug 'slashmili/alchemist.vim'
+Plug 'elixir-editors/vim-elixir'
+Plug 'slashmili/alchemist.vim'
 " RUST ENVIRONMENT
 "Plug 'rust-lang/rust.vim'
 "Plug 'mustache/vim-mustache-handlebars'
@@ -65,16 +68,16 @@ call plug#end()
 "set background=dark
 "autocmd VimEnter * color gruvbox
 
-" RUST
+" RUST ENVIRONMENT
 "autocmd VimEnter * color zenburn
 "let g:mustache_abbreviations = 1
 
 " ELIXIR / REACT ENVIRONMENT
-"autocmd VimEnter * color dracula
+autocmd VimEnter * color dracula
 
 " RUBY ENVIRONMENT
-autocmd VimEnter * color ruby_box
-autocmd FileType ruby compiler ruby
+"autocmd VimEnter * color ruby_box
+"autocmd FileType ruby compiler ruby
 
 set backspace=indent,eol,start
 
