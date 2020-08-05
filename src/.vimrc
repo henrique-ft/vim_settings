@@ -5,7 +5,7 @@ Plug 'ap/vim-css-color'
 " JAVASCRIPT / NODE ENVIRONMENT
 Plug 'pangloss/vim-javascript'
 " REACT
-"Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'MaxMEllon/vim-jsx-pretty'
 " VUE
 "Plug 'posva/vim-vue'
 " RUBY / RAILS ENVIRONMENT
@@ -14,6 +14,8 @@ Plug 'pangloss/vim-javascript'
 " ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
 Plug 'slashmili/alchemist.vim'
+" CRYSTAL ENVIRONMENT
+"Plug 'vim-crystal/vim-crystal'
 " NGINX ENVIRONMENT
 Plug 'chr4/nginx.vim'
 " < DEFAULT >
@@ -72,13 +74,17 @@ call plug#end()
 " ELIXIR / REACT ENVIRONMENT
 autocmd VimEnter * color dracula
 
+" CRYSTAL ENVIRONMENT
+"autocmd VimEnter * color zenburn
+
 set backspace=indent,eol,start
 
 " RUBY / ELIXIR ENVIRONMENT
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-" RUST / JS / VUE / NODE ENVIRONMENT
+
+" JAVASCRIPT / NODE / VUE ENVIRONMENT
 "set tabstop=4
 "set shiftwidth=4
 "set softtabstop=4
@@ -170,7 +176,7 @@ let g:closetag_filetypes = 'html,xhtml,phtml'
 "inoremap ( ()<left>
 "inoremap [ []<left>
 
-" RUST / JS / VUE / NODE ENVIRONMENT
+" JAVASCRIPT / NODE / VUE / REACT ENVIRONMENT
 "inoremap { {}<left>
 "inoremap {<CR> {<CR>}<ESC>O
 "inoremap {;<CR> {<CR>};<ESC>O
