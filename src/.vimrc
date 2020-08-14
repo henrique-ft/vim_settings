@@ -15,10 +15,10 @@ Plug 'tpope/vim-rails'
 "Plug 'elixir-editors/vim-elixir'
 "Plug 'slashmili/alchemist.vim'
 " RUST ENVIRONMENT
-Plug 'rust-lang/rust.vim'
-Plug 'mustache/vim-mustache-handlebars'
+"Plug 'rust-lang/rust.vim'
+"Plug 'mustache/vim-mustache-handlebars'
 " NGINX ENVIRONMENT
-Plug 'chr4/nginx.vim'
+"Plug 'chr4/nginx.vim'
 " < DEFAULT >
 Plug 'severin-lemaignan/vim-minimap'
 Plug 'scrooloose/nerdtree'
@@ -39,6 +39,7 @@ Plug 'kshenoy/vim-signature'
 Plug 'zivyangll/git-blame.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'Yggdroot/indentLine'
+Plug 'nvie/vim-togglemouse'
 " COLORS
 Plug 'tomasiser/vim-code-dark'
 Plug 'liuchengxu/space-vim-dark'
@@ -69,14 +70,14 @@ call plug#end()
 "autocmd VimEnter * color gruvbox
 
 " RUBY / RAILS ENVIRONMENT
-"autocmd VimEnter * color ruby_box
-"autocmd FileType ruby compiler ruby
+autocmd VimEnter * color ruby_box
+autocmd FileType ruby compiler ruby
 
 " ELIXIR / REACT ENVIRONMENT
 "autocmd VimEnter * color dracula
 
 " RUST ENVIRONMENT
-autocmd VimEnter * color zenburn
+"autocmd VimEnter * color zenburn
 
 set backspace=indent,eol,start
 
@@ -196,6 +197,8 @@ nmap <silent> <C-l> :wincmd l<CR>
 "Fast navigation in alt + j k"
 nnoremap <M-k> <C-u>
 nnoremap <M-j> <C-d>
+nnoremap K <C-u>
+nnoremap J <C-d>
 
 "Add space q and space w to save and quit
 let mapleader=" "
