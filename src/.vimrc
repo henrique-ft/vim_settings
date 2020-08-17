@@ -5,18 +5,19 @@ Plug 'ap/vim-css-color'
 " JAVASCRIPT / NODE ENVIRONMENT
 Plug 'pangloss/vim-javascript'
 " REACT
-Plug 'MaxMEllon/vim-jsx-pretty'
+"Plug 'MaxMEllon/vim-jsx-pretty'
 " VUE
 "Plug 'posva/vim-vue'
 "RUBY / RAILS ENVIRONMENT
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
+"Plug 'vim-ruby/vim-ruby'
+"Plug 'tpope/vim-rails'
 " ELIXIR ENVIRONMENT
 "Plug 'elixir-editors/vim-elixir'
 "Plug 'slashmili/alchemist.vim'
-" RUST ENVIRONMENT
-"Plug 'rust-lang/rust.vim'
-"Plug 'mustache/vim-mustache-handlebars'
+" HASKELL ENVIRONMENT
+Plug 'neovimhaskell/haskell-vim'
+Plug 'henriquefernandez/yesod.vim'
+Plug 'pbrisbin/vim-syntax-shakespeare'
 " NGINX ENVIRONMENT
 "Plug 'chr4/nginx.vim'
 " < DEFAULT >
@@ -70,14 +71,15 @@ call plug#end()
 "autocmd VimEnter * color gruvbox
 
 " RUBY / RAILS ENVIRONMENT
-autocmd VimEnter * color ruby_box
-autocmd FileType ruby compiler ruby
+"autocmd VimEnter * color ruby_box
+"autocmd FileType ruby compiler ruby
 
 " ELIXIR / REACT ENVIRONMENT
 "autocmd VimEnter * color dracula
 
-" RUST ENVIRONMENT
-"autocmd VimEnter * color zenburn
+"HASKELL ENVIRONMENT
+set background=dark
+autocmd VimEnter * color night-owl
 
 set backspace=indent,eol,start
 
