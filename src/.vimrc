@@ -9,15 +9,13 @@ Plug 'pangloss/vim-javascript'
 " VUE
 "Plug 'posva/vim-vue'
 "RUBY / RAILS ENVIRONMENT
-"Plug 'vim-ruby/vim-ruby'
-"Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
 " ELIXIR ENVIRONMENT
-"Plug 'elixir-editors/vim-elixir'
-"Plug 'slashmili/alchemist.vim'
-" HASKELL ENVIRONMENT
-Plug 'neovimhaskell/haskell-vim'
-Plug 'henriquefernandez/yesod.vim'
-Plug 'pbrisbin/vim-syntax-shakespeare'
+Plug 'elixir-editors/vim-elixir'
+Plug 'slashmili/alchemist.vim'
+" CRYSTAL ENVIRONMENT
+Plug 'vim-crystal/vim-crystal'
 " NGINX ENVIRONMENT
 "Plug 'chr4/nginx.vim'
 " < DEFAULT >
@@ -38,7 +36,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdcommenter'
 Plug 'kshenoy/vim-signature'
 Plug 'zivyangll/git-blame.vim'
-Plug 'ryanoasis/vim-devicons'
+"Plug 'ryanoasis/vim-devicons'
 Plug 'Yggdroot/indentLine'
 Plug 'nvie/vim-togglemouse'
 " COLORS
@@ -75,11 +73,10 @@ call plug#end()
 "autocmd FileType ruby compiler ruby
 
 " ELIXIR / REACT ENVIRONMENT
-"autocmd VimEnter * color dracula
+autocmd VimEnter * color dracula
 
-"HASKELL ENVIRONMENT
-set background=dark
-autocmd VimEnter * color night-owl
+" CRYSTAL ENVIRONMENT
+"autocmd VimEnter * color zenburn
 
 set backspace=indent,eol,start
 
@@ -146,6 +143,11 @@ silent! nmap <Tab> :NERDTreeTabsToggle<CR>
 silent! map <F2> :NERDTreeTabsFind<CR>
 let g:NERDTreeMapActivateNode="<F2>"
 let g:NERDTreeMapPreview="<F1>"
+"highlight! link NERDTreeFlags NERDTreeDir
+"let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
+"let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
+"let g:NERDTreeDirArrowExpandable = "\u00a0"
+"let g:NERDTreeDirArrowCollapsible = "\u00a0"
 
 "Enable better whitespaces for default
 let g:better_whitespace_enabled=1
@@ -251,6 +253,10 @@ abbr defm defmodule
 
 " TOGGLE MINIMAP
 let g:minimap_toggle='<C-m>'
+
+" Ajust vim bug
+let &t_TI = ""
+let &t_TE = ""
 
 "autocmd VimEnter * color monokai
 "autocmd FileType ruby compiler ruby
