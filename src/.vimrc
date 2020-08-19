@@ -1,5 +1,11 @@
 call plug#begin('~/.vim/plugged')
 
+" RUBY / RAILS ENVIRONMENT
+"Plug 'vim-ruby/vim-ruby'
+"Plug 'tpope/vim-rails'
+" ELIXIR ENVIRONMENT
+Plug 'elixir-editors/vim-elixir'
+Plug 'slashmili/alchemist.vim'
 " CSS ENVIRONMENT
 Plug 'ap/vim-css-color'
 " JAVASCRIPT / NODE ENVIRONMENT
@@ -8,14 +14,6 @@ Plug 'pangloss/vim-javascript'
 "Plug 'MaxMEllon/vim-jsx-pretty'
 " VUE
 "Plug 'posva/vim-vue'
-"RUBY / RAILS ENVIRONMENT
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
-" ELIXIR ENVIRONMENT
-Plug 'elixir-editors/vim-elixir'
-Plug 'slashmili/alchemist.vim'
-" CRYSTAL ENVIRONMENT
-Plug 'vim-crystal/vim-crystal'
 " NGINX ENVIRONMENT
 "Plug 'chr4/nginx.vim'
 " < DEFAULT >
@@ -61,12 +59,10 @@ call plug#end()
 "autocmd VimEnter * color night-owl
 "autocmd VimEnter * color dark_plus
 "autocmd VimEnter * color OceanicNext
+"autocmd VimEnter * color jellybeans
+"autocmd VimEnter * color zenburn
 "autocmd VimEnter * color ron
 "colorscheme ron
-
-" JAVASCRIPT / NODE / VUE / DENO ENVIRONMENT
-"set background=dark
-"autocmd VimEnter * color gruvbox
 
 " RUBY / RAILS ENVIRONMENT
 "autocmd VimEnter * color ruby_box
@@ -75,8 +71,9 @@ call plug#end()
 " ELIXIR / REACT ENVIRONMENT
 autocmd VimEnter * color dracula
 
-" CRYSTAL ENVIRONMENT
-"autocmd VimEnter * color zenburn
+" JAVASCRIPT / NODE / VUE / DENO ENVIRONMENT
+"set background=dark
+"autocmd VimEnter * color gruvbox
 
 set backspace=indent,eol,start
 
@@ -255,8 +252,8 @@ abbr defm defmodule
 let g:minimap_toggle='<C-m>'
 
 " Ajust vim bug
-let &t_TI = ""
-let &t_TE = ""
+"let &t_TI = ""
+"let &t_TE = ""
 
 "autocmd VimEnter * color monokai
 "autocmd FileType ruby compiler ruby
