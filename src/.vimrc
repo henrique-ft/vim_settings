@@ -1,11 +1,11 @@
 call plug#begin('~/.vim/plugged')
 
-" ELIXIR / ERLANG ENVIRONMENT
-Plug 'elixir-editors/vim-elixir'
-Plug 'vim-erlang/vim-erlang-runtime'
 " RUBY / RAILS ENVIRONMENT
-"Plug 'vim-ruby/vim-ruby'
-"Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+" ELIXIR / ERLANG ENVIRONMENT
+"Plug 'elixir-editors/vim-elixir'
+"Plug 'vim-erlang/vim-erlang-runtime'
 " CSS ENVIRONMENT
 Plug 'ap/vim-css-color'
 " HTML ENVIRONMENT
@@ -61,12 +61,12 @@ call plug#end()
 "autocmd VimEnter * color ron
 "colorscheme ron
 
-" ELIXIR / ERLANG / REACT ENVIRONMENT
-autocmd VimEnter * color dracula
-
 " RUBY / RAILS ENVIRONMENT
-"autocmd VimEnter * color ruby_box
-"autocmd FileType ruby compiler ruby
+autocmd VimEnter * color ruby_box
+autocmd FileType ruby compiler ruby
+
+" ELIXIR / ERLANG / REACT ENVIRONMENT
+"autocmd VimEnter * color dracula
 
 " JAVASCRIPT / NODE / VUE / DENO ENVIRONMENT
 "set background=dark
