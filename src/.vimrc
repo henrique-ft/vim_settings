@@ -1,17 +1,19 @@
 call plug#begin('~/.vim/plugged')
 
+" ELIXIR / ERLANG ENVIRONMENT
+Plug 'elixir-editors/vim-elixir'
+Plug 'vim-erlang/vim-erlang-runtime'
 " RUBY / RAILS ENVIRONMENT
 "Plug 'vim-ruby/vim-ruby'
 "Plug 'tpope/vim-rails'
-" ELIXIR ENVIRONMENT
-Plug 'elixir-editors/vim-elixir'
-Plug 'slashmili/alchemist.vim'
 " CSS ENVIRONMENT
 Plug 'ap/vim-css-color'
+" HTML ENVIRONMENT
+Plug 'othree/html5.vim'
 " JAVASCRIPT / NODE ENVIRONMENT
 Plug 'pangloss/vim-javascript'
 " REACT
-"Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'MaxMEllon/vim-jsx-pretty'
 " VUE
 "Plug 'posva/vim-vue'
 " NGINX ENVIRONMENT
@@ -29,12 +31,10 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'dyng/ctrlsf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'othree/html5.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdcommenter'
 Plug 'kshenoy/vim-signature'
 Plug 'zivyangll/git-blame.vim'
-"Plug 'ryanoasis/vim-devicons'
 Plug 'Yggdroot/indentLine'
 Plug 'nvie/vim-togglemouse'
 " COLORS
@@ -50,7 +50,6 @@ Plug 'mhartington/oceanic-next'
 Plug 'jnurmine/Zenburn'
 Plug 'dracula/vim'
 "----------------------------"
-
 call plug#end()
 
 "Colorschemes"
@@ -59,17 +58,15 @@ call plug#end()
 "autocmd VimEnter * color night-owl
 "autocmd VimEnter * color dark_plus
 "autocmd VimEnter * color OceanicNext
-"autocmd VimEnter * color jellybeans
-"autocmd VimEnter * color zenburn
 "autocmd VimEnter * color ron
 "colorscheme ron
+
+" ELIXIR / ERLANG / REACT ENVIRONMENT
+autocmd VimEnter * color dracula
 
 " RUBY / RAILS ENVIRONMENT
 "autocmd VimEnter * color ruby_box
 "autocmd FileType ruby compiler ruby
-
-" ELIXIR / REACT ENVIRONMENT
-autocmd VimEnter * color dracula
 
 " JAVASCRIPT / NODE / VUE / DENO ENVIRONMENT
 "set background=dark
@@ -252,8 +249,8 @@ abbr defm defmodule
 let g:minimap_toggle='<C-m>'
 
 " Ajust vim bug
-"let &t_TI = ""
-"let &t_TE = ""
+let &t_TI = ""
+let &t_TE = ""
 
 "autocmd VimEnter * color monokai
 "autocmd FileType ruby compiler ruby
