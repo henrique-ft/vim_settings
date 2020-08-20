@@ -1,4 +1,4 @@
-" File:       alloy.vim
+" File:       ruby_box.vim
 " Maintainer: Henrique Fernandez
 " URL:        https://github.com/crusoexia/vim-monokai
 " License:    MIT
@@ -10,13 +10,16 @@ if !has("gui_running") && &t_Co < 256
   finish
 endif
 
-if ! exists("g:monokai_gui_italic")
-    let g:monokai_gui_italic = 1
-endif
+let g:monokai_gui_italic = 0
+let g:monokai_term_italic = 1
 
-if ! exists("g:monokai_term_italic")
-    let g:monokai_term_italic = 0
-endif
+"if ! exists("g:monokai_gui_italic")
+    "let g:monokai_gui_italic = 1
+"endif
+
+"if ! exists("g:monokai_term_italic")
+    "let g:monokai_term_italic = 0
+"endif
 
 let g:monokai_termcolors = 256 " does not support 16 color term right now.
 
@@ -27,7 +30,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "monokai"
+let colors_name = "ruby_box"
 
 function! s:h(group, style)
   let s:ctermformat = "NONE"
@@ -298,7 +301,7 @@ call s:h("rubyRailsARAssociationMethod",{ "fg": s:orange })
 call s:h("rubyRailsARMethod",           { "fg": s:orange })
 call s:h("rubyRailsRenderMethod",       { "fg": s:orange })
 call s:h("rubyRailsMethod",             { "fg": s:orange })
-call s:h("rubyConstant",                { "fg": s:aqua, "format": "italic" })
+call s:h("rubyConstant",                { "fg": s:aqua })
 call s:h("rubyBlockArgument",           { "fg": s:orange })
 call s:h("rubyBlockParameter",          { "fg": s:orange })
 
