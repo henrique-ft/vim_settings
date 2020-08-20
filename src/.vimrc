@@ -1,24 +1,23 @@
 call plug#begin('~/.vim/plugged')
-
+"----------------------------"
 " RUBY / RAILS ENVIRONMENT
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
-" ELIXIR / ERLANG ENVIRONMENT
+" ELIXIR ENVIRONMENT
 "Plug 'elixir-editors/vim-elixir'
-"Plug 'vim-erlang/vim-erlang-runtime'
-" CSS ENVIRONMENT
-Plug 'ap/vim-css-color'
-" HTML ENVIRONMENT
-Plug 'othree/html5.vim'
 " JAVASCRIPT / NODE ENVIRONMENT
 Plug 'pangloss/vim-javascript'
-" REACT
-Plug 'MaxMEllon/vim-jsx-pretty'
-" VUE
+" REACT ENVIRONMENT
+"Plug 'MaxMEllon/vim-jsx-pretty'
+" VUE ENVIRONMENT
 "Plug 'posva/vim-vue'
+" HASKELL ENVIRONMENT
+"Plug 'neovimhaskell/haskell-vim'
 " NGINX ENVIRONMENT
-"Plug 'chr4/nginx.vim'
+Plug 'chr4/nginx.vim'
 " < DEFAULT >
+Plug 'ap/vim-css-color'
+Plug 'othree/html5.vim'
 Plug 'severin-lemaignan/vim-minimap'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
@@ -53,24 +52,17 @@ Plug 'dracula/vim'
 call plug#end()
 
 "Colorschemes"
-"autocmd VimEnter * color alloy
-"autocmd VimEnter * color gruvbox
-"autocmd VimEnter * color night-owl
-"autocmd VimEnter * color dark_plus
-"autocmd VimEnter * color OceanicNext
-"autocmd VimEnter * color ron
-"colorscheme ron
 
 " RUBY / RAILS ENVIRONMENT
 autocmd VimEnter * color ruby_box
 autocmd FileType ruby compiler ruby
-
-" ELIXIR / ERLANG / REACT ENVIRONMENT
+" ELIXIR / REACT ENVIRONMENT
 "autocmd VimEnter * color dracula
-
 " JAVASCRIPT / NODE / VUE / DENO ENVIRONMENT
 "set background=dark
 "autocmd VimEnter * color gruvbox
+" HASKELL ENVIRONMENT
+"autocmd VimEnter * color night-owl
 
 set backspace=indent,eol,start
 
