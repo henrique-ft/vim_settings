@@ -1,10 +1,10 @@
 call plug#begin('~/.vim/plugged')
-"----------------------------"
+
 " RUBY / RAILS ENVIRONMENT
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 " ELIXIR ENVIRONMENT
-"Plug 'elixir-editors/vim-elixir'
+Plug 'elixir-editors/vim-elixir'
 " JAVASCRIPT / NODE ENVIRONMENT
 Plug 'pangloss/vim-javascript'
 " REACT ENVIRONMENT
@@ -30,6 +30,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdcommenter'
+Plug 'ryanoasis/vim-devicons'
 Plug 'kshenoy/vim-signature'
 Plug 'zivyangll/git-blame.vim'
 Plug 'Yggdroot/indentLine'
@@ -46,16 +47,16 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'mhartington/oceanic-next'
 Plug 'jnurmine/Zenburn'
 Plug 'dracula/vim'
-"----------------------------"
+
 call plug#end()
 
 "Colorschemes"
 
 " RUBY / RAILS ENVIRONMENT
 autocmd VimEnter * color ruby_box
-autocmd FileType ruby compiler ruby
+"autocmd FileType ruby compiler ruby
 " ELIXIR / REACT ENVIRONMENT
-"autocmd VimEnter * color dracula
+"autocmd VimEnter * color elixir_box
 " JAVASCRIPT / NODE / VUE / DENO ENVIRONMENT
 "set background=dark
 "autocmd VimEnter * color gruvbox
@@ -125,11 +126,16 @@ silent! nmap <Tab> :NERDTreeTabsToggle<CR>
 silent! map <F2> :NERDTreeTabsFind<CR>
 let g:NERDTreeMapActivateNode="<F2>"
 let g:NERDTreeMapPreview="<F1>"
-"highlight! link NERDTreeFlags NERDTreeDir
-"let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
-"let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
-"let g:NERDTreeDirArrowExpandable = "\u00a0"
-"let g:NERDTreeDirArrowCollapsible = "\u00a0"
+highlight! link NERDTreeFlags NERDTreeDir
+let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
+let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
+let g:NERDTreeDirArrowExpandable = "\u00a0"
+let g:NERDTreeDirArrowCollapsible = "\u00a0"
+let g:WebDevIconsOS = 'Darwin'
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:DevIconsEnableFoldersOpenClose = 1
+let g:DevIconsEnableFolderExtensionPatternMatching = 1
+"Icons colors
 
 "Enable better whitespaces for default
 let g:better_whitespace_enabled=1

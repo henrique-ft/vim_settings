@@ -1,4 +1,4 @@
-" File:       alloy.vim
+" File:       elixir_box.vim
 " Maintainer: Henrique Fernandez
 " URL:        https://github.com/crusoexia/vim-monokai
 " License:    MIT
@@ -10,13 +10,16 @@ if !has("gui_running") && &t_Co < 256
   finish
 endif
 
-if ! exists("g:monokai_gui_italic")
-    let g:monokai_gui_italic = 1
-endif
+let g:monokai_gui_italic = 0
+let g:monokai_term_italic = 1
 
-if ! exists("g:monokai_term_italic")
-    let g:monokai_term_italic = 0
-endif
+"if ! exists("g:monokai_gui_italic")
+    "let g:monokai_gui_italic = 1
+"endif
+
+"if ! exists("g:monokai_term_italic")
+    "let g:monokai_term_italic = 0
+"endif
 
 let g:monokai_termcolors = 256 " does not support 16 color term right now.
 
@@ -27,7 +30,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "alloy"
+let colors_name = "elixir_box"
 
 function! s:h(group, style)
   let s:ctermformat = "NONE"
@@ -75,14 +78,14 @@ let s:darkblack   = { "gui": "#211F1C", "cterm": "235" }
 let s:grey        = { "gui": "#8F908A", "cterm": "243" }
 let s:lightgrey   = { "gui": "#575b61", "cterm": "239" }
 let s:darkgrey    = { "gui": "#64645e", "cterm": "241" }
-let s:warmgrey    = { "gui": "#75715E", "cterm": "59" }
+let s:warmgrey    = { "gui": "#75715E", "cterm": "247" }
 
-let s:pink        = { "gui": "#F92772", "cterm": "206" }
-let s:green       = { "gui": "#A6E22D", "cterm": "82" }
+let s:pink        = { "gui": "#F92772", "cterm": "212" }
+let s:green       = { "gui": "#A6E22D", "cterm": "120" }
 let s:aqua        = { "gui": "#66d9ef", "cterm": "81" }
 let s:yellow      = { "gui": "#E6DB74", "cterm": "186" }
 let s:orange      = { "gui": "#FD9720", "cterm": "208" }
-let s:purple      = { "gui": "#ae81ff", "cterm": "177" }
+let s:purple      = { "gui": "#ae81ff", "cterm": "141" }
 let s:red         = { "gui": "#e73c50", "cterm": "196" }
 let s:darkred     = { "gui": "#5f0000", "cterm": "52" }
 
@@ -143,14 +146,14 @@ call s:h("PmenuThumb",    { "fg": s:lightblack, "bg": s:grey })
 " Generic Syntax Highlighting
 " ---------------------------
 
-call s:h("Constant",      { "fg": s:purple, "format": "italic" })
+call s:h("Constant",      { "fg": s:purple })
 call s:h("Number",        { "fg": s:purple })
 call s:h("Float",         { "fg": s:purple })
 call s:h("Boolean",       { "fg": s:purple })
 call s:h("Character",     { "fg": s:yellow })
 call s:h("String",        { "fg": s:yellow })
 
-call s:h("Type",          { "fg": s:aqua })
+call s:h("Type",          { "fg": s:aqua , "format": "italic" })
 call s:h("Structure",     { "fg": s:aqua })
 call s:h("StorageClass",  { "fg": s:aqua })
 call s:h("Typedef",       { "fg": s:aqua })
