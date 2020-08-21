@@ -4,15 +4,17 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 " ELIXIR ENVIRONMENT
-Plug 'elixir-editors/vim-elixir'
+"Plug 'elixir-editors/vim-elixir'
 " JAVASCRIPT / NODE ENVIRONMENT
-Plug 'pangloss/vim-javascript'
-" REACT ENVIRONMENT
+"Plug 'pangloss/vim-javascript'
 "Plug 'MaxMEllon/vim-jsx-pretty'
-" VUE ENVIRONMENT
 "Plug 'posva/vim-vue'
+" HASKELL ENVIRONENT
+"Plug 'neovimhaskell/haskell-vim'
+"Plug 'pbrisbin/vim-syntax-shakespeare'
+"Plug 'alx741/yesod.vim'
 " NGINX ENVIRONMENT
-Plug 'chr4/nginx.vim'
+"Plug 'chr4/nginx.vim'
 " < DEFAULT >
 Plug 'ap/vim-css-color'
 Plug 'othree/html5.vim'
@@ -60,6 +62,8 @@ autocmd VimEnter * color ruby_box
 " JAVASCRIPT / NODE / VUE / DENO ENVIRONMENT
 "set background=dark
 "autocmd VimEnter * color gruvbox
+" HASKELL ENVIRONMENT
+"autocmd VimEnter * color night-owl
 
 set backspace=indent,eol,start
 
@@ -243,8 +247,8 @@ abbr defm defmodule
 let g:minimap_toggle='<C-m>'
 
 " Ajust vim bug
-let &t_TI = ""
-let &t_TE = ""
+"let &t_TI = ""
+"let &t_TE = ""
 
 "autocmd VimEnter * color monokai
 "autocmd FileType ruby compiler ruby
