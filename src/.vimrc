@@ -6,13 +6,9 @@ call plug#begin('~/.vim/plugged')
 " ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
 " JAVASCRIPT / NODE ENVIRONMENT
-"Plug 'pangloss/vim-javascript'
-"Plug 'maxmellon/vim-jsx-pretty'
-"Plug 'posva/vim-vue'
-" HASKELL ENVIRONMENT
-"Plug 'neovimhaskell/haskell-vim'
-"Plug 'pbrisbin/vim-syntax-shakespeare'
-"Plug 'alx741/yesod.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'posva/vim-vue'
 " NGINX ENVIRONMENT
 "Plug 'chr4/nginx.vim'
 " < DEFAULT >
@@ -62,8 +58,6 @@ autocmd VimEnter * color elixir_box
 " JAVASCRIPT / NODE ENVIRONMENT
 "set background=dark
 "autocmd VimEnter * color gruvbox
-" HASKELL ENVIRONMENT
-"autocmd VimEnter * color night-owl
 
 set backspace=indent,eol,start
 
