@@ -1,14 +1,18 @@
 call plug#begin('~/.vim/plugged')
 
 " RUBY / RAILS ENVIRONMENT
-"Plug 'vim-ruby/vim-ruby'
-"Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
 " ELIXIR ENVIRONMENT
-Plug 'elixir-editors/vim-elixir'
+"Plug 'elixir-editors/vim-elixir'
 " JAVASCRIPT / NODE ENVIRONMENT
-Plug 'pangloss/vim-javascript'
-Plug 'maxmellon/vim-jsx-pretty'
-Plug 'posva/vim-vue'
+"Plug 'pangloss/vim-javascript'
+"Plug 'maxmellon/vim-jsx-pretty'
+"Plug 'posva/vim-vue'
+" HASKELL ENVIRONMENT
+"Plug 'neovimhaskell/haskell-vim'
+"Plug 'alx741/yesod.vim'
+"Plug 'pbrisbin/vim-syntax-shakespeare'
 " NGINX ENVIRONMENT
 "Plug 'chr4/nginx.vim'
 " < DEFAULT >
@@ -51,13 +55,15 @@ call plug#end()
 "Colorschemes"
 
 " RUBY / RAILS ENVIRONMENT
-"autocmd VimEnter * color ruby_box
-"autocmd FileType ruby compiler ruby
+autocmd VimEnter * color ruby_box
+autocmd FileType ruby compiler ruby
 " ELIXIR ENVIRONMENT
-autocmd VimEnter * color elixir_box
+"autocmd VimEnter * color elixir_box
 " JAVASCRIPT / NODE ENVIRONMENT
 "set background=dark
 "autocmd VimEnter * color gruvbox
+" HASKELL ENVIRONMENT
+"autocmd VimEnter * color night-owl
 
 set backspace=indent,eol,start
 
