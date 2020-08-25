@@ -11,8 +11,6 @@ Plug 'tpope/vim-rails'
 "Plug 'posva/vim-vue'
 " HASKELL ENVIRONMENT
 "Plug 'neovimhaskell/haskell-vim'
-"Plug 'alx741/yesod.vim'
-"Plug 'pbrisbin/vim-syntax-shakespeare'
 " NGINX ENVIRONMENT
 "Plug 'chr4/nginx.vim'
 " < DEFAULT >
