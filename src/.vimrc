@@ -4,11 +4,11 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 " ELIXIR ENVIRONMENT
-"Plug 'elixir-editors/vim-elixir'
+Plug 'elixir-editors/vim-elixir'
 " JAVASCRIPT / NODE ENVIRONMENT
-"Plug 'pangloss/vim-javascript'
-"Plug 'maxmellon/vim-jsx-pretty'
-"Plug 'posva/vim-vue'
+Plug 'pangloss/vim-javascript'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'posva/vim-vue'
 " HASKELL ENVIRONMENT
 "Plug 'neovimhaskell/haskell-vim'
 " NGINX ENVIRONMENT
@@ -16,7 +16,6 @@ Plug 'tpope/vim-rails'
 " < DEFAULT >
 Plug 'ap/vim-css-color'
 Plug 'othree/html5.vim'
-Plug 'severin-lemaignan/vim-minimap'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'mileszs/ack.vim'
@@ -241,12 +240,12 @@ map H _
 abbr pry require IEx; IEx.pry
 abbr defm defmodule
 
-" TOGGLE MINIMAP
-let g:minimap_toggle='<C-m>'
-
 " Ajust vim bug
-"let &t_TI = ""
-"let &t_TE = ""
+let &t_TI = ""
+let &t_TE = ""
+
+" Set column length limit
+set colorcolumn=80
 
 "autocmd VimEnter * color monokai
 "autocmd FileType ruby compiler ruby
