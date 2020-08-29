@@ -3,8 +3,9 @@ call plug#begin('~/.vim/plugged')
 " RUBY / RAILS ENVIRONMENT
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
-" ELIXIR ENVIRONMENT
+" ELIXIR / ERLANG ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
+Plug 'vim-erlang/vim-erlang-runtime'
 " JAVASCRIPT / NODE ENVIRONMENT
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
@@ -54,7 +55,7 @@ call plug#end()
 " RUBY / RAILS ENVIRONMENT
 autocmd VimEnter * color ruby_box
 autocmd FileType ruby compiler ruby
-" ELIXIR ENVIRONMENT
+" ELIXIR / ERLANG ENVIRONMENT
 "autocmd VimEnter * color elixir_box
 " JAVASCRIPT / NODE ENVIRONMENT
 "set background=dark
