@@ -80,7 +80,7 @@ let s:lightgrey   = { "gui": "#575b61", "cterm": "239" }
 let s:darkgrey    = { "gui": "#64645e", "cterm": "241" }
 let s:warmgrey    = { "gui": "#75715E", "cterm": "59" }
 
-let s:pink        = { "gui": "#a91718", "cterm": "196" }
+let s:pink        = { "gui": "#a91718", "cterm": "1" }
 let s:green       = { "gui": "#A6E22D", "cterm": "155" }
 let s:aqua        = { "gui": "#66d9ef", "cterm": "81" }
 let s:yellow      = { "gui": "#E6DB74", "cterm": "228" }
@@ -301,7 +301,7 @@ call s:h("rubyRailsARAssociationMethod",{ "fg": s:orange })
 call s:h("rubyRailsARMethod",           { "fg": s:orange })
 call s:h("rubyRailsRenderMethod",       { "fg": s:orange })
 call s:h("rubyRailsMethod",             { "fg": s:orange })
-call s:h("rubyConstant",                { "fg": s:aqua })
+call s:h("rubyConstant",                { "fg": s:aqua, "format": "italic" })
 call s:h("rubyBlockArgument",           { "fg": s:orange })
 call s:h("rubyBlockParameter",          { "fg": s:orange })
 

@@ -1,15 +1,17 @@
 call plug#begin('~/.vim/plugged')
 
+" ELIXIR ENVIRONMENT
+Plug 'elixir-editors/vim-elixir'
 " RUBY / RAILS ENVIRONMENT
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
-" ELIXIR / ERLANG ENVIRONMENT
-Plug 'elixir-editors/vim-elixir'
-Plug 'vim-erlang/vim-erlang-runtime'
 " JAVASCRIPT / NODE ENVIRONMENT
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'posva/vim-vue'
+" RUST ENVIRONMENT
+"Plug 'rust-lang/rust.vim'
+"Plug 'mustache/vim-mustache-handlebars'
 " HASKELL ENVIRONMENT
 "Plug 'neovimhaskell/haskell-vim'
 " NGINX ENVIRONMENT
@@ -52,14 +54,16 @@ call plug#end()
 
 "Colorschemes"
 
+" ELIXIR ENVIRONMENT
+autocmd VimEnter * color elixir_box
 " RUBY / RAILS ENVIRONMENT
-autocmd VimEnter * color ruby_box
-autocmd FileType ruby compiler ruby
-" ELIXIR / ERLANG ENVIRONMENT
-"autocmd VimEnter * color elixir_box
+"autocmd VimEnter * color ruby_box
+"autocmd filetype ruby compiler ruby
 " JAVASCRIPT / NODE ENVIRONMENT
 "set background=dark
 "autocmd VimEnter * color gruvbox
+" RUST ENVIRONMENT
+"autocmd VimEnter * color zenburn
 " HASKELL ENVIRONMENT
 "autocmd VimEnter * color night-owl
 
@@ -242,8 +246,8 @@ abbr pry require IEx; IEx.pry
 abbr defm defmodule
 
 " Ajust vim bug
-let &t_TI = ""
-let &t_TE = ""
+"let &t_TI = ""
+"let &t_TE = ""
 
 " Set column length limit
 set colorcolumn=80
