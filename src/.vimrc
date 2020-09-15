@@ -53,15 +53,15 @@ call plug#end()
 
 "Colorschemes"
 
-" ELIXIR / REACT ENVIRONMENT
-autocmd VimEnter * color elixir_box
+" ELIXIR / JAVASCRIPT / REACT ENVIRONMENT
+"autocmd VimEnter * color elixir_box
 " RUST ENVIRONMENT
 "autocmd VimEnter * color zenburn
 " HASKELL ENVIRONMENT
 "autocmd VimEnter * color night-owl
 " RUBY / RAILS ENVIRONMENT
-"autocmd VimEnter * color ruby_box
-"autocmd filetype ruby compiler ruby
+autocmd VimEnter * color ruby_box
+autocmd filetype ruby compiler ruby
 
 set backspace=indent,eol,start
 
@@ -240,8 +240,8 @@ abbr pry require IEx; IEx.pry
 abbr defm defmodule
 
 " Ajust vim bug
-"let &t_TI = ""
-"let &t_TE = ""
+let &t_TI = ""
+let &t_TE = ""
 
 " Set column length limit
 set colorcolumn=80
