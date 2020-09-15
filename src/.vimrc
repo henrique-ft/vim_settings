@@ -2,11 +2,9 @@ call plug#begin('~/.vim/plugged')
 
 " ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
-" JAVASCRIPT ENVIRONMENT
+" JAVASCRIPT / REACT ENVIRONMENT
 Plug 'pangloss/vim-javascript'
-" REACT / VUE ENVIRONMENT
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'posva/vim-vue'
 " RUST ENVIRONMENT
 "Plug 'rust-lang/rust.vim'
 "Plug 'mustache/vim-mustache-handlebars'
@@ -57,9 +55,6 @@ call plug#end()
 
 " ELIXIR / REACT ENVIRONMENT
 autocmd VimEnter * color elixir_box
-" VUE ENVIRONMENT
-"set background=dark
-"autocmd VimEnter * color gruvbox
 " RUST ENVIRONMENT
 "autocmd VimEnter * color zenburn
 " HASKELL ENVIRONMENT
@@ -196,8 +191,6 @@ nmap <silent> <C-l> :wincmd l<CR>
 "Fast navigation in alt + j k"
 nnoremap <M-k> <C-u>
 nnoremap <M-j> <C-d>
-nnoremap K <C-u>
-nnoremap J <C-d>
 
 "Add space q and space w to save and quit
 let mapleader=" "
