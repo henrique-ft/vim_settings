@@ -55,10 +55,10 @@ call plug#end()
 "Colorschemes"
 
 " ELIXIR ENVIRONMENT
-"autocmd VimEnter * color elixir_box
+autocmd VimEnter * color elixir_box
 " VUE ENVIRONMENT
-set background=dark
-autocmd VimEnter * color gruvbox
+"set background=dark
+"autocmd VimEnter * color gruvbox
 " RUST ENVIRONMENT
 "autocmd VimEnter * color zenburn
 " HASKELL ENVIRONMENT
@@ -246,6 +246,9 @@ abbr defm defmodule
 " Ajust vim bug
 let &t_TI = ""
 let &t_TE = ""
+
+" Write mode to visual mode faster
+imap jj <Esc>
 
 " Set column length limit
 set colorcolumn=80
