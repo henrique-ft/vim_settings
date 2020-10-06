@@ -209,6 +209,7 @@ nmap <Leader>w :w<CR>
 "Git Blame"
 nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 
+"B
 "Tab Navigation
 noremap <M-h> :tabprevious<CR>
 noremap <M-l> :tabnext<CR>
@@ -245,8 +246,8 @@ let g:indentLine_fileTypeExclude = ["nerdtree"]
 
 "Fast word highlighting"
 noremap f *
-"Press ; to turn off highlighting and clear any message already displayed.
-nnoremap ; :noh<return>
+"Press ESC to turn off highlighting and clear any message already displayed.
+nnoremap <esc> :noh<return>
 
 " Map line navigation
 map L $
@@ -257,8 +258,8 @@ abbr pry require IEx; IEx.pry
 abbr defm defmodule
 
 " Ajust vim bug
-let &t_TI = ""
-let &t_TE = ""
+"let &t_TI = ""
+"let &t_TE = ""
 
 " Set column length limit
 set colorcolumn=80
