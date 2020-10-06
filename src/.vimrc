@@ -246,8 +246,8 @@ let g:indentLine_fileTypeExclude = ["nerdtree"]
 
 "Fast word highlighting"
 noremap f *
-"Press ESC to turn off highlighting and clear any message already displayed.
-nnoremap <esc> :noh<return>
+"Press x to turn off highlighting and clear any message already displayed.
+nnoremap x :noh<return>
 
 " Map line navigation
 map L $
@@ -258,8 +258,8 @@ abbr pry require IEx; IEx.pry
 abbr defm defmodule
 
 " Ajust vim bug
-"let &t_TI = ""
-"let &t_TE = ""
+let &t_TI = ""
+let &t_TE = ""
 
 " Set column length limit
 set colorcolumn=80
