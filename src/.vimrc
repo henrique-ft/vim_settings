@@ -232,6 +232,8 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 map <Leader>h <Plug>(easymotion-linebackward)
 map <Leader>e <Plug>(easymotion-w)
+map  \ <Plug>(easymotion-sn)
+omap \ <Plug>(easymotion-tn)
 let g:EasyMotion_startofline = 0
 
 " Identlines configuration
@@ -241,10 +243,8 @@ let g:indentLine_fileTypeExclude = ["nerdtree"]
 
 "Fast word highlighting"
 noremap f *
-"Press space space to turn off highlighting and clear any message already displayed.
+"Press ; to turn off highlighting and clear any message already displayed.
 nnoremap ; :noh<return>
-"Fast word finding"
-noremap \ /
 
 " Map line navigation
 map L $
@@ -257,9 +257,6 @@ abbr defm defmodule
 " Ajust vim bug
 "let &t_TI = ""
 "let &t_TE = ""
-
-" Write mode to visual mode faster
-imap jj <Esc>
 
 " Set column length limit
 set colorcolumn=80
