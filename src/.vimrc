@@ -37,6 +37,7 @@ Plug 'kshenoy/vim-signature'
 Plug 'zivyangll/git-blame.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'nvie/vim-togglemouse'
+Plug 'easymotion/vim-easymotion'
 " COLORS
 Plug 'tomasiser/vim-code-dark'
 Plug 'liuchengxu/space-vim-dark'
@@ -138,6 +139,7 @@ let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
 let g:NERDTreeDirArrowExpandable = "\u00a0"
 let g:NERDTreeDirArrowCollapsible = "\u00a0"
 let g:NERDTreeMouseMode = 3
+let NERDTreeShowHidden=1
 let g:WebDevIconsOS = 'Darwin'
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:DevIconsEnableFoldersOpenClose = 1
