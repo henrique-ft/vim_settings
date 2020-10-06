@@ -38,6 +38,7 @@ Plug 'zivyangll/git-blame.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'nvie/vim-togglemouse'
 Plug 'easymotion/vim-easymotion'
+Plug 'mg979/vim-visual-multi'
 " COLORS
 Plug 'tomasiser/vim-code-dark'
 Plug 'liuchengxu/space-vim-dark'
@@ -56,7 +57,7 @@ call plug#end()
 "Colorschemes"
 
 " ELIXIR ENVIRONMENT
-autocmd VimEnter * color elixir_box
+"autocmd VimEnter * color elixir_box
 " VUE ENVIRONMENT
 "set background=dark
 "autocmd VimEnter * color gruvbox
@@ -65,8 +66,8 @@ autocmd VimEnter * color elixir_box
 " HASKELL ENVIRONMENT
 "autocmd VimEnter * color night-owl
 " RUBY / RAILS ENVIRONMENT
-"autocmd VimEnter * color ruby_box
-"autocmd filetype ruby compiler ruby
+autocmd VimEnter * color ruby_box
+autocmd filetype ruby compiler ruby
 
 set backspace=indent,eol,start
 
@@ -91,7 +92,8 @@ set expandtab
 set number
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set noshowmode
-set relativenumber
+" use easymotion instead
+"set relativenumber
 set nobackup
 set noswapfile
 set noundofile
@@ -160,7 +162,7 @@ noremap <M-p> :CtrlPMRU<CR>
 
 "Toggle relative number"
 " USE MOUSE WITH CTRL KEY PRESSED
-map <C-n> :set relativenumber!<CR>
+"map <C-n> :set relativenumber!<CR>
 "map <F12> :set invnumber<CR>
 
 "Some system may need it, others not"
@@ -255,8 +257,8 @@ abbr pry require IEx; IEx.pry
 abbr defm defmodule
 
 " Ajust vim bug
-"let &t_TI = ""
-"let &t_TE = ""
+let &t_TI = ""
+let &t_TE = ""
 
 " Set column length limit
 set colorcolumn=80
