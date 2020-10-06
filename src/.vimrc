@@ -226,6 +226,14 @@ map <C-f> <Plug>CtrlSFPrompt
 vmap <leader>f <Plug>CtrlSFVwordExec
 nmap <leader>f <Plug>CtrlSFCwordPath
 
+"easymotion
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
+map <Leader>e <Plug>(easymotion-w)
+let g:EasyMotion_startofline = 0
+
 " Identlines configuration
 nmap <Leader>i :IndentLinesToggle<CR>
 let g:indentLine_char = '│'
@@ -234,7 +242,7 @@ let g:indentLine_fileTypeExclude = ["nerdtree"]
 "Fast word highlighting"
 noremap f *
 "Press space space to turn off highlighting and clear any message already displayed.
-nnoremap <leader><leader> :noh<return>
+nnoremap ; :noh<return>
 "Fast word finding"
 noremap \ /
 
