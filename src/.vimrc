@@ -5,15 +5,15 @@ Plug 'elixir-editors/vim-elixir'
 " RUBY / RAILS ENVIRONMENT
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
-" JAVASCRIPT / VUE ENVIRONMENT
-Plug 'pangloss/vim-javascript'
+" VUE / NUXT ENVIRONMENT
 Plug 'posva/vim-vue'
-Plug 'maxmellon/vim-jsx-pretty'
-" HASKELL ENVIRONMENT
-"Plug 'neovimhaskell/haskell-vim'
 " NGINX ENVIRONMENT
 "Plug 'chr4/nginx.vim'
+" HASKELL ENVIRONMENT
+"Plug 'neovimhaskell/haskell-vim'
 " < DEFAULT >
+Plug 'pangloss/vim-javascript'
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'ap/vim-css-color'
 Plug 'othree/html5.vim'
 Plug 'scrooloose/nerdtree'
@@ -37,28 +37,28 @@ Plug 'nvie/vim-togglemouse'
 Plug 'easymotion/vim-easymotion'
 Plug 'mg979/vim-visual-multi'
 " COLORS
-Plug 'tomasiser/vim-code-dark'
-Plug 'liuchengxu/space-vim-dark'
-Plug 'crusoexia/vim-monokai'
-Plug 'morhetz/gruvbox'
-Plug 'nanotech/jellybeans.vim'
-Plug 'haishanh/night-owl.vim'
-Plug 'dunstontc/vim-vscode-theme'
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'mhartington/oceanic-next'
-Plug 'jnurmine/Zenburn'
-Plug 'dracula/vim'
+"Plug 'tomasiser/vim-code-dark'
+"Plug 'liuchengxu/space-vim-dark'
+"Plug 'crusoexia/vim-monokai'
+"Plug 'morhetz/gruvbox'
+"Plug 'haishanh/night-owl.vim'
+"Plug 'nanotech/jellybeans.vim'
+"Plug 'dunstontc/vim-vscode-theme'
+"Plug 'NLKNguyen/papercolor-theme'
+"Plug 'mhartington/oceanic-next'
+"Plug 'jnurmine/Zenburn'
+"Plug 'dracula/vim'
 
 call plug#end()
 
 "Colorschemes"
 
 " ELIXIR ENVIRONMENT
-autocmd VimEnter * color elixir_box
+"autocmd VimEnter * color elixir_box
 " RUBY / RAILS ENVIRONMENT
-"autocmd VimEnter * color ruby_box
-"autocmd filetype ruby compiler ruby
-" VUE ENVIRONMENT
+autocmd VimEnter * color ruby_box
+autocmd filetype ruby compiler ruby
+" VUE / NUXT ENVIRONMENT
 "set background=dark
 "autocmd VimEnter * color gruvbox
 " HASKELL ENVIRONMENT
@@ -253,14 +253,11 @@ abbr pry require IEx; IEx.pry
 abbr defm defmodule
 
 " Ajust vim bug
-"let &t_TI = ""
-"let &t_TE = ""
+let &t_TI = ""
+let &t_TE = ""
 
 " Set column length limit
 set colorcolumn=80
-
-"autocmd VimEnter * color monokai
-"autocmd FileType ruby compiler ruby
 
 " RUBY / ELIXIR / CRYSTAL ENVIRONMENT
 "Endwise (tpope/vim-endwise)
