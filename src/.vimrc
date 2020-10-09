@@ -2,11 +2,13 @@ call plug#begin('~/.vim/plugged')
 
 " ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
-" VUE / NUXT ENVIRONMENT
-Plug 'posva/vim-vue'
 " RUBY / RAILS ENVIRONMENT
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
+" VUE / NUXT ENVIRONMENT
+Plug 'posva/vim-vue'
+" RUST ENVIRONMENT
+Plug 'rust-lang/rust.vim'
 " NGINX ENVIRONMENT
 "Plug 'chr4/nginx.vim'
 " < DEFAULT >
@@ -53,12 +55,14 @@ call plug#end()
 
 " ELIXIR ENVIRONMENT
 "autocmd VimEnter * color elixir_box
-" VUE / NUXT ENVIRONMENT
-"set background=dark
-"autocmd VimEnter * color gruvbox
 " RUBY / RAILS ENVIRONMENT
 autocmd VimEnter * color ruby_box
 autocmd filetype ruby compiler ruby
+" VUE / NUXT ENVIRONMENT
+"set background=dark
+"autocmd VimEnter * color gruvbox
+" RUST ENVIRONMENT
+"autocmd VimEnter * color zenburn
 
 set backspace=indent,eol,start
 
