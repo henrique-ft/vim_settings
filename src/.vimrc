@@ -9,8 +9,6 @@ Plug 'tpope/vim-rails'
 Plug 'posva/vim-vue'
 " NGINX ENVIRONMENT
 "Plug 'chr4/nginx.vim'
-" HASKELL ENVIRONMENT
-"Plug 'neovimhaskell/haskell-vim'
 " < DEFAULT >
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
@@ -61,8 +59,6 @@ autocmd filetype ruby compiler ruby
 " VUE / NUXT ENVIRONMENT
 "set background=dark
 "autocmd VimEnter * color gruvbox
-" HASKELL ENVIRONMENT
-"autocmd VimEnter * color night-owl
 
 set backspace=indent,eol,start
 
