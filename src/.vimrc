@@ -2,6 +2,9 @@ call plug#begin('~/.vim/plugged')
 
 " ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
+" RUBY / RAILS ENVIRONMENT
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
 " JAVASCRIPT / VUE / NUXT ENVIRONMENT
 Plug 'posva/vim-vue'
 Plug 'pangloss/vim-javascript'
@@ -10,9 +13,6 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'rust-lang/rust.vim'
 " HASKELL ENVIRONMENT
 Plug 'neovimhaskell/haskell-vim'
-" RUBY / RAILS ENVIRONMENT
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
 " NGINX ENVIRONMENT
 "Plug 'chr4/nginx.vim'
 " < DEFAULT >
@@ -57,6 +57,9 @@ call plug#end()
 
 " ELIXIR ENVIRONMENT
 autocmd VimEnter * color elixir_box
+" RUBY / RAILS ENVIRONMENT
+"autocmd VimEnter * color ruby_box
+"autocmd filetype ruby compiler ruby
 " JAVASCRIPT / VUE / NUXT ENVIRONMENT
 "set background=dark
 "autocmd VimEnter * color gruvbox
@@ -64,9 +67,6 @@ autocmd VimEnter * color elixir_box
 "autocmd VimEnter * color zenburn
 " HASKELL ENVIRONMENT
 "autocmd VimEnter * color night-owl
-" RUBY / RAILS ENVIRONMENT
-"autocmd VimEnter * color ruby_box
-"autocmd filetype ruby compiler ruby
 
 set backspace=indent,eol,start
 
