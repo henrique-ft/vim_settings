@@ -2,13 +2,13 @@ call plug#begin('~/.vim/plugged')
 
 " ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
+" RUBY / RAILS ENVIRONMENT
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
 " VUE / NUXT ENVIRONMENT
 Plug 'posva/vim-vue'
 " RUST ENVIRONMENT
 Plug 'rust-lang/rust.vim'
-" RUBY / RAILS ENVIRONMENT
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
 " NGINX ENVIRONMENT
 "Plug 'chr4/nginx.vim'
 " < DEFAULT >
@@ -35,7 +35,7 @@ Plug 'zivyangll/git-blame.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'nvie/vim-togglemouse'
 Plug 'easymotion/vim-easymotion'
-Plug 'mg979/vim-visual-multi'
+"Plug 'mg979/vim-visual-multi'
 " COLORS
 "Plug 'tomasiser/vim-code-dark'
 "Plug 'liuchengxu/space-vim-dark'
@@ -46,7 +46,7 @@ Plug 'mg979/vim-visual-multi'
 "Plug 'dunstontc/vim-vscode-theme'
 "Plug 'NLKNguyen/papercolor-theme'
 "Plug 'mhartington/oceanic-next'
-"Plug 'jnurmine/Zenburn'
+Plug 'jnurmine/Zenburn'
 "Plug 'dracula/vim'
 
 call plug#end()
@@ -55,14 +55,14 @@ call plug#end()
 
 " ELIXIR ENVIRONMENT
 autocmd VimEnter * color elixir_box
+" RUBY / RAILS ENVIRONMENT
+"autocmd VimEnter * color ruby_box
+"autocmd filetype ruby compiler ruby
 " VUE / NUXT ENVIRONMENT
 "set background=dark
 "autocmd VimEnter * color gruvbox
 " RUST ENVIRONMENT
 "autocmd VimEnter * color zenburn
-" RUBY / RAILS ENVIRONMENT
-"autocmd VimEnter * color ruby_box
-"autocmd filetype ruby compiler ruby
 
 set backspace=indent,eol,start
 
@@ -253,8 +253,8 @@ abbr pry require IEx; IEx.pry
 abbr defm defmodule
 
 " Ajust vim bug
-let &t_TI = ""
-let &t_TE = ""
+"let &t_TI = ""
+"let &t_TE = ""
 
 " Set column length limit
 set colorcolumn=80
