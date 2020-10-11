@@ -11,8 +11,6 @@ Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 " RUST ENVIRONMENT
 Plug 'rust-lang/rust.vim'
-" HASKELL ENVIRONMENT
-Plug 'neovimhaskell/haskell-vim'
 " NGINX ENVIRONMENT
 "Plug 'chr4/nginx.vim'
 " < DEFAULT >
@@ -65,8 +63,6 @@ autocmd VimEnter * color elixir_box
 "autocmd VimEnter * color gruvbox
 " RUST ENVIRONMENT
 "autocmd VimEnter * color zenburn
-" HASKELL ENVIRONMENT
-"autocmd VimEnter * color night-owl
 
 set backspace=indent,eol,start
 
