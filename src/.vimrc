@@ -5,7 +5,7 @@ Plug 'elixir-editors/vim-elixir'
 " RUBY / RAILS ENVIRONMENT
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
-" JAVASCRIPT / VUE / NUXT ENVIRONMENT
+" JAVASCRIPT / REACT / VUE ENVIRONMENT
 Plug 'posva/vim-vue'
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
@@ -40,25 +40,25 @@ Plug 'easymotion/vim-easymotion'
 "Plug 'tomasiser/vim-code-dark'
 "Plug 'liuchengxu/space-vim-dark'
 "Plug 'crusoexia/vim-monokai'
-"Plug 'morhetz/gruvbox'
 "Plug 'haishanh/night-owl.vim'
 "Plug 'nanotech/jellybeans.vim'
 "Plug 'dunstontc/vim-vscode-theme'
 "Plug 'NLKNguyen/papercolor-theme'
 "Plug 'mhartington/oceanic-next'
-Plug 'jnurmine/Zenburn'
 "Plug 'dracula/vim'
+Plug 'jnurmine/Zenburn'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
 "Colorschemes"
 
-" ELIXIR ENVIRONMENT
+" ELIXIR / REACT ENVIRONMENT
 autocmd VimEnter * color elixir_box
 " RUBY / RAILS ENVIRONMENT
 "autocmd VimEnter * color ruby_box
 "autocmd filetype ruby compiler ruby
-" JAVASCRIPT / VUE / NUXT ENVIRONMENT
+" VUE ENVIRONMENT
 "set background=dark
 "autocmd VimEnter * color gruvbox
 " RUST ENVIRONMENT
