@@ -9,8 +9,8 @@ Plug 'tpope/vim-rails'
 Plug 'posva/vim-vue'
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
-" RUST ENVIRONMENT
-Plug 'rust-lang/rust.vim'
+" HASKELL ENVIRONMENT
+Plug 'neovimhaskell/haskell-vim'
 " NGINX ENVIRONMENT
 "Plug 'chr4/nginx.vim'
 " < DEFAULT >
@@ -40,14 +40,14 @@ Plug 'easymotion/vim-easymotion'
 "Plug 'tomasiser/vim-code-dark'
 "Plug 'liuchengxu/space-vim-dark'
 "Plug 'crusoexia/vim-monokai'
-"Plug 'haishanh/night-owl.vim'
 "Plug 'nanotech/jellybeans.vim'
 "Plug 'dunstontc/vim-vscode-theme'
 "Plug 'NLKNguyen/papercolor-theme'
 "Plug 'mhartington/oceanic-next'
 "Plug 'dracula/vim'
-Plug 'jnurmine/Zenburn'
+"Plug 'jnurmine/Zenburn'
 Plug 'morhetz/gruvbox'
+Plug 'haishanh/night-owl.vim'
 
 call plug#end()
 
@@ -61,8 +61,8 @@ autocmd VimEnter * color elixir_box
 " VUE ENVIRONMENT
 "set background=dark
 "autocmd VimEnter * color gruvbox
-" RUST ENVIRONMENT
-"autocmd VimEnter * color zenburn
+" HASKELL ENVIRONMENT
+"autocmd VimEnter * color night-owl
 
 set backspace=indent,eol,start
 
