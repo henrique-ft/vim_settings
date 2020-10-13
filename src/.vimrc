@@ -9,8 +9,6 @@ Plug 'tpope/vim-rails'
 Plug 'posva/vim-vue'
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
-" HASKELL ENVIRONMENT
-Plug 'neovimhaskell/haskell-vim'
 " NGINX ENVIRONMENT
 "Plug 'chr4/nginx.vim'
 " < DEFAULT >
@@ -35,7 +33,7 @@ Plug 'zivyangll/git-blame.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'nvie/vim-togglemouse'
 Plug 'easymotion/vim-easymotion'
-"Plug 'mg979/vim-visual-multi'
+Plug 'mg979/vim-visual-multi'
 " COLORS
 "Plug 'tomasiser/vim-code-dark'
 "Plug 'liuchengxu/space-vim-dark'
@@ -54,15 +52,13 @@ call plug#end()
 "Colorschemes"
 
 " ELIXIR / REACT ENVIRONMENT
-autocmd VimEnter * color elixir_box
+"autocmd VimEnter * color elixir_box
 " RUBY / RAILS ENVIRONMENT
 "autocmd VimEnter * color ruby_box
 "autocmd filetype ruby compiler ruby
 " VUE ENVIRONMENT
 "set background=dark
 "autocmd VimEnter * color gruvbox
-" HASKELL ENVIRONMENT
-"autocmd VimEnter * color night-owl
 
 set backspace=indent,eol,start
 
@@ -253,8 +249,8 @@ abbr pry require IEx; IEx.pry
 abbr defm defmodule
 
 " Ajust vim bug
-"let &t_TI = ""
-"let &t_TE = ""
+let &t_TI = ""
+let &t_TE = ""
 
 " Set column length limit
 set colorcolumn=80
