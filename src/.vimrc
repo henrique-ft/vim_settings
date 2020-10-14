@@ -9,6 +9,8 @@ Plug 'tpope/vim-rails'
 Plug 'posva/vim-vue'
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
+" RUST ENVIRONMENT
+Plug 'rust-lang/rust.vim'
 " NGINX ENVIRONMENT
 "Plug 'chr4/nginx.vim'
 " < DEFAULT >
@@ -43,9 +45,9 @@ Plug 'mg979/vim-visual-multi'
 "Plug 'NLKNguyen/papercolor-theme'
 "Plug 'mhartington/oceanic-next'
 "Plug 'dracula/vim'
-"Plug 'jnurmine/Zenburn'
+"Plug 'haishanh/night-owl.vim'
+Plug 'jnurmine/Zenburn'
 Plug 'morhetz/gruvbox'
-Plug 'haishanh/night-owl.vim'
 
 call plug#end()
 
@@ -59,6 +61,8 @@ call plug#end()
 " VUE ENVIRONMENT
 "set background=dark
 "autocmd VimEnter * color gruvbox
+" RUST ENVIRONMENT
+autocmd VimEnter * color zenburn
 
 set backspace=indent,eol,start
 
@@ -241,8 +245,8 @@ noremap f *
 nnoremap x :noh<return>
 
 " Map line navigation
-map L $
-map H _
+"map L $
+"map H _
 
 " ELIXIR
 abbr pry require IEx; IEx.pry
