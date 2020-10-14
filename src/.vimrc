@@ -46,8 +46,9 @@ Plug 'mg979/vim-visual-multi'
 "Plug 'mhartington/oceanic-next'
 "Plug 'dracula/vim'
 "Plug 'haishanh/night-owl.vim'
-Plug 'jnurmine/Zenburn'
+"Plug 'jnurmine/Zenburn'
 Plug 'morhetz/gruvbox'
+Plug 'fcpg/vim-fahrenheit'
 
 call plug#end()
 
@@ -56,7 +57,7 @@ call plug#end()
 " ELIXIR / REACT ENVIRONMENT
 "autocmd VimEnter * color elixir_box
 " RUST ENVIRONMENT
-autocmd VimEnter * color zenburn
+autocmd VimEnter * color fahrenheit
 " VUE ENVIRONMENT
 "set background=dark
 "autocmd VimEnter * color gruvbox
@@ -245,8 +246,8 @@ noremap f *
 nnoremap x :noh<return>
 
 " Map line navigation
-"map L $
-"map H _
+map L $
+map H _
 
 " ELIXIR
 abbr pry require IEx; IEx.pry
