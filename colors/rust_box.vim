@@ -174,7 +174,7 @@ call s:h("Keyword",       { "fg": s:aqua, "format": "bold" })
 "        Exception"
 
 call s:h("PreProc",       { "fg": s:green2, "format": "bold" }) " MACROS RUST
-call s:h("Include",       { "fg": s:white, "format": "bold" }) " INCLUDES RUST
+call s:h("Include",       { "fg": s:white, "format": "bold,italic" }) " INCLUDES RUST
 call s:h("Define",        { "fg": s:pink })
 call s:h("Macro",         { "fg": s:green })
 call s:h("PreCondit",     { "fg": s:green })

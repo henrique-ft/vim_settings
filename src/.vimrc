@@ -255,8 +255,8 @@ abbr pry require IEx; IEx.pry
 abbr defm defmodule
 
 " Ajust vim bug
-"let &t_TI = ""
-"let &t_TE = ""
+let &t_TI = ""
+let &t_TE = ""
 
 " Set column length limit
 set colorcolumn=80
