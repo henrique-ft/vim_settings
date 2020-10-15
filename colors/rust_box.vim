@@ -86,6 +86,7 @@ let s:green       = { "gui": "#A6E22D", "cterm": "131" }
 let s:green2       = { "gui": "#A6E22D", "cterm": "95" }
 "let s:aqua        = { "gui": "#66d9ef", "cterm": "96" }
 let s:aqua        = { "gui": "#66d9ef", "cterm": "59" }
+let s:aqua2        = { "gui": "#66d9ef", "cterm": "248" }
 let s:yellow      = { "gui": "#E6DB74", "cterm": "229" }
 let s:orange      = { "gui": "#FD9720", "cterm": "209" }
 let s:purple      = { "gui": "#ae81ff", "cterm": "61" }
@@ -156,7 +157,7 @@ call s:h("Boolean",       { "fg": s:purple })
 call s:h("Character",     { "fg": s:yellow })
 call s:h("String",        { "fg": s:yellow })
 
-call s:h("Type",          { "fg": s:aqua , "format": "italic" })
+call s:h("Type",          { "fg": s:aqua2 , "format": "italic" }) " CONSTANTS RUST
 call s:h("Structure",     { "fg": s:aqua })
 call s:h("StorageClass",  { "fg": s:aqua })
 call s:h("Typedef",       { "fg": s:aqua })
@@ -186,7 +187,7 @@ call s:h("Tag",           { "fg": s:pink })
 "        Debug"
 
 call s:h("Todo",          { "fg": s:orange,   "format": "bold,italic" })
-call s:h("Comment",       { "fg": s:warmgrey, "format": "italic" })
+call s:h("Comment",       { "fg": s:warmgrey, "format": "italic,underline" })
 
 call s:h("Underlined",    { "fg": s:green })
 call s:h("Ignore",        {})
