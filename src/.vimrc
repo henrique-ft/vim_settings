@@ -56,9 +56,9 @@ call plug#end()
 "Colorschemes"
 
 " ELIXIR / REACT ENVIRONMENT
-"autocmd VimEnter * color elixir_box
+autocmd VimEnter * color elixir_box
 " RUST ENVIRONMENT
-autocmd VimEnter * color rust_box
+"autocmd VimEnter * color rust_box
 " VUE ENVIRONMENT
 "set background=dark
 "autocmd VimEnter * color gruvbox
@@ -200,11 +200,11 @@ nnoremap <M-j> <C-d>
 
 "Add space q and space w to save and quit
 let mapleader=" "
-nmap <Leader>q :q<CR>
-nmap <Leader>w :w<CR>
+nmap <leader>q :q<CR>
+nmap <leader>w :w<CR>
 
 "Git Blame"
-nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
+nnoremap <leader>s :<C-u>call gitblame#echo()<CR>
 
 "B
 "Tab Navigation
@@ -227,17 +227,18 @@ vmap <leader>f <Plug>CtrlSFVwordExec
 nmap <leader>f <Plug>CtrlSFCwordPath
 
 "easymotion
-map <Leader>l <Plug>(easymotion-lineforward)
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
-map <Leader>h <Plug>(easymotion-linebackward)
-map <Leader>e <Plug>(easymotion-w)
+map <leader>l <Plug>(easymotion-lineforward)
+map <leader>j <Plug>(easymotion-j)
+map <leader>k <Plug>(easymotion-k)
+map <leader>h <Plug>(easymotion-linebackward)
+map <leader>e <Plug>(easymotion-w)
+map <leader>E <Plug>(easymotion-e)
 map  \ <Plug>(easymotion-sn)
 omap \ <Plug>(easymotion-tn)
 let g:EasyMotion_startofline = 0
 
 " Identlines configuration
-nmap <Leader>i :IndentLinesToggle<CR>
+nmap <leader>i :IndentLinesToggle<CR>
 let g:indentLine_char = '│'
 let g:indentLine_fileTypeExclude = ["nerdtree"]
 
@@ -255,8 +256,8 @@ abbr pry require IEx; IEx.pry
 abbr defm defmodule
 
 " Ajust vim bug
-let &t_TI = ""
-let &t_TE = ""
+"let &t_TI = ""
+"let &t_TE = ""
 
 " Set column length limit
 set colorcolumn=80
