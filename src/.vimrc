@@ -170,7 +170,7 @@ set encoding=UTF-8
 let g:gitgutter_terminal_reports_focus=0
 let g:indentLine_color_term = 239
 let g:ackprg = 'ag --nogroup --nocolor --column'
-let g:closetag_filenames = '*.erb,*.html,*.xhtml,*.phtml'
+let g:closetag_filenames = '*.erb,*.html,*.xhtml,*.phtml,*.html.*,*.jsx'
 let g:closetag_filetypes = 'html,xhtml,phtml'
 
 "Auto complete"
