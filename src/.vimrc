@@ -2,13 +2,12 @@ call plug#begin('~/.vim/plugged')
 
 " ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
+" JAVASCRIPT / REACT ENVIRONMENT
+Plug 'pangloss/vim-javascript'
+Plug 'maxmellon/vim-jsx-pretty'
 " RUST ENVIRONMENT
 Plug 'rust-lang/rust.vim'
 Plug 'mustache/vim-mustache-handlebars'
-" JAVASCRIPT / REACT / VUE ENVIRONMENT
-Plug 'posva/vim-vue'
-Plug 'pangloss/vim-javascript'
-Plug 'maxmellon/vim-jsx-pretty'
 " RUBY / RAILS ENVIRONMENT
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
@@ -36,7 +35,7 @@ Plug 'zivyangll/git-blame.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'nvie/vim-togglemouse'
 Plug 'easymotion/vim-easymotion'
-"Plug 'mg979/vim-visual-multi'
+Plug 'mg979/vim-visual-multi'
 " COLORS
 "Plug 'tomasiser/vim-code-dark'
 "Plug 'liuchengxu/space-vim-dark'
@@ -59,9 +58,6 @@ call plug#end()
 autocmd VimEnter * color elixir_box
 " RUST ENVIRONMENT
 "autocmd VimEnter * color rust_box
-" VUE ENVIRONMENT
-"set background=dark
-"autocmd VimEnter * color gruvbox
 " RUBY / RAILS ENVIRONMENT
 "autocmd VimEnter * color ruby_box
 "autocmd filetype ruby compiler ruby
@@ -256,8 +252,8 @@ abbr pry require IEx; IEx.pry
 abbr defm defmodule
 
 " Ajust vim bug
-"let &t_TI = ""
-"let &t_TE = ""
+let &t_TI = ""
+let &t_TE = ""
 
 " Set column length limit
 set colorcolumn=80
