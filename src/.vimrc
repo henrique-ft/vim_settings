@@ -2,15 +2,15 @@ call plug#begin('~/.vim/plugged')
 
 " ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
-" JAVASCRIPT / REACT ENVIRONMENT
+" RUBY / RAILS ENVIRONMENT
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+" JAVASCRIPT / VUE ENVIRONMENT
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 " RUST ENVIRONMENT
 Plug 'rust-lang/rust.vim'
 Plug 'mustache/vim-mustache-handlebars'
-" RUBY / RAILS ENVIRONMENT
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
 " NGINX ENVIRONMENT
 "Plug 'chr4/nginx.vim'
 " < DEFAULT >
@@ -54,13 +54,16 @@ call plug#end()
 
 "Colorschemes"
 
-" ELIXIR / REACT ENVIRONMENT
+" ELIXIR ENVIRONMENT
 autocmd VimEnter * color elixir_box
-" RUST ENVIRONMENT
-"autocmd VimEnter * color rust_box
 " RUBY / RAILS ENVIRONMENT
 "autocmd VimEnter * color ruby_box
 "autocmd filetype ruby compiler ruby
+" VUE ENVIRONMENT
+"set background=dark
+"autocmd VimEnter * color gruvbox
+" RUST ENVIRONMENT
+"autocmd VimEnter * color rust_box
 
 set backspace=indent,eol,start
 
@@ -69,7 +72,7 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 
-" JAVASCRIPT / NODE / VUE ENVIRONMENT
+" JAVASCRIPT / VUE ENVIRONMENT
 "set tabstop=4
 "set shiftwidth=4
 "set softtabstop=4
@@ -166,7 +169,7 @@ set encoding=UTF-8
 let g:gitgutter_terminal_reports_focus=0
 let g:indentLine_color_term = 239
 let g:ackprg = 'ag --nogroup --nocolor --column'
-let g:closetag_filenames = '*.erb,*.html,*.xhtml,*.phtml,*.html.*,*.jsx'
+let g:closetag_filenames = '*.erb,*.html,*.xhtml,*.phtml'
 let g:closetag_filetypes = 'html,xhtml,phtml'
 
 "Auto complete"
@@ -174,7 +177,7 @@ let g:closetag_filetypes = 'html,xhtml,phtml'
 "inoremap ( ()<left>
 "inoremap [ []<left>
 
-" JAVASCRIPT / NODE / VUE / REACT ENVIRONMENT
+" JAVASCRIPT / VUE / RUST ENVIRONMENT
 "inoremap { {}<left>
 "inoremap {<CR> {<CR>}<ESC>O
 "inoremap {;<CR> {<CR>};<ESC>O
@@ -258,7 +261,7 @@ let &t_TE = ""
 " Set column length limit
 set colorcolumn=80
 
-" RUBY / ELIXIR / CRYSTAL ENVIRONMENT
+" RUBY / ELIXIR ENVIRONMENT
 "Endwise (tpope/vim-endwise)
 "------------------------------------------------------------------------------------------------------------------------------------
 
