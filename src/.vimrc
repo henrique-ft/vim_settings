@@ -8,9 +8,8 @@ Plug 'tpope/vim-rails'
 " JAVASCRIPT / VUE ENVIRONMENT
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
-" RUST ENVIRONMENT
-Plug 'rust-lang/rust.vim'
-Plug 'mustache/vim-mustache-handlebars'
+" HASKELL ENVIRONMENT
+Plug 'neovimhaskell/haskell-vim'
 " NGINX ENVIRONMENT
 "Plug 'chr4/nginx.vim'
 " < DEFAULT >
@@ -45,10 +44,10 @@ Plug 'mg979/vim-visual-multi'
 "Plug 'NLKNguyen/papercolor-theme'
 "Plug 'mhartington/oceanic-next'
 "Plug 'dracula/vim'
-"Plug 'haishanh/night-owl.vim'
 "Plug 'jnurmine/Zenburn'
 "Plug 'fcpg/vim-fahrenheit'
 Plug 'morhetz/gruvbox'
+Plug 'haishanh/night-owl.vim'
 
 call plug#end()
 
@@ -62,8 +61,8 @@ autocmd VimEnter * color elixir_box
 " VUE ENVIRONMENT
 "set background=dark
 "autocmd VimEnter * color gruvbox
-" RUST ENVIRONMENT
-"autocmd VimEnter * color rust_box
+" HASKELL ENVIRONMENT
+"autocmd VimEnter * color night-owl
 
 set backspace=indent,eol,start
 
@@ -177,7 +176,7 @@ let g:closetag_filetypes = 'html,xhtml,phtml'
 "inoremap ( ()<left>
 "inoremap [ []<left>
 
-" JAVASCRIPT / VUE / RUST ENVIRONMENT
+" JAVASCRIPT / VUE ENVIRONMENT
 "inoremap { {}<left>
 "inoremap {<CR> {<CR>}<ESC>O
 "inoremap {;<CR> {<CR>};<ESC>O
