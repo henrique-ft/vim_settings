@@ -2,14 +2,12 @@ call plug#begin('~/.vim/plugged')
 
 " ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
-" JAVASCRIPT / VUE ENVIRONMENT
+" JAVASCRIPT / REACT ENVIRONMENT
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 " RUST ENVIRONMENT
 Plug 'rust-lang/rust.vim'
 Plug 'mustache/vim-mustache-handlebars'
-" HASKELL ENVIRONMENT
-Plug 'neovimhaskell/haskell-vim'
 " RUBY / RAILS ENVIRONMENT
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
@@ -37,7 +35,7 @@ Plug 'zivyangll/git-blame.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'nvie/vim-togglemouse'
 Plug 'easymotion/vim-easymotion'
-Plug 'mg979/vim-visual-multi'
+"Plug 'mg979/vim-visual-multi'
 " COLORS
 "Plug 'tomasiser/vim-code-dark'
 "Plug 'liuchengxu/space-vim-dark'
@@ -47,24 +45,19 @@ Plug 'mg979/vim-visual-multi'
 "Plug 'NLKNguyen/papercolor-theme'
 "Plug 'mhartington/oceanic-next'
 "Plug 'dracula/vim'
+"Plug 'haishanh/night-owl.vim'
 "Plug 'jnurmine/Zenburn'
 "Plug 'fcpg/vim-fahrenheit'
 Plug 'morhetz/gruvbox'
-Plug 'haishanh/night-owl.vim'
 
 call plug#end()
 
 "Colorschemes"
 
-" ELIXIR ENVIRONMENT
+" ELIXIR / REACT ENVIRONMENT
 autocmd VimEnter * color elixir_box
-" VUE ENVIRONMENT
-"set background=dark
-"autocmd VimEnter * color gruvbox
 " RUST ENVIRONMENT
 "autocmd VimEnter * color rust_box
-" HASKELL ENVIRONMENT
-"autocmd VimEnter * color night-owl
 " RUBY / RAILS ENVIRONMENT
 "autocmd VimEnter * color ruby_box
 "autocmd filetype ruby compiler ruby
@@ -76,7 +69,7 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 
-" JAVASCRIPT / VUE ENVIRONMENT
+" JAVASCRIPT / NODE / VUE ENVIRONMENT
 "set tabstop=4
 "set shiftwidth=4
 "set softtabstop=4
@@ -173,7 +166,7 @@ set encoding=UTF-8
 let g:gitgutter_terminal_reports_focus=0
 let g:indentLine_color_term = 239
 let g:ackprg = 'ag --nogroup --nocolor --column'
-let g:closetag_filenames = '*.erb,*.html,*.xhtml,*.phtml'
+let g:closetag_filenames = '*.exs,*.jsx,*.erb,*.html,*.xhtml,*.phtml,*.html.*,*.jsx'
 let g:closetag_filetypes = 'html,xhtml,phtml'
 
 "Auto complete"
@@ -181,7 +174,7 @@ let g:closetag_filetypes = 'html,xhtml,phtml'
 "inoremap ( ()<left>
 "inoremap [ []<left>
 
-" JAVASCRIPT / VUE ENVIRONMENT
+" JAVASCRIPT / NODE / VUE / REACT ENVIRONMENT
 "inoremap { {}<left>
 "inoremap {<CR> {<CR>}<ESC>O
 "inoremap {;<CR> {<CR>};<ESC>O
@@ -259,13 +252,13 @@ abbr pry require IEx; IEx.pry
 abbr defm defmodule
 
 " Ajust vim bug
-let &t_TI = ""
-let &t_TE = ""
+"let &t_TI = ""
+"let &t_TE = ""
 
 " Set column length limit
 set colorcolumn=80
 
-" RUBY / ELIXIR ENVIRONMENT
+" RUBY / ELIXIR / CRYSTAL ENVIRONMENT
 "Endwise (tpope/vim-endwise)
 "------------------------------------------------------------------------------------------------------------------------------------
 
