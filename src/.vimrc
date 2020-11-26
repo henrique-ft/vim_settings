@@ -69,7 +69,7 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 
-" JAVASCRIPT / NODE / VUE ENVIRONMENT
+" JAVASCRIPT ENVIRONMENT
 "set tabstop=4
 "set shiftwidth=4
 "set softtabstop=4
@@ -174,7 +174,7 @@ let g:closetag_filetypes = 'html,xhtml,phtml'
 "inoremap ( ()<left>
 "inoremap [ []<left>
 
-" JAVASCRIPT / NODE / VUE / REACT ENVIRONMENT
+" RUST / JAVASCRIPT / REACT ENVIRONMENT
 "inoremap { {}<left>
 "inoremap {<CR> {<CR>}<ESC>O
 "inoremap {;<CR> {<CR>};<ESC>O
@@ -258,7 +258,7 @@ abbr defm defmodule
 " Set column length limit
 set colorcolumn=80
 
-" RUBY / ELIXIR / CRYSTAL ENVIRONMENT
+" RUBY / ELIXIR ENVIRONMENT
 "Endwise (tpope/vim-endwise)
 "------------------------------------------------------------------------------------------------------------------------------------
 
