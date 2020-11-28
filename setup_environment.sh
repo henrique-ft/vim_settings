@@ -19,6 +19,22 @@ git clone https://github.com/kien/ctrlp.vim.git bundle/ctrlp.vim
 echo "******************************************"
 echo " "
 echo " "
+echo "Install Elixir / Erlang? [Y,n]"
+read input
+echo " "
+echo " "
+echo " "
+if [[ $input == "Y" || $input == "y" ]]; then
+  echo "******************************************"
+  wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb && sudo dpkg -i erlang-solutions_2.0_all.deb
+  sudo apt-get update
+  sudo apt-get install esl-erlang
+  sudo apt-get install elixir
+  echo "******************************************"
+fi
+
+echo " "
+echo " "
 echo "Setup done, open vim and run :PlugInstall"
 echo " "
 echo " "
