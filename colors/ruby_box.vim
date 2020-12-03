@@ -251,9 +251,9 @@ call s:h("typescriptObjectLabel",         { "fg": s:green })
 call s:h("typescriptAmbientDeclaration",  { "fg": s:pink })
 
 " Html
-call s:h("htmlTag",             { "fg": s:white })
-call s:h("htmlEndTag",          { "fg": s:white })
-call s:h("htmlTagName",         { "fg": s:pink })
+call s:h("htmlTag",             { "fg": s:pink })
+call s:h("htmlEndTag",          { "fg": s:pink })
+call s:h("htmlTagName",         { "fg": s:white })
 call s:h("htmlArg",             { "fg": s:green })
 call s:h("htmlSpecialChar",     { "fg": s:purple })
 
