@@ -1,16 +1,16 @@
 call plug#begin('~/.vim/plugged')
 
+" ELIXIR ENVIRONMENT
+Plug 'elixir-editors/vim-elixir'
+" RUST ENVIRONMENT
+Plug 'rust-lang/rust.vim'
+" JS / VUE ENVIRONMENT
+Plug 'pangloss/vim-javascript'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'leafgarland/typescript-vim'
 " RUBY / RAILS ENVIRONMENT
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
-" ELIXIR ENVIRONMENT
-Plug 'elixir-editors/vim-elixir'
-" JS / TS / VUE ENVIRONMENT
-Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
-Plug 'mustache/vim-mustache-handlebars'
-Plug 'posva/vim-vue'
-Plug 'maxmellon/vim-jsx-pretty'
 " NGINX ENVIRONMENT
 "Plug 'chr4/nginx.vim'
 " < DEFAULT >
@@ -54,14 +54,16 @@ call plug#end()
 
 "Colorschemes"
 
-" RUBY / RAILS ENVIRONMENT
-"autocmd VimEnter * color ruby_box
-"autocmd filetype ruby compiler ruby
 " ELIXIR ENVIRONMENT
 "autocmd VimEnter * color elixir_box
-" JS / TS / VUE ENVIRONMENT
-set background=dark
-autocmd VimEnter * color gruvbox
+" RUST ENVIRONMENT
+"autocmd VimEnter * color rust_box
+" JS / VUE ENVIRONMENT
+"set backgrount=dark
+"autocmd VimEnter * color gruvbox
+" RUBY / RAILS ENVIRONMENT
+autocmd VimEnter * color ruby_box
+autocmd filetype ruby compiler ruby
 
 set backspace=indent,eol,start
 
@@ -70,7 +72,7 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 
-" JS / TS / VUE ENVIRONMENT
+" JAVASCRIPT ENVIRONMENT
 "set tabstop=4
 "set shiftwidth=4
 "set softtabstop=4
@@ -174,12 +176,10 @@ let g:closetag_filetypes = 'html,xhtml,phtml'
 "inoremap ' ''<left>
 "inoremap ( ()<left>
 "inoremap [ []<left>
-
-" JS / TS / VUE ENVIRONMENT
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
-"
+
 syntax on
 
 autocmd VimEnter * CloseTagEnableBuffer
@@ -253,8 +253,8 @@ abbr pry require IEx; IEx.pry
 abbr defm defmodule
 
 " Ajust vim bug
-"let &t_TI = ""
-"let &t_TE = ""
+let &t_TI = ""
+let &t_TE = ""
 
 " Set column length limit
 set colorcolumn=80
