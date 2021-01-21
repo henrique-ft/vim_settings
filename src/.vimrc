@@ -2,7 +2,7 @@ call plug#begin('~/.vim/plugged')
 
 " ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
-" JS ENVIRONMENT
+" JS / TS ENVIRONMENT
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'posva/vim-vue'
@@ -54,7 +54,7 @@ call plug#end()
 
 " ELIXIR ENVIRONMENT
 "autocmd VimEnter * color elixir_box
-" JS ENVIRONMENT
+" JS / TS ENVIRONMENT
 "set background=dark
 "autocmd VimEnter * color gruvbox
 " RUBY / RAILS ENVIRONMENT
@@ -68,7 +68,7 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 
-" JAVASCRIPT ENVIRONMENT
+" JS / TS ENVIRONMENT
 "set tabstop=4
 "set shiftwidth=4
 "set softtabstop=4
