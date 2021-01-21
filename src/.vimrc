@@ -9,8 +9,10 @@ Plug 'rust-lang/rust.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 " NGINX ENVIRONMENT
-"Plug 'chr4/nginx.vim'
+Plug 'chr4/nginx.vim'
+
 " < DEFAULT >
+
 Plug 'ap/vim-css-color'
 Plug 'othree/html5.vim'
 Plug 'scrooloose/nerdtree'
@@ -33,7 +35,9 @@ Plug 'Yggdroot/indentLine'
 Plug 'nvie/vim-togglemouse'
 Plug 'easymotion/vim-easymotion'
 "Plug 'mg979/vim-visual-multi'
-" COLORS
+
+" < COLORS >
+
 "Plug 'tomasiser/vim-code-dark'
 "Plug 'liuchengxu/space-vim-dark'
 "Plug 'crusoexia/vim-monokai'
@@ -46,21 +50,25 @@ Plug 'easymotion/vim-easymotion'
 "Plug 'jnurmine/Zenburn'
 "Plug 'fcpg/vim-fahrenheit'
 "Plug 'morhetz/gruvbox'
-" < OTHERS >
+
+" < LEGACY >
+
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 Plug 'posva/vim-vue'
-
 call plug#end()
 
 "Colorschemes"
+
+" MAIN
 
 " ELIXIR ENVIRONMENT
 "autocmd VimEnter * color elixir_box
 " RUST ENVIRONMENT
 "autocmd VimEnter * color rust_box
 
-" OTHERS
+" LEGACY
+
 autocmd VimEnter * color ruby_box
 autocmd filetype ruby compiler ruby
 
