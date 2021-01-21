@@ -2,12 +2,10 @@ call plug#begin('~/.vim/plugged')
 
 " ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
-" RUST ENVIRONMENT
-Plug 'rust-lang/rust.vim'
-" JS / VUE ENVIRONMENT
+" JS ENVIRONMENT
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'leafgarland/typescript-vim'
+Plug 'posva/vim-vue'
 " RUBY / RAILS ENVIRONMENT
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
@@ -56,10 +54,8 @@ call plug#end()
 
 " ELIXIR ENVIRONMENT
 "autocmd VimEnter * color elixir_box
-" RUST ENVIRONMENT
-"autocmd VimEnter * color rust_box
-" JS / VUE ENVIRONMENT
-"set backgrount=dark
+" JS ENVIRONMENT
+"set background=dark
 "autocmd VimEnter * color gruvbox
 " RUBY / RAILS ENVIRONMENT
 autocmd VimEnter * color ruby_box
