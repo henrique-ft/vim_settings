@@ -1,14 +1,13 @@
 call plug#begin('~/.vim/plugged')
+" < MAIN >
 
 " ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
-" JS / REACT / VUE ENVIRONMENT
+" RUST ENVIRONMENT
+Plug 'rust-lang/rust.vim'
+" JAVASCRIPT / REACT ENVIRONMENT
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'posva/vim-vue'
-" RUBY / RAILS ENVIRONMENT
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
 " NGINX ENVIRONMENT
 "Plug 'chr4/nginx.vim'
 " < DEFAULT >
@@ -46,18 +45,21 @@ Plug 'easymotion/vim-easymotion'
 "Plug 'haishanh/night-owl.vim'
 "Plug 'jnurmine/Zenburn'
 "Plug 'fcpg/vim-fahrenheit'
-Plug 'morhetz/gruvbox'
+"Plug 'morhetz/gruvbox'
+" < OTHERS >
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+Plug 'posva/vim-vue'
 
 call plug#end()
 
 "Colorschemes"
 
-" ELIXIR / REACT ENVIRONMENT
+" ELIXIR ENVIRONMENT
 "autocmd VimEnter * color elixir_box
-" JS / VUE ENVIRONMENT
-"set background=dark
-"autocmd VimEnter * color gruvbox
-" RUBY / RAILS ENVIRONMENT
+" RUST ENVIRONMENT
+"autocmd VimEnter * color rust_box
+
 autocmd VimEnter * color ruby_box
 autocmd filetype ruby compiler ruby
 
