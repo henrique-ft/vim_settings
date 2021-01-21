@@ -60,17 +60,18 @@ call plug#end()
 " RUST ENVIRONMENT
 "autocmd VimEnter * color rust_box
 
+" OTHERS
 autocmd VimEnter * color ruby_box
 autocmd filetype ruby compiler ruby
 
 set backspace=indent,eol,start
 
-" RUBY / ELIXIR ENVIRONMENT
+" ELIXIR ENVIRONMENT
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 
-" JS / TS ENVIRONMENT
+" JS / REACT ENVIRONMENT
 "set tabstop=4
 "set shiftwidth=4
 "set softtabstop=4
@@ -257,7 +258,7 @@ let &t_TE = ""
 " Set column length limit
 set colorcolumn=80
 
-" RUBY / ELIXIR ENVIRONMENT
+" ELIXIR ENVIRONMENT
 "Endwise (tpope/vim-endwise)
 "------------------------------------------------------------------------------------------------------------------------------------
 
