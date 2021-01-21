@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'elixir-editors/vim-elixir'
 " JS / TS ENVIRONMENT
 Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'posva/vim-vue'
 " RUBY / RAILS ENVIRONMENT
