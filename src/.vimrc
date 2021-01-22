@@ -7,7 +7,7 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'rust-lang/rust.vim'
 " JAVASCRIPT / REACT ENVIRONMENT
 Plug 'pangloss/vim-javascript'
-Plug 'maxmellon/vim-jsx-pretty'
+Plug 'posva/vim-vue'
 " NGINX ENVIRONMENT
 Plug 'chr4/nginx.vim'
 
@@ -49,28 +49,28 @@ Plug 'easymotion/vim-easymotion'
 "Plug 'haishanh/night-owl.vim'
 "Plug 'jnurmine/Zenburn'
 "Plug 'fcpg/vim-fahrenheit'
-"Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
 
-" < LEGACY >
+" < OTHERS >
 
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
-Plug 'posva/vim-vue'
 call plug#end()
 
 "Colorschemes"
 
-" MAIN
+" < MAIN >
 
 " ELIXIR ENVIRONMENT
-"autocmd VimEnter * color elixir_box
+autocmd VimEnter * color elixir_box
 " RUST ENVIRONMENT
 "autocmd VimEnter * color rust_box
 
-" LEGACY
+" < OTHERS >
 
-autocmd VimEnter * color ruby_box
-autocmd filetype ruby compiler ruby
+"autocmd VimEnter * color ruby_box
+"autocmd filetype ruby compiler ruby
 
 set backspace=indent,eol,start
 
@@ -79,7 +79,7 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 
-" JS / REACT ENVIRONMENT
+" JAVASCRIPT / REACT ENVIRONMENT
 "set tabstop=4
 "set shiftwidth=4
 "set softtabstop=4
@@ -260,8 +260,8 @@ abbr pry require IEx; IEx.pry
 abbr defm defmodule
 
 " Ajust vim bug
-let &t_TI = ""
-let &t_TE = ""
+"let &t_TI = ""
+"let &t_TE = ""
 
 " Set column length limit
 set colorcolumn=80
