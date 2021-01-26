@@ -1,0 +1,77 @@
+call plug#begin('~/.vim/plugged')
+  Plug 'drmikehenry/vim-fixkey'
+call plug#end()
+
+" https://plugins.jetbrains.com/plugin/13360-ideavim-easymotion
+" https://plugins.jetbrains.com/plugin/7086-acejump
+set easymotion
+
+set backspace=indent,eol,start
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set nobackup
+set noswapfile
+set noundofile
+set nofoldenable
+nnoremap p p=`]
+
+"Add highlight for searchs
+set hlsearch
+
+"stop recording bug
+map q <Nop>
+map Q <Nop>
+"stop navigation wrong keys 'bugs'
+map K <Nop>
+map J <Nop>
+
+"ctrl+hjkl or hjkl Navigation"
+nmap <silent> <C-h> :wincmd h<CR>
+nmap <silent> <C-j> :wincmd j<CR>
+nmap <silent> <C-k> :wincmd k<CR>
+nmap <silent> <C-l> :wincmd l<CR>
+"
+
+"Add space q and space w to save and quit
+let mapleader=" "
+nmap <leader>q :q<CR>
+nmap <leader>w :w<CR>
+
+"Fast word highlighting"
+noremap f *
+"Press x to turn off highlighting and clear any message already displayed.
+nnoremap x :noh<return>
+
+" Map line navigation
+map L $
+map H _
+
+" Set column length limit
+set colorcolumn=80
+
+"easymotion
+map <leader>l <Plug>(easymotion-lineforward)
+map <leader>j <Plug>(easymotion-j)
+map <leader>k <Plug>(easymotion-k)
+map <leader>h <Plug>(easymotion-linebackward)
+map <leader>e <Plug>(easymotion-w)
+map <leader>E <Plug>(easymotion-e)
+let g:EasyMotion_startofline = 0
+
+"Tab Navigation
+noremap <M-h> :tabprevious<CR>
+noremap <M-l> :tabnext<CR>
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>
+
+"Search
+map \ <Plug>/
