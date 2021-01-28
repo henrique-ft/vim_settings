@@ -1,7 +1,7 @@
 """"""""""""""""""""""""""""""""
-" ~                          ~ "
-" ~   @truehenrique .vimrc   ~ "
-" ~                          ~ "
+" ~|                        |~ "
+" ~|  @truehenrique .vimrc  |~ "
+" ~|                        |~ "
 """"""""""""""""""""""""""""""""
 
 call plug#begin('~/.vim/plugged')
@@ -67,15 +67,15 @@ call plug#end()
 " *RUBY ENVIRONMENT
 autocmd VimEnter * color ruby_box
 autocmd filetype ruby compiler ruby
+" *JAVA ENVIRONMENT
+"set background=light
+"autocmd VimEnter * color PaperColor
+"autocmd FileType java setlocal omnifunc=javacomplete#Complete
 " *ELIXIR ENVIRONMENT
 "autocmd VimEnter * color elixir_box
 " *VUE ENVIRONMENT
 "set background=dark
 "autocmd VimEnter * color gruvbox
-" *JAVA ENVIRONMENT
-"set background=light
-"autocmd VimEnter * color PaperColor
-"autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 " < CONFIG >
 
@@ -217,7 +217,6 @@ nmap <leader>w :w<CR>
 "Git Blame"
 nnoremap <leader>s :<C-u>call gitblame#echo()<CR>
 
-"B
 "Tab Navigation
 noremap <M-h> :tabprevious<CR>
 noremap <M-l> :tabnext<CR>
