@@ -1,14 +1,24 @@
-call plug#begin('~/.vim/plugged')
-" < MAIN >
+""""""""""""""""""""""""""""""""
+"                              "
+"     @truehenrique .vimrc     "
+"                              "
+""""""""""""""""""""""""""""""""
 
-" ELIXIR ENVIRONMENT
+call plug#begin('~/.vim/plugged')
+" < MISC >
+
+" *RUBY ENVIRONMENT
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+" *JAVA ENVIRONMENT
+Plug 'artur-shaik/vim-javacomplete2'
+" *ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
-" RUST ENVIRONMENT
-Plug 'rust-lang/rust.vim'
-" JAVASCRIPT / REACT ENVIRONMENT
+" *JAVASCRIPT / *VUE ENVIRONMENT
 Plug 'pangloss/vim-javascript'
+Plug 'posva/vim-vue'
 Plug 'maxmellon/vim-jsx-pretty'
-" NGINX ENVIRONMENT
+" *NGINX ENVIRONMENT
 Plug 'chr4/nginx.vim'
 
 " < DEFAULT >
@@ -34,7 +44,7 @@ Plug 'zivyangll/git-blame.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'nvie/vim-togglemouse'
 Plug 'easymotion/vim-easymotion'
-"Plug 'mg979/vim-visual-multi'
+Plug 'mg979/vim-visual-multi'
 
 " < COLORS >
 
@@ -43,45 +53,40 @@ Plug 'easymotion/vim-easymotion'
 "Plug 'crusoexia/vim-monokai'
 "Plug 'nanotech/jellybeans.vim'
 "Plug 'dunstontc/vim-vscode-theme'
-"Plug 'NLKNguyen/papercolor-theme'
 "Plug 'mhartington/oceanic-next'
 "Plug 'dracula/vim'
 "Plug 'haishanh/night-owl.vim'
 "Plug 'jnurmine/Zenburn'
 "Plug 'fcpg/vim-fahrenheit'
-"Plug 'morhetz/gruvbox'
-
-" < LEGACY >
-
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
-Plug 'posva/vim-vue'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'morhetz/gruvbox'
 call plug#end()
 
-"Colorschemes"
+" < SET COLORS >
 
-" < MAIN >
-
-" ELIXIR ENVIRONMENT
-"autocmd VimEnter * color elixir_box
-" RUST ENVIRONMENT
-"autocmd VimEnter * color rust_box
-
-" < LEGACY >
-
+" *RUBY ENVIRONMENT
 autocmd VimEnter * color ruby_box
 autocmd filetype ruby compiler ruby
+" *ELIXIR ENVIRONMENT
+"autocmd VimEnter * color elixir_box
+" *VUE ENVIRONMENT
 "set background=dark
 "autocmd VimEnter * color gruvbox
+" *JAVA ENVIRONMENT
+"set background=light
+"autocmd VimEnter * color PaperColor
+"autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
+" < CONFIG >
 
 set backspace=indent,eol,start
 
-" ELIXIR ENVIRONMENT
+" *RUBY / *ELIXIR ENVIRONMENT
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 
-" JAVASCRIPT / REACT ENVIRONMENT
+" *JAVA / *JAVASCRIPT / *VUE ENVIRONMENT
 "set tabstop=4
 "set shiftwidth=4
 "set softtabstop=4
@@ -257,7 +262,7 @@ nnoremap x :noh<return>
 map L $
 map H _
 
-" ELIXIR
+" *ELIXIR ENVIRONMENT
 abbr pry require IEx; IEx.pry
 abbr defm defmodule
 
@@ -268,7 +273,7 @@ let &t_TE = ""
 " Set column length limit
 set colorcolumn=80
 
-" ELIXIR ENVIRONMENT
+" *RUBY / *ELIXIR ENVIRONMENT
 "Endwise (tpope/vim-endwise)
 "------------------------------------------------------------------------------------------------------------------------------------
 
