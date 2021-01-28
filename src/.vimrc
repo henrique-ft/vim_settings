@@ -10,7 +10,8 @@ call plug#begin('~/.vim/plugged')
 " *RUBY ENVIRONMENT
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
-" *JAVA ENVIRONMENT
+" *JAVA ENVIRONMENT ~ vim.gtk required
+Plug 'vim-syntastic/syntastic'
 Plug 'artur-shaik/vim-javacomplete2'
 " *ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
@@ -48,16 +49,16 @@ Plug 'mg979/vim-visual-multi'
 
 " < COLORS >
 
-"Plug 'tomasiser/vim-code-dark'
-"Plug 'liuchengxu/space-vim-dark'
-"Plug 'crusoexia/vim-monokai'
-"Plug 'nanotech/jellybeans.vim'
-"Plug 'dunstontc/vim-vscode-theme'
-"Plug 'mhartington/oceanic-next'
-"Plug 'dracula/vim'
-"Plug 'haishanh/night-owl.vim'
-"Plug 'jnurmine/Zenburn'
-"Plug 'fcpg/vim-fahrenheit'
+Plug 'tomasiser/vim-code-dark'
+Plug 'liuchengxu/space-vim-dark'
+Plug 'crusoexia/vim-monokai'
+Plug 'nanotech/jellybeans.vim'
+Plug 'dunstontc/vim-vscode-theme'
+Plug 'mhartington/oceanic-next'
+Plug 'dracula/vim'
+Plug 'haishanh/night-owl.vim'
+Plug 'jnurmine/Zenburn'
+Plug 'fcpg/vim-fahrenheit'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'morhetz/gruvbox'
 call plug#end()
@@ -68,9 +69,8 @@ call plug#end()
 autocmd VimEnter * color ruby_box
 autocmd filetype ruby compiler ruby
 " *JAVA ENVIRONMENT
-"set background=light
+"set background=dark
 "autocmd VimEnter * color PaperColor
-"autocmd FileType java setlocal omnifunc=javacomplete#Complete
 " *ELIXIR ENVIRONMENT
 "autocmd VimEnter * color elixir_box
 " *VUE ENVIRONMENT
@@ -78,6 +78,25 @@ autocmd filetype ruby compiler ruby
 "autocmd VimEnter * color gruvbox
 
 " < CONFIG >
+
+" *JAVA ENVIRONMENT
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+"" https://medium.com/@Sohjiro/setup-vim-checkstyle-java-d0dd74dca1e1
+"" https://checkstyle.sourceforge.io/
+"" https://github.com/checkstyle/checkstyle/releases/
+"let g:syntastic_java_checkers = ['checkstyle']
+"let g:syntastic_java_checkstyle_classpath = './checkstyle-8.4-all.jar'
+"let g:syntastic_java_checkstyle_conf_file = './checkstyle.xml
+inoremap <C-p> <C-x><C-o>
+inoremap <C-@> <C-p>
+abbr syso System.out.println();
 
 set backspace=indent,eol,start
 
@@ -264,6 +283,7 @@ map H _
 " *ELIXIR ENVIRONMENT
 abbr pry require IEx; IEx.pry
 abbr defm defmodule
+
 
 " Ajust vim bug
 let &t_TI = ""
