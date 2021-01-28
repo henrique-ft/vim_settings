@@ -1,7 +1,7 @@
 """"""""""""""""""""""""""""""""
-"                              "
-"     @truehenrique .vimrc     "
-"                              "
+" ~                          ~ "
+" ~   @truehenrique .vimrc   ~ "
+" ~                          ~ "
 """"""""""""""""""""""""""""""""
 
 call plug#begin('~/.vim/plugged')
