@@ -1,0 +1,222 @@
+{
+  "ruby.intellisense": "rubyLocate",
+  // The number of spaces a tab is equal to. This setting is overridden
+  // based on the file contents when `editor.detectIndentation` is true.
+  "editor.tabSize": 2,
+  // Insert spaces when pressing Tab. This setting is overriden
+  // based on the file contents when `editor.detectIndentation` is true.
+  "editor.insertSpaces": true,
+  // When opening a file, `editor.tabSize` and `editor.insertSpaces`
+  // will be detected based on the file contents. Set to false to keep
+  // the values you've explicitly set, above.
+  "editor.detectIndentation": false,
+  "window.zoomLevel": 0,
+  "breadcrumbs.enabled": true,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "window.menuBarVisibility": "default",
+  "workbench.colorTheme": "One Monokai Darker",
+  "editor.renderWhitespace": "none",
+  "editor.renderControlCharacters": false,
+  "editor.rulers": [
+    80
+  ],
+  "powermode.enabled": true,
+  "powermode.enableShake": false,
+  "workbench.iconTheme": "file-icons",
+  "editor.find.seedSearchStringFromSelection": false,
+  "vim.leader": "<space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // @FAST_SEARCH
+    { 
+      "before": [
+        "f",
+      ],
+      "after": [
+        "*"
+      ]
+    },
+    { 
+      "before": [
+        "x",
+      ],
+      "commands": [
+        ":nohl"
+      ]
+    },
+    // @HIGHLIGHT
+    {
+      "before": [
+        "x",
+      ],
+      "commands": [
+        ":nohl"
+      ]
+    },
+    // @EASYMOTION
+    {
+      "before": [
+        "<leader>",
+        "e"
+      ],
+      "after": [
+        "leader",
+        "leader",
+        "w"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "j"
+      ],
+      "after": [
+        "leader",
+        "leader",
+        "j"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "k"
+      ],
+      "after": [
+        "leader",
+        "leader",
+        "k"
+      ]
+    },
+    // @SAVE_AND_QUIT
+    {
+      "before": [
+        "<leader>",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.files.save"
+      ]
+    },
+    {
+      "before": [
+        "<space>",
+        "q"
+      ],
+      "commands": [
+        ":q",
+      ]
+    },
+    // @EXPLORER
+    {
+      "before": [
+        "<TAB>",
+      ],
+      "commands": [
+        "workbench.action.toggleSidebarVisibility",
+      ]
+    },
+    // @COMMENTS
+    {
+      "before": ["<leader>", "c", "<leader>"],
+      "commands": [
+          "editor.action.commentLine",
+      ],
+    },
+    // @LINE_MOTIONS
+    {
+      "before": [
+        "L"
+      ],
+      "after": [
+        "$"
+      ]
+    },
+    {
+      "before": [
+        "H"
+      ],
+      "after": [
+        "^"
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    // @EASYMOTION
+    {
+      "before": [
+        "<leader>",
+        "e"
+      ],
+      "after": [
+        "leader",
+        "leader",
+        "w"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "j"
+      ],
+      "after": [
+        "leader",
+        "leader",
+        "j"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "k"
+      ],
+      "after": [
+        "leader",
+        "leader",
+        "k"
+      ]
+    },
+    // @LINE_MOTIONS
+    {
+      "before": [
+        "L"
+      ],
+      "after": [
+        "$"
+      ]
+    },
+    {
+      "before": [
+        "H"
+      ],
+      "after": [
+        "^"
+      ]
+    },
+    // @COMMENTS
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "<leader>",
+      ],
+      "commands": [
+        "editor.action.commentLine",
+        "extension.vim_escape"
+      ],
+    }
+  ],
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": false,
+  "vim.handleKeys": {
+    "<C-f>": false,
+    "<C-r>": true,
+    "<C-o>": true,
+    "<C-u>": true,
+    "<C-d>": true
+  },
+  "vim.hlsearch": true,
+  "editor.fontSize": 12,
+  "editor.minimap.enabled": false,
+  "terminal.integrated.fontSize": 13,
+}
