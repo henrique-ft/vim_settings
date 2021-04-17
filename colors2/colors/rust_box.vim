@@ -71,22 +71,25 @@ endfunction
 
 
 let s:white       = { "gui": "#E8E8E3", "cterm": "255" }
-let s:black       = { "gui": "#272822", "cterm": "236" }
-let s:lightblack  = { "gui": "#2D2E27", "cterm": "237" }
-let s:lightblack2 = { "gui": "#383a3e", "cterm": "238" }
-let s:darkblack   = { "gui": "#211F1C", "cterm": "235" }
-let s:grey        = { "gui": "#8F908A", "cterm": "243" }
-let s:lightgrey   = { "gui": "#575b61", "cterm": "239" }
-let s:darkgrey    = { "gui": "#64645e", "cterm": "241" }
-let s:warmgrey    = { "gui": "#75715E", "cterm": "247" }
+let s:black       = { "gui": "#272822", "cterm": "16" }
+let s:lightblack  = { "gui": "#2D2E27", "cterm": "233" }
+let s:lightblack2 = { "gui": "#383a3e", "cterm": "234" }
+let s:darkblack   = { "gui": "#211F1C", "cterm": "232" }
+let s:grey        = { "gui": "#8F908A", "cterm": "244" }
+let s:lightgrey   = { "gui": "#575b61", "cterm": "237" }
+let s:darkgrey    = { "gui": "#64645e", "cterm": "101" }
+let s:warmgrey    = { "gui": "#75715E", "cterm": "238" }
 
-let s:pink        = { "gui": "#F92772", "cterm": "182" }
-let s:green       = { "gui": "#A6E22D", "cterm": "146" }
-let s:aqua        = { "gui": "#66d9ef", "cterm": "81" }
-let s:darkpurple  = { "gui": "#66d9ef", "cterm": "60" }
+let s:pink        = { "gui": "#F92772", "cterm": "101" }
+let s:pink2        = { "gui": "#F92772", "cterm": "102" }
+let s:green       = { "gui": "#A6E22D", "cterm": "131" }
+let s:green2       = { "gui": "#A6E22D", "cterm": "95" }
+"let s:aqua        = { "gui": "#66d9ef", "cterm": "96" }
+let s:aqua        = { "gui": "#66d9ef", "cterm": "59" }
+let s:aqua2        = { "gui": "#66d9ef", "cterm": "248" }
 let s:yellow      = { "gui": "#E6DB74", "cterm": "229" }
-let s:orange      = { "gui": "#FD9720", "cterm": "217" }
-let s:purple      = { "gui": "#ae81ff", "cterm": "183" }
+let s:orange      = { "gui": "#FD9720", "cterm": "209" }
+let s:purple      = { "gui": "#ae81ff", "cterm": "61" }
 let s:red         = { "gui": "#e73c50", "cterm": "196" }
 let s:darkred     = { "gui": "#5f0000", "cterm": "52" }
 
@@ -148,43 +151,43 @@ call s:h("PmenuThumb",    { "fg": s:lightblack, "bg": s:grey })
 " ---------------------------
 
 call s:h("Constant",      { "fg": s:purple })
-call s:h("Number",        { "fg": s:orange })
-call s:h("Float",         { "fg": s:orange })
-call s:h("Boolean",       { "fg": s:orange })
+call s:h("Number",        { "fg": s:purple })
+call s:h("Float",         { "fg": s:purple })
+call s:h("Boolean",       { "fg": s:purple })
 call s:h("Character",     { "fg": s:yellow })
 call s:h("String",        { "fg": s:yellow })
 
-call s:h("Type",          { "fg": s:aqua , "format": "italic" })
+call s:h("Type",          { "fg": s:aqua2 , "format": "italic" }) " CONSTANTS RUST
 call s:h("Structure",     { "fg": s:aqua })
 call s:h("StorageClass",  { "fg": s:aqua })
 call s:h("Typedef",       { "fg": s:aqua })
 
-call s:h("Identifier",    { "fg": s:white, "format": "italic,bold" })
-call s:h("Function",      { "fg": s:green, "format": "italic" })
+call s:h("Identifier",    { "fg": s:white, "format": "bold" }) " STRUCT RUST
+call s:h("Function",      { "fg": s:green })
 
-call s:h("Statement",     { "fg": s:pink, "format": "bold" })
-call s:h("Operator",      { "fg": s:pink, "format": "bold" })
-call s:h("Label",         { "fg": s:pink, "format": "bold" })
-call s:h("Keyword",       { "fg": s:aqua })
+call s:h("Statement",     { "fg": s:pink, "format": "bold"  })
+call s:h("Operator",      { "fg": s:pink, "format": "bold"  })
+call s:h("Label",         { "fg": s:pink, "format": "bold"  })
+call s:h("Keyword",       { "fg": s:aqua, "format": "bold" })
 "        Conditional"
 "        Repeat"
 "        Exception"
 
-call s:h("PreProc",       { "fg": s:green })
-call s:h("Include",       { "fg": s:pink, "format": "bold" })
-call s:h("Define",        { "fg": s:pink, "format": "bold" })
+call s:h("PreProc",       { "fg": s:green2, "format": "bold" }) " MACROS RUST
+call s:h("Include",       { "fg": s:white, "format": "bold,italic" }) " INCLUDES RUST
+call s:h("Define",        { "fg": s:pink })
 call s:h("Macro",         { "fg": s:green })
 call s:h("PreCondit",     { "fg": s:green })
 
 call s:h("Special",       { "fg": s:purple })
-call s:h("SpecialChar",   { "fg": s:pink,     "format": "bold" })
-call s:h("Delimiter",     { "fg": s:pink,     "format": "bold" })
+call s:h("SpecialChar",   { "fg": s:pink })
+call s:h("Delimiter",     { "fg": s:pink })
 call s:h("SpecialComment",{ "fg": s:aqua })
-call s:h("Tag",           { "fg": s:pink,     "format": "bold" })
+call s:h("Tag",           { "fg": s:pink })
 "        Debug"
 
 call s:h("Todo",          { "fg": s:orange,   "format": "bold,italic" })
-call s:h("Comment",       { "fg": s:darkpurple, "format": "italic"})
+call s:h("Comment",       { "fg": s:warmgrey, "format": "italic,underline" })
 
 call s:h("Underlined",    { "fg": s:green })
 call s:h("Ignore",        {})
@@ -252,9 +255,9 @@ call s:h("typescriptObjectLabel",         { "fg": s:green })
 call s:h("typescriptAmbientDeclaration",  { "fg": s:pink })
 
 " Html
-call s:h("htmlTag",             { "fg": s:pink })
-call s:h("htmlEndTag",          { "fg": s:pink })
-call s:h("htmlTagName",         { "fg": s:white })
+call s:h("htmlTag",             { "fg": s:white })
+call s:h("htmlEndTag",          { "fg": s:white })
+call s:h("htmlTagName",         { "fg": s:pink })
 call s:h("htmlArg",             { "fg": s:green })
 call s:h("htmlSpecialChar",     { "fg": s:purple })
 

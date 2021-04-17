@@ -1,9 +1,9 @@
-" File:       elixir_box.vim
+" File:       ruby_box.vim
 " Maintainer: Henrique Fernandez
 " URL:        https://github.com/crusoexia/vim-monokai
 " License:    MIT
 
-" Initialisation
+" Initialization
 " --------------
 
 if !has("gui_running") && &t_Co < 256
@@ -30,7 +30,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "elixir_box"
+let colors_name = "ruby_box"
 
 function! s:h(group, style)
   let s:ctermformat = "NONE"
@@ -71,22 +71,21 @@ endfunction
 
 
 let s:white       = { "gui": "#E8E8E3", "cterm": "255" }
-let s:black       = { "gui": "#272822", "cterm": "236" }
-let s:lightblack  = { "gui": "#2D2E27", "cterm": "237" }
-let s:lightblack2 = { "gui": "#383a3e", "cterm": "238" }
-let s:darkblack   = { "gui": "#211F1C", "cterm": "235" }
+let s:black       = { "gui": "#272822", "cterm": "233" }
+let s:lightblack  = { "gui": "#2D2E27", "cterm": "235" }
+let s:lightblack2 = { "gui": "#383a3e", "cterm": "237" }
+let s:darkblack   = { "gui": "#211F1C", "cterm": "232" }
 let s:grey        = { "gui": "#8F908A", "cterm": "243" }
 let s:lightgrey   = { "gui": "#575b61", "cterm": "239" }
 let s:darkgrey    = { "gui": "#64645e", "cterm": "241" }
-let s:warmgrey    = { "gui": "#75715E", "cterm": "247" }
+let s:warmgrey    = { "gui": "#75715E", "cterm": "59" }
 
-let s:pink        = { "gui": "#F92772", "cterm": "182" }
-let s:green       = { "gui": "#A6E22D", "cterm": "146" }
+let s:pink        = { "gui": "#a91718", "cterm": "1" }
+let s:green       = { "gui": "#A6E22D", "cterm": "155" }
 let s:aqua        = { "gui": "#66d9ef", "cterm": "81" }
-let s:darkpurple  = { "gui": "#66d9ef", "cterm": "60" }
-let s:yellow      = { "gui": "#E6DB74", "cterm": "229" }
-let s:orange      = { "gui": "#FD9720", "cterm": "217" }
-let s:purple      = { "gui": "#ae81ff", "cterm": "183" }
+let s:yellow      = { "gui": "#E6DB74", "cterm": "228" }
+let s:orange      = { "gui": "#FD9720", "cterm": "208" }
+let s:purple      = { "gui": "#ae81ff", "cterm": "177" }
 let s:red         = { "gui": "#e73c50", "cterm": "196" }
 let s:darkred     = { "gui": "#5f0000", "cterm": "52" }
 
@@ -148,19 +147,19 @@ call s:h("PmenuThumb",    { "fg": s:lightblack, "bg": s:grey })
 " ---------------------------
 
 call s:h("Constant",      { "fg": s:purple })
-call s:h("Number",        { "fg": s:orange })
-call s:h("Float",         { "fg": s:orange })
-call s:h("Boolean",       { "fg": s:orange })
+call s:h("Number",        { "fg": s:purple })
+call s:h("Float",         { "fg": s:purple })
+call s:h("Boolean",       { "fg": s:purple })
 call s:h("Character",     { "fg": s:yellow })
 call s:h("String",        { "fg": s:yellow })
 
-call s:h("Type",          { "fg": s:aqua , "format": "italic" })
+call s:h("Type",          { "fg": s:aqua })
 call s:h("Structure",     { "fg": s:aqua })
 call s:h("StorageClass",  { "fg": s:aqua })
 call s:h("Typedef",       { "fg": s:aqua })
 
-call s:h("Identifier",    { "fg": s:white, "format": "italic,bold" })
-call s:h("Function",      { "fg": s:green, "format": "italic" })
+call s:h("Identifier",    { "fg": s:green })
+call s:h("Function",      { "fg": s:green })
 
 call s:h("Statement",     { "fg": s:pink, "format": "bold" })
 call s:h("Operator",      { "fg": s:pink, "format": "bold" })
@@ -171,20 +170,20 @@ call s:h("Keyword",       { "fg": s:aqua })
 "        Exception"
 
 call s:h("PreProc",       { "fg": s:green })
-call s:h("Include",       { "fg": s:pink, "format": "bold" })
-call s:h("Define",        { "fg": s:pink, "format": "bold" })
+call s:h("Include",       { "fg": s:pink })
+call s:h("Define",        { "fg": s:pink })
 call s:h("Macro",         { "fg": s:green })
 call s:h("PreCondit",     { "fg": s:green })
 
 call s:h("Special",       { "fg": s:purple })
-call s:h("SpecialChar",   { "fg": s:pink,     "format": "bold" })
-call s:h("Delimiter",     { "fg": s:pink,     "format": "bold" })
+call s:h("SpecialChar",   { "fg": s:pink })
+call s:h("Delimiter",     { "fg": s:pink })
 call s:h("SpecialComment",{ "fg": s:aqua })
-call s:h("Tag",           { "fg": s:pink,     "format": "bold" })
+call s:h("Tag",           { "fg": s:pink })
 "        Debug"
 
 call s:h("Todo",          { "fg": s:orange,   "format": "bold,italic" })
-call s:h("Comment",       { "fg": s:darkpurple, "format": "italic"})
+call s:h("Comment",       { "fg": s:warmgrey, "format": "italic" })
 
 call s:h("Underlined",    { "fg": s:green })
 call s:h("Ignore",        {})
@@ -284,7 +283,7 @@ call s:h("lessVariable",        { "fg": s:green })
 call s:h("rubyInterpolationDelimiter",  {})
 call s:h("rubyInstanceVariable",        {})
 call s:h("rubyGlobalVariable",          {})
-call s:h("rubyClassVariable",           {})
+call s:h("rubyClassVariable",           {"fg": s:purple})
 call s:h("rubyPseudoVariable",          {})
 call s:h("rubyFunction",                { "fg": s:green })
 call s:h("rubyStringDelimiter",         { "fg": s:yellow })
@@ -292,17 +291,17 @@ call s:h("rubyRegexp",                  { "fg": s:yellow })
 call s:h("rubyRegexpDelimiter",         { "fg": s:yellow })
 call s:h("rubySymbol",                  { "fg": s:purple })
 call s:h("rubyEscape",                  { "fg": s:purple })
-call s:h("rubyInclude",                 { "fg": s:pink })
-call s:h("rubyOperator",                { "fg": s:pink })
-call s:h("rubyControl",                 { "fg": s:pink })
-call s:h("rubyClass",                   { "fg": s:pink })
-call s:h("rubyDefine",                  { "fg": s:pink })
-call s:h("rubyException",               { "fg": s:pink })
+call s:h("rubyInclude",                 { "fg": s:pink, "format": "bold" })
+call s:h("rubyOperator",                { "fg": s:pink, "format": "bold" })
+call s:h("rubyControl",                 { "fg": s:pink, "format": "bold" })
+call s:h("rubyClass",                   { "fg": s:pink, "format": "bold" })
+call s:h("rubyDefine",                  { "fg": s:pink, "format": "bold" })
+call s:h("rubyException",               { "fg": s:pink, "format": "bold"  })
 call s:h("rubyRailsARAssociationMethod",{ "fg": s:orange })
 call s:h("rubyRailsARMethod",           { "fg": s:orange })
 call s:h("rubyRailsRenderMethod",       { "fg": s:orange })
 call s:h("rubyRailsMethod",             { "fg": s:orange })
-call s:h("rubyConstant",                { "fg": s:aqua })
+call s:h("rubyConstant",                { "fg": s:aqua, "format": "italic" })
 call s:h("rubyBlockArgument",           { "fg": s:orange })
 call s:h("rubyBlockParameter",          { "fg": s:orange })
 

@@ -1,4 +1,4 @@
-" File:       elixir_box.vim
+" File:       alloy.vim
 " Maintainer: Henrique Fernandez
 " URL:        https://github.com/crusoexia/vim-monokai
 " License:    MIT
@@ -10,16 +10,13 @@ if !has("gui_running") && &t_Co < 256
   finish
 endif
 
-let g:monokai_gui_italic = 0
-let g:monokai_term_italic = 1
+if ! exists("g:monokai_gui_italic")
+    let g:monokai_gui_italic = 1
+endif
 
-"if ! exists("g:monokai_gui_italic")
-    "let g:monokai_gui_italic = 1
-"endif
-
-"if ! exists("g:monokai_term_italic")
-    "let g:monokai_term_italic = 0
-"endif
+if ! exists("g:monokai_term_italic")
+    let g:monokai_term_italic = 0
+endif
 
 let g:monokai_termcolors = 256 " does not support 16 color term right now.
 
@@ -30,7 +27,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "elixir_box"
+let colors_name = "alloy"
 
 function! s:h(group, style)
   let s:ctermformat = "NONE"
@@ -78,15 +75,14 @@ let s:darkblack   = { "gui": "#211F1C", "cterm": "235" }
 let s:grey        = { "gui": "#8F908A", "cterm": "243" }
 let s:lightgrey   = { "gui": "#575b61", "cterm": "239" }
 let s:darkgrey    = { "gui": "#64645e", "cterm": "241" }
-let s:warmgrey    = { "gui": "#75715E", "cterm": "247" }
+let s:warmgrey    = { "gui": "#75715E", "cterm": "59" }
 
-let s:pink        = { "gui": "#F92772", "cterm": "182" }
-let s:green       = { "gui": "#A6E22D", "cterm": "146" }
+let s:pink        = { "gui": "#F92772", "cterm": "206" }
+let s:green       = { "gui": "#A6E22D", "cterm": "82" }
 let s:aqua        = { "gui": "#66d9ef", "cterm": "81" }
-let s:darkpurple  = { "gui": "#66d9ef", "cterm": "60" }
-let s:yellow      = { "gui": "#E6DB74", "cterm": "229" }
-let s:orange      = { "gui": "#FD9720", "cterm": "217" }
-let s:purple      = { "gui": "#ae81ff", "cterm": "183" }
+let s:yellow      = { "gui": "#E6DB74", "cterm": "186" }
+let s:orange      = { "gui": "#FD9720", "cterm": "208" }
+let s:purple      = { "gui": "#ae81ff", "cterm": "177" }
 let s:red         = { "gui": "#e73c50", "cterm": "196" }
 let s:darkred     = { "gui": "#5f0000", "cterm": "52" }
 
@@ -147,44 +143,44 @@ call s:h("PmenuThumb",    { "fg": s:lightblack, "bg": s:grey })
 " Generic Syntax Highlighting
 " ---------------------------
 
-call s:h("Constant",      { "fg": s:purple })
-call s:h("Number",        { "fg": s:orange })
-call s:h("Float",         { "fg": s:orange })
-call s:h("Boolean",       { "fg": s:orange })
+call s:h("Constant",      { "fg": s:purple, "format": "italic" })
+call s:h("Number",        { "fg": s:purple })
+call s:h("Float",         { "fg": s:purple })
+call s:h("Boolean",       { "fg": s:purple })
 call s:h("Character",     { "fg": s:yellow })
 call s:h("String",        { "fg": s:yellow })
 
-call s:h("Type",          { "fg": s:aqua , "format": "italic" })
+call s:h("Type",          { "fg": s:aqua })
 call s:h("Structure",     { "fg": s:aqua })
 call s:h("StorageClass",  { "fg": s:aqua })
 call s:h("Typedef",       { "fg": s:aqua })
 
-call s:h("Identifier",    { "fg": s:white, "format": "italic,bold" })
-call s:h("Function",      { "fg": s:green, "format": "italic" })
+call s:h("Identifier",    { "fg": s:green })
+call s:h("Function",      { "fg": s:green })
 
-call s:h("Statement",     { "fg": s:pink, "format": "bold" })
-call s:h("Operator",      { "fg": s:pink, "format": "bold" })
-call s:h("Label",         { "fg": s:pink, "format": "bold" })
+call s:h("Statement",     { "fg": s:pink })
+call s:h("Operator",      { "fg": s:pink })
+call s:h("Label",         { "fg": s:pink })
 call s:h("Keyword",       { "fg": s:aqua })
 "        Conditional"
 "        Repeat"
 "        Exception"
 
 call s:h("PreProc",       { "fg": s:green })
-call s:h("Include",       { "fg": s:pink, "format": "bold" })
-call s:h("Define",        { "fg": s:pink, "format": "bold" })
+call s:h("Include",       { "fg": s:pink })
+call s:h("Define",        { "fg": s:pink })
 call s:h("Macro",         { "fg": s:green })
 call s:h("PreCondit",     { "fg": s:green })
 
 call s:h("Special",       { "fg": s:purple })
-call s:h("SpecialChar",   { "fg": s:pink,     "format": "bold" })
-call s:h("Delimiter",     { "fg": s:pink,     "format": "bold" })
+call s:h("SpecialChar",   { "fg": s:pink })
+call s:h("Delimiter",     { "fg": s:pink })
 call s:h("SpecialComment",{ "fg": s:aqua })
-call s:h("Tag",           { "fg": s:pink,     "format": "bold" })
+call s:h("Tag",           { "fg": s:pink })
 "        Debug"
 
 call s:h("Todo",          { "fg": s:orange,   "format": "bold,italic" })
-call s:h("Comment",       { "fg": s:darkpurple, "format": "italic"})
+call s:h("Comment",       { "fg": s:warmgrey, "format": "italic" })
 
 call s:h("Underlined",    { "fg": s:green })
 call s:h("Ignore",        {})
@@ -252,9 +248,9 @@ call s:h("typescriptObjectLabel",         { "fg": s:green })
 call s:h("typescriptAmbientDeclaration",  { "fg": s:pink })
 
 " Html
-call s:h("htmlTag",             { "fg": s:pink })
-call s:h("htmlEndTag",          { "fg": s:pink })
-call s:h("htmlTagName",         { "fg": s:white })
+call s:h("htmlTag",             { "fg": s:white })
+call s:h("htmlEndTag",          { "fg": s:white })
+call s:h("htmlTagName",         { "fg": s:pink })
 call s:h("htmlArg",             { "fg": s:green })
 call s:h("htmlSpecialChar",     { "fg": s:purple })
 
