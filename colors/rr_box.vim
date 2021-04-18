@@ -80,12 +80,18 @@ let s:lightgrey   = { "gui": "#575b61", "cterm": "239" }
 let s:darkgrey    = { "gui": "#64645e", "cterm": "241" }
 let s:warmgrey    = { "gui": "#75715E", "cterm": "59" }
 
-let s:pink        = { "gui": "#a91718", "cterm": "1" }
-let s:green       = { "gui": "#A6E22D", "cterm": "155" }
-let s:aqua        = { "gui": "#66d9ef", "cterm": "81" }
+"let s:pink        = { "gui": "#a91718", "cterm": "167" }
+let s:pink        = { "gui": "#a91718", "cterm": "167" }
+"let s:green       = { "gui": "#A6E22D", "cterm": "105" }
+"let s:green       = { "gui": "#A6E22D", "cterm": "104" }
+"let s:green       = { "gui": "#A6E22D", "cterm": "141" }
+let s:green       = { "gui": "#A6E22D", "cterm": "146" }
+let s:aqua        = { "gui": "#66d9ef", "cterm": "87" }
 let s:yellow      = { "gui": "#E6DB74", "cterm": "228" }
-let s:orange      = { "gui": "#FD9720", "cterm": "208" }
-let s:purple      = { "gui": "#ae81ff", "cterm": "177" }
+"let s:yellow      = { "gui": "#E6DB74", "cterm": "78" }
+let s:orange      = { "gui": "#FD9720", "cterm": "189" }
+"let s:purple      = { "gui": "#ae81ff", "cterm": "177" }
+let s:purple      = { "gui": "#ae81ff", "cterm": "174" }
 let s:red         = { "gui": "#e73c50", "cterm": "196" }
 let s:darkred     = { "gui": "#5f0000", "cterm": "52" }
 
@@ -281,7 +287,7 @@ call s:h("lessVariable",        { "fg": s:green })
 
 " ruby
 call s:h("rubyInterpolationDelimiter",  {})
-call s:h("rubyInstanceVariable",        {})
+call s:h("rubyInstanceVariable",        {"fg": s:white, "format": "bold,italic"})
 call s:h("rubyGlobalVariable",          {})
 call s:h("rubyClassVariable",           {"fg": s:purple})
 call s:h("rubyPseudoVariable",          {})
@@ -296,7 +302,7 @@ call s:h("rubyOperator",                { "fg": s:pink, "format": "bold" })
 call s:h("rubyControl",                 { "fg": s:pink, "format": "bold" })
 call s:h("rubyClass",                   { "fg": s:pink, "format": "bold" })
 call s:h("rubyDefine",                  { "fg": s:pink, "format": "bold" })
-call s:h("rubyException",               { "fg": s:pink, "format": "bold"  })
+call s:h("rubyException",               { "fg": s:pink, "format": "bold"   })
 call s:h("rubyRailsARAssociationMethod",{ "fg": s:orange })
 call s:h("rubyRailsARMethod",           { "fg": s:orange })
 call s:h("rubyRailsRenderMethod",       { "fg": s:orange })
