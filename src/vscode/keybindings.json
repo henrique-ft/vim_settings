@@ -1,8 +1,9 @@
+// Place your key bindings in this file to override the defaultsauto[]
 [
   {
     "key": "ctrl+t",
     "command": "workbench.action.terminal.focus"
-  },
+  }
   {
     "key": "ctrl+h",
     "command": "workbench.action.navigateLeft"
@@ -26,5 +27,13 @@
   {
     "key": "alt+h",
     "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "f2",
+    "command": "list.select"
+  },
+  {
+    "key": "f1",
+    "command": "workbench.files.action.showActiveFileInExplorer",
   }
 ]
