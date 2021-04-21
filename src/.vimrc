@@ -6,21 +6,20 @@
 
 call plug#begin('~/.vim/plugged')
 " < MISC >
-
+"
 " *RUBY ENVIRONMENT
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
-" *JAVA ENVIRONMENT ~ vim.gtk required
-Plug 'vim-syntastic/syntastic'
-Plug 'artur-shaik/vim-javacomplete2'
 " *ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
-" *JAVASCRIPT / *VUE ENVIRONMENT
+" *JAVASCRIPT ENVIRONMENT
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
 Plug 'maxmellon/vim-jsx-pretty'
 " *NGINX ENVIRONMENT
 Plug 'chr4/nginx.vim'
+
+Plug 'vim-crystal/vim-crystal'
 
 " < DEFAULT >
 
@@ -66,37 +65,12 @@ call plug#end()
 " < SET COLORS >
 
 " *RUBY ENVIRONMENT
-autocmd VimEnter * color ruby_box
+autocmd VimEnter * color rr_box
 autocmd filetype ruby compiler ruby
-" *JAVA ENVIRONMENT
-"set background=dark
-"autocmd VimEnter * color PaperColor
 " *ELIXIR ENVIRONMENT
-"autocmd VimEnter * color elixir_box
-" *VUE ENVIRONMENT
-"set background=dark
-"autocmd VimEnter * color gruvbox
+"autocmd VimEnter * color er_box
 
 " < CONFIG >
-
-" *JAVA ENVIRONMENT
-autocmd FileType java setlocal omnifunc=javacomplete#Complete
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-"" https://medium.com/@Sohjiro/setup-vim-checkstyle-java-d0dd74dca1e1
-"" https://checkstyle.sourceforge.io/
-"" https://github.com/checkstyle/checkstyle/releases/
-"let g:syntastic_java_checkers = ['checkstyle']
-"let g:syntastic_java_checkstyle_classpath = './checkstyle-8.4-all.jar'
-"let g:syntastic_java_checkstyle_conf_file = './checkstyle.xml
-inoremap <C-p> <C-x><C-o>
-inoremap <C-@> <C-p>
-abbr syso System.out.println();
 
 set backspace=indent,eol,start
 
@@ -202,16 +176,16 @@ set encoding=UTF-8
 let g:gitgutter_terminal_reports_focus=0
 let g:indentLine_color_term = 239
 let g:ackprg = 'ag --nogroup --nocolor --column'
-let g:closetag_filenames = '*.exs,*.jsx,*.erb,*.html,*.xhtml,*.phtml,*.html.*,*.jsx'
+let g:closetag_filenames = '*.exs,*.jsx,*.erb,*.html,*.xhtml,*.phtml,*.html.*,*.jsx,*.vue,*.js'
 let g:closetag_filetypes = 'html,xhtml,phtml'
 
 "Auto complete"
 "inoremap ' ''<left>
 "inoremap ( ()<left>
 "inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
+"inoremap { {}<left>
+"inoremap {<CR> {<CR>}<ESC>O
+"inoremap {;<CR> {<CR>};<ESC>O
 
 syntax on
 
