@@ -6,6 +6,10 @@
 
 setxkbmap -option caps:swapescape
 
+#### Change to default
+
+setxkbmap -option
+
 #### Airline
 
 $ git clone http://www.github.com/powerline/fonts.git
