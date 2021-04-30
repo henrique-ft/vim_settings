@@ -84,9 +84,9 @@ set hlsearch
 
 "NERDTree navigation"
 silent! nmap <Tab> :silent! NERDTreeTabsToggle<CR>
-silent! map <F2> :silent! NERDTreeTabsFind<CR>
-silent! let g:NERDTreeMapActivateNode="<F2>"
-silent! let g:NERDTreeMapPreview="<F1>"
+silent! map w :silent! NERDTreeTabsFind<CR>
+silent! let g:NERDTreeMapActivateNode="w"
+silent! let g:NERDTreeMapPreview="q"
 highlight! link NERDTreeFlags NERDTreeDir
 let g:NERDTreeMouseMode=3
 let NERDTreeShowHidden=1
@@ -141,6 +141,10 @@ nnoremap <M-j> <C-d>
 let mapleader=" "
 nmap <leader>q :q<CR>
 nmap <leader>w :w<CR>
+
+"Fast ESC
+inoremap JJ <ESC>
+vnoremap JJ <ESC>
 
 "Git Blame"
 nnoremap <leader>s :<C-u>call gitblame#echo()<CR>
