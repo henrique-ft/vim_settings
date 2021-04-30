@@ -10,9 +10,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 cp vimrclite ~/.vimrc
 cp tmuxconflite ~/.tmux.conf
 mkdir ~/.vim/colors
-cp colors/elixir_box.vim ~/.vim/colors/elixir_box.vim
-cp colors/ruby_box.vim ~/.vim/colors/ruby_box.vim
-cp colors/rust_box.vim ~/.vim/colors/rust_box.vim
+cp colors/er_box.vim ~/.vim/colors/er_box.vim
+cp colors/rr_box.vim ~/.vim/colors/rr_box.vim
 cd ~/.vim
 git clone https://github.com/kien/ctrlp.vim.git bundle/ctrlp.vim
 
