@@ -83,7 +83,7 @@ set hlsearch
 
 "NERDTree navigation"
 silent! nmap <Tab> :silent! NERDTreeTabsToggle<CR>
-silent! map w :silent! NERDTreeTabsFind<CR>
+silent! map q :silent! NERDTreeTabsFind<CR>
 silent! let g:NERDTreeMapActivateNode="w"
 silent! let g:NERDTreeMapPreview="q"
 highlight! link NERDTreeFlags NERDTreeDir
@@ -139,9 +139,11 @@ nnoremap <M-j> <C-d>
 "Add space q and space w to save and quit
 let mapleader=" "
 nmap <leader>q :q<CR>
+nmap <leader><leader>q :q!<CR>
 nmap <leader>w :w<CR>
 
 "Fast ESC
+inoremap jj <ESC>
 inoremap JJ <ESC>
 vnoremap JJ <ESC>
 

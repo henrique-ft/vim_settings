@@ -213,6 +213,7 @@ vnoremap JJ <ESC>
 "Add space q and space w to save and quit
 let mapleader=" "
 nmap <leader>q :q<CR>
+nmap <leader><leader>q :q!<CR>
 nmap <leader>w :w<CR>
 
 "Git Blame"
@@ -265,7 +266,6 @@ map H _
 " *ELIXIR ENVIRONMENT
 abbr pry require IEx; IEx.pry
 abbr defm defmodule
-
 
 " Ajust vim bug
 let &t_TI = ""
