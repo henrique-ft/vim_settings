@@ -138,7 +138,7 @@ silent! nmap <Tab> :NERDTreeTabsToggle<CR>
 "silent! map <F2> :NERDTreeTabsFind<CR>
 "let g:NERDTreeMapActivateNode="<F2>"
 "let g:NERDTreeMapPreview="<F1>"
-silent! map w :silent! NERDTreeTabsFind<CR>
+silent! map q :silent! NERDTreeTabsFind<CR>
 silent! let g:NERDTreeMapActivateNode="w"
 silent! let g:NERDTreeMapPreview="q"
 highlight! link NERDTreeFlags NERDTreeDir
@@ -206,6 +206,7 @@ nnoremap <M-k> <C-u>
 nnoremap <M-j> <C-d>
 
 "Fast ESC
+inoremap jj <ESC>
 inoremap JJ <ESC>
 vnoremap JJ <ESC>
 
