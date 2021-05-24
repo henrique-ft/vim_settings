@@ -87,7 +87,7 @@ let s:pink        = { "gui": "#a91718", "cterm": "167" }
 "let s:green       = { "gui": "#A6E22D", "cterm": "141" }
 let s:green       = { "gui": "#A6E22D", "cterm": "146" }
 let s:aqua        = { "gui": "#66d9ef", "cterm": "87" }
-let s:yellow      = { "gui": "#E6DB74", "cterm": "228" }
+let s:yellow      = { "gui": "#E6DB74", "cterm": "229" }
 "let s:yellow      = { "gui": "#E6DB74", "cterm": "78" }
 let s:orange      = { "gui": "#FD9720", "cterm": "189" }
 "let s:purple      = { "gui": "#ae81ff", "cterm": "177" }
@@ -295,7 +295,7 @@ call s:h("rubyFunction",                { "fg": s:green })
 call s:h("rubyStringDelimiter",         { "fg": s:yellow })
 call s:h("rubyRegexp",                  { "fg": s:yellow })
 call s:h("rubyRegexpDelimiter",         { "fg": s:yellow })
-call s:h("rubySymbol",                  { "fg": s:purple })
+call s:h("rubySymbol",                  { "fg": s:purple, "format":"italic" })
 call s:h("rubyEscape",                  { "fg": s:purple })
 call s:h("rubyInclude",                 { "fg": s:pink, "format": "bold" })
 call s:h("rubyOperator",                { "fg": s:pink, "format": "bold" })

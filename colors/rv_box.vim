@@ -69,24 +69,24 @@ endfunction
 " Palettes
 " --------
 
-let s:white       = { "gui": "#E8E8E3", "cterm": "255" }
-let s:black       = { "gui": "#272822", "cterm": "233" }
+let s:white       = { "gui": "#E8E8E3", "cterm": "254" }
+let s:black       = { "gui": "#272822", "cterm": "232" }
 let s:lightblack  = { "gui": "#2D2E27", "cterm": "235" }
-let s:lightblack2 = { "gui": "#383a3e", "cterm": "237" }
-let s:darkblack   = { "gui": "#211F1C", "cterm": "232" }
+let s:lightblack2 = { "gui": "#383a3e", "cterm": "236" }
+let s:darkblack   = { "gui": "#211F1C", "cterm": "233" }
 let s:grey        = { "gui": "#8F908A", "cterm": "243" }
-let s:lightgrey   = { "gui": "#575b61", "cterm": "239" }
-let s:darkgrey    = { "gui": "#64645e", "cterm": "241" }
+let s:lightgrey   = { "gui": "#575b61", "cterm": "237" }
+let s:darkgrey    = { "gui": "#64645e", "cterm": "239" }
 let s:warmgrey    = { "gui": "#75715E", "cterm": "59" }
 
-"let s:pink        = { "gui": "#a91718", "cterm": "167" }
-let s:pink        = { "gui": "#a91718", "cterm": "203" }
+let s:pink        = { "gui": "#a91718", "cterm": "167" }
+"let s:pink        = { "gui": "#a91718", "cterm": "203" }
 "let s:pink        = { "gui": "#a91718", "cterm": "1" }
 let s:green       = { "gui": "#A6E22D", "cterm": "121" }
 let s:aqua        = { "gui": "#66d9ef", "cterm": "117" }
 let s:yellow      = { "gui": "#E6DB74", "cterm": "229" }
 "let s:yellow      = { "gui": "#E6DB74", "cterm": "78" }
-let s:orange      = { "gui": "#FD9720", "cterm": "189" }
+let s:orange      = { "gui": "#FD9720", "cterm": "225" }
 let s:purple      = { "gui": "#ae81ff", "cterm": "182" }
 "let s:purple      = { "gui": "#ae81ff", "cterm": "182" }
 let s:red         = { "gui": "#e73c50", "cterm": "196" }
@@ -149,10 +149,10 @@ call s:h("PmenuThumb",    { "fg": s:lightblack, "bg": s:grey })
 " Generic Syntax Highlighting
 " ---------------------------
 
-call s:h("Constant",      { "fg": s:purple, "format": "italic" })
-call s:h("Number",        { "fg": s:purple, "format": "italic" })
-call s:h("Float",         { "fg": s:purple, "format": "italic" })
-call s:h("Boolean",       { "fg": s:purple, "format": "italic" })
+call s:h("Constant",      { "fg": s:purple })
+call s:h("Number",        { "fg": s:purple })
+call s:h("Float",         { "fg": s:purple })
+call s:h("Boolean",       { "fg": s:purple })
 call s:h("Character",     { "fg": s:yellow })
 call s:h("String",        { "fg": s:yellow })
 
