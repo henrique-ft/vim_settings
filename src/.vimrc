@@ -10,16 +10,15 @@ call plug#begin('~/.vim/plugged')
 " *RUBY ENVIRONMENT
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
+" *GO ENVIRONMENT
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " *ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
 " *JAVASCRIPT ENVIRONMENT
 Plug 'pangloss/vim-javascript'
-Plug 'posva/vim-vue'
 Plug 'maxmellon/vim-jsx-pretty'
 " *NGINX ENVIRONMENT
 Plug 'chr4/nginx.vim'
-
-Plug 'vim-crystal/vim-crystal'
 
 " < DEFAULT >
 
@@ -64,8 +63,8 @@ call plug#end()
 
 " < SET COLORS >
 
-" *RUBY ENVIRONMENT
-autocmd VimEnter * color rv_box
+" *RUBY / GO ENVIRONMENT
+autocmd VimEnter * color rr_box
 autocmd filetype ruby compiler ruby
 " *ELIXIR ENVIRONMENT
 "autocmd VimEnter * color ev_box
@@ -79,7 +78,7 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 
-" *JAVA / *JAVASCRIPT / *VUE ENVIRONMENT
+" *JAVASCRIPT ENVIRONMENT
 "set tabstop=4
 "set shiftwidth=4
 "set softtabstop=4
@@ -186,9 +185,10 @@ let g:closetag_filetypes = 'html,xhtml,phtml'
 "inoremap ' ''<left>
 "inoremap ( ()<left>
 "inoremap [ []<left>
-"inoremap { {}<left>
-"inoremap {<CR> {<CR>}<ESC>O
-"inoremap {;<CR> {<CR>};<ESC>O
+"Auto complete for *GO / *JAVASCRIPT ENVIRONMENT"
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
 
 syntax on
 
@@ -263,16 +263,55 @@ nnoremap x :noh<return>
 map L $
 map H _
 
-" *ELIXIR ENVIRONMENT
-abbr pry require IEx; IEx.pry
-abbr defm defmodule
-
 " Ajust vim bug
 let &t_TI = ""
 let &t_TE = ""
 
 " Set column length limit
 set colorcolumn=80
+
+" *ELIXIR ENVIRONMENT
+abbr pry require IEx; IEx.pry
+abbr defm defmodule
+
+" *GO ENVIRONMENT =======================================
+inoremap pp fmt.Println()<left>
+inoremap ifer if err != nil { panic(err) }<right>
+
+filetype plugin indent on
+
+set autowrite
+
+" Go syntax highlighting
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_operators = 1
+
+" Auto formatting and importing
+let g:go_fmt_autosave = 1
+let g:go_fmt_command = "goimports"
+
+" Status line types/signatures
+let g:go_auto_type_info = 1
+
+" Run :GoBuild or :GoTestCompile based on the go file
+function! s:build_go_files()
+  let l:file = expand('%')
+  if l:file =~# '^\f\+_test\.go$'
+    call go#test#Test(0, 1)
+  elseif l:file =~# '^\f\+\.go$'
+    call go#cmd#Build(0)
+  endif
+endfunction
+
+" Map keys for most used commands.
+" Ex: `\b` for building, `\r` for running and `\b` for running test.
+autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+autocmd FileType go nmap <leader>r  <Plug>(go-run)
+autocmd FileType go nmap <leader>t  <Plug>(go-test)
+" END GO ENVIRONMENT =======================================
 
 " *RUBY / *ELIXIR ENVIRONMENT
 "Endwise (tpope/vim-endwise)
