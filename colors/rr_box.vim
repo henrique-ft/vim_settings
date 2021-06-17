@@ -80,18 +80,13 @@ let s:lightgrey   = { "gui": "#575b61", "cterm": "239" }
 let s:darkgrey    = { "gui": "#64645e", "cterm": "241" }
 let s:warmgrey    = { "gui": "#75715E", "cterm": "59" }
 
-"let s:pink        = { "gui": "#a91718", "cterm": "167" }
 let s:pink        = { "gui": "#a91718", "cterm": "167" }
-"let s:green       = { "gui": "#A6E22D", "cterm": "105" }
-"let s:green       = { "gui": "#A6E22D", "cterm": "104" }
-"let s:green       = { "gui": "#A6E22D", "cterm": "141" }
-let s:green       = { "gui": "#A6E22D", "cterm": "146" }
-let s:aqua        = { "gui": "#66d9ef", "cterm": "87" }
-let s:yellow      = { "gui": "#E6DB74", "cterm": "229" }
-"let s:yellow      = { "gui": "#E6DB74", "cterm": "78" }
-let s:orange      = { "gui": "#FD9720", "cterm": "189" }
-"let s:purple      = { "gui": "#ae81ff", "cterm": "177" }
-let s:purple      = { "gui": "#ae81ff", "cterm": "174" }
+let s:green       = { "gui": "#A6E22D", "cterm": "153" }
+let s:aqua        = { "gui": "#66d9ef", "cterm": "153" }
+let s:yellow      = { "gui": "#E6DB74", "cterm": "150" }
+let s:orange      = { "gui": "#FD9720", "cterm": "180" }
+"let s:purple      = { "gui": "#ae81ff", "cterm": "174" }
+let s:purple      = { "gui": "#ae81ff", "cterm": "74" }
 let s:red         = { "gui": "#e73c50", "cterm": "196" }
 let s:darkred     = { "gui": "#5f0000", "cterm": "52" }
 
@@ -153,9 +148,9 @@ call s:h("PmenuThumb",    { "fg": s:lightblack, "bg": s:grey })
 " ---------------------------
 
 call s:h("Constant",      { "fg": s:purple })
-call s:h("Number",        { "fg": s:purple })
-call s:h("Float",         { "fg": s:purple })
-call s:h("Boolean",       { "fg": s:purple })
+call s:h("Number",        { "fg": s:orange })
+call s:h("Float",         { "fg": s:orange })
+call s:h("Boolean",       { "fg": s:orange })
 call s:h("Character",     { "fg": s:yellow })
 call s:h("String",        { "fg": s:yellow })
 
@@ -167,9 +162,9 @@ call s:h("Typedef",       { "fg": s:aqua })
 call s:h("Identifier",    { "fg": s:green })
 call s:h("Function",      { "fg": s:green })
 
-call s:h("Statement",     { "fg": s:pink, "format": "bold" })
-call s:h("Operator",      { "fg": s:pink, "format": "bold" })
-call s:h("Label",         { "fg": s:pink, "format": "bold" })
+call s:h("Statement",     { "fg": s:pink })
+call s:h("Operator",      { "fg": s:pink })
+call s:h("Label",         { "fg": s:pink })
 call s:h("Keyword",       { "fg": s:aqua })
 "        Conditional"
 "        Repeat"
@@ -181,7 +176,7 @@ call s:h("Define",        { "fg": s:pink })
 call s:h("Macro",         { "fg": s:green })
 call s:h("PreCondit",     { "fg": s:green })
 
-call s:h("Special",       { "fg": s:purple })
+call s:h("Special",       { "fg": s:purple, "format": "italic" })
 call s:h("SpecialChar",   { "fg": s:pink })
 call s:h("Delimiter",     { "fg": s:pink })
 call s:h("SpecialComment",{ "fg": s:aqua })
@@ -266,7 +261,7 @@ call s:h("htmlSpecialChar",     { "fg": s:purple })
 " Xml
 call s:h("xmlTag",              { "fg": s:pink })
 call s:h("xmlEndTag",           { "fg": s:pink })
-call s:h("xmlTagName",          { "fg": s:orange })
+call s:h("xmlTagName",          { "fg": s:white, "format": "bold,italic" })
 call s:h("xmlAttrib",           { "fg": s:green })
 
 " CSS
@@ -291,18 +286,18 @@ call s:h("rubyInstanceVariable",        {"fg": s:white, "format": "bold,italic"}
 call s:h("rubyGlobalVariable",          {})
 call s:h("rubyClassVariable",           {"fg": s:purple})
 call s:h("rubyPseudoVariable",          {})
-call s:h("rubyFunction",                { "fg": s:green })
+call s:h("rubyFunction",                { "fg": s:aqua })
 call s:h("rubyStringDelimiter",         { "fg": s:yellow })
-call s:h("rubyRegexp",                  { "fg": s:yellow })
-call s:h("rubyRegexpDelimiter",         { "fg": s:yellow })
-call s:h("rubySymbol",                  { "fg": s:purple, "format":"italic" })
+call s:h("rubyRegexp",                  { "fg": s:orange, "format": "italic" })
+call s:h("rubyRegexpDelimiter",         { "fg": s:orange, "format": "italic" })
+call s:h("rubySymbol",                  { "fg": s:purple, "format": "italic" })
 call s:h("rubyEscape",                  { "fg": s:purple })
-call s:h("rubyInclude",                 { "fg": s:pink, "format": "bold" })
-call s:h("rubyOperator",                { "fg": s:pink, "format": "bold" })
-call s:h("rubyControl",                 { "fg": s:pink, "format": "bold" })
-call s:h("rubyClass",                   { "fg": s:pink, "format": "bold" })
-call s:h("rubyDefine",                  { "fg": s:pink, "format": "bold" })
-call s:h("rubyException",               { "fg": s:pink, "format": "bold"   })
+call s:h("rubyInclude",                 { "fg": s:pink })
+call s:h("rubyOperator",                { "fg": s:pink })
+call s:h("rubyControl",                 { "fg": s:pink })
+call s:h("rubyClass",                   { "fg": s:pink })
+call s:h("rubyDefine",                  { "fg": s:pink })
+call s:h("rubyException",               { "fg": s:pink   })
 call s:h("rubyRailsARAssociationMethod",{ "fg": s:orange })
 call s:h("rubyRailsARMethod",           { "fg": s:orange })
 call s:h("rubyRailsRenderMethod",       { "fg": s:orange })
