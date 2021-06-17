@@ -1,4 +1,4 @@
-" File:       ruby_box.vim
+" File:       rr_box.vim --> based in codeschool theme
 " Maintainer: Henrique Fernandez
 " URL:        https://github.com/crusoexia/vim-monokai
 " License:    MIT
