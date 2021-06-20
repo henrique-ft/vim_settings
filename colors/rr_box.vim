@@ -71,22 +71,26 @@ endfunction
 
 
 let s:white       = { "gui": "#E8E8E3", "cterm": "255" }
-let s:black       = { "gui": "#272822", "cterm": "233" }
+let s:black       = { "gui": "#272822", "cterm": "234" }
 let s:lightblack  = { "gui": "#2D2E27", "cterm": "232" }
 let s:lightblack2 = { "gui": "#383a3e", "cterm": "237" }
 let s:darkblack   = { "gui": "#211F1C", "cterm": "232" }
 let s:grey        = { "gui": "#8F908A", "cterm": "243" }
 let s:lightgrey   = { "gui": "#575b61", "cterm": "239" }
 let s:darkgrey    = { "gui": "#64645e", "cterm": "241" }
-let s:warmgrey    = { "gui": "#75715E", "cterm": "245" }
+let s:warmgrey    = { "gui": "#75715E", "cterm": "244" }
 
-let s:pink        = { "gui": "#a91718", "cterm": "167" }
+"let s:pink        = { "gui": "#a91718", "cterm": "167" }
+let s:pink        = { "gui": "#a91718", "cterm": "131" }
 let s:green       = { "gui": "#A6E22D", "cterm": "153" }
 let s:aqua        = { "gui": "#66d9ef", "cterm": "153" }
+"let s:yellow      = { "gui": "#E6DB74", "cterm": "151" }
 let s:yellow      = { "gui": "#E6DB74", "cterm": "230" }
-let s:orange      = { "gui": "#FD9720", "cterm": "189" }
-"let s:orange      = { "gui": "#FD9720", "cterm": "182" }
-let s:purple      = { "gui": "#ae81ff", "cterm": "74" }
+"let s:orange      = { "gui": "#FD9720", "cterm": "189" }
+"let s:orange      = { "gui": "#FD9720", "cterm": "174" }
+let s:orange      = { "gui": "#FD9720", "cterm": "138" }
+"let s:purple      = { "gui": "#ae81ff", "cterm": "174" }
+let s:purple      = { "gui": "#ae81ff", "cterm": "138" }
 let s:red         = { "gui": "#e73c50", "cterm": "196" }
 let s:darkred     = { "gui": "#5f0000", "cterm": "52" }
 
@@ -176,7 +180,7 @@ call s:h("Define",        { "fg": s:pink })
 call s:h("Macro",         { "fg": s:green })
 call s:h("PreCondit",     { "fg": s:green })
 
-call s:h("Special",       { "fg": s:purple })
+call s:h("Special",       { "fg": s:aqua })
 call s:h("SpecialChar",   { "fg": s:pink })
 call s:h("Delimiter",     { "fg": s:pink })
 call s:h("SpecialComment",{ "fg": s:aqua })
@@ -221,6 +225,7 @@ call s:h("vimCommand",              { "fg": s:pink })
 
 " Javascript
 call s:h("jsFuncName",          { "fg": s:green })
+call s:h("jsFunction",          { "fg": s:green, "format": "italic" })
 call s:h("jsThis",              { "fg": s:pink })
 call s:h("jsFunctionKey",       { "fg": s:green })
 call s:h("jsPrototype",         { "fg": s:aqua })
@@ -290,7 +295,7 @@ call s:h("rubyFunction",                { "fg": s:green })
 call s:h("rubyStringDelimiter",         { "fg": s:yellow })
 call s:h("rubyRegexp",                  { "fg": s:orange, "format": "italic" })
 call s:h("rubyRegexpDelimiter",         { "fg": s:orange, "format": "italic" })
-call s:h("rubySymbol",                  { "fg": s:purple, "format": "italic" })
+call s:h("rubySymbol",                  { "fg": s:purple })
 call s:h("rubyEscape",                  { "fg": s:purple })
 call s:h("rubyInclude",                 { "fg": s:pink, "format": "bold" })
 call s:h("rubyOperator",                { "fg": s:pink, "format": "bold" })
