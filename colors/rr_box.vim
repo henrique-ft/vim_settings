@@ -82,14 +82,16 @@ let s:warmgrey    = { "gui": "#75715E", "cterm": "244" }
 
 "let s:pink        = { "gui": "#a91718", "cterm": "167" }
 let s:pink        = { "gui": "#a91718", "cterm": "131" }
-let s:green       = { "gui": "#A6E22D", "cterm": "153" }
-let s:aqua        = { "gui": "#66d9ef", "cterm": "153" }
+"let s:green       = { "gui": "#A6E22D", "cterm": "123" }
+let s:green       = { "gui": "#A6E22D", "cterm": "146" }
+"let s:aqua        = { "gui": "#66d9ef", "cterm": "123" }
+let s:aqua        = { "gui": "#66d9ef", "cterm": "123" }
 "let s:yellow      = { "gui": "#E6DB74", "cterm": "151" }
 let s:yellow      = { "gui": "#E6DB74", "cterm": "230" }
+"let s:orange      = { "gui": "#FD9720", "cterm": "153" }
+"let s:orange      = { "gui": "#FD9720", "cterm": "182" }
 "let s:orange      = { "gui": "#FD9720", "cterm": "189" }
-"let s:orange      = { "gui": "#FD9720", "cterm": "174" }
 let s:orange      = { "gui": "#FD9720", "cterm": "138" }
-"let s:purple      = { "gui": "#ae81ff", "cterm": "174" }
 let s:purple      = { "gui": "#ae81ff", "cterm": "138" }
 let s:red         = { "gui": "#e73c50", "cterm": "196" }
 let s:darkred     = { "gui": "#5f0000", "cterm": "52" }
@@ -225,7 +227,7 @@ call s:h("vimCommand",              { "fg": s:pink })
 
 " Javascript
 call s:h("jsFuncName",          { "fg": s:green })
-call s:h("jsFunction",          { "fg": s:green, "format": "italic" })
+call s:h("jsFunction",          { "fg": s:aqua, "format": "italic" })
 call s:h("jsThis",              { "fg": s:pink })
 call s:h("jsFunctionKey",       { "fg": s:green })
 call s:h("jsPrototype",         { "fg": s:aqua })
