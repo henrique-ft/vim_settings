@@ -11,12 +11,13 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 " *GO ENVIRONMENT
-"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " *ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
 " *JAVASCRIPT ENVIRONMENT
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'evanleck/vim-svelte'
 " *NGINX ENVIRONMENT
 Plug 'chr4/nginx.vim'
 
@@ -275,42 +276,46 @@ abbr pry require IEx; IEx.pry
 abbr defm defmodule
 
 " *GO ENVIRONMENT =======================================
-"inoremap pp fmt.Println()<left>
-"inoremap ifer if err != nil { panic(err) }<right>
+inoremap pp fmt.Println()<left>
+inoremap ifer if err != nil { panic(err) }<right>
 
-"filetype plugin indent on
+" Language server configs https://github.com/golang/tools/blob/master/gopls/doc/vim.md
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 
-"set autowrite
+filetype plugin indent on
 
-"" Go syntax highlighting
-"let g:go_highlight_fields = 1
-"let g:go_highlight_functions = 1
-"let g:go_highlight_function_calls = 1
-"let g:go_highlight_extra_types = 1
-"let g:go_highlight_operators = 1
+set autowrite
 
-"" Auto formatting and importing
-"let g:go_fmt_autosave = 1
-"let g:go_fmt_command = "goimports"
+" Go syntax highlighting
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_operators = 1
 
-"" Status line types/signatures
-"let g:go_auto_type_info = 1
+" Auto formatting and importing
+let g:go_fmt_autosave = 1
+let g:go_fmt_command = "goimports"
 
-"" Run :GoBuild or :GoTestCompile based on the go file
-"function! s:build_go_files()
-  "let l:file = expand('%')
-  "if l:file =~# '^\f\+_test\.go$'
-    "call go#test#Test(0, 1)
-  "elseif l:file =~# '^\f\+\.go$'
-    "call go#cmd#Build(0)
-  "endif
-"endfunction
+" Status line types/signatures
+let g:go_auto_type_info = 1
 
-"" Map keys for most used commands.
-"" Ex: `\b` for building, `\r` for running and `\b` for running test.
-"autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
-"autocmd FileType go nmap <leader>r  <Plug>(go-run)
-"autocmd FileType go nmap <leader>t  <Plug>(go-test)
+" Run :GoBuild or :GoTestCompile based on the go file
+function! s:build_go_files()
+  let l:file = expand('%')
+  if l:file =~# '^\f\+_test\.go$'
+    call go#test#Test(0, 1)
+  elseif l:file =~# '^\f\+\.go$'
+    call go#cmd#Build(0)
+  endif
+endfunction
+
+" Map keys for most used commands.
+" Ex: `\b` for building, `\r` for running and `\b` for running test.
+autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+autocmd FileType go nmap <leader>r  <Plug>(go-run)
+autocmd FileType go nmap <leader>t  <Plug>(go-test)
 " END GO ENVIRONMENT =======================================
 
 " *RUBY / *ELIXIR ENVIRONMENT

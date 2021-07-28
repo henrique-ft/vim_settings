@@ -208,6 +208,7 @@ call s:h("NERDTreeCWD",             { "fg": s:pink })
 call s:h("NERDTreeUp",              { "fg": s:white })
 call s:h("NERDTreeDirSlash",        { "fg": s:grey })
 call s:h("NERDTreeDir",             { "fg": s:grey })
+call s:h("NERDTreeFlags",             { "fg": s:grey })
 
 " Syntastic
 " ---------
