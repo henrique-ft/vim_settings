@@ -155,9 +155,9 @@ call s:h("PmenuThumb",    { "fg": s:lightblack, "bg": s:grey })
 " ---------------------------
 
 call s:h("Constant",      { "fg": s:purple, "format": "italic" })
-call s:h("Number",        { "fg": s:orange })
-call s:h("Float",         { "fg": s:orange })
-call s:h("Boolean",       { "fg": s:orange })
+call s:h("Number",        { "fg": s:purple })
+call s:h("Float",         { "fg": s:purple })
+call s:h("Boolean",       { "fg": s:purple })
 call s:h("Character",     { "fg": s:yellow })
 call s:h("String",        { "fg": s:yellow })
 
@@ -166,7 +166,7 @@ call s:h("Structure",     { "fg": s:aqua })
 call s:h("StorageClass",  { "fg": s:aqua })
 call s:h("Typedef",       { "fg": s:aqua })
 
-call s:h("Identifier",    { "fg": s:white, "format": "italic,bold" })
+call s:h("Identifier",    { "fg": s:white, "format": "bold" })
 call s:h("Function",      { "fg": s:green, "format": "bold" })
 
 call s:h("Statement",     { "fg": s:pink })
