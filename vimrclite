@@ -144,6 +144,7 @@ nmap <leader><leader>q :q!<CR>
 nmap <leader>w :w<CR>
 
 "Fast ESC
+inoremap jj <ESC>
 inoremap JJ <ESC>
 vnoremap JJ <ESC>
 
