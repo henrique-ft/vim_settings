@@ -68,7 +68,7 @@ call plug#end()
 autocmd VimEnter * color rr_box
 autocmd filetype ruby compiler ruby
 " *ELIXIR ENVIRONMENT
-"autocmd VimEnter * color ev_box
+"autocmd VimEnter * color er_box
 
 " < CONFIG >
 
@@ -187,9 +187,9 @@ let g:closetag_filetypes = 'html,xhtml,phtml'
 "inoremap ( ()<left>
 "inoremap [ []<left>
 "Auto complete for *GO / *JAVASCRIPT ENVIRONMENT"
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
+"inoremap { {}<left>
+"inoremap {<CR> {<CR>}<ESC>O
+"inoremap {;<CR> {<CR>};<ESC>O
 
 syntax on
 
@@ -276,8 +276,8 @@ abbr pry require IEx; IEx.pry
 abbr defm defmodule
 
 " *GO ENVIRONMENT =======================================
-inoremap pp fmt.Println()<left>
-inoremap ifer if err != nil { panic(err) }<right>
+"inoremap pp fmt.Println()<left>
+"inoremap ifer if err != nil { panic(err) }<right>
 
 " Language server configs https://github.com/golang/tools/blob/master/gopls/doc/vim.md
 let g:go_def_mode='gopls'
