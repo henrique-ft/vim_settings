@@ -12,6 +12,8 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 " *GO ENVIRONMENT
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" https://github.com/go-delve/delve/tree/master/Documentation/installation
+Plug 'sebdah/vim-delve'
 " *ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
 " *JAVASCRIPT ENVIRONMENT
@@ -187,9 +189,9 @@ let g:closetag_filetypes = 'html,xhtml,phtml'
 "inoremap ( ()<left>
 "inoremap [ []<left>
 "Auto complete for *GO / *JAVASCRIPT ENVIRONMENT"
-"inoremap { {}<left>
-"inoremap {<CR> {<CR>}<ESC>O
-"inoremap {;<CR> {<CR>};<ESC>O
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
 
 syntax on
 
@@ -209,6 +211,8 @@ nnoremap <M-j> <C-d>
 "Fast ESC
 inoremap jj <ESC>
 inoremap JJ <ESC>
+inoremap Jj <ESC>
+inoremap jJ <ESC>
 vnoremap JJ <ESC>
 
 "Add space q and space w to save and quit
@@ -276,8 +280,10 @@ abbr pry require IEx; IEx.pry
 abbr defm defmodule
 
 " *GO ENVIRONMENT =======================================
-"inoremap pp fmt.Println()<left>
-"inoremap ifer if err != nil { panic(err) }<right>
+inoremap f1 fmt.Println()<left>
+inoremap f2 fmt.Printf("%+v\n",)<left>
+inoremap f3 fmt.Sprintf("%s", name)<left>
+inoremap ifer if err != nil { panic(err) }<right>
 
 " Language server configs https://github.com/golang/tools/blob/master/gopls/doc/vim.md
 let g:go_def_mode='gopls'
