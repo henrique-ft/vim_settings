@@ -1,3 +1,4 @@
+""""""""""""""""""""""""""""""""
 " ~|                        |~ "
 " ~|  @truehenrique .vimrc  |~ "
 " ~|                        |~ "
@@ -15,11 +16,14 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'sebdah/vim-delve'
 " *REACT ENVIRONMENT
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'SirVer/ultisnips'
-Plug 'mlaursen/vim-react-snippets'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 " *JAVASCRIPT ENVIRONMENT
 Plug 'pangloss/vim-javascript'
+" For js autoimport work
+" $ git clone https://github.com/universal-ctags/ctags 
+" # cd ctags && ./autogen.sh && ./configure && make && sudo make install
+Plug 'ludovicchabant/vim-gutentags' 
+Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install'}
 " *ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
 " *NGINX ENVIRONMENT
@@ -87,6 +91,12 @@ set softtabstop=2
 "set tabstop=4
 "set shiftwidth=4
 "set softtabstop=4
+
+" *REACT ENVIRONMENT
+" Sometimes syntax highlighting can get out of sync in large JSX and TSX
+" files. This solves the problem
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
 "stop recording bug
 map q <Nop>
@@ -254,7 +264,7 @@ omap \ <Plug>(easymotion-tn)
 let g:EasyMotion_startofline = 0
 
 " Identlines configuration
-nmap <leader>i :IndentLinesToggle<CR>
+nmap <leader>li :IndentLinesToggle<CR>
 let g:indentLine_char = '│'
 let g:indentLine_fileTypeExclude = ["nerdtree"]
 
