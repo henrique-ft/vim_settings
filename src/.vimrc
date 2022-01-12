@@ -744,11 +744,6 @@ map  \ <Plug>(easymotion-sn)
 omap \ <Plug>(easymotion-tn)
 let g:EasyMotion_startofline = 0
 
-" Identlines configuration
-nmap <leader>i :IndentLinesToggle<CR>
-let g:indentLine_char = '│'
-let g:indentLine_fileTypeExclude = ["nerdtree"]
-
 "Fast word highlighting"
 noremap f *
 "Press x to turn off highlighting and clear any message already displayed.
