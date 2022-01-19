@@ -78,10 +78,10 @@ call plug#end()
 " < SET COLORS >
 
 " *RUBY ENVIRONMENT
-"autocmd VimEnter * color rr_box
+autocmd VimEnter * color rr_box
 "autocmd filetype ruby compiler ruby
 " *ELIXIR ENVIRONMENT
-autocmd VimEnter * color er_box
+"autocmd VimEnter * color er_box
 
 " < CONFIG >
 
