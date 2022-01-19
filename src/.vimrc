@@ -77,10 +77,10 @@ call plug#end()
 
 " < SET COLORS >
 
-" *RUBY / GO / REACT ENVIRONMENT
+" *RUBY ENVIRONMENT
 "autocmd VimEnter * color rr_box
 "autocmd filetype ruby compiler ruby
-" *ELIXIR / GO / REACT ENVIRONMENT
+" *ELIXIR ENVIRONMENT
 autocmd VimEnter * color er_box
 
 " < CONFIG >
@@ -292,6 +292,7 @@ set colorcolumn=80
 " *ELIXIR ENVIRONMENT
 abbr pry require IEx; IEx.pry
 abbr defm defmodule
+let g:mix_format_on_save = 1
 
 " *GO ENVIRONMENT =======================================
 inoremap f1 fmt.Println()<left>
