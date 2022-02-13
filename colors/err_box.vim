@@ -159,7 +159,7 @@ call s:h("StorageClass",  { "fg": s:aqua })
 call s:h("Typedef",       { "fg": s:aqua })
 
 call s:h("Identifier",    { "fg": s:white, "format":"bold" })
-call s:h("Function",      { "fg": s:purple2 })
+call s:h("Function",      { "fg": s:purple2, "format":"bold" })
 
 call s:h("Statement",     { "fg": s:red, "format": "bold" })
 call s:h("Operator",      { "fg": s:red, "format": "bold" })
@@ -222,6 +222,7 @@ call s:h("vimCommand",              { "fg": s:red })
 " Javascript
 call s:h("jsFuncName",          { "fg": s:purple2 })
 call s:h("jsFunction",          { "fg": s:aqua, "format": "italic" })
+call s:h("jsFuncCall",          { "fg": s:purple2 })
 call s:h("jsThis",              { "fg": s:red })
 call s:h("jsFunctionKey",       { "fg": s:purple2 })
 call s:h("jsPrototype",         { "fg": s:aqua })
@@ -356,4 +357,5 @@ call s:h("goTypeConstructor",         { "fg": s:aqua, "format": "italic" })
 call s:h("goTypeName",         { "fg": s:aqua, "format": "italic" })
 call s:h("goTypeDecl",         { "fg": s:aqua, "format": "italic" })
 call s:h("goDeclType",         { "fg": s:aqua, "format": "italic" })
+call s:h("goFunction",         { "fg": s:purple2 })
 
