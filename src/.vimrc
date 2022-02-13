@@ -1,8 +1,4 @@
 """"""""""""""""""""""""""""""""
-" ~|                        |~ "
-" ~|  @truehenrique .vimrc  |~ "
-" ~|                        |~ "
-""""""""""""""""""""""""""""""""
 
 call plug#begin('~/.vim/plugged')
 " < MISC >
@@ -31,6 +27,8 @@ Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install'}
 " *ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
+" *CRYSTAL ENVIRONMENT
+Plug 'vim-crystal/vim-crystal'
 " *NGINX ENVIRONMENT
 Plug 'chr4/nginx.vim'
 
@@ -77,11 +75,8 @@ call plug#end()
 
 " < SET COLORS >
 
-" *RUBY ENVIRONMENT
-autocmd VimEnter * color rr_box
-"autocmd filetype ruby compiler ruby
-" *ELIXIR ENVIRONMENT
-"autocmd VimEnter * color er_box
+autocmd VimEnter * color err_box
+autocmd filetype ruby compiler ruby
 
 " < CONFIG >
 
@@ -142,7 +137,8 @@ let g:airline#extensions#tabline#show_close_button = 0
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_theme='minimalist'
-map <silent> <F6> :set background=light<CR> :color PaperColor<CR>
+map <silent> <F5> :color rr_box<CR>
+map <silent> <F6> :color er_box<CR>
 map <silent> <F7> :AirlineTheme base16_grayscale<CR>
 map <silent> <F8> :AirlineTheme minimalist<CR>
 
@@ -290,8 +286,7 @@ let &t_TE = ""
 set colorcolumn=80
 
 " *ELIXIR ENVIRONMENT
-abbr pry require IEx; IEx.pry
-abbr defm defmodule
+inoremap pry require IEx; IEx.pry<left>
 let g:mix_format_on_save = 1
 
 " *GO ENVIRONMENT =======================================
