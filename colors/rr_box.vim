@@ -73,27 +73,20 @@ endfunction
 let s:white       = { "gui": "#E8E8E3", "cterm": "255" }
 let s:black       = { "gui": "#272822", "cterm": "234" }
 let s:lightblack  = { "gui": "#2D2E27", "cterm": "232" }
-let s:lightblack2 = { "gui": "#383a3e", "cterm": "237" }
+let s:lightblack2 = { "gui": "#383a3e", "cterm": "16" }
 let s:darkblack   = { "gui": "#211F1C", "cterm": "232" }
 let s:grey        = { "gui": "#8F908A", "cterm": "243" }
 let s:lightgrey   = { "gui": "#575b61", "cterm": "239" }
-let s:darkgrey    = { "gui": "#64645e", "cterm": "241" }
+let s:darkgrey    = { "gui": "#64645e", "cterm": "235" }
 let s:warmgrey    = { "gui": "#75715E", "cterm": "244" }
 
-"let s:pink        = { "gui": "#a91718", "cterm": "167" }
-let s:pink        = { "gui": "#a91718", "cterm": "131" }
-"let s:green       = { "gui": "#A6E22D", "cterm": "123" }
-let s:green       = { "gui": "#A6E22D", "cterm": "146" }
-"let s:aqua        = { "gui": "#66d9ef", "cterm": "123" }
-let s:aqua        = { "gui": "#66d9ef", "cterm": "123" }
-"let s:yellow      = { "gui": "#E6DB74", "cterm": "151" }
+let s:red        = { "gui": "#a91718", "cterm": "131" }
+let s:purple2     = { "gui": "#A6E22D", "cterm": "146" }
+let s:aqua        = { "gui": "#66d9ef", "cterm": "159" }
 let s:yellow      = { "gui": "#E6DB74", "cterm": "230" }
-"let s:orange      = { "gui": "#FD9720", "cterm": "153" }
-"let s:orange      = { "gui": "#FD9720", "cterm": "182" }
-"let s:orange      = { "gui": "#FD9720", "cterm": "189" }
 let s:orange      = { "gui": "#FD9720", "cterm": "138" }
 let s:purple      = { "gui": "#ae81ff", "cterm": "138" }
-let s:red         = { "gui": "#e73c50", "cterm": "196" }
+let s:lightred         = { "gui": "#e73c50", "cterm": "196" }
 let s:darkred     = { "gui": "#5f0000", "cterm": "52" }
 
 let s:addfg       = { "gui": "#d7ffaf", "cterm": "193" }
@@ -121,15 +114,15 @@ call s:h("MatchParen",    { "fg": s:purple,                           "format": 
 call s:h("Question",      { "fg": s:yellow })
 call s:h("ModeMsg",       { "fg": s:yellow })
 call s:h("MoreMsg",       { "fg": s:yellow })
-call s:h("ErrorMsg",      { "fg": s:black,      "bg": s:red,          "format": "standout" })
-call s:h("WarningMsg",    { "fg": s:red })
+call s:h("ErrorMsg",      { "fg": s:black,      "bg": s:lightred,          "format": "standout" })
+call s:h("WarningMsg",    { "fg": s:lightred })
 call s:h("VertSplit",     { "fg": s:darkgrey,   "bg": s:darkblack })
 call s:h("LineNr",        { "fg": s:grey,       "bg": s:lightblack })
 call s:h("CursorLineNr",  { "fg": s:white,     "bg": s:lightblack })
 call s:h("SignColumn",    {                     "bg": s:lightblack })
 
 " misc
-call s:h("SpecialKey",    { "fg": s:pink })
+call s:h("SpecialKey",    { "fg": s:red })
 call s:h("Title",         { "fg": s:yellow })
 call s:h("Directory",     { "fg": s:aqua })
 
@@ -166,35 +159,35 @@ call s:h("StorageClass",  { "fg": s:aqua })
 call s:h("Typedef",       { "fg": s:aqua })
 
 call s:h("Identifier",    { "fg": s:white, "format":"bold" })
-call s:h("Function",      { "fg": s:green })
+call s:h("Function",      { "fg": s:purple2 })
 
-call s:h("Statement",     { "fg": s:pink, "format": "bold" })
-call s:h("Operator",      { "fg": s:pink, "format": "bold" })
-call s:h("Label",         { "fg": s:pink, "format": "bold" })
+call s:h("Statement",     { "fg": s:red, "format": "bold" })
+call s:h("Operator",      { "fg": s:red, "format": "bold" })
+call s:h("Label",         { "fg": s:red, "format": "bold" })
 call s:h("Keyword",       { "fg": s:aqua })
 "        Conditional"
 "        Repeat"
 "        Exception"
 
-call s:h("PreProc",       { "fg": s:green })
-call s:h("Include",       { "fg": s:pink })
-call s:h("Define",        { "fg": s:pink })
-call s:h("Macro",         { "fg": s:green })
-call s:h("PreCondit",     { "fg": s:green })
+call s:h("PreProc",       { "fg": s:purple2 })
+call s:h("Include",       { "fg": s:red })
+call s:h("Define",        { "fg": s:red })
+call s:h("Macro",         { "fg": s:purple2 })
+call s:h("PreCondit",     { "fg": s:purple2 })
 
 call s:h("Special",       { "fg": s:aqua })
-call s:h("SpecialChar",   { "fg": s:pink })
-call s:h("Delimiter",     { "fg": s:pink })
+call s:h("SpecialChar",   { "fg": s:red })
+call s:h("Delimiter",     { "fg": s:red })
 call s:h("SpecialComment",{ "fg": s:aqua })
-call s:h("Tag",           { "fg": s:pink })
+call s:h("Tag",           { "fg": s:red })
 "        Debug"
 
 call s:h("Todo",          { "fg": s:orange,   "format": "bold,italic" })
 call s:h("Comment",       { "fg": s:warmgrey, "format": "italic" })
 
-call s:h("Underlined",    { "fg": s:green })
+call s:h("Underlined",    { "fg": s:purple2 })
 call s:h("Ignore",        {})
-call s:h("Error",         { "fg": s:red, "bg": s:darkred })
+call s:h("Error",         { "fg": s:lightred, "bg": s:darkred })
 
 " NerdTree
 " --------
@@ -202,10 +195,10 @@ call s:h("Error",         { "fg": s:red, "bg": s:darkred })
 call s:h("NERDTreeOpenable",        { "fg": s:yellow })
 call s:h("NERDTreeClosable",        { "fg": s:yellow })
 call s:h("NERDTreeHelp",            { "fg": s:yellow })
-call s:h("NERDTreeBookmarksHeader", { "fg": s:pink })
+call s:h("NERDTreeBookmarksHeader", { "fg": s:red })
 call s:h("NERDTreeBookmarksLeader", { "fg": s:black })
 call s:h("NERDTreeBookmarkName",    { "fg": s:yellow })
-call s:h("NERDTreeCWD",             { "fg": s:pink })
+call s:h("NERDTreeCWD",             { "fg": s:red })
 call s:h("NERDTreeUp",              { "fg": s:white })
 call s:h("NERDTreeDirSlash",        { "fg": s:grey })
 call s:h("NERDTreeDir",             { "fg": s:grey })
@@ -221,16 +214,16 @@ call s:h("SyntasticWarningSign",    { "fg": s:lightblack, "bg": s:orange })
 " ------------------
 
 " Java properties
-call s:h("jpropertiesIdentifier",   { "fg": s:pink })
+call s:h("jpropertiesIdentifier",   { "fg": s:red })
 
 " Vim command
-call s:h("vimCommand",              { "fg": s:pink })
+call s:h("vimCommand",              { "fg": s:red })
 
 " Javascript
-call s:h("jsFuncName",          { "fg": s:green })
+call s:h("jsFuncName",          { "fg": s:purple2 })
 call s:h("jsFunction",          { "fg": s:aqua, "format": "italic" })
-call s:h("jsThis",              { "fg": s:pink })
-call s:h("jsFunctionKey",       { "fg": s:green })
+call s:h("jsThis",              { "fg": s:red })
+call s:h("jsFunctionKey",       { "fg": s:purple2 })
 call s:h("jsPrototype",         { "fg": s:aqua })
 call s:h("jsExceptions",        { "fg": s:aqua })
 call s:h("jsFutureKeys",        { "fg": s:aqua })
@@ -251,26 +244,26 @@ call s:h("typescriptVariable",            { "fg": s:aqua })
 call s:h("typescriptModule",              { "fg": s:aqua })
 call s:h("typescriptPredefinedType",      { "fg": s:aqua })
 call s:h("typescriptFuncTypeArrow",       { "fg": s:aqua })
-call s:h("typescriptImport",              { "fg": s:pink })
-call s:h("typescriptExport",              { "fg": s:pink })
-call s:h("typescriptCastKeyword",         { "fg": s:pink })
-call s:h("typescriptOperator",            { "fg": s:pink })
+call s:h("typescriptImport",              { "fg": s:red })
+call s:h("typescriptExport",              { "fg": s:red })
+call s:h("typescriptCastKeyword",         { "fg": s:red })
+call s:h("typescriptOperator",            { "fg": s:red })
 call s:h("typescriptEndColons",           { "fg": s:white })
-call s:h("typescriptObjectLabel",         { "fg": s:green })
-call s:h("typescriptAmbientDeclaration",  { "fg": s:pink })
+call s:h("typescriptObjectLabel",         { "fg": s:purple2 })
+call s:h("typescriptAmbientDeclaration",  { "fg": s:red })
 
 " Html
-call s:h("htmlTag",             { "fg": s:pink })
-call s:h("htmlEndTag",          { "fg": s:pink })
+call s:h("htmlTag",             { "fg": s:red })
+call s:h("htmlEndTag",          { "fg": s:red })
 call s:h("htmlTagName",         { "fg": s:white })
-call s:h("htmlArg",             { "fg": s:green })
+call s:h("htmlArg",             { "fg": s:purple2 })
 call s:h("htmlSpecialChar",     { "fg": s:purple })
 
 " Xml
-call s:h("xmlTag",              { "fg": s:pink })
-call s:h("xmlEndTag",           { "fg": s:pink })
+call s:h("xmlTag",              { "fg": s:red })
+call s:h("xmlEndTag",           { "fg": s:red })
 call s:h("xmlTagName",          { "fg": s:white, "format": "bold,italic" })
-call s:h("xmlAttrib",           { "fg": s:green })
+call s:h("xmlAttrib",           { "fg": s:purple2 })
 
 " CSS
 call s:h("cssProp",             { "fg": s:yellow })
@@ -278,15 +271,15 @@ call s:h("cssUIAttr",           { "fg": s:yellow })
 call s:h("cssFunctionName",     { "fg": s:aqua })
 call s:h("cssColor",            { "fg": s:purple })
 call s:h("cssPseudoClassId",    { "fg": s:purple })
-call s:h("cssClassName",        { "fg": s:green })
+call s:h("cssClassName",        { "fg": s:purple2 })
 call s:h("cssValueLength",      { "fg": s:purple })
-call s:h("cssCommonAttr",       { "fg": s:pink })
+call s:h("cssCommonAttr",       { "fg": s:red })
 call s:h("cssBraces" ,          { "fg": s:white })
-call s:h("cssClassNameDot",     { "fg": s:pink })
+call s:h("cssClassNameDot",     { "fg": s:red })
 call s:h("cssURL",              { "fg": s:orange, "format": "underline,italic" })
 
 " LESS
-call s:h("lessVariable",        { "fg": s:green })
+call s:h("lessVariable",        { "fg": s:purple2 })
 
 " ruby
 call s:h("rubyInterpolationDelimiter",  {})
@@ -294,18 +287,18 @@ call s:h("rubyInstanceVariable",        {"fg": s:white, "format": "bold,italic"}
 call s:h("rubyGlobalVariable",          {})
 call s:h("rubyClassVariable",           {"fg": s:purple})
 call s:h("rubyPseudoVariable",          {})
-call s:h("rubyFunction",                { "fg": s:green })
+call s:h("rubyFunction",                { "fg": s:purple2 })
 call s:h("rubyStringDelimiter",         { "fg": s:yellow })
 call s:h("rubyRegexp",                  { "fg": s:orange, "format": "italic" })
 call s:h("rubyRegexpDelimiter",         { "fg": s:orange, "format": "italic" })
 call s:h("rubySymbol",                  { "fg": s:purple })
 call s:h("rubyEscape",                  { "fg": s:purple })
-call s:h("rubyInclude",                 { "fg": s:pink, "format": "bold" })
-call s:h("rubyOperator",                { "fg": s:pink, "format": "bold" })
-call s:h("rubyControl",                 { "fg": s:pink, "format": "bold" })
-call s:h("rubyClass",                   { "fg": s:pink, "format": "bold" })
-call s:h("rubyDefine",                  { "fg": s:pink, "format": "bold" })
-call s:h("rubyException",               { "fg": s:pink, "format": "bold" })
+call s:h("rubyInclude",                 { "fg": s:red, "format": "bold" })
+call s:h("rubyOperator",                { "fg": s:red, "format": "bold" })
+call s:h("rubyControl",                 { "fg": s:red, "format": "bold" })
+call s:h("rubyClass",                   { "fg": s:red, "format": "bold" })
+call s:h("rubyDefine",                  { "fg": s:red, "format": "bold" })
+call s:h("rubyException",               { "fg": s:red, "format": "bold" })
 call s:h("rubyRailsARAssociationMethod",{ "fg": s:orange })
 call s:h("rubyRailsARMethod",           { "fg": s:orange })
 call s:h("rubyRailsRenderMethod",       { "fg": s:orange })
@@ -319,8 +312,48 @@ call s:h("erubyDelimiter",              {})
 call s:h("erubyRailsMethod",            { "fg": s:aqua })
 
 " c
-call s:h("cLabel",                      { "fg": s:pink })
-call s:h("cStructure",                  { "fg": s:pink })
-call s:h("cStorageClass",               { "fg": s:pink })
-call s:h("cInclude",                    { "fg": s:green })
-call s:h("cDefine",                     { "fg": s:green })
+call s:h("cLabel",                      { "fg": s:red })
+call s:h("cStructure",                  { "fg": s:red })
+call s:h("cStorageClass",               { "fg": s:red })
+call s:h("cInclude",                    { "fg": s:purple2 })
+call s:h("cDefine",                     { "fg": s:purple2 })
+
+" elixir
+
+call s:h("elixirBlockDefinition",         { "fg": s:purple2, "format": "bold" })
+call s:h("elixirDefine",                  { "fg": s:purple2, "format": "bold" })
+call s:h("elixirPrivateDefine",           { "fg": s:purple2, "format": "bold" })
+call s:h("elixirModuleDefine",            { "fg": s:purple2, "format": "bold" })
+call s:h("elixirProtocolDefine",          { "fg": s:purple2, "format": "bold" })
+call s:h("elixirImplDefine",              { "fg": s:purple2, "format": "bold" })
+call s:h("elixirRecordDefine",            { "fg": s:purple2, "format": "bold" })
+call s:h("elixirPrivateRecordDefine",     { "fg": s:purple2, "format": "bold" })
+call s:h("elixirMacroDefine",             { "fg": s:purple2, "format": "bold" })
+call s:h("elixirPrivateMacroDefine",      { "fg": s:purple2, "format": "bold" })
+call s:h("elixirDelegateDefine",          { "fg": s:purple2, "format": "bold" })
+call s:h("elixirOverridableDefine",       { "fg": s:purple2, "format": "bold" })
+call s:h("elixirExceptionDefine",         { "fg": s:purple2, "format": "bold" })
+call s:h("elixirCallbackDefine",          { "fg": s:purple2, "format": "bold" })
+call s:h("elixirStructDefine",            { "fg": s:purple2, "format": "bold" })
+call s:h("elixirExUnitMacro",             { "fg": s:purple2, "format": "bold" })
+call s:h("elixirModuleDeclarationMacro",  { "fg": s:purple2, "format": "bold" })
+call s:h("elixirKeyword",                 { "fg": s:purple2, "format": "bold" })
+call s:h("elixirInclude",                 { "fg": s:purple2 })
+call s:h("elixirModuleDeclaration",       { "fg": s:aqua, "format": "italic" })
+call s:h("elixirAlias",                   { "fg": s:aqua, "format": "italic" })
+call s:h("elixirAtom",                    { "fg": s:purple, "format": "italic" })
+call s:h("elixirFunctionDeclaration",     { "fg": s:purple2, "format": "italic" })
+call s:h("elixirVariable",                { "fg": s:white, "format": "bold,italic" })
+
+" go
+
+call s:h("goType",         { "fg": s:aqua, "format": "italic" })
+call s:h("goSignedInts",         { "fg": s:aqua, "format": "italic" })
+call s:h("goUnsignedInts",         { "fg": s:aqua, "format": "italic" })
+call s:h("goFloats",         { "fg": s:aqua, "format": "italic" })
+call s:h("goComplexes",         { "fg": s:aqua, "format": "italic" })
+call s:h("goTypeConstructor",         { "fg": s:aqua, "format": "italic" })
+call s:h("goTypeName",         { "fg": s:aqua, "format": "italic" })
+call s:h("goTypeDecl",         { "fg": s:aqua, "format": "italic" })
+call s:h("goDeclType",         { "fg": s:aqua, "format": "italic" })
+
