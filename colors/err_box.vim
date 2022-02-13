@@ -339,12 +339,13 @@ call s:h("elixirStructDefine",            { "fg": s:purple2, "format": "bold" })
 call s:h("elixirExUnitMacro",             { "fg": s:purple2, "format": "bold" })
 call s:h("elixirModuleDeclarationMacro",  { "fg": s:purple2, "format": "bold" })
 call s:h("elixirKeyword",                 { "fg": s:purple2, "format": "bold" })
-call s:h("elixirInclude",                 { "fg": s:purple2 })
+call s:h("elixirInclude",                 { "fg": s:red })
 call s:h("elixirModuleDeclaration",       { "fg": s:aqua, "format": "italic" })
 call s:h("elixirAlias",                   { "fg": s:aqua, "format": "italic" })
 call s:h("elixirAtom",                    { "fg": s:purple, "format": "italic" })
 call s:h("elixirFunctionDeclaration",     { "fg": s:purple2, "format": "italic" })
 call s:h("elixirVariable",                { "fg": s:white, "format": "bold,italic" })
+call s:h("elixirStringDelimiter",         { "fg": s:purple })
 
 " go
 
