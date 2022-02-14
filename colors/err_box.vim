@@ -345,7 +345,7 @@ call s:h("elixirAlias",                   { "fg": s:aqua, "format": "italic" })
 call s:h("elixirAtom",                    { "fg": s:purple, "format": "italic" })
 call s:h("elixirFunctionDeclaration",     { "fg": s:purple2, "format": "italic" })
 call s:h("elixirVariable",                { "fg": s:white, "format": "bold,italic" })
-call s:h("elixirStringDelimiter",         { "fg": s:red })
+call s:h("elixirStringDelimiter",         { "fg": s:yellow })
 
 " go
 
