@@ -79,6 +79,7 @@ let s:grey        = { "gui": "#8F908A", "cterm": "243" }
 let s:lightgrey   = { "gui": "#575b61", "cterm": "239" }
 let s:darkgrey    = { "gui": "#64645e", "cterm": "235" }
 let s:warmgrey    = { "gui": "#75715E", "cterm": "244" }
+let s:warmgrey2    = { "gui": "#75715E", "cterm": "248" }
 
 let s:red        = { "gui": "#a91718", "cterm": "131" }
 let s:purple2     = { "gui": "#A6E22D", "cterm": "146" }
@@ -346,7 +347,7 @@ call s:h("elixirAtom",                    { "fg": s:purple, "format": "italic" }
 call s:h("elixirFunctionDeclaration",     { "fg": s:purple2 })
 call s:h("elixirVariable",                { "fg": s:white, "format": "bold,italic" })
 call s:h("elixirStringDelimiter",         { "fg": s:yellow })
-call s:h("elixirDocStringDelimiter",       { "fg": s:red })
+call s:h("elixirDocStringDelimiter",       { "fg": s:warmgrey2 })
 
 " go
 
