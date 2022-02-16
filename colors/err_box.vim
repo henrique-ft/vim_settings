@@ -350,14 +350,4 @@ call s:h("elixirDocStringDelimiter",       { "fg": s:red })
 
 " go
 
-call s:h("goType",         { "fg": s:aqua, "format": "italic" })
-call s:h("goSignedInts",         { "fg": s:aqua, "format": "italic" })
-call s:h("goUnsignedInts",         { "fg": s:aqua, "format": "italic" })
-call s:h("goFloats",         { "fg": s:aqua, "format": "italic" })
-call s:h("goComplexes",         { "fg": s:aqua, "format": "italic" })
-call s:h("goTypeConstructor",         { "fg": s:aqua, "format": "italic" })
-call s:h("goTypeName",         { "fg": s:aqua, "format": "italic" })
-call s:h("goTypeDecl",         { "fg": s:aqua, "format": "italic" })
-call s:h("goDeclType",         { "fg": s:aqua, "format": "italic" })
 call s:h("goFunction",         { "fg": s:purple2 })
-
