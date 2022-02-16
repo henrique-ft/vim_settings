@@ -347,7 +347,6 @@ call s:h("elixirFunctionDeclaration",     { "fg": s:purple2 })
 call s:h("elixirVariable",                { "fg": s:white, "format": "bold,italic" })
 call s:h("elixirStringDelimiter",         { "fg": s:yellow })
 call s:h("elixirDocStringDelimiter",       { "fg": s:red })
-call s:h("elixirComment",       { "format": "bold,italic"  })
 
 " go
 
