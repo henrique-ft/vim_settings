@@ -71,8 +71,8 @@ endfunction
 
 
 let s:white       = { "gui": "#E8E8E3", "cterm": "255" }
-let s:black       = { "gui": "#272822", "cterm": "234" }
-let s:lightblack  = { "gui": "#2D2E27", "cterm": "232" }
+let s:black       = { "gui": "#272822", "cterm": "235" }
+let s:lightblack  = { "gui": "#2D2E27", "cterm": "233" }
 let s:lightblack2 = { "gui": "#383a3e", "cterm": "16" }
 let s:darkblack   = { "gui": "#211F1C", "cterm": "232" }
 let s:grey        = { "gui": "#8F908A", "cterm": "243" }
