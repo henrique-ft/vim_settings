@@ -82,11 +82,12 @@ let s:warmgrey    = { "gui": "#75715E", "cterm": "245" }
 let s:warmgrey2    = { "gui": "#75715E", "cterm": "249" }
 
 let s:red        = { "gui": "#a91718", "cterm": "131" }
-let s:purple2     = { "gui": "#A6E22D", "cterm": "146" }
 let s:aqua        = { "gui": "#66d9ef", "cterm": "159" }
 let s:yellow      = { "gui": "#E6DB74", "cterm": "230" }
 let s:orange      = { "gui": "#FD9720", "cterm": "138" }
 let s:purple      = { "gui": "#ae81ff", "cterm": "138" }
+let s:purple2     = { "gui": "#A6E22D", "cterm": "146" }
+let s:purple3     = { "gui": "#A6E22D", "cterm": "103" }
 let s:lightred         = { "gui": "#e73c50", "cterm": "196" }
 let s:darkred     = { "gui": "#5f0000", "cterm": "52" }
 
@@ -147,7 +148,7 @@ call s:h("PmenuThumb",    { "fg": s:lightblack, "bg": s:grey })
 " Generic Syntax Highlighting
 " ---------------------------
 
-call s:h("Constant",      { "fg": s:orange })
+call s:h("Constant",      { "fg": s:purple3, "format": "italic" })
 call s:h("Number",        { "fg": s:orange })
 call s:h("Float",         { "fg": s:orange })
 call s:h("Boolean",       { "fg": s:orange })
@@ -344,7 +345,7 @@ call s:h("elixirInclude",                 { "fg": s:red })
 call s:h("elixirModuleDeclaration",       { "fg": s:aqua, "format": "italic" })
 call s:h("elixirAlias",                   { "fg": s:aqua, "format": "italic" })
 call s:h("elixirAtom",                    { "fg": s:purple, "format": "italic" })
-call s:h("elixirOperator",                { "fg": s:red })
+call s:h("elixirOperator",                { "fg": s:purple3 })
 call s:h("elixirFunctionDeclaration",     { "fg": s:purple2 })
 call s:h("elixirVariable",                { "fg": s:white, "format": "bold,italic" })
 call s:h("elixirStringDelimiter",         { "fg": s:yellow })
