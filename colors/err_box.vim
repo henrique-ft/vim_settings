@@ -148,7 +148,7 @@ call s:h("PmenuThumb",    { "fg": s:lightblack, "bg": s:grey })
 " Generic Syntax Highlighting
 " ---------------------------
 
-call s:h("Constant",      { "fg": s:purple3, "format": "italic" })
+call s:h("Constant",      { "fg": s:purple })
 call s:h("Number",        { "fg": s:orange })
 call s:h("Float",         { "fg": s:orange })
 call s:h("Boolean",       { "fg": s:orange })
@@ -345,7 +345,7 @@ call s:h("elixirInclude",                 { "fg": s:red })
 call s:h("elixirModuleDeclaration",       { "fg": s:aqua, "format": "italic" })
 call s:h("elixirAlias",                   { "fg": s:aqua, "format": "italic" })
 call s:h("elixirAtom",                    { "fg": s:purple, "format": "italic" })
-call s:h("elixirOperator",                { "fg": s:purple3 })
+call s:h("elixirOperator",                { "fg": s:red })
 call s:h("elixirFunctionDeclaration",     { "fg": s:purple2 })
 call s:h("elixirVariable",                { "fg": s:white, "format": "bold,italic" })
 call s:h("elixirStringDelimiter",         { "fg": s:yellow })
