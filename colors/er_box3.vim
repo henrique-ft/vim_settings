@@ -81,7 +81,7 @@ let s:lightgrey   = { "gui": "#575b61", "cterm": "239" }
 let s:darkgrey    = { "gui": "#64645e", "cterm": "16" }
 let s:warmgrey    = { "gui": "#75715E", "cterm": "244" }
 
-let s:pink        = { "gui": "#F92772", "cterm": "140" }
+let s:pink        = { "gui": "#F92772", "cterm": "146" }
 "let s:pink        = { "gui": "#F92772", "cterm": "134" }
 "let s:pink        = { "gui": "#F92772", "cterm": "139" }
 "let s:pink        = { "gui": "#F92772", "cterm": "140" }
@@ -92,11 +92,10 @@ let s:green       = { "gui": "#A6E22D", "cterm": "146" }
 let s:aqua        = { "gui": "#66d9ef", "cterm": "159" }
 let s:darkpurple  = { "gui": "#66d9ef", "cterm": "60" }
 let s:yellow      = { "gui": "#E6DB74", "cterm": "230" }
-let s:orange      = { "gui": "#FD9720", "cterm": "218" }
-let s:purple      = { "gui": "#ae81ff", "cterm": "219" }
+let s:orange      = { "gui": "#FD9720", "cterm": "217" }
+let s:purple      = { "gui": "#ae81ff", "cterm": "139" }
 let s:red         = { "gui": "#e73c50", "cterm": "196" }
 let s:darkred     = { "gui": "#5f0000", "cterm": "52" }
-let s:test     = { "gui": "#5f0000", "cterm": "183" }
 
 let s:addfg       = { "gui": "#d7ffaf", "cterm": "193" }
 let s:addbg       = { "gui": "#5f875f", "cterm": "65" }
@@ -155,40 +154,40 @@ call s:h("PmenuThumb",    { "fg": s:lightblack, "bg": s:grey })
 " Generic Syntax Highlighting
 " ---------------------------
 
-call s:h("Constant",      { "fg": s:purple, "format": "italic" })
+call s:h("Constant",      { "fg": s:purple })
 call s:h("Number",        { "fg": s:purple })
 call s:h("Float",         { "fg": s:purple })
 call s:h("Boolean",       { "fg": s:purple })
 call s:h("Character",     { "fg": s:yellow })
 call s:h("String",        { "fg": s:yellow })
 
-call s:h("Type",          { "fg": s:aqua , "format": "italic" })
+call s:h("Type",          { "fg": s:aqua, "format": "italic" })
 call s:h("Structure",     { "fg": s:aqua })
 call s:h("StorageClass",  { "fg": s:aqua })
 call s:h("Typedef",       { "fg": s:aqua })
 
 call s:h("Identifier",    { "fg": s:white2, "format": "bold" })
-call s:h("Function",      { "fg": s:green, "format": "bold" })
+call s:h("Function",      { "fg": s:green })
 
-call s:h("Statement",     { "fg": s:pink })
-call s:h("Operator",      { "fg": s:test })
-call s:h("Label",         { "fg": s:pink })
+call s:h("Statement",     { "fg": s:pink, "format": "bold" })
+call s:h("Operator",      { "fg": s:pink })
+call s:h("Label",         { "fg": s:pink, "format": "bold" })
 call s:h("Keyword",       { "fg": s:aqua })
 "        Conditional"
 "        Repeat"
 "        Exception"
 
 call s:h("PreProc",       { "fg": s:green })
-call s:h("Include",       { "fg": s:pink })
-call s:h("Define",        { "fg": s:pink })
+call s:h("Include",       { "fg": s:pink, "format": "bold" })
+call s:h("Define",        { "fg": s:pink, "format": "bold" })
 call s:h("Macro",         { "fg": s:green })
 call s:h("PreCondit",     { "fg": s:green })
 
 call s:h("Special",       { "fg": s:purple })
-call s:h("SpecialChar",   { "fg": s:pink })
-call s:h("Delimiter",     { "fg": s:pink })
+call s:h("SpecialChar",   { "fg": s:pink, "format": "bold" })
+call s:h("Delimiter",     { "fg": s:pink, "format": "bold" })
 call s:h("SpecialComment",{ "fg": s:aqua })
-call s:h("Tag",           { "fg": s:pink })
+call s:h("Tag",           { "fg": s:pink, "format": "bold" })
 "        Debug"
 
 call s:h("Todo",          { "fg": s:orange,   "format": "bold,italic" })
@@ -230,6 +229,11 @@ call s:h("vimCommand",              { "fg": s:pink })
 
 " Javascript
 call s:h("jsFuncName",          { "fg": s:green })
+call s:h("jsFunction",          { "fg": s:aqua, "format": "italic" })
+call s:h("jsFuncCall",          { "fg": s:green, "format": "bold" })
+call s:h("jsImport",          { "fg": s:green })
+call s:h("jsExport",          { "fg": s:green })
+call s:h("jsReturn",          { "fg": s:green })
 call s:h("jsThis",              { "fg": s:pink })
 call s:h("jsFunctionKey",       { "fg": s:green })
 call s:h("jsPrototype",         { "fg": s:aqua })
@@ -322,7 +326,7 @@ call s:h("erubyRailsMethod",            { "fg": s:aqua })
 " elixir
 call s:h("elixirStringDelimiter",         { "fg": s:yellow })
 call s:h("elixirDocStringDelimiter",       { "fg": s:pink })
-call s:h("elixirVariable",                { "fg": s:white, "format": "bold,italic" })
+call s:h("elixirVariable",                { "fg": s:white, "format": "bold" })
 
 " c
 call s:h("cLabel",                      { "fg": s:pink })
@@ -333,12 +337,12 @@ call s:h("cDefine",                     { "fg": s:green })
 
 " go
 call s:h("goFunctionCall", { "fg": s:aqua })
-call s:h("goFunction", { "fg": s:green, "format": "bold" })
-"call s:h("goImport", { "fg": s:pink, "format": "bold" })
-"call s:h("goPackage", { "fg": s:pink, "format": "bold" })
-"call s:h("goStatement", { "fg": s:pink, "format": "bold" })
-"call s:h("goConditional", { "fg": s:pink, "format": "bold" })
-"call s:h("goLabel", { "fg": s:pink, "format": "bold" })
-"call s:h("goRepeat", { "fg": s:pink, "format": "bold" })
-call s:h("goOperator", { "fg": s:pink, "format": "bold" })
+call s:h("goFunction", { "fg": s:green })
+call s:h("goImport", { "fg": s:purple, "format": "bold" })
+call s:h("goPackage", { "fg": s:purple, "format": "bold" })
+call s:h("goStatement", { "fg": s:purple, "format": "bold" })
+call s:h("goConditional", { "fg": s:purple, "format": "bold" })
+call s:h("goLabel", { "fg": s:purple, "format": "bold" })
+call s:h("goRepeat", { "fg": s:purple, "format": "bold" })
+call s:h("goOperator", { "fg": s:purple, "format": "bold" })
 call s:h("goType", { "fg": s:aqua })
