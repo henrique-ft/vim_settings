@@ -69,7 +69,6 @@ endfunction
 " Palettes
 " --------
 
-
 let s:white       = { "gui": "#E8E8E3", "cterm": "254" }
 let s:white2       = { "gui": "#E8E8E3", "cterm": "255" }
 let s:black       = { "gui": "#272822", "cterm": "234" }
@@ -191,7 +190,7 @@ call s:h("Tag",           { "fg": s:pink, "format": "bold" })
 "        Debug"
 
 call s:h("Todo",          { "fg": s:orange,   "format": "bold,italic" })
-call s:h("Comment",       { "fg": s:darkpurple, "format": "italic"})
+call s:h("Comment",       { "fg": s:darkpurple})
 
 call s:h("Underlined",    { "fg": s:green })
 call s:h("Ignore",        {})
