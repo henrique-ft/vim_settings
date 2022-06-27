@@ -69,16 +69,16 @@ endfunction
 " Palettes
 " --------
 
-let s:white       = { "gui": "#E8E8E3", "cterm": "254" }
+let s:white       = { "gui": "#E8E8E3", "cterm": "255" }
 let s:white2       = { "gui": "#E8E8E3", "cterm": "255" }
-let s:black       = { "gui": "#272822", "cterm": "234" }
-let s:lightblack  = { "gui": "#2D2E27", "cterm": "235" }
-let s:lightblack2 = { "gui": "#383a3e", "cterm": "237" }
+let s:black       = { "gui": "#272822", "cterm": "235" }
+let s:lightblack  = { "gui": "#2D2E27", "cterm": "234" }
+let s:lightblack2 = { "gui": "#383a3e", "cterm": "234" }
 let s:darkblack   = { "gui": "#211F1C", "cterm": "233" }
-let s:grey        = { "gui": "#8F908A", "cterm": "242" }
-let s:lightgrey   = { "gui": "#575b61", "cterm": "239" }
-let s:darkgrey    = { "gui": "#64645e", "cterm": "16" }
-let s:warmgrey    = { "gui": "#75715E", "cterm": "244" }
+let s:grey        = { "gui": "#8F908A", "cterm": "244" }
+let s:lightgrey   = { "gui": "#575b61", "cterm": "240" }
+let s:darkgrey    = { "gui": "#64645e", "cterm": "236" }
+let s:warmgrey    = { "gui": "#75715E", "cterm": "245" }
 
 let s:pink        = { "gui": "#F92772", "cterm": "146" }
 "let s:pink        = { "gui": "#F92772", "cterm": "134" }
@@ -115,7 +115,7 @@ call s:h("NonText",       { "fg": s:lightgrey })
 call s:h("StatusLine",    { "fg": s:warmgrey,   "bg": s:black,        "format": "reverse" })
 call s:h("StatusLineNC",  { "fg": s:darkgrey,   "bg": s:warmgrey,     "format": "reverse" })
 call s:h("TabLine",       { "fg": s:white,      "bg": s:darkblack,    "format": "reverse" })
-call s:h("Visual",        {                     "bg": s:lightblack2 })
+call s:h("Visual",        {                     "bg": s:lightgrey })
 call s:h("Search",        { "fg": s:black,      "bg": s:yellow })
 call s:h("MatchParen",    { "fg": s:purple,                           "format": "underline,bold" })
 call s:h("Question",      { "fg": s:yellow })
@@ -323,7 +323,7 @@ call s:h("erubyDelimiter",              {})
 call s:h("erubyRailsMethod",            { "fg": s:aqua })
 
 " elixir
-call s:h("elixirStringDelimiter",         { "fg": s:yellow })
+call s:h("elixirStringDelimiter",         { "fg": s:pink })
 call s:h("elixirDocStringDelimiter",       { "fg": s:pink })
 call s:h("elixirVariable",                { "fg": s:white, "format": "bold" })
 
