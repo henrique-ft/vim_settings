@@ -323,7 +323,7 @@ call s:h("erubyDelimiter",              {})
 call s:h("erubyRailsMethod",            { "fg": s:aqua })
 
 " elixir
-call s:h("elixirStringDelimiter",         { "fg": s:pink })
+call s:h("elixirStringDelimiter",         { "fg": s:yellow })
 call s:h("elixirDocStringDelimiter",       { "fg": s:pink })
 call s:h("elixirVariable",                { "fg": s:white, "format": "bold" })
 
