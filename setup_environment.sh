@@ -12,8 +12,8 @@ cp tmuxconflite ~/.tmux.conf
 mkdir ~/.vim/colors
 cp colors/er_box.vim ~/.vim/colors/er_box.vim
 cp colors/rr_box.vim ~/.vim/colors/rr_box.vim
-cd ~/.vim
-git clone https://github.com/kien/ctrlp.vim.git bundle/ctrlp.vim
+cd ~/.vim && git clone https://github.com/ctrlpvim/ctrlp.vim.git bundle/ctrlp.vim
+sudo apt-get python-dev
 
 echo "******************************************"
 echo " "

@@ -177,7 +177,7 @@ let g:strip_whitespace_confirm=0
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_max_files=0
-let g:ctrlp_custom_ignore = 'app/assets/images\|node_modules\|spec/cassettes\|DS_Store\|git'
+let g:ctrlp_custom_ignore = 'node_modules\|spec/cassettes\|DS_Store\|git'
 " SHOW MOST RECENT FILES
 "noremap <M-p> :CtrlPMixed<CR>
 noremap <M-p> :CtrlPMRU<CR>
