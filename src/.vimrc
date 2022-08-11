@@ -22,8 +22,8 @@ Plug 'pangloss/vim-javascript'
 " git config --global core.excludesfile ~/.gitignore_global
 " vim ~/.gitignore_global
 " and add to this file: tags tags.lock and tags.temp
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install'}
+"Plug 'ludovicchabant/vim-gutentags'
+"Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install'}
 " *ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
@@ -174,6 +174,8 @@ let g:strip_whitespace_confirm=0
 "CTRLP Maps
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_max_files=0
+let g:ctrlp_custom_ignore = 'app/assets/images\|node_modules\|spec/cassettes\|DS_Store\|git'
 " SHOW MOST RECENT FILES
 "noremap <M-p> :CtrlPMixed<CR>
 noremap <M-p> :CtrlPMRU<CR>
