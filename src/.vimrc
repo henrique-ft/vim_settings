@@ -121,6 +121,8 @@ nnoremap p p=`]
 "ctrlsf position"
 let g:ctrlsf_position = 'bottom'
 let g:ctrlsf_auto_close = { "normal" : 0, "compact": 0}
+"ctrlsf ignore"
+let g:ctrlsf_ignore_dir = ["node_modules",  ".git"]
 
 "make italics work
 let &t_ZH="\e[3m"
