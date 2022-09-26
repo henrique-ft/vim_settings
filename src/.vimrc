@@ -294,6 +294,8 @@ inoremap pry require IEx; IEx.pry<left>
 let g:mix_format_on_save = 1
 
 " *GO ENVIRONMENT =======================================
+" Autocomplete = CTRL +X +O
+
 inoremap f1 fmt.Println()<left>
 inoremap f2 fmt.Sprintf("%s", name)<left>
 inoremap f3 fmt.Printf("%+v\n",)<left>
