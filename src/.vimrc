@@ -7,6 +7,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 " *GO ENVIRONMENT
+" open tmux wiwth export GO111MODULE=on && tmux for ajust some problems that
+" may occurr
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " https://github.com/go-delve/delve/tree/master/Documentation/installation
 Plug 'sebdah/vim-delve'
