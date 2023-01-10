@@ -26,8 +26,8 @@ Plug 'evanleck/vim-svelte', {'branch': 'main'}
 " git config --global core.excludesfile ~/.gitignore_global
 " vim ~/.gitignore_global
 " and add to this file: tags tags.lock and tags.temp
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install'}
+"Plug 'ludovicchabant/vim-gutentags'
+"Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install'}
 " *ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
@@ -79,7 +79,7 @@ call plug#end()
 
 " < SET COLORS >
 
-autocmd VimEnter * color err_box
+autocmd VimEnter * color err_box_darker
 autocmd filetype ruby compiler ruby
 
 " < CONFIG >
@@ -178,11 +178,12 @@ let g:strip_whitespace_on_save=1
 let g:strip_whitespace_confirm=0
 
 "CTRLP Maps
+"Follow this site to install -> https://ctrlpvim.github.io/ctrlp.vim/#installation
 "Hit <c-r> before search to find exact match file
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_max_files=0
-let g:ctrlp_custom_ignore = 'node_modules\|spec/cassettes\|DS_Store\|git'
+let g:ctrlp_custom_ignore = 'spec\|node_modules\|spec/cassettes\|DS_Store\|git'
 
 " SHOW MOST RECENT FILES
 "noremap <M-p> :CtrlPMixed<CR>
