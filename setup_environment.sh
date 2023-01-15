@@ -21,12 +21,32 @@ redshift -O 4000
 echo "******************************************"
 echo " "
 echo " "
+echo "Install Rbenv? [Y,n]"
+read inputrb
+echo " "
+echo " "
+echo " "
+if [[ $inputrb == "Y" || $inputrb == "y" ]]; then
+  echo "******************************************"
+  sudo apt-get update
+  sudo apt install git curl autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev
+  curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
+  echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+  echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+  source ~/.bashrc
+  rbenv install -l
+  echo "******************************************"
+fi
+
+echo "******************************************"
+echo " "
+echo " "
 echo "Install Elixir / Erlang? [Y,n]"
-read input
+read inputex
 echo " "
 echo " "
 echo " "
-if [[ $input == "Y" || $input == "y" ]]; then
+if [[ $inputex == "Y" || $inputex == "y" ]]; then
   echo "******************************************"
   wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb && sudo dpkg -i erlang-solutions_2.0_all.deb
   sudo apt-get update
@@ -42,4 +62,3 @@ echo " "
 echo " "
 echo " "
 echo "******************************************"
-
