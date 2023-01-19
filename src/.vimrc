@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
 "
 " *RUBY ENVIRONMENT
 Plug 'vim-ruby/vim-ruby'
+Plug 'kremso/vim-spectator'
 Plug 'tpope/vim-rails'
 " *JAVASCRIPT ENVIRONMENT
 Plug 'pangloss/vim-javascript'
@@ -90,6 +91,18 @@ set backspace=indent,eol,start
 " *RUBY
 " Navigate to spec and back
 autocmd FileType ruby noremap O :A<CR>
+let g:rails_projections = {
+      \ "app/controllers/*_controller.rb": {
+      \   "test": [
+      \     "spec/controllers/{}_controller_spec.rb",
+      \     "spec/requests/{}_spec.rb"
+      \   ],
+      \ },
+      \ "spec/requests/*_spec.rb": {
+      \   "alternate": [
+      \     "app/controllers/{}_controller.rb",
+      \   ],
+      \ }}
 
 " *RUBY / *ELIXIR ENVIRONMENT
 set tabstop=2
