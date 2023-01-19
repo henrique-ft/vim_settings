@@ -6,6 +6,8 @@ call plug#begin('~/.vim/plugged')
 " *RUBY ENVIRONMENT
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
+" *JAVASCRIPT ENVIRONMENT
+Plug 'pangloss/vim-javascript'
 " *GO ENVIRONMENT
 " open tmux wiwth export GO111MODULE=on && tmux for ajust some problems that
 " may occurr
@@ -15,10 +17,8 @@ Plug 'sebdah/vim-delve'
 " *REACT ENVIRONMENT
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-" *JAVASCRIPT ENVIRONMENT
-Plug 'pangloss/vim-javascript'
-" *SVELTE ENVIRONMENT
-Plug 'evanleck/vim-svelte', {'branch': 'main'}
+" *NGINX ENVIRONMENT
+Plug 'chr4/nginx.vim'
 " For js autoimport work
 " $ git clone https://github.com/universal-ctags/ctags
 " # cd ctags && ./autogen.sh && ./configure && make && sudo make install
@@ -31,10 +31,8 @@ Plug 'evanleck/vim-svelte', {'branch': 'main'}
 " *ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
-" *CRYSTAL ENVIRONMENT
-Plug 'vim-crystal/vim-crystal'
-" *NGINX ENVIRONMENT
-Plug 'chr4/nginx.vim'
+" *CLOJURE ENVIRONMENT
+Plug 'clojure-vim/clojure.vim'
 
 " < DEFAULT >
 
@@ -75,6 +73,10 @@ Plug 'jnurmine/Zenburn'
 Plug 'fcpg/vim-fahrenheit'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'morhetz/gruvbox'
+
+" < GAMES >
+Plug 'johngrib/vim-game-code-break'
+
 call plug#end()
 
 " < SET COLORS >
@@ -83,8 +85,11 @@ autocmd VimEnter * color err_box_darker
 autocmd filetype ruby compiler ruby
 
 " < CONFIG >
-
 set backspace=indent,eol,start
+
+" *RUBY
+" Navigate to spec and back
+autocmd FileType ruby noremap O :A<CR>
 
 " *RUBY / *ELIXIR ENVIRONMENT
 set tabstop=2
@@ -207,9 +212,10 @@ let g:closetag_filetypes = 'html,xhtml,phtml'
 
 "Auto complete"
 "inoremap ' ''<left>
+"for *CLOJURE ENVIRONMENT"
 "inoremap ( ()<left>
 "inoremap [ []<left>
-"Auto complete for *GO / *JAVASCRIPT ENVIRONMENT"
+"for *GO / *JAVASCRIPT ENVIRONMENT"
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
