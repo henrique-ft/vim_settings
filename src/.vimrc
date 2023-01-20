@@ -9,6 +9,8 @@ Plug 'kremso/vim-spectator'
 Plug 'tpope/vim-rails'
 " *JAVASCRIPT ENVIRONMENT
 Plug 'pangloss/vim-javascript'
+" Yarn must be installed
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 " *GO ENVIRONMENT
 " open tmux wiwth export GO111MODULE=on && tmux for ajust some problems that
 " may occurr
