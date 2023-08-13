@@ -1,5 +1,9 @@
 # VimSettings
 
+### Run commands on startup
+
+https://help.ubuntu.com/stable/ubuntu-help/startup-applications.html.en
+
 ### Extra installations / configurations
 
 #### Change ESC and Capslock
