@@ -24,7 +24,7 @@
   "vim.leader": "<space>",
   "vim.normalModeKeyBindingsNonRecursive": [
     // @FAST_SEARCH
-    { 
+    {
       "before": [
         "f",
       ],
@@ -32,7 +32,7 @@
         "*"
       ]
     },
-    { 
+    {
       "before": [
         "x",
       ],
@@ -113,9 +113,13 @@
     },
     // @COMMENTS
     {
-      "before": ["<leader>", "c", "<leader>"],
+      "before": [
+        "<leader>",
+        "c",
+        "<leader>"
+      ],
       "commands": [
-          "editor.action.commentLine",
+        "editor.action.commentLine",
       ],
     },
     // @LINE_MOTIONS
@@ -139,16 +143,16 @@
   "vim.visualModeKeyBindings": [
     // @AUTOIDENT
     {
-        "before": [
-            "="
-        ],
-        "after": [],
-        "commands": [
-            {
-                "command": "editor.action.reindentlines",
-                "args": []
-            }
-        ]
+      "before": [
+        "="
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.reindentlines",
+          "args": []
+        }
+      ]
     },
     // @EASYMOTION
     {
@@ -214,6 +218,12 @@
       ],
     }
   ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
   "vim.easymotion": true,
   "vim.incsearch": true,
   "vim.useSystemClipboard": false,
@@ -227,11 +237,13 @@
     "<C-a>": false
   },
   "vim.hlsearch": true,
-  "editor.fontSize": 12,
   "editor.minimap.enabled": false,
-  "terminal.integrated.fontSize": 12,
-  "workbench.iconTheme": "file-icons",
-  "workbench.colorTheme": "One Monokai Darker",
+  "terminal.integrated.fontSize": 15,
   "tws.trimOnSave": true,
-  "git.enableSmartCommit": true
+  "git.enableSmartCommit": true,
+  "workbench.colorTheme": "vs-theme-be5invis-ezekel",
+  "editor.fontFamily": "'monospace'",
+  "terminal.integrated.fontFamily": "monospace",
+  "editor.fontSize": 15,
+  "workbench.iconTheme": "easy-icons"
 }
