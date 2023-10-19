@@ -22,6 +22,14 @@ $ ./install.sh
 
 Setar fonte Hack Regular tamanho 10
 
+#### For Windows WSL
+
+Download and install:
+
+https://www.nerdfonts.com/font-downloads
+
+After download -> right click all fonts -> click in install
+
 #### SilverSearch
 
 ```$ apt-get install silversearcher-ag```
