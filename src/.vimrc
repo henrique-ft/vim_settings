@@ -62,24 +62,6 @@ Plug 'nvie/vim-togglemouse'
 Plug 'easymotion/vim-easymotion'
 Plug 'mg979/vim-visual-multi'
 
-" < COLORS >
-
-Plug 'tomasiser/vim-code-dark'
-Plug 'liuchengxu/space-vim-dark'
-Plug 'crusoexia/vim-monokai'
-Plug 'nanotech/jellybeans.vim'
-Plug 'dunstontc/vim-vscode-theme'
-Plug 'mhartington/oceanic-next'
-Plug 'dracula/vim'
-Plug 'haishanh/night-owl.vim'
-Plug 'jnurmine/Zenburn'
-Plug 'fcpg/vim-fahrenheit'
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'morhetz/gruvbox'
-
-" < GAMES >
-Plug 'johngrib/vim-game-code-break'
-
 call plug#end()
 
 " < SET COLORS >
