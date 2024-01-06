@@ -242,37 +242,9 @@
   "tws.trimOnSave": true,
   "git.enableSmartCommit": true,
   "workbench.colorTheme": "One Monokai Shadow",
-  "editor.fontFamily": "'monospace'",
+  "editor.fontFamily": "\"Inconsolata\"",
   "terminal.integrated.fontFamily": "monospace",
   "editor.fontSize": 15,
-  "workbench.iconTheme": "file-icons",
-  "editor.tokenColorCustomizations": {
-    "textMateRules": [
-      {
-        "scope": "entity.other.inherited-class",
-        "settings": {
-          "fontStyle": "italic"
-        },
-      },
-      {
-        "scope": "entity.name.type",
-        "settings": {
-          "fontStyle": "italic"
-        },
-      },
-      {
-        "scope": "variable.other.constant",
-        "settings": {
-          "fontStyle": "italic"
-        },
-      },
-      {
-        "scope": "support.class",
-        "settings": {
-          "fontStyle": "italic"
-        },
-      },
-    ]
-  },
+  "workbench.iconTheme": "file-icons-colourless",
   "editor.bracketPairColorization.enabled": false
 }
