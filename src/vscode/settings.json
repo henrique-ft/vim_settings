@@ -237,34 +237,22 @@
     "<C-a>": false
   },
   "vim.hlsearch": true,
+  "editor.minimap.enabled": false,
   "terminal.integrated.fontSize": 15,
   "tws.trimOnSave": true,
   "git.enableSmartCommit": true,
-  "editor.fontFamily": "\"Inconsolata\"",
-  "terminal.integrated.fontFamily": "monospace",
-  "editor.fontSize": 16,
-  "workbench.iconTheme": "file-icons-colourless",
-  "editor.bracketPairColorization.enabled": false,
-  "explorer.confirmDelete": false,
-  "window.zoomLevel": -1,
   "workbench.colorTheme": "React Theme",
-  "rubyLsp.enabledFeatures": {
-    "codeActions": true,
-    "diagnostics": false,
-    "documentHighlights": true,
-    "documentLink": true,
-    "documentSymbols": true,
-    "foldingRanges": true,
-    "formatting": true,
-    "hover": true,
-    "inlayHint": true,
-    "onTypeFormatting": true,
-    "selectionRanges": true,
-    "semanticHighlighting": true,
-    "completion": true,
-    "codeLens": true,
-    "definition": true,
-    "workspaceSymbol": true,
-    "references": true
-  }
+  "editor.fontFamily": "'monospace'",
+  "terminal.integrated.fontFamily": "monospace",
+  "editor.fontSize": 15,
+  "workbench.iconTheme": "file-icons-colourless",
+  "workbench.colorCustomizations": {
+    "[React Theme]": {
+      "editor.foreground": "#ddd"
+    },
+    "editorBracketHighlight.foreground1": "#fff",
+    "editorBracketHighlight.foreground2": "#fff",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#fff",
+    "editorCursor.foreground": "#fff",
+  },
 }

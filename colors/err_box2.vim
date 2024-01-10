@@ -71,10 +71,10 @@ endfunction
 
 
 let s:white       = { "gui": "#E8E8E3", "cterm": "255" }
-let s:black       = { "gui": "#272822", "cterm": "232" }
-let s:lightblack  = { "gui": "#2D2E27", "cterm": "235" }
-let s:lightblack2 = { "gui": "#383a3e", "cterm": "236" }
-let s:darkblack   = { "gui": "#211F1C", "cterm": "233" }
+let s:black       = { "gui": "#272822", "cterm": "236" }
+let s:lightblack  = { "gui": "#2D2E27", "cterm": "234" }
+let s:lightblack2 = { "gui": "#383a3e", "cterm": "238" }
+let s:darkblack   = { "gui": "#211F1C", "cterm": "234" }
 let s:grey        = { "gui": "#8F908A", "cterm": "244" }
 let s:lightgrey   = { "gui": "#575b61", "cterm": "240" }
 let s:darkgrey    = { "gui": "#64645e", "cterm": "236" }
@@ -163,9 +163,9 @@ call s:h("Typedef",       { "fg": s:aqua })
 call s:h("Identifier",    { "fg": s:white, "format":"bold" })
 call s:h("Function",      { "fg": s:aqua })
 
-call s:h("Statement",     { "fg": s:red, "format": "bold" })
-call s:h("Operator",      { "fg": s:red, "format": "bold" })
-call s:h("Label",         { "fg": s:red, "format": "bold" })
+call s:h("Statement",     { "fg": s:red })
+call s:h("Operator",      { "fg": s:red })
+call s:h("Label",         { "fg": s:red })
 call s:h("Keyword",       { "fg": s:aqua })
 "        Conditional"
 "        Repeat"
@@ -286,28 +286,28 @@ call s:h("lessVariable",        { "fg": s:purple2 })
 
 " ruby
 call s:h("rubyInterpolationDelimiter",  {})
-call s:h("rubyInstanceVariable",        {"fg": s:white, "format": "bold,italic"})
+call s:h("rubyInstanceVariable",        {"fg": s:white, "format": "bold"})
 call s:h("rubyGlobalVariable",          {})
 call s:h("rubyClassVariable",           {"fg": s:purple})
 call s:h("rubyPseudoVariable",          {})
 call s:h("rubyFunction",                { "fg": s:purple2 })
 call s:h("rubyFunctionCall",                { "fg": s:purple2 })
 call s:h("rubyStringDelimiter",         { "fg": s:yellow })
-call s:h("rubyRegexp",                  { "fg": s:orange, "format": "italic" })
-call s:h("rubyRegexpDelimiter",         { "fg": s:orange, "format": "italic" })
+call s:h("rubyRegexp",                  { "fg": s:orange })
+call s:h("rubyRegexpDelimiter",         { "fg": s:orange })
 call s:h("rubySymbol",                  { "fg": s:purple })
 call s:h("rubyEscape",                  { "fg": s:purple })
-call s:h("rubyInclude",                 { "fg": s:red, "format": "bold" })
-call s:h("rubyOperator",                { "fg": s:red, "format": "bold" })
-call s:h("rubyControl",                 { "fg": s:red, "format": "bold" })
-call s:h("rubyClass",                   { "fg": s:red, "format": "bold" })
-call s:h("rubyDefine",                  { "fg": s:red, "format": "bold" })
-call s:h("rubyException",               { "fg": s:red, "format": "bold" })
+call s:h("rubyInclude",                 { "fg": s:red})
+call s:h("rubyOperator",                { "fg": s:red})
+call s:h("rubyControl",                 { "fg": s:red})
+call s:h("rubyClass",                   { "fg": s:red})
+call s:h("rubyDefine",                  { "fg": s:red})
+call s:h("rubyException",               { "fg": s:red})
 call s:h("rubyRailsARAssociationMethod",{ "fg": s:orange })
 call s:h("rubyRailsARMethod",           { "fg": s:orange })
 call s:h("rubyRailsRenderMethod",       { "fg": s:orange })
 call s:h("rubyRailsMethod",             { "fg": s:orange })
-call s:h("rubyConstant",                { "fg": s:aqua, "format": "italic" })
+call s:h("rubyConstant",                { "fg": s:aqua })
 call s:h("rubyBlockArgument",           { "fg": s:orange })
 call s:h("rubyBlockParameter",          { "fg": s:orange })
 
