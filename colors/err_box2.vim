@@ -71,10 +71,10 @@ endfunction
 
 
 let s:white       = { "gui": "#E8E8E3", "cterm": "255" }
-let s:black       = { "gui": "#272822", "cterm": "236" }
-let s:lightblack  = { "gui": "#2D2E27", "cterm": "234" }
-let s:lightblack2 = { "gui": "#383a3e", "cterm": "238" }
-let s:darkblack   = { "gui": "#211F1C", "cterm": "234" }
+let s:black       = { "gui": "#272822", "cterm": "232" }
+let s:lightblack  = { "gui": "#2D2E27", "cterm": "235" }
+let s:lightblack2 = { "gui": "#383a3e", "cterm": "236" }
+let s:darkblack   = { "gui": "#211F1C", "cterm": "233" }
 let s:grey        = { "gui": "#8F908A", "cterm": "244" }
 let s:lightgrey   = { "gui": "#575b61", "cterm": "240" }
 let s:darkgrey    = { "gui": "#64645e", "cterm": "236" }
