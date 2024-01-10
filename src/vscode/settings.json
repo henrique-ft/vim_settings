@@ -245,7 +245,6 @@
   "editor.fontFamily": "'monospace'",
   "terminal.integrated.fontFamily": "monospace",
   "editor.fontSize": 15,
-  "workbench.iconTheme": "file-icons-colourless",
   "workbench.colorCustomizations": {
     "[React Theme]": {
       "editor.foreground": "#ddd"
@@ -255,4 +254,6 @@
     "editorBracketHighlight.unexpectedBracket.foreground": "#fff",
     "editorCursor.foreground": "#fff",
   },
+  "window.zoomLevel": -1,
+  "workbench.iconTheme": "file-icons-colourless",
 }
