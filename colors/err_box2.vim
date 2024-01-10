@@ -71,9 +71,9 @@ endfunction
 
 
 let s:white       = { "gui": "#E8E8E3", "cterm": "255" }
-let s:black       = { "gui": "#272822", "cterm": "235" }
-let s:lightblack  = { "gui": "#2D2E27", "cterm": "234" }
-let s:lightblack2 = { "gui": "#383a3e", "cterm": "234" }
+let s:black       = { "gui": "#272822", "cterm": "232" }
+let s:lightblack  = { "gui": "#2D2E27", "cterm": "235" }
+let s:lightblack2 = { "gui": "#383a3e", "cterm": "236" }
 let s:darkblack   = { "gui": "#211F1C", "cterm": "233" }
 let s:grey        = { "gui": "#8F908A", "cterm": "244" }
 let s:lightgrey   = { "gui": "#575b61", "cterm": "240" }
@@ -111,7 +111,7 @@ call s:h("StatusLine",    { "fg": s:warmgrey,   "bg": s:black,        "format": 
 call s:h("StatusLineNC",  { "fg": s:darkgrey,   "bg": s:warmgrey,     "format": "reverse" })
 call s:h("TabLine",       { "fg": s:white,      "bg": s:darkblack,    "format": "reverse" })
 call s:h("Visual",        {                     "bg": s:lightgrey })
-call s:h("Search",        { "fg": s:black,      "bg": s:yellow })
+call s:h("Search",        {      "bg": s:lightgrey })
 call s:h("MatchParen",    { "fg": s:purple,                           "format": "underline,bold" })
 call s:h("Question",      { "fg": s:yellow })
 call s:h("ModeMsg",       { "fg": s:yellow })
@@ -291,6 +291,7 @@ call s:h("rubyGlobalVariable",          {})
 call s:h("rubyClassVariable",           {"fg": s:purple})
 call s:h("rubyPseudoVariable",          {})
 call s:h("rubyFunction",                { "fg": s:purple2 })
+call s:h("rubyFunctionCall",                { "fg": s:purple2 })
 call s:h("rubyStringDelimiter",         { "fg": s:yellow })
 call s:h("rubyRegexp",                  { "fg": s:orange, "format": "italic" })
 call s:h("rubyRegexpDelimiter",         { "fg": s:orange, "format": "italic" })
