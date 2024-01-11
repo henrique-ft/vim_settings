@@ -166,7 +166,7 @@ call s:h("Function",      { "fg": s:purple2 })
 call s:h("Statement",     { "fg": s:red, "format": "bold" })
 call s:h("Operator",      { "fg": s:red, "format": "bold" })
 call s:h("Label",         { "fg": s:red, "format": "bold" })
-call s:h("Keyword",       { "fg": s:aqua })
+call s:h("Keyword",       { "fg": s:aqua }) " aqui que muda
 "        Conditional"
 "        Repeat"
 "        Exception"
@@ -339,17 +339,18 @@ call s:h("elixirExceptionDefine",         { "fg": s:purple2, "format": "bold" })
 call s:h("elixirCallbackDefine",          { "fg": s:purple2, "format": "bold" })
 call s:h("elixirStructDefine",            { "fg": s:purple2, "format": "bold" })
 call s:h("elixirExUnitMacro",             { "fg": s:purple2, "format": "bold" })
+call s:h("elixirExUnitAssert",            { "fg": s:purple2 })
 call s:h("elixirModuleDeclarationMacro",  { "fg": s:purple2, "format": "bold" })
 call s:h("elixirKeyword",                 { "fg": s:purple2, "format": "bold" })
 call s:h("elixirInclude",                 { "fg": s:red })
 call s:h("elixirModuleDeclaration",       { "fg": s:aqua, "format": "italic" })
 call s:h("elixirAlias",                   { "fg": s:aqua, "format": "italic" })
-call s:h("elixirAtom",                    { "fg": s:purple, "format": "italic" })
+call s:h("elixirAtom",                    { "fg": s:purple })
 call s:h("elixirOperator",                { "fg": s:red })
 call s:h("elixirFunctionDeclaration",     { "fg": s:purple2 })
 call s:h("elixirVariable",                { "fg": s:white, "format": "bold,italic" })
 call s:h("elixirStringDelimiter",         { "fg": s:yellow })
-call s:h("elixirDocStringDelimiter",       { "fg": s:warmgrey2 })
+call s:h("elixirDocStringDelimiter",      { "fg": s:warmgrey2 })
 
 " go
 
