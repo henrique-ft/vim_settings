@@ -2,7 +2,7 @@
   "name": "monokai-ruby",
   "displayName": "Monokai Ruby",
   "description": "Monokai inspired theme with tons of red",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.85.0"
   },
