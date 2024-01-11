@@ -511,7 +511,7 @@
       "name": "Operators",
       "scope": "keyword.operator",
       "settings": {
-        "foreground": "#eeeeee"
+        "foreground": "#c07676"
       }
     },
     {
@@ -533,13 +533,6 @@
       "scope": "keyword",
       "settings": {
         "foreground": "#c07676"
-      }
-    },
-    {
-      "name": "Keywords",
-      "scope": "keyword.js",
-      "settings": {
-        "foreground": "#fff"
       }
     },
     {
@@ -1226,14 +1219,14 @@
       "name": "parameter function ruby cs",
       "scope": "function.parameter.ruby, function.parameter.cs",
       "settings": {
-        "foreground": "#eeeeee"
+        "foreground": "#b29292"
       }
     },
     {
       "name": "constant.language.symbol.ruby",
       "scope": "constant.language.symbol.ruby",
       "settings": {
-        "foreground": "#eeeeee"
+        "foreground": "#b29292"
       }
     },
     {

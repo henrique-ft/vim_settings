@@ -1,1 +1,2 @@
+vsce package
 code --install-extension myextension.vsix
