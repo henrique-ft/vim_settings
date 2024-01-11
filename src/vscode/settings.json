@@ -241,10 +241,9 @@
   "terminal.integrated.fontSize": 15,
   "tws.trimOnSave": true,
   "git.enableSmartCommit": true,
-  "workbench.colorTheme": "React Theme",
   "editor.fontFamily": "'monospace'",
   "terminal.integrated.fontFamily": "monospace",
-  "editor.fontSize": 15,
+  "editor.fontSize": 16,
   "workbench.colorCustomizations": {
     "[React Theme]": {
       "editor.foreground": "#ddd"
@@ -255,5 +254,6 @@
     "editorCursor.foreground": "#fff",
   },
   "window.zoomLevel": -1,
+  "workbench.colorTheme": "One Monokai Shadow",
   "workbench.iconTheme": "file-icons-colourless",
 }
