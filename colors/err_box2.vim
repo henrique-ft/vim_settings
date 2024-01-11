@@ -336,3 +336,17 @@ call s:h("elixirDocStringDelimiter",       { "fg": s:warmgrey2 })
 " go
 
 call s:h("goFunction",         { "fg": s:purple2 })
+call s:h("goDeclaration",         { "fg": s:red })
+call s:h("goOperator",         { "fg": s:aqua, "format": "bold" })
+call s:h("goStatement",         { "fg": s:red })
+call s:h("goConditional",         { "fg": s:red })
+call s:h("goRepeat",         { "fg": s:red })
+call s:h("goLabel",         { "fg": s:red })
+call s:h("goFunctionCall",         { "fg": s:purple2 })
+
+call s:h("goType",         { "fg": s:aqua })
+call s:h("goSignedInts",         { "fg": s:aqua })
+call s:h("goUnsignedInts",         { "fg": s:aqua })
+call s:h("goFloats",         { "fg": s:aqua })
+call s:h("goComplexes",         { "fg": s:aqua })
+
