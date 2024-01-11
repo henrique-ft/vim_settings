@@ -69,23 +69,22 @@ endfunction
 " Palettes
 " --------
 
-
 let s:white       = { "gui": "#E8E8E3", "cterm": "255" }
-let s:black       = { "gui": "#272822", "cterm": "232" }
+let s:black       = { "gui": "#272822", "cterm": "233" }
 let s:lightblack  = { "gui": "#2D2E27", "cterm": "234" }
 let s:lightblack2 = { "gui": "#383a3e", "cterm": "236" }
 let s:darkblack   = { "gui": "#211F1C", "cterm": "233" }
 let s:grey        = { "gui": "#8F908A", "cterm": "244" }
 let s:lightgrey   = { "gui": "#575b61", "cterm": "240" }
-let s:darkgrey    = { "gui": "#64645e", "cterm": "236" }
-let s:warmgrey    = { "gui": "#75715E", "cterm": "245" }
+let s:darkgrey    = { "gui": "#64645e", "cterm": "242" }
+let s:warmgrey    = { "gui": "#75715E", "cterm": "242" }
 let s:warmgrey2    = { "gui": "#75715E", "cterm": "249" }
 
 let s:red        = { "gui": "#a91718", "cterm": "189" }
 let s:aqua        = { "gui": "#66d9ef", "cterm": "210" }
 let s:yellow      = { "gui": "#E6DB74", "cterm": "151" }
 let s:orange      = { "gui": "#FD9720", "cterm": "210" }
-let s:purple      = { "gui": "#ae81ff", "cterm": "249" }
+let s:purple      = { "gui": "#ae81ff", "cterm": "250" }
 let s:purple2     = { "gui": "#A6E22D", "cterm": "75" }
 let s:purple3     = { "gui": "#A6E22D", "cterm": "181" }
 let s:lightred         = { "gui": "#e73c50", "cterm": "196" }
@@ -185,7 +184,7 @@ call s:h("Tag",           { "fg": s:red })
 "        Debug"
 
 call s:h("Todo",          { "fg": s:orange,   "format": "bold,italic" })
-call s:h("Comment",       { "fg": s:warmgrey, "format": "italic" })
+call s:h("Comment",       { "fg": s:warmgrey })
 
 call s:h("Underlined",    { "fg": s:purple2 })
 call s:h("Ignore",        {})
@@ -325,12 +324,12 @@ call s:h("cDefine",                     { "fg": s:purple2 })
 " elixir
 
 call s:h("elixirInclude",                 { "fg": s:red })
-call s:h("elixirModuleDeclaration",       { "fg": s:aqua, "format": "italic" })
-call s:h("elixirAlias",                   { "fg": s:aqua, "format": "italic" })
-call s:h("elixirAtom",                    { "fg": s:purple, "format": "italic" })
+call s:h("elixirModuleDeclaration",       { "fg": s:purple3 })
+call s:h("elixirAlias",                   { "fg": s:purple3 })
+call s:h("elixirAtom",                    { "fg": s:purple })
 call s:h("elixirOperator",                { "fg": s:red })
 call s:h("elixirFunctionDeclaration",     { "fg": s:purple2 })
-call s:h("elixirVariable",                { "fg": s:white, "format": "bold,italic" })
+call s:h("elixirVariable",                { "fg": s:white, "format": "bold" })
 call s:h("elixirStringDelimiter",         { "fg": s:yellow })
 call s:h("elixirDocStringDelimiter",       { "fg": s:warmgrey2 })
 
