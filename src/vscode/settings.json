@@ -248,12 +248,12 @@
     "[React Theme]": {
       "editor.foreground": "#ddd"
     },
-    "editorBracketHighlight.foreground1": "#fff",
-    "editorBracketHighlight.foreground2": "#fff",
-    "editorBracketHighlight.unexpectedBracket.foreground": "#fff",
-    "editorCursor.foreground": "#fff",
+    "editorBracketHighlight.foreground1": "#eee",
+    "editorBracketHighlight.foreground2": "#eee",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#eee",
+    "editorCursor.foreground": "#eee",
   },
   "window.zoomLevel": -1,
-  "workbench.colorTheme": "One Monokai Shadow",
   "workbench.iconTheme": "file-icons-colourless",
+  "editor.bracketPairColorization.enabled": false,
 }

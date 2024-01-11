@@ -1,0 +1,1 @@
+code --install-extension myextension.vsix
