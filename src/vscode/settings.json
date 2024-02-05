@@ -241,19 +241,19 @@
   "terminal.integrated.fontSize": 15,
   "tws.trimOnSave": true,
   "git.enableSmartCommit": true,
-  "workbench.colorTheme": "React Theme",
   "editor.fontFamily": "'monospace'",
   "terminal.integrated.fontFamily": "monospace",
-  "editor.fontSize": 15,
+  "editor.fontSize": 16,
   "workbench.colorCustomizations": {
     "[React Theme]": {
       "editor.foreground": "#ddd"
     },
-    "editorBracketHighlight.foreground1": "#fff",
-    "editorBracketHighlight.foreground2": "#fff",
-    "editorBracketHighlight.unexpectedBracket.foreground": "#fff",
-    "editorCursor.foreground": "#fff",
+    "editorBracketHighlight.foreground1": "#eee",
+    "editorBracketHighlight.foreground2": "#eee",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#eee",
+    "editorCursor.foreground": "#eee",
   },
   "window.zoomLevel": -1,
   "workbench.iconTheme": "file-icons-colourless",
+  "editor.bracketPairColorization.enabled": false,
 }
