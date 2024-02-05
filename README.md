@@ -92,6 +92,10 @@ in ~/.bashrc:
 PS1="\[\e[32m\]henrique.teixeira\[\e[m\]:\[\e[34m\]\w\[\e[m\]$ "
 ```
 
+### Screen recording
+
+https://github.com/henrywoo/kazam
+
 ### Tips
 
 https://superuser.com/questions/41378/how-to-search-for-selected-text-in-vim
