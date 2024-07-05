@@ -11,7 +11,7 @@ Plug 'tpope/vim-rails'
 " *****JAVASCRIPT / TYPESCRIPT ENVIRONMENT
 Plug 'pangloss/vim-javascript'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
-Plug 'leafgarland/typescript-vim'
+"Plug 'leafgarland/typescript-vim'
 " *****GO ENVIRONMENT
 " open tmux wiwth export GO111MODULE=on && tmux for ajust some problems that
 " may occurr

@@ -160,7 +160,7 @@ call s:h("Structure",     { "fg": s:aqua })
 call s:h("StorageClass",  { "fg": s:aqua })
 call s:h("Typedef",       { "fg": s:aqua })
 
-call s:h("Identifier",    { "fg": s:white, "format":"bold" })
+call s:h("Identifier",    { "fg": s:white })
 call s:h("Function",      { "fg": s:purple2 })
 
 call s:h("Statement",     { "fg": s:red, "format": "bold" })
@@ -359,3 +359,4 @@ call s:h("elixirDocStringDelimiter",      { "fg": s:warmgrey2 })
 " go
 
 call s:h("goFunction",         { "fg": s:purple2 })
+call s:h("goIdentifier",         { "fg": s:purple2 })
