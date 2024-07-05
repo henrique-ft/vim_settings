@@ -1,26 +1,27 @@
 """"""""""""""""""""""""""""""""
 
+
 call plug#begin('~/.vim/plugged')
 " < MISC >
 "
-" *RUBY ENVIRONMENT
+" *****RUBY ENVIRONMENT
 Plug 'vim-ruby/vim-ruby'
 Plug 'kremso/vim-spectator'
 Plug 'tpope/vim-rails'
-" *JAVASCRIPT ENVIRONMENT
+" *****JAVASCRIPT / TYPESCRIPT ENVIRONMENT
 Plug 'pangloss/vim-javascript'
-" Yarn must be installed
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
-" *GO ENVIRONMENT
+Plug 'leafgarland/typescript-vim'
+" *****GO ENVIRONMENT
 " open tmux wiwth export GO111MODULE=on && tmux for ajust some problems that
 " may occurr
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " https://github.com/go-delve/delve/tree/master/Documentation/installation
 Plug 'sebdah/vim-delve'
-" *REACT ENVIRONMENT
+" *****REACT ENVIRONMENT
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-" *NGINX ENVIRONMENT
+" ******NGINX ENVIRONMENT
 Plug 'chr4/nginx.vim'
 " For js autoimport work
 " $ git clone https://github.com/universal-ctags/ctags
@@ -31,11 +32,15 @@ Plug 'chr4/nginx.vim'
 " and add to this file: tags tags.lock and tags.temp
 "Plug 'ludovicchabant/vim-gutentags'
 "Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install'}
-" *ELIXIR ENVIRONMENT
+" ******EBOOK WRITING ENVIRONMENT
+Plug 'lervag/vimtex'
+" ******ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
-" *CLOJURE ENVIRONMENT
-Plug 'clojure-vim/clojure.vim'
+" ******CLOJURE ENVIRONMENT
+"Plug 'clojure-vim/clojure.vim'
+" *SVELTE ENVIRONMENT
+"Plug 'evanleck/vim-svelte', {'branch': 'main'}
 
 " < DEFAULT >
 
@@ -61,6 +66,24 @@ Plug 'Yggdroot/indentLine'
 Plug 'nvie/vim-togglemouse'
 Plug 'easymotion/vim-easymotion'
 Plug 'mg979/vim-visual-multi'
+
+" < COLORS >
+
+Plug 'tomasiser/vim-code-dark'
+Plug 'liuchengxu/space-vim-dark'
+Plug 'crusoexia/vim-monokai'
+Plug 'nanotech/jellybeans.vim'
+Plug 'dunstontc/vim-vscode-theme'
+Plug 'mhartington/oceanic-next'
+Plug 'dracula/vim'
+Plug 'haishanh/night-owl.vim'
+Plug 'jnurmine/Zenburn'
+Plug 'fcpg/vim-fahrenheit'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'morhetz/gruvbox'
+
+" < GAMES >
+"Plug 'johngrib/vim-game-code-break'
 
 call plug#end()
 
@@ -94,6 +117,7 @@ set shiftwidth=2
 set softtabstop=2
 
 " *JAVASCRIPT ENVIRONMENT
+let g:prettier#autoformat_require_pragma = 0
 "set tabstop=4
 "set shiftwidth=4
 "set softtabstop=4
@@ -210,7 +234,7 @@ let g:closetag_filetypes = 'html,xhtml,phtml'
 "Auto complete"
 "inoremap ' ''<left>
 "for *CLOJURE ENVIRONMENT"
-"inoremap ( ()<left>
+autocmd filetype clojure inoremap ( ()<left>
 "inoremap [ []<left>
 "for *GO / *JAVASCRIPT ENVIRONMENT"
 inoremap { {}<left>
