@@ -240,9 +240,9 @@ call s:h("jsStorageClass",      { "fg": s:aqua })
 call s:h("jsDocTags",           { "fg": s:aqua,   "format": "italic" })
 
 " Typescript
-call s:h("typescriptArrowFuncArg",        { "fg": s:orange, "format": "italic" })
-call s:h("typescriptFuncType",            { "fg": s:orange, "format": "italic" })
-call s:h("typescriptCall",                { "fg": s:orange, "format": "italic" })
+call s:h("typescriptArrowFuncArg",        { "fg": s:orange })
+call s:h("typescriptFuncType",            { "fg": s:orange })
+call s:h("typescriptCall",                { "fg": s:orange })
 call s:h("typescriptVariable",            { "fg": s:aqua })
 call s:h("typescriptModule",              { "fg": s:aqua })
 call s:h("typescriptDecorator",           { "fg": s:white })
