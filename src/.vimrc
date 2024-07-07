@@ -328,6 +328,7 @@ inoremap pry require IEx; IEx.pry<left>
 let g:mix_format_on_save = 1
 
 " *NODE ENVIRONMENT =======================================
+inoremap consl console.log('◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩')
 inoremap conl console.log('')<left><left>
 inoremap cll console.log()<left>
 inoremap imp import  from ''<left><left><left><left><left><left><left><left>
