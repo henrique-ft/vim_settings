@@ -11,6 +11,15 @@ Plug 'tpope/vim-rails'
 " *****JAVASCRIPT / TYPESCRIPT ENVIRONMENT
 Plug 'pangloss/vim-javascript'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+" For js autoimport work
+" $ git clone https://github.com/universal-ctags/ctags
+" # cd ctags && ./autogen.sh && ./configure && make && sudo make install
+" touch ~/.gitignore_global
+" git config --global core.excludesfile ~/.gitignore_global
+" vim ~/.gitignore_global
+" and add to this file: tags tags.lock and tags.temp
+"Plug 'ludovicchabant/vim-gutentags'
+"Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install'}
 "Plug 'leafgarland/typescript-vim'
 " *****GO ENVIRONMENT
 " open tmux wiwth export GO111MODULE=on && tmux for ajust some problems that
@@ -23,15 +32,6 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 " ******NGINX ENVIRONMENT
 Plug 'chr4/nginx.vim'
-" For js autoimport work
-" $ git clone https://github.com/universal-ctags/ctags
-" # cd ctags && ./autogen.sh && ./configure && make && sudo make install
-" touch ~/.gitignore_global
-" git config --global core.excludesfile ~/.gitignore_global
-" vim ~/.gitignore_global
-" and add to this file: tags tags.lock and tags.temp
-"Plug 'ludovicchabant/vim-gutentags'
-"Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install'}
 " ******EBOOK WRITING ENVIRONMENT
 Plug 'lervag/vimtex'
 " ******ELIXIR ENVIRONMENT
@@ -326,6 +326,11 @@ set colorcolumn=80
 " *ELIXIR ENVIRONMENT
 inoremap pry require IEx; IEx.pry<left>
 let g:mix_format_on_save = 1
+
+" *NODE ENVIRONMENT =======================================
+inoremap conl console.log('')<left><left>
+inoremap cll console.log()<left>
+inoremap imp import  from ''<left><left><left><left><left><left><left><left>
 
 " *GO ENVIRONMENT =======================================
 " Autocomplete = CTRL +X +O
