@@ -16,6 +16,7 @@ mkdir ~/.vim/colors
 cp colors/er_box.vim ~/.vim/colors/er_box.vim
 cp colors/rr_box.vim ~/.vim/colors/rr_box.vim
 cp colors/err_box.vim ~/.vim/colors/err_box.vim
+cp colors/err_box_darker.vim ~/.vim/colors/err_box_darker.vim
 cd ~/.vim && git clone https://github.com/ctrlpvim/ctrlp.vim.git bundle/ctrlp.vim
 sudo apt-get python-dev
 sudo apt-get install redshift
