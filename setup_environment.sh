@@ -17,6 +17,7 @@ cd ~/.vim && git clone https://github.com/ctrlpvim/ctrlp.vim.git bundle/ctrlp.vi
 sudo apt-get python-dev
 sudo apt-get install redshift
 redshift -O 4000
+sudo apt-get install fonts-powerline
 
 echo "******************************************"
 echo " "
