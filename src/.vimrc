@@ -1,4 +1,6 @@
 """"""""""""""""""""""""""""""""
+
+
 call plug#begin('~/.vim/plugged')
 " < MISC >
 "
@@ -55,7 +57,7 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'dyng/ctrlsf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'ryanoasis/vim-devicons'
+"Plug 'ryanoasis/vim-devicons'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdcommenter'
 Plug 'kshenoy/vim-signature'
@@ -175,7 +177,7 @@ map <silent> <F8> :AirlineTheme minimalist<CR>
 "Add highlight for searchs
 set hlsearch
 
-"NERDTree navigation"
+"NERDTree / nerdtree navigation"
 silent! nmap <Tab> :NERDTreeTabsToggle<CR>
 "silent! map <F2> :NERDTreeTabsFind<CR>
 "let g:NERDTreeMapActivateNode="<F2>"
@@ -186,14 +188,17 @@ silent! let g:NERDTreeMapPreview="q"
 highlight! link NERDTreeFlags NERDTreeDir
 let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
 let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
-let g:NERDTreeDirArrowExpandable = "\u00a0"
-let g:NERDTreeDirArrowCollapsible = "\u00a0"
+"let g:NERDTreeDirArrowExpandable = "\u00a0"
+"let g:NERDTreeDirArrowCollapsible = "\u00a0"
+"let g:NERDTreeDirArrowExpandable = "-"
+"let g:NERDTreeDirArrowCollapsible = "o"
 let g:NERDTreeMouseMode = 3
 let NERDTreeShowHidden=1
 let g:WebDevIconsOS = 'Darwin'
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:DevIconsEnableFoldersOpenClose = 1
 let g:DevIconsEnableFolderExtensionPatternMatching = 1
+
 "Icons colors
 
 "Enable better whitespaces for default

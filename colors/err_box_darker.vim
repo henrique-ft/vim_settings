@@ -194,8 +194,8 @@ call s:h("Error",         { "fg": s:lightred, "bg": s:darkred })
 " NerdTree
 " --------
 
-call s:h("NERDTreeOpenable",        { "fg": s:yellow })
-call s:h("NERDTreeClosable",        { "fg": s:yellow })
+call s:h("NERDTreeOpenable",        { "fg": s:grey })
+call s:h("NERDTreeClosable",        { "fg": s:grey })
 call s:h("NERDTreeHelp",            { "fg": s:yellow })
 call s:h("NERDTreeBookmarksHeader", { "fg": s:red })
 call s:h("NERDTreeBookmarksLeader", { "fg": s:black })
