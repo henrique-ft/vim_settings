@@ -99,3 +99,7 @@ https://github.com/henrywoo/kazam
 ### Tips
 
 https://superuser.com/questions/41378/how-to-search-for-selected-text-in-vim
+
+#### Bugs in tabs
+
+https://github.com/jistr/vim-nerdtree-tabs/issues/102

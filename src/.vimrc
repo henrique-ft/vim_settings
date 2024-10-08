@@ -270,7 +270,7 @@ vnoremap JJ <ESC>
 
 "Add space q and space w to save and quit
 let mapleader=" "
-nmap <leader>q :q<CR>
+nmap <leader>q :tabc<CR>
 nmap <leader><leader>q :q!<CR>
 nmap <leader>w :w<CR>
 
