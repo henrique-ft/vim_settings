@@ -11,6 +11,7 @@ sudo install lazygit /usr/local/bin
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 cp vimrclite ~/.vimrc
+echo 'export TERM=screen-256color' >> ~/.bashrc # Fiz TMUX resize problem
 cp tmuxconflite ~/.tmux.conf
 mkdir ~/.vim/colors
 cp colors/er_box.vim ~/.vim/colors/er_box.vim
