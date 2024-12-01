@@ -92,6 +92,7 @@ let s:orange      = { "gui": "#FD9720", "cterm": "138" }
 "let s:orange      = { "gui": "#FD9720", "cterm": "225" }
 let s:purple      = { "gui": "#ae81ff", "cterm": "138" }
 "let s:purple      = { "gui": "#ae81ff", "cterm": "182" }
+let s:purple2     = { "gui": "#A6E22D", "cterm": "182" }
 let s:red         = { "gui": "#e73c50", "cterm": "196" }
 let s:darkred     = { "gui": "#5f0000", "cterm": "52" }
 
@@ -243,12 +244,13 @@ call s:h("jsDocTags",           { "fg": s:aqua,   "format": "italic" })
 " Typescript
 call s:h("typescriptArrowFuncArg",        { "fg": s:orange, "format": "italic" })
 call s:h("typescriptFuncType",            { "fg": s:orange, "format": "italic" })
-call s:h("typescriptDecorator",           { "fg": s:white })
-call s:h("typescriptBraces",              { "fg": s:white })
-call s:h("typescriptParens",              { "fg": s:white })
 call s:h("typescriptCall",                { "fg": s:orange, "format": "italic" })
 call s:h("typescriptVariable",            { "fg": s:aqua })
 call s:h("typescriptModule",              { "fg": s:aqua })
+call s:h("typescriptDecorator",           { "fg": s:white })
+call s:h("typescriptBraces",              { "fg": s:white })
+call s:h("typescriptParens",              { "fg": s:white })
+call s:h("typescriptReserved",            { "fg": s:pink })
 call s:h("typescriptPredefinedType",      { "fg": s:aqua })
 call s:h("typescriptFuncTypeArrow",       { "fg": s:aqua })
 call s:h("typescriptImport",              { "fg": s:pink })
