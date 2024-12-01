@@ -69,25 +69,28 @@ endfunction
 " Palettes
 " --------
 
-let s:white       = { "gui": "#E8E8E3", "cterm": "254" }
-let s:black       = { "gui": "#272822", "cterm": "232" }
+let s:white       = { "gui": "#E8E8E3", "cterm": "253" }
+let s:black       = { "gui": "#272822", "cterm": "234" }
 let s:lightblack  = { "gui": "#2D2E27", "cterm": "235" }
-let s:lightblack2 = { "gui": "#383a3e", "cterm": "236" }
-let s:darkblack   = { "gui": "#211F1C", "cterm": "233" }
+let s:lightblack2 = { "gui": "#383a3e", "cterm": "233" }
+let s:darkblack   = { "gui": "#211F1C", "cterm": "236" }
 let s:grey        = { "gui": "#8F908A", "cterm": "243" }
-let s:lightgrey   = { "gui": "#575b61", "cterm": "237" }
-let s:darkgrey    = { "gui": "#64645e", "cterm": "239" }
-let s:warmgrey    = { "gui": "#75715E", "cterm": "59" }
+let s:lightgrey   = { "gui": "#575b61", "cterm": "239" }
+let s:darkgrey    = { "gui": "#64645e", "cterm": "236" }
+let s:warmgrey    = { "gui": "#75715E", "cterm": "244" }
+let s:warmgrey2    = { "gui": "#75715E", "cterm": "248" }
 
-let s:pink        = { "gui": "#a91718", "cterm": "167" }
+let s:pink        = { "gui": "#a91718", "cterm": "131" }
 "let s:pink        = { "gui": "#a91718", "cterm": "203" }
 "let s:pink        = { "gui": "#a91718", "cterm": "1" }
-let s:green       = { "gui": "#A6E22D", "cterm": "121" }
+"let s:green       = { "gui": "#A6E22D", "cterm": "158" }
+let s:green       = { "gui": "#A6E22D", "cterm": "158" }
 let s:aqua        = { "gui": "#66d9ef", "cterm": "117" }
-let s:yellow      = { "gui": "#E6DB74", "cterm": "229" }
+let s:yellow      = { "gui": "#E6DB74", "cterm": "230" }
 "let s:yellow      = { "gui": "#E6DB74", "cterm": "78" }
-let s:orange      = { "gui": "#FD9720", "cterm": "225" }
-let s:purple      = { "gui": "#ae81ff", "cterm": "182" }
+let s:orange      = { "gui": "#FD9720", "cterm": "138" }
+"let s:orange      = { "gui": "#FD9720", "cterm": "225" }
+let s:purple      = { "gui": "#ae81ff", "cterm": "138" }
 "let s:purple      = { "gui": "#ae81ff", "cterm": "182" }
 let s:red         = { "gui": "#e73c50", "cterm": "196" }
 let s:darkred     = { "gui": "#5f0000", "cterm": "52" }
@@ -161,12 +164,12 @@ call s:h("Structure",     { "fg": s:aqua })
 call s:h("StorageClass",  { "fg": s:aqua })
 call s:h("Typedef",       { "fg": s:aqua })
 
-call s:h("Identifier",    { "fg": s:green })
+call s:h("Identifier",    { "fg": s:white })
 call s:h("Function",      { "fg": s:green })
 
-call s:h("Statement",     { "fg": s:pink })
-call s:h("Operator",      { "fg": s:pink })
-call s:h("Label",         { "fg": s:pink })
+call s:h("Statement",     { "fg": s:pink, "format": "bold"  })
+call s:h("Operator",      { "fg": s:pink, "format": "bold"  })
+call s:h("Label",         { "fg": s:pink, "format": "bold"  })
 call s:h("Keyword",       { "fg": s:aqua })
 "        Conditional"
 "        Repeat"
@@ -195,8 +198,8 @@ call s:h("Error",         { "fg": s:red, "bg": s:darkred })
 " NerdTree
 " --------
 
-call s:h("NERDTreeOpenable",        { "fg": s:yellow })
-call s:h("NERDTreeClosable",        { "fg": s:yellow })
+call s:h("NERDTreeOpenable",        { "fg": s:grey })
+call s:h("NERDTreeClosable",        { "fg": s:grey })
 call s:h("NERDTreeHelp",            { "fg": s:yellow })
 call s:h("NERDTreeBookmarksHeader", { "fg": s:pink })
 call s:h("NERDTreeBookmarksLeader", { "fg": s:black })
@@ -240,6 +243,9 @@ call s:h("jsDocTags",           { "fg": s:aqua,   "format": "italic" })
 " Typescript
 call s:h("typescriptArrowFuncArg",        { "fg": s:orange, "format": "italic" })
 call s:h("typescriptFuncType",            { "fg": s:orange, "format": "italic" })
+call s:h("typescriptDecorator",           { "fg": s:white })
+call s:h("typescriptBraces",              { "fg": s:white })
+call s:h("typescriptParens",              { "fg": s:white })
 call s:h("typescriptCall",                { "fg": s:orange, "format": "italic" })
 call s:h("typescriptVariable",            { "fg": s:aqua })
 call s:h("typescriptModule",              { "fg": s:aqua })
@@ -263,7 +269,7 @@ call s:h("htmlSpecialChar",     { "fg": s:purple })
 " Xml
 call s:h("xmlTag",              { "fg": s:pink })
 call s:h("xmlEndTag",           { "fg": s:pink })
-call s:h("xmlTagName",          { "fg": s:orange })
+call s:h("xmlTagName",          { "fg": s:orange, "format": "bold,italic" })
 call s:h("xmlAttrib",           { "fg": s:green })
 
 " CSS
@@ -292,13 +298,13 @@ call s:h("rubyFunction",                { "fg": s:green })
 call s:h("rubyStringDelimiter",         { "fg": s:yellow })
 call s:h("rubyRegexp",                  { "fg": s:yellow })
 call s:h("rubyRegexpDelimiter",         { "fg": s:yellow })
-call s:h("rubySymbol",                  { "fg": s:purple, "format": "italic" })
+call s:h("rubySymbol",                  { "fg": s:purple})
 call s:h("rubyEscape",                  { "fg": s:purple, "format": "italic" })
-call s:h("rubyInclude",                 { "fg": s:pink })
-call s:h("rubyOperator",                { "fg": s:pink })
-call s:h("rubyControl",                 { "fg": s:pink })
-call s:h("rubyClass",                   { "fg": s:pink })
-call s:h("rubyDefine",                  { "fg": s:pink })
+call s:h("rubyInclude",                 { "fg": s:pink, "format": "bold" })
+call s:h("rubyOperator",                { "fg": s:pink, "format": "bold" })
+call s:h("rubyControl",                 { "fg": s:pink, "format": "bold" })
+call s:h("rubyClass",                   { "fg": s:pink, "format": "bold" })
+call s:h("rubyDefine",                  { "fg": s:pink, "format": "bold" })
 call s:h("rubyException",               { "fg": s:pink   })
 call s:h("rubyRailsARAssociationMethod",{ "fg": s:orange })
 call s:h("rubyRailsARMethod",           { "fg": s:orange })
