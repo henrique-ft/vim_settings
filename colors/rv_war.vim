@@ -209,6 +209,7 @@ call s:h("NERDTreeCWD",             { "fg": s:pink })
 call s:h("NERDTreeUp",              { "fg": s:white })
 call s:h("NERDTreeDirSlash",        { "fg": s:grey })
 call s:h("NERDTreeDir",             { "fg": s:grey })
+call s:h("NERDTreeFlags",             { "fg": s:grey })
 
 " Syntastic
 " ---------
@@ -227,6 +228,8 @@ call s:h("vimCommand",              { "fg": s:pink })
 
 " Javascript
 call s:h("jsFuncName",          { "fg": s:green })
+call s:h("jsFunction",          { "fg": s:aqua, "format": "italic" })
+call s:h("jsFuncCall",          { "fg": s:green })
 call s:h("jsThis",              { "fg": s:pink })
 call s:h("jsFunctionKey",       { "fg": s:green })
 call s:h("jsPrototype",         { "fg": s:aqua })
@@ -265,14 +268,14 @@ call s:h("typescriptAmbientDeclaration",  { "fg": s:pink })
 call s:h("htmlTag",             { "fg": s:pink })
 call s:h("htmlEndTag",          { "fg": s:pink })
 call s:h("htmlTagName",         { "fg": s:white })
-call s:h("htmlArg",             { "fg": s:green })
+call s:h("htmlArg",             { "fg": s:purple })
 call s:h("htmlSpecialChar",     { "fg": s:purple })
 
 " Xml
 call s:h("xmlTag",              { "fg": s:pink })
 call s:h("xmlEndTag",           { "fg": s:pink })
-call s:h("xmlTagName",          { "fg": s:orange, "format": "bold,italic" })
-call s:h("xmlAttrib",           { "fg": s:green })
+call s:h("xmlTagName",          { "fg": s:white, "format": "bold,italic" })
+call s:h("xmlAttrib",           { "fg": s:purple })
 
 " CSS
 call s:h("cssProp",             { "fg": s:yellow })
