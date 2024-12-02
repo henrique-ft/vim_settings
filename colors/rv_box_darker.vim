@@ -86,6 +86,7 @@ let s:pink        = { "gui": "#a91718", "cterm": "131" }
 "let s:pink        = { "gui": "#a91718", "cterm": "95" }
 "let s:pink        = { "gui": "#a91718", "cterm": "174" }
 let s:green       = { "gui": "#A6E22D", "cterm": "194" }
+let s:green2     = { "gui": "#A6E22D", "cterm": "152" }
 let s:aqua        = { "gui": "#66d9ef", "cterm": "117" }
 "let s:aqua        = { "gui": "#66d9ef", "cterm": "159" }
 let s:yellow      = { "gui": "#E6DB74", "cterm": "230" }
@@ -96,7 +97,6 @@ let s:orange      = { "gui": "#FD9720", "cterm": "138" }
 let s:purple      = { "gui": "#ae81ff", "cterm": "138" }
 "let s:purple        = { "gui": "#a91718", "cterm": "152" }
 "let s:purple     = { "gui": "#A6E22D", "cterm": "182" }
-let s:purple2     = { "gui": "#A6E22D", "cterm": "152" }
 let s:red         = { "gui": "#e73c50", "cterm": "196" }
 let s:darkred     = { "gui": "#5f0000", "cterm": "52" }
 
@@ -170,7 +170,7 @@ call s:h("StorageClass",  { "fg": s:aqua })
 call s:h("Typedef",       { "fg": s:aqua })
 
 call s:h("Identifier",    { "fg": s:white })
-call s:h("Function",      { "fg": s:purple2 })
+call s:h("Function",      { "fg": s:green })
 
 call s:h("Statement",     { "fg": s:pink, "format": "bold"  })
 call s:h("Operator",      { "fg": s:pink, "format": "bold"  })
@@ -233,7 +233,7 @@ call s:h("vimCommand",              { "fg": s:pink })
 " Javascript
 call s:h("jsFuncName",          { "fg": s:green })
 call s:h("jsFunction",          { "fg": s:aqua, "format": "italic" })
-call s:h("jsFuncCall",          { "fg": s:purple2 })
+call s:h("jsFuncCall",          { "fg": s:green })
 call s:h("jsThis",              { "fg": s:pink })
 call s:h("jsFunctionKey",       { "fg": s:green })
 call s:h("jsPrototype",         { "fg": s:aqua })
@@ -272,8 +272,8 @@ call s:h("typescriptAmbientDeclaration",  { "fg": s:pink })
 call s:h("htmlTag",             { "fg": s:pink })
 call s:h("htmlEndTag",          { "fg": s:pink })
 call s:h("htmlTagName",         { "fg": s:white })
-call s:h("htmlArg",             { "fg": s:purple2 })
-call s:h("htmlSpecialChar",     { "fg": s:purple2 })
+call s:h("htmlArg",             { "fg": s:green })
+call s:h("htmlSpecialChar",     { "fg": s:green })
 
 " Xml
 call s:h("xmlTag",              { "fg": s:pink })
