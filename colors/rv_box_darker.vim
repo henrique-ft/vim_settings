@@ -186,7 +186,7 @@ call s:h("Define",        { "fg": s:pink })
 call s:h("Macro",         { "fg": s:green })
 call s:h("PreCondit",     { "fg": s:green })
 
-call s:h("Special",       { "fg": s:purple })
+call s:h("Special",       { "fg": s:aqua })
 call s:h("SpecialChar",   { "fg": s:pink })
 call s:h("Delimiter",     { "fg": s:pink })
 call s:h("SpecialComment",{ "fg": s:aqua })
