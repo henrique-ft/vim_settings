@@ -47,7 +47,6 @@ Plug 'mhinz/vim-mix-format'
 Plug 'ap/vim-css-color'
 Plug 'othree/html5.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
 Plug 'mileszs/ack.vim'
 Plug 'drmikehenry/vim-fixkey'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -89,7 +88,8 @@ call plug#end()
 
 " < SET COLORS >
 
-autocmd VimEnter * color err_box_darker
+autocmd VimEnter * color rv_box_darker
+"autocmd VimEnter * color err_box_darker
 autocmd filetype ruby compiler ruby
 
 " < CONFIG >
@@ -168,21 +168,27 @@ let g:airline#extensions#tabline#close_symbol = '×'
 let g:airline#extensions#tabline#show_close_button = 0
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline_theme='minimalist'
+let g:airline_theme='base16_grayscale'
 map <silent> <F5> :color rr_box<CR>
 map <silent> <F6> :color er_box<CR>
 map <silent> <F7> :AirlineTheme base16_grayscale<CR>
 map <silent> <F8> :AirlineTheme minimalist<CR>
+" Paint tabs on vim enter
+function! AirlineInit()
+  silent! AirlineRefresh
+endfunction
+
+autocmd VimEnter * call AirlineInit()
 
 "Add highlight for searchs
 set hlsearch
 
 "NERDTree / nerdtree navigation"
-silent! nmap <Tab> :NERDTreeTabsToggle<CR>
+silent! nmap <Tab> :NERDTreeToggle<CR>
 "silent! map <F2> :NERDTreeTabsFind<CR>
 "let g:NERDTreeMapActivateNode="<F2>"
 "let g:NERDTreeMapPreview="<F1>"
-silent! map q :silent! NERDTreeTabsFind<CR>
+silent! map q :silent! NERDTreeFind<CR>
 silent! let g:NERDTreeMapActivateNode="w"
 silent! let g:NERDTreeMapPreview="q"
 highlight! link NERDTreeFlags NERDTreeDir
@@ -190,19 +196,20 @@ let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
 let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
 "let g:NERDTreeDirArrowExpandable = "\u00a0"
 "let g:NERDTreeDirArrowCollapsible = "\u00a0"
-"let g:NERDTreeDirArrowExpandable = "-"
-"let g:NERDTreeDirArrowCollapsible = "›"
-let g:NERDTreeDirArrowExpandable = "🗀"
-let g:NERDTreeDirArrowCollapsible = "🗁"
+let g:NERDTreeDirArrowExpandable = "o"
+let g:NERDTreeDirArrowCollapsible = "o"
+"let g:NERDTreeDirArrowExpandable = "🗀"
+"let g:NERDTreeDirArrowCollapsible = "🗁"
 let g:NERDTreeMouseMode = 3
 let NERDTreeShowHidden=1
 let g:WebDevIconsOS = 'Darwin'
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:DevIconsEnableFoldersOpenClose = 1
 let g:DevIconsEnableFolderExtensionPatternMatching = 1
+" Keep the nerdtree open in every new tab
+autocmd BufWinEnter * if &buftype != 'quickfix' && getcmdwintype() == '' | silent NERDTreeMirror | endif
 
 "Icons colors
-
 "Enable better whitespaces for default
 let g:better_whitespace_enabled=1
 let g:strip_whitespace_on_save=1
@@ -242,9 +249,9 @@ let g:closetag_filetypes = 'html,xhtml,phtml'
 autocmd filetype clojure inoremap ( ()<left>
 "inoremap [ []<left>
 "for *GO / *JAVASCRIPT ENVIRONMENT"
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
+"inoremap { {}<left>
+"inoremap {<CR> {<CR>}<ESC>O
+"inoremap {;<CR> {<CR>};<ESC>O
 
 syntax on
 
@@ -270,7 +277,8 @@ vnoremap JJ <ESC>
 
 "Add space q and space w to save and quit
 let mapleader=" "
-nmap <leader>q :tabc<CR>
+"nmap <leader>q :tabc<CR>
+nmap <leader>q :q<CR>
 nmap <leader><leader>q :q!<CR>
 nmap <leader>w :w<CR>
 
