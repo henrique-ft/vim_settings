@@ -1,6 +1,4 @@
 """"""""""""""""""""""""""""""""
-
-
 call plug#begin('~/.vim/plugged')
 " < MISC >
 "
@@ -32,13 +30,9 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 " ******NGINX ENVIRONMENT
 Plug 'chr4/nginx.vim'
-" ******EBOOK WRITING ENVIRONMENT
-Plug 'lervag/vimtex'
 " ******ELIXIR ENVIRONMENT
-Plug 'elixir-editors/vim-elixir'
-Plug 'mhinz/vim-mix-format'
-" ******CLOJURE ENVIRONMENT
-"Plug 'clojure-vim/clojure.vim'
+"Plug 'elixir-editors/vim-elixir'
+"Plug 'mhinz/vim-mix-format'
 " *SVELTE ENVIRONMENT
 "Plug 'evanleck/vim-svelte', {'branch': 'main'}
 
@@ -196,8 +190,8 @@ let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
 let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
 "let g:NERDTreeDirArrowExpandable = "\u00a0"
 "let g:NERDTreeDirArrowCollapsible = "\u00a0"
-let g:NERDTreeDirArrowExpandable = "o"
-let g:NERDTreeDirArrowCollapsible = "o"
+let g:NERDTreeDirArrowExpandable = "▢"
+let g:NERDTreeDirArrowCollapsible = "▢"
 "let g:NERDTreeDirArrowExpandable = "🗀"
 "let g:NERDTreeDirArrowCollapsible = "🗁"
 let g:NERDTreeMouseMode = 3
