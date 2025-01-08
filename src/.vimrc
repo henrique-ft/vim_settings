@@ -38,6 +38,7 @@ Plug 'chr4/nginx.vim'
 
 " < DEFAULT >
 
+Plug 'github/copilot.vim'
 Plug 'ap/vim-css-color'
 Plug 'othree/html5.vim'
 Plug 'scrooloose/nerdtree'
@@ -82,8 +83,8 @@ call plug#end()
 
 " < SET COLORS >
 
-autocmd VimEnter * color rv_box_darker
-"autocmd VimEnter * color err_box_darker
+"autocmd VimEnter * color rv_box_darker
+autocmd VimEnter * color err_box_darker
 autocmd filetype ruby compiler ruby
 
 " < CONFIG >
@@ -330,23 +331,23 @@ let &t_TE = ""
 " Set column length limit
 set colorcolumn=80
 
-" *ELIXIR ENVIRONMENT
-inoremap pry require IEx; IEx.pry<left>
+" *ELIXIR ENVIRONMENT (without IA) =======================================
+"inoremap pry require IEx; IEx.pry<left>
 let g:mix_format_on_save = 1
 
-" *NODE ENVIRONMENT =======================================
-inoremap consl console.log('◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩')
-inoremap conl console.log('')<left><left>
-inoremap cll console.log()<left>
-inoremap imp import  from ''<left><left><left><left><left><left><left><left>
+" *NODE ENVIRONMENT (without IA) =======================================
+"inoremap consl console.log('◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩')
+"inoremap conl console.log('')<left><left>
+"inoremap cll console.log()<left>
+"inoremap imp import  from ''<left><left><left><left><left><left><left><left>
 
-" *GO ENVIRONMENT =======================================
+" *GO ENVIRONMENT (without IA) =======================================
 " Autocomplete = CTRL +X +O
 
-inoremap f1 fmt.Println()<left>
-inoremap f2 fmt.Sprintf("%s", name)<left>
-inoremap f3 fmt.Printf("%+v\n",)<left>
-inoremap ifer if err != nil { panic(err) }<right>
+"inoremap f1 fmt.Println()<left>
+"inoremap f2 fmt.Sprintf("%s", name)<left>
+"inoremap f3 fmt.Printf("%+v\n",)<left>
+"inoremap ifer if err != nil { panic(err) }<right>
 
 " Language server configs https://github.com/golang/tools/blob/master/gopls/doc/vim.md
 let g:go_def_mode='gopls'
