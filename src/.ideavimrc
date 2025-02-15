@@ -73,5 +73,11 @@ noremap <leader>8 8gt
 noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
 
+inoremap jj <ESC>
+inoremap JJ <ESC>
+inoremap Jj <ESC>
+inoremap jJ <ESC>
+vnoremap JJ <ESC>
+
 "Search
 map \ <Plug>/
