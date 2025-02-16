@@ -71,8 +71,8 @@ endfunction
 
 
 let s:white       = { "gui": "#E8E8E3", "cterm": "255" }
-let s:black       = { "gui": "#272822", "cterm": "232" }
-let s:lightblack  = { "gui": "#2D2E27", "cterm": "233" }
+let s:black       = { "gui": "#272822", "cterm": "233" }
+let s:lightblack  = { "gui": "#2D2E27", "cterm": "232" }
 let s:lightblack2 = { "gui": "#383a3e", "cterm": "234" }
 let s:darkblack   = { "gui": "#211F1C", "cterm": "234" }
 let s:grey        = { "gui": "#8F908A", "cterm": "242" }
@@ -300,12 +300,12 @@ call s:h("rubyRegexp",                  { "fg": s:orange, "format": "italic" })
 call s:h("rubyRegexpDelimiter",         { "fg": s:orange, "format": "italic" })
 call s:h("rubySymbol",                  { "fg": s:purple3 })
 call s:h("rubyEscape",                  { "fg": s:purple })
-call s:h("rubyInclude",                 { "fg": s:red, "format": "bold" })
-call s:h("rubyOperator",                { "fg": s:red, "format": "bold" })
-call s:h("rubyControl",                 { "fg": s:red, "format": "bold" })
-call s:h("rubyClass",                   { "fg": s:red, "format": "bold" })
-call s:h("rubyDefine",                  { "fg": s:red, "format": "bold" })
-call s:h("rubyException",               { "fg": s:red, "format": "bold" })
+call s:h("rubyInclude",                 { "fg": s:red })
+call s:h("rubyOperator",                { "fg": s:red })
+call s:h("rubyControl",                 { "fg": s:red })
+call s:h("rubyClass",                   { "fg": s:red })
+call s:h("rubyDefine",                  { "fg": s:red })
+call s:h("rubyException",               { "fg": s:red })
 call s:h("rubyRailsARAssociationMethod",{ "fg": s:orange })
 call s:h("rubyRailsARMethod",           { "fg": s:orange })
 call s:h("rubyRailsRenderMethod",       { "fg": s:orange })
