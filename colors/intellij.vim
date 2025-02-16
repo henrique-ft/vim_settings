@@ -70,7 +70,7 @@ endfunction
 " --------
 
 
-let s:white       = { "gui": "#E8E8E3", "cterm": "253" }
+let s:white       = { "gui": "#E8E8E3", "cterm": "255" }
 let s:black       = { "gui": "#272822", "cterm": "232" }
 let s:lightblack  = { "gui": "#2D2E27", "cterm": "233" }
 let s:lightblack2 = { "gui": "#383a3e", "cterm": "234" }
