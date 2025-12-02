@@ -9,6 +9,8 @@ Plug 'tpope/vim-rails'
 " *****JAVASCRIPT / TYPESCRIPT ENVIRONMENT
 Plug 'pangloss/vim-javascript'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+Plug 'nikvdp/ejs-syntax'
+"Plug 'leafgarland/typescript-vim'
 " For js autoimport work
 " $ git clone https://github.com/universal-ctags/ctags
 " # cd ctags && ./autogen.sh && ./configure && make && sudo make install
@@ -18,7 +20,6 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --producti
 " and add to this file: tags tags.lock and tags.temp
 "Plug 'ludovicchabant/vim-gutentags'
 "Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install'}
-"Plug 'leafgarland/typescript-vim'
 " *****GO ENVIRONMENT
 " open tmux wiwth export GO111MODULE=on && tmux for ajust some problems that
 " may occurr
@@ -31,7 +32,7 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 " ******NGINX ENVIRONMENT
 Plug 'chr4/nginx.vim'
 " ******ELIXIR ENVIRONMENT
-"Plug 'elixir-editors/vim-elixir'
+Plug 'elixir-editors/vim-elixir'
 "Plug 'mhinz/vim-mix-format'
 " *SVELTE ENVIRONMENT
 "Plug 'evanleck/vim-svelte', {'branch': 'main'}
@@ -85,6 +86,7 @@ call plug#end()
 
 "autocmd VimEnter * color rv_box_darker
 autocmd VimEnter * color err_box_darker
+"autocmd VimEnter * color fahrenheit
 autocmd filetype ruby compiler ruby
 
 " < CONFIG >
@@ -111,11 +113,12 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 
-" *JAVASCRIPT ENVIRONMENT
 let g:prettier#autoformat_require_pragma = 0
-"set tabstop=4
-"set shiftwidth=4
-"set softtabstop=4
+
+" *PHP ENVIRONMENT
+autocmd FileType php set tabstop=4
+autocmd FileType php set shiftwidth=4
+autocmd FileType php set softtabstop=4
 
 " *REACT ENVIRONMENT
 " Sometimes syntax highlighting can get out of sync in large JSX and TSX
