@@ -34,6 +34,8 @@ Plug 'chr4/nginx.vim'
 " ******ELIXIR ENVIRONMENT
 Plug 'elixir-editors/vim-elixir'
 "Plug 'mhinz/vim-mix-format'
+" ******PHP ENVIRONMENT
+Plug 'jwalton512/vim-blade'
 " *SVELTE ENVIRONMENT
 "Plug 'evanleck/vim-svelte', {'branch': 'main'}
 
@@ -246,10 +248,10 @@ let g:closetag_filetypes = 'html,xhtml,phtml'
 "for *CLOJURE ENVIRONMENT"
 autocmd filetype clojure inoremap ( ()<left>
 "inoremap [ []<left>
-"for *GO / *JAVASCRIPT ENVIRONMENT"
-"inoremap { {}<left>
-"inoremap {<CR> {<CR>}<ESC>O
-"inoremap {;<CR> {<CR>};<ESC>O
+"for *GO / *JAVASCRIPT / *PHP ENVIRONMENT"
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
 
 syntax on
 
