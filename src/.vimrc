@@ -41,6 +41,7 @@ Plug 'jwalton512/vim-blade'
 
 " < DEFAULT >
 
+Plug 'inkarkat/vim-SyntaxRange'
 Plug 'github/copilot.vim'
 Plug 'ap/vim-css-color'
 Plug 'othree/html5.vim'
@@ -118,9 +119,9 @@ set softtabstop=2
 let g:prettier#autoformat_require_pragma = 0
 
 " *PHP ENVIRONMENT
-autocmd FileType php set tabstop=4
-autocmd FileType php set shiftwidth=4
-autocmd FileType php set softtabstop=4
+"autocmd FileType php set tabstop=4
+"autocmd FileType php set shiftwidth=4
+"autocmd FileType php set softtabstop=4
 
 " *REACT ENVIRONMENT
 " Sometimes syntax highlighting can get out of sync in large JSX and TSX
@@ -249,9 +250,9 @@ let g:closetag_filetypes = 'html,xhtml,phtml'
 autocmd filetype clojure inoremap ( ()<left>
 "inoremap [ []<left>
 "for *GO / *JAVASCRIPT / *PHP ENVIRONMENT"
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
+"inoremap { {}<left>
+"inoremap {<CR> {<CR>}<ESC>O
+"inoremap {;<CR> {<CR>};<ESC>O
 
 syntax on
 
@@ -342,9 +343,9 @@ let g:mix_format_on_save = 1
 
 " *NODE ENVIRONMENT (without IA) =======================================
 "inoremap consl console.log('◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩')
-"inoremap conl console.log('')<left><left>
+inoremap conl console.log()<left>
 "inoremap cll console.log()<left>
-"inoremap imp import  from ''<left><left><left><left><left><left><left><left>
+inoremap imp import  from ''<left><left><left><left><left><left><left><left>
 
 " *GO ENVIRONMENT (without IA) =======================================
 " Autocomplete = CTRL +X +O
@@ -385,6 +386,14 @@ function! s:build_go_files()
     call go#cmd#Build(0)
   endif
 endfunction
+
+" Html inside strings (vim-SyntaxRange)
+augroup SyntaxRangeHTML
+  autocmd!
+  autocmd BufRead,BufNewFile *.rb silent! call SyntaxRange#Include('"""', '"""', 'html')
+  autocmd BufRead,BufNewFile *.rb silent! call SyntaxRange#Include('<style>', '</style>', 'css')
+  autocmd BufRead,BufNewFile *.rb silent! call SyntaxRange#Include('<script>', '</script>', 'js')
+augroup END
 
 " Map keys for most used commands.
 " Ex: `\b` for building, `\r` for running and `\b` for running test.
