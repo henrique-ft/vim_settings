@@ -83,13 +83,14 @@ let s:warmgrey2    = { "gui": "#75715E", "cterm": "247" }
 
 let s:red        = { "gui": "#a91718", "cterm": "131" }
 let s:aqua        = { "gui": "#66d9ef", "cterm": "159" }
-let s:yellow      = { "gui": "#E6DB74", "cterm": "231" }
+let s:yellow      = { "gui": "#E6DB74", "cterm": "230" }
 let s:orange      = { "gui": "#FD9720", "cterm": "138" }
 let s:purple      = { "gui": "#ae81ff", "cterm": "138" }
 let s:purple2     = { "gui": "#A6E22D", "cterm": "146" }
 let s:purple3     = { "gui": "#A6E22D", "cterm": "103" }
-let s:lightred         = { "gui": "#e73c50", "cterm": "196" }
-let s:darkred     = { "gui": "#5f0000", "cterm": "52" }
+" ignoring red marks
+let s:lightred         = { "gui": "#e73c50", "cterm": "131" }
+let s:darkred     = { "gui": "#5f0000", "cterm": "233" }
 
 let s:addfg       = { "gui": "#d7ffaf", "cterm": "193" }
 let s:addbg       = { "gui": "#5f875f", "cterm": "65" }
@@ -343,18 +344,22 @@ call s:h("elixirExceptionDefine",         { "fg": s:purple2, "format": "bold" })
 call s:h("elixirCallbackDefine",          { "fg": s:purple2, "format": "bold" })
 call s:h("elixirStructDefine",            { "fg": s:purple2, "format": "bold" })
 call s:h("elixirExUnitMacro",             { "fg": s:purple2, "format": "bold" })
-call s:h("elixirExUnitAssert",            { "fg": s:purple2 })
+call s:h("elixirExUnitAssert",            { "fg": s:purple2, "format": "bold" })
 call s:h("elixirModuleDeclarationMacro",  { "fg": s:purple2, "format": "bold" })
 call s:h("elixirKeyword",                 { "fg": s:purple2, "format": "bold" })
-call s:h("elixirInclude",                 { "fg": s:red })
+call s:h("elixirInclude",                 { "fg": s:purple2, "format": "bold" })
 call s:h("elixirModuleDeclaration",       { "fg": s:aqua, "format": "italic" })
 call s:h("elixirAlias",                   { "fg": s:aqua, "format": "italic" })
 call s:h("elixirAtom",                    { "fg": s:purple })
-call s:h("elixirOperator",                { "fg": s:red })
-call s:h("elixirFunctionDeclaration",     { "fg": s:purple2 })
-call s:h("elixirVariable",                { "fg": s:white, "format": "bold,italic" })
+call s:h("elixirNumber",                  { "fg": s:purple })
+call s:h("elixirBoolean",                 { "fg": s:purple })
+call s:h("elixirOperator",                { "fg": s:purple2 })
+call s:h("elixirFunctionDeclaration",     { "fg": s:purple3 })
+call s:h("elixirVariable",                { "fg": s:white, "format": "italic,bold" })
 call s:h("elixirStringDelimiter",         { "fg": s:yellow })
-call s:h("elixirDocStringDelimiter",      { "fg": s:warmgrey2 })
+call s:h("elixirInterpolationDelimiter",           { "fg": s:purple2 })
+call s:h("elixirCharListDelimiter",       { "fg": s:yellow })
+call s:h("elixirDocStringDelimiter",      { "fg": s:grey })
 
 " go
 

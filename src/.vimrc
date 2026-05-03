@@ -37,7 +37,7 @@ Plug 'elixir-editors/vim-elixir'
 " ******PHP ENVIRONMENT
 Plug 'jwalton512/vim-blade'
 " *SVELTE ENVIRONMENT
-"Plug 'evanleck/vim-svelte', {'branch': 'main'}
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
 
 " < DEFAULT >
 
@@ -250,8 +250,8 @@ let g:closetag_filetypes = 'html,xhtml,phtml'
 autocmd filetype clojure inoremap ( ()<left>
 "inoremap [ []<left>
 "for *GO / *JAVASCRIPT / *PHP ENVIRONMENT"
-"inoremap { {}<left>
-"inoremap {<CR> {<CR>}<ESC>O
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
 "inoremap {;<CR> {<CR>};<ESC>O
 
 syntax on
@@ -340,6 +340,7 @@ set colorcolumn=80
 " *ELIXIR ENVIRONMENT (without IA) =======================================
 "inoremap pry require IEx; IEx.pry<left>
 let g:mix_format_on_save = 1
+au BufRead,BufNewFile *.eex,*.heex,*.leex set filetype=eelixir
 
 " *NODE ENVIRONMENT (without IA) =======================================
 "inoremap consl console.log('◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩')
@@ -350,10 +351,10 @@ inoremap imp import  from ''<left><left><left><left><left><left><left><left>
 " *GO ENVIRONMENT (without IA) =======================================
 " Autocomplete = CTRL +X +O
 
-"inoremap f1 fmt.Println()<left>
-"inoremap f2 fmt.Sprintf("%s", name)<left>
-"inoremap f3 fmt.Printf("%+v\n",)<left>
-"inoremap ifer if err != nil { panic(err) }<right>
+inoremap f1 fmt.Println()<left>
+inoremap f2 fmt.Sprintf("%s", name)<left>
+inoremap f3 fmt.Printf("%+v\n",)<left>
+inoremap ifer if err != nil { panic(err) }<right>
 
 " Language server configs https://github.com/golang/tools/blob/master/gopls/doc/vim.md
 let g:go_def_mode='gopls'
