@@ -83,6 +83,7 @@ let s:warmgrey2    = { "gui": "#75715E", "cterm": "247" }
 
 let s:red        = { "gui": "#a91718", "cterm": "131" }
 let s:aqua        = { "gui": "#66d9ef", "cterm": "159" }
+let s:aqua2        = { "gui": "#66d9ef", "cterm": "195" }
 let s:yellow      = { "gui": "#E6DB74", "cterm": "230" }
 let s:orange      = { "gui": "#FD9720", "cterm": "138" }
 let s:purple      = { "gui": "#ae81ff", "cterm": "138" }
@@ -348,16 +349,16 @@ call s:h("elixirExUnitAssert",            { "fg": s:purple2, "format": "bold" })
 call s:h("elixirModuleDeclarationMacro",  { "fg": s:purple2, "format": "bold" })
 call s:h("elixirKeyword",                 { "fg": s:purple2, "format": "bold" })
 call s:h("elixirInclude",                 { "fg": s:purple2, "format": "bold" })
-call s:h("elixirModuleDeclaration",       { "fg": s:aqua, "format": "italic" })
-call s:h("elixirAlias",                   { "fg": s:aqua, "format": "italic" })
+call s:h("elixirModuleDeclaration",       { "fg": s:aqua2, "format": "italic" })
+call s:h("elixirAlias",                   { "fg": s:aqua2, "format": "italic" })
 call s:h("elixirAtom",                    { "fg": s:purple })
 call s:h("elixirNumber",                  { "fg": s:purple })
 call s:h("elixirBoolean",                 { "fg": s:purple })
-call s:h("elixirOperator",                { "fg": s:purple2 })
-call s:h("elixirFunctionDeclaration",     { "fg": s:purple3 })
+call s:h("elixirOperator",                { "fg": s:purple3 })
+call s:h("elixirFunctionDeclaration",     { "fg": s:purple2 })
 call s:h("elixirVariable",                { "fg": s:white, "format": "bold" })
 call s:h("elixirStringDelimiter",         { "fg": s:yellow })
-call s:h("elixirInterpolationDelimiter",           { "fg": s:purple2 })
+call s:h("elixirInterpolationDelimiter",  { "fg": s:purple2 })
 call s:h("elixirCharListDelimiter",       { "fg": s:yellow })
 call s:h("elixirDocStringDelimiter",      { "fg": s:grey })
 
