@@ -69,10 +69,10 @@ endfunction
 " Palettes
 " --------
 
-let s:white       = { "gui": "#E8E8E3", "cterm": "252" }
-let s:black       = { "gui": "#272822", "cterm": "233" }
-let s:lightblack  = { "gui": "#2D2E27", "cterm": "232" }
-let s:lightblack2 = { "gui": "#383a3e", "cterm": "232" }
+let s:white       = { "gui": "#E8E8E3", "cterm": "255" }
+let s:black       = { "gui": "#272822", "cterm": "232" }
+let s:lightblack  = { "gui": "#2D2E27", "cterm": "233" }
+let s:lightblack2 = { "gui": "#383a3e", "cterm": "233" }
 let s:darkblack   = { "gui": "#211F1C", "cterm": "235" }
 let s:grey        = { "gui": "#8F908A", "cterm": "242" }
 let s:lightgrey   = { "gui": "#575b61", "cterm": "238" }
@@ -80,10 +80,10 @@ let s:darkgrey    = { "gui": "#64645e", "cterm": "235" }
 let s:warmgrey    = { "gui": "#75715E", "cterm": "243" }
 let s:warmgrey2    = { "gui": "#75715E", "cterm": "247" }
 
-let s:pink        = { "gui": "#a91718", "cterm": "131" }
+"let s:pink        = { "gui": "#a91718", "cterm": "131" }
 "let s:pink        = { "gui": "#a91718", "cterm": "159" }
 "let s:pink        = { "gui": "#a91718", "cterm": "152" }
-"let s:pink        = { "gui": "#a91718", "cterm": "95" }
+let s:pink        = { "gui": "#a91718", "cterm": "95" }
 "let s:pink        = { "gui": "#a91718", "cterm": "174" }
 let s:green       = { "gui": "#A6E22D", "cterm": "194" }
 let s:green2     = { "gui": "#A6E22D", "cterm": "152" }
@@ -91,8 +91,8 @@ let s:aqua        = { "gui": "#66d9ef", "cterm": "117" }
 "let s:aqua        = { "gui": "#66d9ef", "cterm": "159" }
 let s:yellow      = { "gui": "#E6DB74", "cterm": "230" }
 "let s:yellow      = { "gui": "#E6DB74", "cterm": "78" }
-let s:orange      = { "gui": "#FD9720", "cterm": "138" }
-"let s:orange      = { "gui": "#FD9720", "cterm": "225" }
+"let s:orange      = { "gui": "#FD9720", "cterm": "138" }
+let s:orange      = { "gui": "#FD9720", "cterm": "225" }
 "let s:purple      = { "gui": "#ae81ff", "cterm": "181" }
 let s:purple      = { "gui": "#ae81ff", "cterm": "138" }
 "let s:purple        = { "gui": "#a91718", "cterm": "152" }
@@ -169,7 +169,7 @@ call s:h("Structure",     { "fg": s:aqua })
 call s:h("StorageClass",  { "fg": s:aqua })
 call s:h("Typedef",       { "fg": s:aqua })
 
-call s:h("Identifier",    { "fg": s:white })
+call s:h("Identifier",    { "fg": s:white, "format": "bold"   })
 call s:h("Function",      { "fg": s:green })
 
 call s:h("Statement",     { "fg": s:pink, "format": "bold"  })
