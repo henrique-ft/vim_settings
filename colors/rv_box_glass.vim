@@ -80,10 +80,10 @@ let s:darkgrey    = { "gui": "#64645e", "cterm": "235" }
 let s:warmgrey    = { "gui": "#75715E", "cterm": "243" }
 let s:warmgrey2    = { "gui": "#75715E", "cterm": "247" }
 
-"let s:pink        = { "gui": "#a91718", "cterm": "131" }
+let s:pink        = { "gui": "#a91718", "cterm": "131" }
 "let s:pink        = { "gui": "#a91718", "cterm": "159" }
 "let s:pink        = { "gui": "#a91718", "cterm": "152" }
-let s:pink        = { "gui": "#a91718", "cterm": "95" }
+"let s:pink        = { "gui": "#a91718", "cterm": "95" }
 "let s:pink        = { "gui": "#a91718", "cterm": "174" }
 let s:green       = { "gui": "#A6E22D", "cterm": "194" }
 let s:green2     = { "gui": "#A6E22D", "cterm": "152" }
