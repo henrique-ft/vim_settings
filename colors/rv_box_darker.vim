@@ -81,18 +81,18 @@ let s:warmgrey    = { "gui": "#75715E", "cterm": "243" }
 let s:warmgrey2    = { "gui": "#75715E", "cterm": "247" }
 
 let s:pink        = { "gui": "#a91718", "cterm": "131" }
+let s:pink2        = { "gui": "#a91718", "cterm": "174" }
 "let s:pink        = { "gui": "#a91718", "cterm": "159" }
 "let s:pink        = { "gui": "#a91718", "cterm": "152" }
 "let s:pink        = { "gui": "#a91718", "cterm": "95" }
-"let s:pink        = { "gui": "#a91718", "cterm": "174" }
 let s:green       = { "gui": "#A6E22D", "cterm": "194" }
 let s:green2     = { "gui": "#A6E22D", "cterm": "152" }
 let s:aqua        = { "gui": "#66d9ef", "cterm": "117" }
 "let s:aqua        = { "gui": "#66d9ef", "cterm": "159" }
 let s:yellow      = { "gui": "#E6DB74", "cterm": "230" }
 "let s:yellow      = { "gui": "#E6DB74", "cterm": "78" }
-"let s:orange      = { "gui": "#FD9720", "cterm": "138" }
-let s:orange      = { "gui": "#FD9720", "cterm": "225" }
+let s:orange      = { "gui": "#FD9720", "cterm": "138" }
+"let s:orange      = { "gui": "#FD9720", "cterm": "225" }
 "let s:purple      = { "gui": "#ae81ff", "cterm": "181" }
 let s:purple      = { "gui": "#ae81ff", "cterm": "138" }
 "let s:purple        = { "gui": "#a91718", "cterm": "152" }
@@ -249,12 +249,12 @@ call s:h("jsStorageClass",      { "fg": s:aqua })
 call s:h("jsDocTags",           { "fg": s:aqua,   "format": "italic" })
 
 " Typescript
-call s:h("typescriptArrowFuncArg",        { "fg": s:orange, "format": "italic" })
-call s:h("typescriptFuncType",            { "fg": s:orange, "format": "italic" })
-call s:h("typescriptCall",                { "fg": s:orange, "format": "italic" })
+call s:h("typescriptArrowFuncArg",        { "fg": s:orange})
+call s:h("typescriptFuncType",            { "fg": s:orange})
+call s:h("typescriptCall",                { "fg": s:orange})
 call s:h("typescriptVariable",            { "fg": s:aqua })
 call s:h("typescriptModule",              { "fg": s:aqua })
-call s:h("typescriptDecorator",           { "fg": s:white })
+call s:h("typescriptDecorator",           { "fg": s:white, "format": "bold" })
 call s:h("typescriptBraces",              { "fg": s:white })
 call s:h("typescriptParens",              { "fg": s:white })
 call s:h("typescriptReserved",            { "fg": s:pink })
