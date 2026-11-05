@@ -87,9 +87,13 @@ call plug#end()
 
 " < SET COLORS >
 
-"autocmd VimEnter * color rv_box_darker
-autocmd VimEnter * color err_box_darker
-"autocmd VimEnter * color fahrenheit
+"autocmd VimEnter * color err_box_darker
+"autocmd VimEnter * color err_box_glass
+autocmd VimEnter * color rv_box_darker
+"autocmd VimEnter * color rv_box_glass
+"autocmd VimEnter * color desert
+"autocmd VimEnter * color pablo
+"autocmd VimEnter * color delek
 autocmd filetype ruby compiler ruby
 
 " < CONFIG >
@@ -119,9 +123,9 @@ set softtabstop=2
 let g:prettier#autoformat_require_pragma = 0
 
 " *PHP ENVIRONMENT
-"autocmd FileType php set tabstop=4
-"autocmd FileType php set shiftwidth=4
-"autocmd FileType php set softtabstop=4
+autocmd FileType php set tabstop=4
+autocmd FileType php set shiftwidth=4
+autocmd FileType php set softtabstop=4
 
 " *REACT ENVIRONMENT
 " Sometimes syntax highlighting can get out of sync in large JSX and TSX
@@ -289,16 +293,6 @@ nnoremap <leader>s :<C-u>call gitblame#echo()<CR>
 "Tab Navigation
 noremap <M-h> :tabprevious<CR>
 noremap <M-l> :tabnext<CR>
-noremap <leader>1 1gt
-noremap <leader>2 2gt
-noremap <leader>3 3gt
-noremap <leader>4 4gt
-noremap <leader>5 5gt
-noremap <leader>6 6gt
-noremap <leader>7 7gt
-noremap <leader>8 8gt
-noremap <leader>9 9gt
-noremap <leader>0 :tablast<cr>
 
 "Fast word finding in project"
 map <C-f> <Plug>CtrlSFPrompt
@@ -335,26 +329,33 @@ let &t_TI = ""
 let &t_TE = ""
 
 " Set column length limit
-set colorcolumn=80
+"set colorcolumn=80
 
 " *ELIXIR ENVIRONMENT (without IA) =======================================
-"inoremap pry require IEx; IEx.pry<left>
+inoremap pry require IEx; IEx.pry<left>
 let g:mix_format_on_save = 1
 au BufRead,BufNewFile *.eex,*.heex,*.leex set filetype=eelixir
 
 " *NODE ENVIRONMENT (without IA) =======================================
 "inoremap consl console.log('◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩')
-inoremap conl console.log()<left>
+inoremap consl console.log()<left>
 "inoremap cll console.log()<left>
 inoremap imp import  from ''<left><left><left><left><left><left><left><left>
 
 " *GO ENVIRONMENT (without IA) =======================================
 " Autocomplete = CTRL +X +O
-
-inoremap f1 fmt.Println()<left>
-inoremap f2 fmt.Sprintf("%s", name)<left>
-inoremap f3 fmt.Printf("%+v\n",)<left>
 inoremap ifer if err != nil { panic(err) }<right>
+
+" Go debug
+"inoremap f1 fmt.Println()<left>
+"inoremap f2 fmt.Sprintf("%s", name)<left>
+"inoremap f3 fmt.Printf("%+v\n",)<left>
+inoremap <leader>2 godump.Dump()<left>
+noremap <leader>d :GoDebugBreakpoint<CR>
+noremap <leader>' :GoDebugStart<CR>
+noremap <leader><Tab> :GoTestFile<CR>
+let g:go_debug_preserve_breakpoints = 0
+let g:go_test_show_color = 0
 
 " Language server configs https://github.com/golang/tools/blob/master/gopls/doc/vim.md
 let g:go_def_mode='gopls'
@@ -388,6 +389,13 @@ function! s:build_go_files()
   endif
 endfunction
 
+" Map keys for most used commands.
+" Ex: `\b` for building, `\r` for running and `\b` for running test.
+autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+autocmd FileType go nmap <leader>r  <Plug>(go-run)
+autocmd FileType go nmap <leader>t  <Plug>(go-test)
+" END GO ENVIRONMENT =======================================
+
 " Html inside strings (vim-SyntaxRange)
 augroup SyntaxRangeHTML
   autocmd!
@@ -395,13 +403,6 @@ augroup SyntaxRangeHTML
   autocmd BufRead,BufNewFile *.rb silent! call SyntaxRange#Include('<style>', '</style>', 'css')
   autocmd BufRead,BufNewFile *.rb silent! call SyntaxRange#Include('<script>', '</script>', 'js')
 augroup END
-
-" Map keys for most used commands.
-" Ex: `\b` for building, `\r` for running and `\b` for running test.
-autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
-autocmd FileType go nmap <leader>r  <Plug>(go-run)
-autocmd FileType go nmap <leader>t  <Plug>(go-test)
-" END GO ENVIRONMENT =======================================
 
 " *RUBY / *ELIXIR ENVIRONMENT
 "Endwise (tpope/vim-endwise)
