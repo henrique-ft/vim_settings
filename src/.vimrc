@@ -354,8 +354,13 @@ inoremap <leader>2 godump.Dump()<left>
 noremap <leader>d :GoDebugBreakpoint<CR>
 noremap <leader>' :GoDebugStart<CR>
 noremap <leader><Tab> :GoTestFile<CR>
+let g:go_term_enabled = 1
+let g:go_term_mode = 'split' " or 'vsplit'
 let g:go_debug_preserve_breakpoints = 0
-let g:go_test_show_color = 0
+" Disable automatic quickfix opening on test failure
+let g:go_list_autofix = 0
+" Keep test output in the terminal buffer even on failure
+let g:go_term_close_on_exit = 0
 
 " Language server configs https://github.com/golang/tools/blob/master/gopls/doc/vim.md
 let g:go_def_mode='gopls'
