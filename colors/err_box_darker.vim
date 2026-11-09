@@ -75,7 +75,7 @@ let s:black       = { "gui": "#272822", "cterm": "233" }
 let s:lightblack  = { "gui": "#2D2E27", "cterm": "232" }
 let s:lightblack2 = { "gui": "#383a3e", "cterm": "232" }
 let s:darkblack   = { "gui": "#211F1C", "cterm": "234" }
-let s:grey        = { "gui": "#8F908A", "cterm": "242" }
+let s:grey        = { "gui": "#8F908A", "cterm": "245" }
 let s:lightgrey   = { "gui": "#575b61", "cterm": "238" }
 let s:darkgrey    = { "gui": "#64645e", "cterm": "234" }
 let s:warmgrey    = { "gui": "#75715E", "cterm": "243" }
@@ -188,7 +188,7 @@ call s:h("Tag",           { "fg": s:red })
 "        Debug"
 
 call s:h("Todo",          { "fg": s:orange,   "format": "bold,italic" })
-call s:h("Comment",       { "fg": s:warmgrey, "format": "italic" })
+call s:h("Comment",       { "fg": s:grey, "format": "italic" })
 
 call s:h("Underlined",    { "fg": s:purple2 })
 call s:h("Ignore",        {})
