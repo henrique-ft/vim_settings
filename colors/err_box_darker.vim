@@ -82,9 +82,10 @@ let s:warmgrey    = { "gui": "#75715E", "cterm": "243" }
 let s:warmgrey2    = { "gui": "#75715E", "cterm": "247" }
 
 let s:red        = { "gui": "#a91718", "cterm": "131" }
-"let s:aqua        = { "gui": "#66d9ef", "cterm": "159" }
+let s:blue        = { "gui": "#a91718", "cterm": "67" }
 let s:aqua        = { "gui": "#66d9ef", "cterm": "195" }
 let s:aqua2        = { "gui": "#66d9ef", "cterm": "195" }
+let s:aqua3        = { "gui": "#66d9ef", "cterm": "159" }
 let s:yellow      = { "gui": "#E6DB74", "cterm": "230" }
 let s:orange      = { "gui": "#FD9720", "cterm": "138" }
 let s:purple      = { "gui": "#ae81ff", "cterm": "138" }
@@ -329,7 +330,6 @@ call s:h("cInclude",                    { "fg": s:purple2 })
 call s:h("cDefine",                     { "fg": s:purple2 })
 
 " elixir
-
 call s:h("elixirBlockDefinition",         { "fg": s:purple2, "format": "bold" })
 call s:h("elixirDefine",                  { "fg": s:purple2, "format": "bold" })
 call s:h("elixirPrivateDefine",           { "fg": s:purple2, "format": "bold" })
@@ -364,6 +364,29 @@ call s:h("elixirCharListDelimiter",       { "fg": s:yellow })
 call s:h("elixirDocStringDelimiter",      { "fg": s:grey })
 
 " go
-
 call s:h("goFunction",         { "fg": s:purple2 })
 call s:h("goIdentifier",         { "fg": s:purple2 })
+
+" python
+call s:h("pythonStatement",         { "fg": s:blue, "format": "bold" })
+call s:h("pythonFunction",         { "fg": s:aqua2 })
+call s:h("pythonConditional",         { "fg": s:purple })
+call s:h("pythonRepeat",         { "fg": s:purple })
+call s:h("pythonOperator",         { "fg": s:purple })
+call s:h("pythonException",         { "fg": s:purple })
+call s:h("pythonDecorator",         { "fg": s:blue, "format": "bold" })
+call s:h("pythonDecoratorName",         { "fg": s:white, "format": "bold" })
+call s:h("pythonAsync",         { "fg": s:blue  })
+call s:h("pythonInclude",         { "fg": s:purple })
+
+" rust
+call s:h("rustKeyword",         { "fg": s:purple2 })
+call s:h("rustFuncName",         { "fg": s:purple3 })
+call s:h("rustType",         { "fg": s:purple3, "format": "italic" })
+call s:h("rustStorage",         { "fg": s:red })
+call s:h("rustSigil",         { "fg": s:red })
+call s:h("rustStructure",         { "fg": s:red })
+call s:h("rustCommentLine",         { "fg": s:grey })
+call s:h("rustCommentBlockDoc",         { "fg": s:grey })
+call s:h("rustCommentLineDoc",         { "fg": s:grey })
+call s:h("rustLifetime",         { "fg": s:purple, "format": "italic"  })
